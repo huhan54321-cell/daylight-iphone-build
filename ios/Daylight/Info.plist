@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleDevelopmentRegion</key><string>zh_CN</string>
+<key>CFBundleDisplayName</key><string>日常</string>
+<key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
+<key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+<key>CFBundleName</key><string>$(PRODUCT_NAME)</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.3.8</string>
+<key>CFBundleVersion</key><string>12</string>
+<key>LSRequiresIPhoneOS</key><true/>
+<key>CFBundleURLTypes</key><array><dict><key>CFBundleURLName</key><string>com.personalassistant.Daylight.navigation</string><key>CFBundleURLSchemes</key><array><string>daylight</string></array></dict></array>
+<key>UIApplicationSceneManifest</key><dict><key>UIApplicationSupportsMultipleScenes</key><false/></dict>
+<key>UILaunchScreen</key><dict/>
+<key>UISupportedInterfaceOrientations</key><array><string>UIInterfaceOrientationPortrait</string></array>
+<key>NSCalendarsFullAccessUsageDescription</key><string>读取和保存你的日程，让日常与苹果日历显示相同安排。</string>
+<key>NSRemindersFullAccessUsageDescription</key><string>读取待办、添加计划和更新完成状态，让日常与提醒事项同步。</string>
+<key>NSHealthShareUsageDescription</key><string>在你主动读取时显示已有的运动和体重记录，减少重复记录。</string>
+<key>NSLocalNetworkUsageDescription</key><string>连接你电脑上的个人岗位采集服务，刷新真实岗位和来源状态。</string>
+<key>NSAppTransportSecurity</key><dict><key>NSAllowsLocalNetworking</key><true/></dict>
+</dict></plist>

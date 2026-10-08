@@ -1,0 +1,1017 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-06T07:38:52.627Z",
+  "jobs": [
+    {
+      "id": "job_e1a9c5e43840efe4adebd1ca",
+      "sourceID": "zhaopin",
+      "sourceName": "智联招聘",
+      "company": "浙江中控信息产业",
+      "title": "实习-机器人算法(导航/感知/机械臂/VLM)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "未公开(登录查看)",
+      "location": "杭州滨江",
+      "url": "https://www.zhaopin.com/jobdetail/CC121142370J40757909706.htm",
+      "description": "机械臂运动学、机器人感知及仿真落地",
+      "requirements": [
+        "相关专业,C++/Python、Linux、ROS基础;2027届优先"
+      ],
+      "tags": [
+        "操作与机器人系统"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "full_jd",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": 5,
+      "minMonths": 3,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "基础设施自动化企业,公开岗位含机器人算法实习。",
+      "sourceNote": "原招聘页职责1–4和要求1–6可读,有招聘沟通入口;注明登录查看完整内容,未取得完整地址、薪酬、发布日期。只核验公开职责,不保证仍有名额。",
+      "sourceJobID": "CC121142370J40757909706",
+      "sourceMembers": [
+        {
+          "sourceID": "zhaopin",
+          "sourceJobID": "CC121142370J40757909706",
+          "url": "https://www.zhaopin.com/jobdetail/CC121142370J40757909706.htm"
+        }
+      ],
+      "contentHash": "a08a3eab423f43450aa8d8b62ed43317d303f9837728b3d79911e243508f464d"
+    },
+    {
+      "id": "job_ac47297d93f5770b58e59947",
+      "sourceID": "shixiseng",
+      "sourceName": "实习僧",
+      "company": "凤梧",
+      "title": "AI数据项目实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "面议",
+      "location": "余杭区菜鸟智谷产业园2期",
+      "url": "https://www.shixiseng.com/intern/inn_blwhh4gpf8rx?pcm=pc_SearchList",
+      "description": "具身与世界模型的数据质量和项目交付",
+      "requirements": [
+        "相关专业在读,C9偏好,优秀者可放宽"
+      ],
+      "tags": [
+        "相邻方向"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "verified",
+      "verification": "full_jd",
+      "refreshedAt": "2026-09-08T10:14:40.000Z",
+      "deadline": "2026-10-09T15:59:59.000Z",
+      "minDays": 5,
+      "minMonths": 3,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "招聘介绍称杭州团队负责物理交互数据业务。",
+      "sourceNote": "已读取完整岗位页,显示投递入口且未超过截止;只表述网页状态,不承诺雇主仍有名额。",
+      "sourceJobID": "inn_blwhh4gpf8rx",
+      "sourceMembers": [
+        {
+          "sourceID": "shixiseng",
+          "sourceJobID": "inn_blwhh4gpf8rx",
+          "url": "https://www.shixiseng.com/intern/inn_blwhh4gpf8rx?pcm=pc_SearchList"
+        }
+      ],
+      "contentHash": "f7b3965859d0ea7735896a253a5ac02d8125d4f4d42369e253cac8341b72fc59"
+    },
+    {
+      "id": "job_51b7b7a28b05d13119a986ad",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "浙江大学杭州科创中心",
+      "title": "具身智能算法实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "250–300元/天",
+      "location": "杭州萧山宁围",
+      "url": "https://www.zhipin.com/job_detail/17d4ed9e50eb10310nd-0ty9F1VQ.html",
+      "description": "机器人视觉算法及目标位姿方向",
+      "requirements": [],
+      "tags": [
+        "视觉与操作"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/3c57f33beaffef6503R42Nq6Eg~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "17d4ed9e50eb10310nd-0ty9F1VQ",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "17d4ed9e50eb10310nd-0ty9F1VQ",
+          "url": "https://www.zhipin.com/job_detail/17d4ed9e50eb10310nd-0ty9F1VQ.html"
+        }
+      ],
+      "contentHash": "ecf952d54e4a9a89ed684261522f07d6a9846c2a656583bd155547b9312fac71"
+    },
+    {
+      "id": "job_daf444d5e5b0b635fbabc63e",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "北京极佳视界科技",
+      "title": "具身智能算法实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "250–300元/天",
+      "location": "杭州余杭仓前",
+      "url": "https://www.zhipin.com/job_detail/b78d10a4051ea9df0nZy3924EVFT.html",
+      "description": "移动操作平台的多模态算法",
+      "requirements": [],
+      "tags": [
+        "操作与多模态"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/3c57f33beaffef6503R42Nq6Eg~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "b78d10a4051ea9df0nZy3924EVFT",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "b78d10a4051ea9df0nZy3924EVFT",
+          "url": "https://www.zhipin.com/job_detail/b78d10a4051ea9df0nZy3924EVFT.html"
+        }
+      ],
+      "contentHash": "69c51add889878fdf8f34a1d2898fa1252914818e4273475f684d0fc77ea560f"
+    },
+    {
+      "id": "job_7d255614a9596cfb32943d67",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "联汇科技",
+      "title": "具身智能算法工程师(实习生)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "200–250元/天",
+      "location": "杭州滨江长河",
+      "url": "https://www.zhipin.com/job_detail/30a5daede5eeefb70nd-39y4GFtY.html",
+      "description": "VLN/VAM训练和评测方向",
+      "requirements": [],
+      "tags": [
+        "视觉与操作"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/3c57f33beaffef6503R42Nq6Eg~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "30a5daede5eeefb70nd-39y4GFtY",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "30a5daede5eeefb70nd-39y4GFtY",
+          "url": "https://www.zhipin.com/job_detail/30a5daede5eeefb70nd-39y4GFtY.html"
+        }
+      ],
+      "contentHash": "3f60a543fc35d3f21614784f1ba1f25d98a08a71b23470efef85abb722a594f9"
+    },
+    {
+      "id": "job_e9c79f8f1cebd48d1348d522",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "树根互联股份有限公司",
+      "title": "3D空间智能算法实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "300–310元/天",
+      "location": "杭州余杭仓前/广州",
+      "url": "https://www.zhipin.com/job_detail/195c186cdfdc8ef40nF439-4EFNQ.html",
+      "description": "机械拆装模型方向",
+      "requirements": [],
+      "tags": [
+        "仿真与空间智能"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": 5,
+      "minMonths": 6,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/3c57f33beaffef6503R42Nq6Eg~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "195c186cdfdc8ef40nF439-4EFNQ",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "195c186cdfdc8ef40nF439-4EFNQ",
+          "url": "https://www.zhipin.com/job_detail/195c186cdfdc8ef40nF439-4EFNQ.html"
+        }
+      ],
+      "contentHash": "4c1a14c68dd83559383423d0e237759ea22fd348ea0a9c3914592ecc8c9bc7d2"
+    },
+    {
+      "id": "job_7fd8aa290f38334870b59cf5",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "杭州芝诺未来技术",
+      "title": "机器人软件开发实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "150–300元/天",
+      "location": "杭州萧山钱江世纪城",
+      "url": "https://www.zhipin.com/job_detail/fb0315cbb1e42e5803x73Ny6FFRQ.html",
+      "description": "轮式人形软件及通信、仿真模块",
+      "requirements": [],
+      "tags": [
+        "机器人系统"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/7e20d187d07ee3e503N709W0EQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "fb0315cbb1e42e5803x73Ny6FFRQ",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "fb0315cbb1e42e5803x73Ny6FFRQ",
+          "url": "https://www.zhipin.com/job_detail/fb0315cbb1e42e5803x73Ny6FFRQ.html"
+        }
+      ],
+      "contentHash": "7e89d425442d4aa04d292e85495d446133e6ae95905187e199de149086dcad36"
+    },
+    {
+      "id": "job_dd11aec76719d1a83dbad098",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "蓝芯机器人",
+      "title": "机器人开发实习生(J10065)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "180–230元/天",
+      "location": "杭州余杭未来科技城",
+      "url": "https://www.zhipin.com/job_detail/c67135b5132cf5ec03J93ti8FFpR.html",
+      "description": "ROS2机器人软件及算法落地",
+      "requirements": [],
+      "tags": [
+        "机器人系统"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/7e20d187d07ee3e503N709W0EQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "c67135b5132cf5ec03J93ti8FFpR",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "c67135b5132cf5ec03J93ti8FFpR",
+          "url": "https://www.zhipin.com/job_detail/c67135b5132cf5ec03J93ti8FFpR.html"
+        }
+      ],
+      "contentHash": "8493cf24becb6947c4a254287ec948148783e568230474b893de2b095d452d15"
+    },
+    {
+      "id": "job_602881f2a077524d4246e606",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "微分智飞",
+      "title": "机器人系统实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "200–400元/天",
+      "location": "杭州余杭仓前",
+      "url": "https://www.zhipin.com/job_detail/eac9cce0851462e60nZ5396-EFFX.html",
+      "description": "无人机功能部署、调试与测试",
+      "requirements": [],
+      "tags": [
+        "相邻方向"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/7e20d187d07ee3e503N709W0EQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "eac9cce0851462e60nZ5396-EFFX",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "eac9cce0851462e60nZ5396-EFFX",
+          "url": "https://www.zhipin.com/job_detail/eac9cce0851462e60nZ5396-EFFX.html"
+        }
+      ],
+      "contentHash": "7c397826ade3f737a52e07794829260b71ecdda1ea7dbd36e30e90286f5438b1"
+    },
+    {
+      "id": "job_7917fc14eb8136e87cead8a5",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "浙江大学",
+      "title": "具身智能、世界模型科研助理/实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "80–100元/天",
+      "location": "杭州西湖西溪",
+      "url": "https://www.zhipin.com/job_detail/5c0de19fd5a34ba10nBy2dW9FFNU.html",
+      "description": "具身与世界模型科研方向",
+      "requirements": [],
+      "tags": [
+        "操作与多模态"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/7e20d187d07ee3e503N709W0EQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "5c0de19fd5a34ba10nBy2dW9FFNU",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "5c0de19fd5a34ba10nBy2dW9FFNU",
+          "url": "https://www.zhipin.com/job_detail/5c0de19fd5a34ba10nBy2dW9FFNU.html"
+        }
+      ],
+      "contentHash": "4a44292fe1d5d759edd79446d6c3c8bbec33132589ed55f7769ea462ec15d7d4"
+    },
+    {
+      "id": "job_76dd65d577fd51bb94415671",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "智无际",
+      "title": "深度强化学习算法实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "200–250元/天",
+      "location": "杭州余杭仓前",
+      "url": "https://www.zhipin.com/job_detail/b2f429b10d4de231031z2tS1EFtU.html",
+      "description": "人形运控及仿真迁移方向",
+      "requirements": [],
+      "tags": [
+        "运动控制"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/afe84456095e15c903Vz09q9GQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "b2f429b10d4de231031z2tS1EFtU",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "b2f429b10d4de231031z2tS1EFtU",
+          "url": "https://www.zhipin.com/job_detail/b2f429b10d4de231031z2tS1EFtU.html"
+        }
+      ],
+      "contentHash": "8bb1e996019a083039f4c44824f45b76605a05ebc9ca1563412dcb2ff03b8679"
+    },
+    {
+      "id": "job_9372b3d5c6f7e2f5ab0118f2",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "光轮智能",
+      "title": "物理仿真算法实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "300–500元/天",
+      "location": "杭州上城南星",
+      "url": "https://www.zhipin.com/job_detail/140aca6f03a601ba0nd93Nq4EFBT.html",
+      "description": "软体物理解算器与计算优化",
+      "requirements": [],
+      "tags": [
+        "仿真与空间智能"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/afe84456095e15c903Vz09q9GQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "140aca6f03a601ba0nd93Nq4EFBT",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "140aca6f03a601ba0nd93Nq4EFBT",
+          "url": "https://www.zhipin.com/job_detail/140aca6f03a601ba0nd93Nq4EFBT.html"
+        }
+      ],
+      "contentHash": "86bb7817046631876b97c33d21944a10fe80c64332ed220b574b700f8e80aa84"
+    },
+    {
+      "id": "job_b776fe90c94cc4642591adbc",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "上海星越聚易机器人",
+      "title": "运控算法实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "200–250元/天",
+      "location": "杭州余杭仓前",
+      "url": "https://www.zhipin.com/job_detail/8193ac9388d4542b0nB929y_FVNR.html",
+      "description": "机械臂运动学、规划与力控",
+      "requirements": [],
+      "tags": [
+        "运动控制"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/afe84456095e15c903Vz09q9GQ~~/"
+      ],
+      "companyIntro": "",
+      "sourceNote": "官方聚合列表可读;详情访问受限,未核实完整 JD 和当前招聘状态。",
+      "sourceJobID": "8193ac9388d4542b0nB929y_FVNR",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "8193ac9388d4542b0nB929y_FVNR",
+          "url": "https://www.zhipin.com/job_detail/8193ac9388d4542b0nB929y_FVNR.html"
+        }
+      ],
+      "contentHash": "ca1169714ee67fc11823371b06026d6f26cc2004491d79efbe77c96dea7f33b3"
+    },
+    {
+      "id": "job_c5ada96a265a597151a400ad",
+      "sourceID": "shixiseng",
+      "sourceName": "实习僧",
+      "company": "美的集团",
+      "title": "具身智能实习生",
+      "city": "上海",
+      "jobType": "实习",
+      "salary": "150–200元/天",
+      "location": "青浦区美的全球创新园区",
+      "url": "https://www.shixiseng.com/intern/inn_binngf4kj4oa?pcm=pc_SearchList",
+      "description": "机器人操作学习及实验评估",
+      "requirements": [
+        "在读相关专业,Python或C++,了解IL/RL"
+      ],
+      "tags": [
+        "操作与学习"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "verified",
+      "verification": "full_jd",
+      "refreshedAt": "2026-04-01T01:39:25.000Z",
+      "deadline": "2027-01-14T15:59:59.000Z",
+      "minDays": 5,
+      "minMonths": 6,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "招聘页的美的集团操作学习实习。",
+      "sourceNote": "完整页显示投递入口,刷新较早,放其他城市并提醒复核。",
+      "sourceJobID": "inn_binngf4kj4oa",
+      "sourceMembers": [
+        {
+          "sourceID": "shixiseng",
+          "sourceJobID": "inn_binngf4kj4oa",
+          "url": "https://www.shixiseng.com/intern/inn_binngf4kj4oa?pcm=pc_SearchList"
+        }
+      ],
+      "contentHash": "63d7c454bbf099c4f6ad2f9d5a14aa64e1da98b001de34f54e3f157dbbb23fa7"
+    },
+    {
+      "id": "job_9787401a272d55776d069dc7",
+      "sourceID": "shixiseng",
+      "sourceName": "实习僧",
+      "company": "Palatial Technology",
+      "title": "机器人仿真实习生(操作方向)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "300–500元/天(页头)",
+      "location": "西湖区西溪首座",
+      "url": "https://www.shixiseng.com/intern/inn_rp3z5fbft3rh?pcm=pc_SearchList",
+      "description": "操作任务仿真、闭环评测及演示",
+      "requirements": [
+        "操作项目运行证据;MuJoCo等;Python与英语沟通"
+      ],
+      "tags": [
+        "仿真与操作"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "closed",
+      "verification": "full_jd",
+      "refreshedAt": "2026-09-02T09:59:12.000Z",
+      "deadline": "2026-09-20T15:59:59.000Z",
+      "minDays": 4,
+      "minMonths": 3,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "岗位介绍称杭州为仿真与演示团队。",
+      "sourceNote": "全文已读;截止早于核查日,即使有投递按钮仍放历史。页头日薪与正文350–500存在差异,不擅自统一。",
+      "sourceJobID": "inn_rp3z5fbft3rh",
+      "sourceMembers": [
+        {
+          "sourceID": "shixiseng",
+          "sourceJobID": "inn_rp3z5fbft3rh",
+          "url": "https://www.shixiseng.com/intern/inn_rp3z5fbft3rh?pcm=pc_SearchList"
+        }
+      ],
+      "contentHash": "71689552c43aa39c03dc987f787ba480820a305aa0acf017f1139060f9b97a0e"
+    },
+    {
+      "id": "job_2c84a6f6948339117c631b7b",
+      "sourceID": "zju",
+      "sourceName": "浙大官方招聘",
+      "company": "宇泛智能",
+      "title": "机器人仿真(实习/应届)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "实习薪资未单列",
+      "location": "杭州余杭",
+      "url": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7",
+      "description": "物理仿真平台与机器人验证",
+      "requirements": [
+        "熟悉一种仿真工具"
+      ],
+      "tags": [
+        "仿真与操作"
+      ],
+      "publishedAt": "2025-09-16T02:23:13.000Z",
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "historical",
+      "verification": "full_jd",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": 4,
+      "minMonths": 3,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "高校招聘页列杭州机器人与AIoT岗位。",
+      "sourceNote": "2025届招聘活动历史完整JD。校招页面12000以上为混合实习/应届条目,不用作实习薪资。飞书当前页不可读,未核实仍在招。",
+      "sourceJobID": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7|宇泛智能|机器人仿真实习/应届|杭州|intern",
+      "sourceMembers": [
+        {
+          "sourceID": "zju",
+          "sourceJobID": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7|宇泛智能|机器人仿真实习/应届|杭州|intern",
+          "url": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7"
+        }
+      ],
+      "contentHash": "fac1d09e8455723684f6a9acfb0ecae56b7ff9a109dc3598bf83b1821817106b"
+    },
+    {
+      "id": "job_b86796de591d65ccfea15a32",
+      "sourceID": "zju",
+      "sourceName": "浙大官方招聘",
+      "company": "宇泛智能",
+      "title": "嵌入式工程师(实习/应届)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "实习薪资未单列",
+      "location": "杭州余杭",
+      "url": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7",
+      "description": "产品模块开发与调试",
+      "requirements": [
+        "C/C++及软硬件联调"
+      ],
+      "tags": [
+        "机器人系统"
+      ],
+      "publishedAt": "2025-09-16T02:23:13.000Z",
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "historical",
+      "verification": "full_jd",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "高校招聘页列杭州机器人与AIoT岗位。",
+      "sourceNote": "2025届招聘活动历史完整JD。校招页面12000以上为混合实习/应届条目,不用作实习薪资。飞书当前页不可读,未核实仍在招。",
+      "sourceJobID": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7|宇泛智能|嵌入式工程师实习/应届|杭州|intern",
+      "sourceMembers": [
+        {
+          "sourceID": "zju",
+          "sourceJobID": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7|宇泛智能|嵌入式工程师实习/应届|杭州|intern",
+          "url": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7"
+        }
+      ],
+      "contentHash": "f5343a64b342c0a06110c8ca7494e3125199a6f56b932f78e4589da5e47ffedf"
+    },
+    {
+      "id": "job_68936a581df4ca6a68692d15",
+      "sourceID": "zju",
+      "sourceName": "浙大官方招聘",
+      "company": "宇泛智能",
+      "title": "具身智能算法VLA/VLN(应届/实习)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "实习薪资未单列",
+      "location": "杭州拱墅",
+      "url": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7",
+      "description": "视觉语言导航及真机验证",
+      "requirements": [
+        "有VLN/VLA经验"
+      ],
+      "tags": [
+        "操作与多模态"
+      ],
+      "publishedAt": "2025-09-16T02:23:13.000Z",
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "historical",
+      "verification": "full_jd",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": 4,
+      "minMonths": 3,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "高校招聘页列杭州机器人与AIoT岗位。",
+      "sourceNote": "2025届招聘活动历史完整JD。校招页面12000以上为混合实习/应届条目,不用作实习薪资。飞书当前页不可读,未核实仍在招。",
+      "sourceJobID": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7|宇泛智能|具身智能算法vla/vln应届/实习|杭州|intern",
+      "sourceMembers": [
+        {
+          "sourceID": "zju",
+          "sourceJobID": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7|宇泛智能|具身智能算法vla/vln应届/实习|杭州|intern",
+          "url": "https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=JG1453240&zphbh=3CEB6297E6B43775E0653A68DD0E9B18&zphsqbh=c6ef3c6ecfed649cd5044f9053e54df7"
+        }
+      ],
+      "contentHash": "21a5c7a7753510e87b6e143b0ce5db66ade155605d749ec752aaec6c10644a23"
+    },
+    {
+      "id": "job_0794dcab85c8f577f1fcef19",
+      "sourceID": "shixiseng",
+      "sourceName": "实习僧",
+      "company": "杭州呈起",
+      "title": "具身智能研发助理",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "面议",
+      "location": "萧山区西电杭研院",
+      "url": "https://www.shixiseng.com/intern/inn_dc6r7bna7sld?pcm=pc_SearchList",
+      "description": "测试、实验资料和技术辅助",
+      "requirements": [
+        "稳定实习,ROS或Python加分"
+      ],
+      "tags": [
+        "相邻方向"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "closed",
+      "verification": "full_jd",
+      "refreshedAt": "2026-09-04T13:19:30.000Z",
+      "deadline": "2026-09-09T15:59:59.000Z",
+      "minDays": 4,
+      "minMonths": 3,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "",
+      "sourceNote": "完整页明确当前职位已下线。",
+      "sourceJobID": "inn_dc6r7bna7sld",
+      "sourceMembers": [
+        {
+          "sourceID": "shixiseng",
+          "sourceJobID": "inn_dc6r7bna7sld",
+          "url": "https://www.shixiseng.com/intern/inn_dc6r7bna7sld?pcm=pc_SearchList"
+        }
+      ],
+      "contentHash": "2b1bb24222f756924ec5801653c76781565f39ca4bccc306a9cb197777a3ba44"
+    },
+    {
+      "id": "job_1492194cc432073024680781",
+      "sourceID": "shixiseng",
+      "sourceName": "实习僧",
+      "company": "探微智造(西电杭研院)",
+      "title": "实习生(电子/机械/算法方向)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "面议",
+      "location": "杭州萧山江南电子谷",
+      "url": "https://www.shixiseng.com/intern/inn_ne1udluun9ob",
+      "description": "精密设备联调、平台标定与测试数据",
+      "requirements": [
+        "工程相关专业,C++或Python等工具、动手能力"
+      ],
+      "tags": [
+        "相邻方向"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "verified",
+      "verification": "full_jd",
+      "refreshedAt": "2026-10-05T00:58:35.000Z",
+      "deadline": "2026-10-30T15:59:59.000Z",
+      "minDays": 5,
+      "minMonths": 6,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "曲面精密制造设备方向,非具身操作模型公司。",
+      "sourceNote": "已打开完整原文,显示投递入口且截止未过。",
+      "sourceJobID": "inn_ne1udluun9ob",
+      "sourceMembers": [
+        {
+          "sourceID": "shixiseng",
+          "sourceJobID": "inn_ne1udluun9ob",
+          "url": "https://www.shixiseng.com/intern/inn_ne1udluun9ob"
+        }
+      ],
+      "contentHash": "0eaf60891c48435c33e0ed51e1ce30c7a2043c18bcc44403cb87e07a51244ffa"
+    },
+    {
+      "id": "job_95e304ad759054c1561fa4d0",
+      "sourceID": "zhaopin",
+      "sourceName": "智联招聘",
+      "company": "灵步(杭州)智能",
+      "title": "机器人控制软件实习生(可转正)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "未公开(登录查看)",
+      "location": "杭州滨江长河",
+      "url": "https://www.zhaopin.com/jobdetail/CCL1502427760J40875358811.htm",
+      "description": "底层SDK、通信联调与测试",
+      "requirements": [
+        "2027届,Linux/C++,ROS2"
+      ],
+      "tags": [
+        "机器人系统"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "full_jd",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": 6,
+      "graduateYears": [
+        2027
+      ],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "公开招聘页为杭州机器人控制软件实习。",
+      "sourceNote": "公开职责和要求可读,显示立即投递;不自动认为放宽毕业届次,条件不符默认隐藏,扩展查阅时说明。",
+      "sourceJobID": "CCL1502427760J40875358811",
+      "sourceMembers": [
+        {
+          "sourceID": "zhaopin",
+          "sourceJobID": "CCL1502427760J40875358811",
+          "url": "https://www.zhaopin.com/jobdetail/CCL1502427760J40875358811.htm"
+        }
+      ],
+      "contentHash": "778d90f38fab64a5c07c24b79e0a2e80646cc36c79bc362e20e551049a252893"
+    },
+    {
+      "id": "job_47305f9d2ddc7f9bc6579261",
+      "sourceID": "nowcoder",
+      "sourceName": "牛客招聘",
+      "company": "树根互联",
+      "title": "机器人强化学习实习生(世界模型方向)",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "300–500元/天",
+      "location": "杭州余杭未来科技城(三一耘实验室)",
+      "url": "https://www.nowcoder.com/jobs/detail/420483",
+      "description": "机械臂强化学习、世界模型训练与真机闭环验证",
+      "requirements": [
+        "相关专业在读、PyTorch;需有强化学习实现训练及真机实验经验"
+      ],
+      "tags": [
+        "操作与机器人学习"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "verified",
+      "verification": "full_jd",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": 4,
+      "minMonths": 6,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "公开岗位描述为工业机械臂与世界模型研发团队。",
+      "sourceNote": "牛客原岗位页职责与要求已读,有立即申请入口;未公开发布/刷新日,不用爬取时间代替。未确认仍有名额,与树根3D空间智能为不同方向。",
+      "sourceJobID": "420483",
+      "sourceMembers": [
+        {
+          "sourceID": "nowcoder",
+          "sourceJobID": "420483",
+          "url": "https://www.nowcoder.com/jobs/detail/420483"
+        }
+      ],
+      "contentHash": "6e181eb66abc2c3ecb000cd63219bc67fb655f90b112fd5eae9c943963c47939"
+    },
+    {
+      "id": "job_80403cb2e5c675345231bc42",
+      "sourceID": "boss",
+      "sourceName": "BOSS 直聘",
+      "company": "浙江有鹿机器人科技",
+      "title": "具身智能VLA实习/研究性实习生",
+      "city": "杭州",
+      "jobType": "实习",
+      "salary": "200–350元/天",
+      "location": "杭州(详细办公地未核实)",
+      "url": "https://www.zhipin.com/job_detail/78e007bedf8a66370nV72Nu8ElFZ.html",
+      "description": "VLA研究及多模态模型真机应用(列表节选)",
+      "requirements": [],
+      "tags": [
+        "操作与多模态"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-05T16:00:00.000Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.zhipin.com/zhaopin/1f616ed651e2faf71nxy0t25EA~~/"
+      ],
+      "companyIntro": "BOSS公开列表显示杭州有鹿机器人团队。",
+      "sourceNote": "官方列表可读并给出真实详情链接,详情转到安全验证;没有完整JD、发布日期或当前开放证明。仅作为待补全线索,不冒充已核验在招。",
+      "sourceJobID": "78e007bedf8a66370nV72Nu8ElFZ",
+      "sourceMembers": [
+        {
+          "sourceID": "boss",
+          "sourceJobID": "78e007bedf8a66370nV72Nu8ElFZ",
+          "url": "https://www.zhipin.com/job_detail/78e007bedf8a66370nV72Nu8ElFZ.html"
+        }
+      ],
+      "contentHash": "2cb2c0ad0335d81256bb28fdbc461fc1a59d2ecd7b19c59dbce68de800d1aac1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "zhaopin",
+      "name": "智联招聘",
+      "state": "not_configured",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 2,
+      "message": "当前为公开来源研究缓存；尚未由采集服务刷新。"
+    },
+    {
+      "id": "shixiseng",
+      "name": "实习僧",
+      "state": "not_configured",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 5,
+      "message": "公开页面已人工核查；商户 API 凭据与自动采集尚未配置。"
+    },
+    {
+      "id": "boss",
+      "name": "BOSS 直聘",
+      "state": "login_required",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 12,
+      "message": "已保留公开列表线索；电脑登录采集尚未运行，详情需核查。"
+    },
+    {
+      "id": "zju",
+      "name": "高校官方招聘",
+      "state": "not_configured",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 3,
+      "message": "当前为公开来源研究缓存；尚未由采集服务刷新。"
+    },
+    {
+      "id": "nowcoder",
+      "name": "牛客招聘",
+      "state": "not_configured",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 1,
+      "message": "当前为公开来源研究缓存；尚未由采集服务刷新。"
+    },
+    {
+      "id": "unitree",
+      "name": "宇树官方招聘",
+      "state": "not_configured",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 0,
+      "message": "当前为公开来源研究缓存；尚未由采集服务刷新。"
+    },
+    {
+      "id": "tavily",
+      "name": "多源搜索",
+      "state": "not_configured",
+      "lastAttemptAt": null,
+      "lastSuccessAt": null,
+      "count": 0,
+      "message": "搜索 API Key 尚未配置。"
+    }
+  ],
+  "articles": []
+}

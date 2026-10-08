@@ -1,0 +1,55 @@
+name: Build iPhone app
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: daylight-ios-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Career collection and scheduler regression tests
+        run: |
+          mkdir -p build
+          node --test tests/career-*.test.cjs 2>&1 | tee build/career-tests.log
+      - name: Core checks, simulator and device builds
+        run: bash scripts/build-ios.sh
+      - name: Native UI interaction and persistence tests
+        timeout-minutes: 35
+        run: bash scripts/ui-test-ios.sh
+      - name: Capture native screens
+        run: bash scripts/capture-ios.sh
+      - name: Upload verified installation package
+        uses: actions/upload-artifact@v7
+        with:
+          name: Daylight-0.3.8-unsigned
+          path: |
+            build/Daylight-0.3.8-unsigned.ipa
+            build/SHA256.txt
+            docs/ios-install.md
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload verification logs and screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: native-verification
+          path: |
+            build/*.log
+            build/screenshots/*.png
+            build/ui-test-*.json
+            build/ui-test-summary.md
+            build/ui-test-attachments/**/*.png
+            build/ui-test-attachments/**/*.jpg
+            build/ui-test-attachments/**/*.jpeg
+            build/ui-test-attachments/**/*.txt
+            build/ui-test-attachments/**/*.json
+            build/Daylight-UI-Tests.xcresult.zip
+          if-no-files-found: warn
+          retention-days: 7

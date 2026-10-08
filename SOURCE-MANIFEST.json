@@ -1,0 +1,362 @@
+{
+  "version": "0.3.8",
+  "built": false,
+  "files": [
+    {
+      "file": "ios/Daylight/AppleServices.swift",
+      "sha256": "87d66d4738e20e7cef2fdeb15d02faf3cdc2cea36ae1326daa69c409b10eb5b2"
+    },
+    {
+      "file": "ios/Daylight/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "sha256": "07d7f9d256badbbfdaaddadfae86e1bf93a85d695f472474228f51c674951c15"
+    },
+    {
+      "file": "ios/Daylight/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "sha256": "9239900ca4c37dc860feb154216409f05d906e26f2d79550e1e8e8b8db6324c7"
+    },
+    {
+      "file": "ios/Daylight/Assets.xcassets/Contents.json",
+      "sha256": "a3393322cd7b4c1e0aa93bebe09abaa91ad891290d1225b0b5d10b5c6f216025"
+    },
+    {
+      "file": "ios/Daylight/AssistantStore.swift",
+      "sha256": "850d8ddf7d2346efc0f971d433774dafe4dfd10d5de536b9103d609dbdf89bec"
+    },
+    {
+      "file": "ios/Daylight/BankIntents.swift",
+      "sha256": "1a1103140466cf31864050559089362f9d1248120bbf892f9b335a445a9d6ff8"
+    },
+    {
+      "file": "ios/Daylight/BankNotification.swift",
+      "sha256": "7b3d95a9257ace25efd476662afb1cf30bfbf8264b6be4094a567e6e60724241"
+    },
+    {
+      "file": "ios/Daylight/BankSMS.swift",
+      "sha256": "54bd34e52f7ee9779248502a65bd9c67a8a7806c6be1325f834c31d8fe6c5ea5"
+    },
+    {
+      "file": "ios/Daylight/BankScreenshotCore.swift",
+      "sha256": "4a96335a0c389383992b6e55e7ed9700dea3bb665b3941edbb4fd6f328c209b6"
+    },
+    {
+      "file": "ios/Daylight/BankScreenshotImportSheet.swift",
+      "sha256": "4e9980a00bbfb24e80ed7108f7304e6f2a4626c0ed592e847979dd1ca663606c"
+    },
+    {
+      "file": "ios/Daylight/BankScreenshotOCR.swift",
+      "sha256": "04bdb608b96a6ea7b7a5dc9970389fcc398ad79b50ecf57925efd1f0171dd966"
+    },
+    {
+      "file": "ios/Daylight/CareerCompanies.swift",
+      "sha256": "1fd39d7d062a77fece0518cdc7742939793e00fc373eca01e365a60076740bc3"
+    },
+    {
+      "file": "ios/Daylight/CareerFeed.swift",
+      "sha256": "4f385286b70d6bebd2a1c71d04b861868a3c1b723ec2a24f19e83751faae087b"
+    },
+    {
+      "file": "ios/Daylight/CareerModelMatching.swift",
+      "sha256": "2732e542c9eadc2a65966aec153dfff8a9001c10a967ff1dbeffe1328963c27a"
+    },
+    {
+      "file": "ios/Daylight/CareerModule.swift",
+      "sha256": "14193c473de6c8774632246647d18e9454adc4ebb2a031896e00d8f76623278f"
+    },
+    {
+      "file": "ios/Daylight/CareerNetworking.swift",
+      "sha256": "406504ede7c91df28c01f8d6865bd19ed3ee5f44dd70260fb0d69dd7ea0f014f"
+    },
+    {
+      "file": "ios/Daylight/CareerSeed.json",
+      "sha256": "407a5dc7e9d20a3144fb64c531308188c8697322c88ab6024250985b58b10a61"
+    },
+    {
+      "file": "ios/Daylight/CareerStore.swift",
+      "sha256": "ef6bb65365567d363618aba3c112492c2eb5529fd06cb522c6d1cf6caf6059ef"
+    },
+    {
+      "file": "ios/Daylight/ContentView.swift",
+      "sha256": "8fe4abd2edd0edd5360bdaa85248eb4c9bc0dc250d2b2f3cc52cd5dfecb23b29"
+    },
+    {
+      "file": "ios/Daylight/Daylight.entitlements",
+      "sha256": "712b35d104b24b1c2468d13a08f5e5e2eb5c78855613b660777138a5f1554b6b"
+    },
+    {
+      "file": "ios/Daylight/DaylightApp.swift",
+      "sha256": "28ff7cd7a461af532e25fee5f75aafe10335f6dd9766569eb7c5e8cd3fae652f"
+    },
+    {
+      "file": "ios/Daylight/EntrySheet.swift",
+      "sha256": "a32ac6b60536aefc97b547aae49d765da7bd9271f975b150b089b827b52d6a0d"
+    },
+    {
+      "file": "ios/Daylight/FinanceModule.swift",
+      "sha256": "cd1999d6ef61b87021f95911a375821882229d9c3cc1cdc241890647081fd91c"
+    },
+    {
+      "file": "ios/Daylight/HealthModule.swift",
+      "sha256": "62404c116568306ef1e5b953c2f3d3e3d8b26574ee14c3d5f7682726c8e406df"
+    },
+    {
+      "file": "ios/Daylight/Info.plist",
+      "sha256": "2b38db6596883e47e857bba4ead495397a007d5e7d0014fc9256eab9bf268eac"
+    },
+    {
+      "file": "ios/Daylight/Models.swift",
+      "sha256": "b3b90062ab194c18ff4d73e88a4921c9525a49bffdfb6464b641c09c628fede5"
+    },
+    {
+      "file": "ios/Daylight/PlanModule.swift",
+      "sha256": "a23b03589899766c4ef854ac6ef243fb7029d2f0fef6c333160ae8cd50b960a2"
+    },
+    {
+      "file": "ios/Daylight/PlannerCore.swift",
+      "sha256": "6c7d098e50c7f2628e3b0cf1780745cedba48fa0c75c79a3e5c59ca04ecf33a5"
+    },
+    {
+      "file": "ios/Daylight/PlannerCredentials.swift",
+      "sha256": "7132c3274830d6d3f235fdb35a400ac29b379dbad243cee96c6bd929624c8759"
+    },
+    {
+      "file": "ios/Daylight/PlannerModule.swift",
+      "sha256": "3209c6dd680ce1d54e2ea16be8ad48357faf263f5bfcee7dc605568615887572"
+    },
+    {
+      "file": "ios/Daylight/PlannerNetworking.swift",
+      "sha256": "28e097bc917b815134d586b1c26cbaa634d38c9e444f9e0968675bf8664b6932"
+    },
+    {
+      "file": "ios/Daylight/PlannerSettingsView.swift",
+      "sha256": "53ac2bc4ae99e172e13e56bd3e77bf4d840569eb50fb0a939dc51dc8cc9f43b6"
+    },
+    {
+      "file": "ios/Daylight/PrivacyInfo.xcprivacy",
+      "sha256": "edf1a81e6e6035129a902e49ce6560d0359beed0642678fcef73bd17001c235a"
+    },
+    {
+      "file": "ios/Daylight/RecordRepository.swift",
+      "sha256": "1f2732adb577b09b794d208d7c953f7cc7705fbc276a840d6ccb456e60c3318a"
+    },
+    {
+      "file": "ios/Daylight/SMSInboxPolicy.swift",
+      "sha256": "53d61a78b1b2447149391d62bcc28ab3a77579b1c79c74429222686c42f1e217"
+    },
+    {
+      "file": "ios/Daylight/SMSReceptionDiagnostics.swift",
+      "sha256": "4b5cd094d07cef077d6a58fe6c096e283c265e547c1a8d125f5587aa4fcf6fa5"
+    },
+    {
+      "file": "ios/Daylight/SMSReceptionDiagnosticsView.swift",
+      "sha256": "1b5d2716b29a5c00c2db8e863fc42168c3c077c5ad868bf47b873aaa608a71b7"
+    },
+    {
+      "file": "ios/Daylight/ScheduleAssistantSheet.swift",
+      "sha256": "901caad17b7eddcab5fbeab266fefd7f25558c77fc142718d14c3839e67ea8be"
+    },
+    {
+      "file": "ios/Daylight/ScheduleCore.swift",
+      "sha256": "6c16254ea80c3385b214dfd5ff1d4d4ba51893cada45bd51a6b24ccfb5c0d3b3"
+    },
+    {
+      "file": "ios/Daylight/SettingsModule.swift",
+      "sha256": "f6d1eea3efdb661e291dc44bf2c702e932ce2028dcd6509a788eceef1569126e"
+    },
+    {
+      "file": "ios/Daylight/SummaryNotifications.swift",
+      "sha256": "65ee33d2ebf15ed3b619747dc599317d9d50139cb0908f8e8bed069160ee43ba"
+    },
+    {
+      "file": "ios/Daylight/UIComponents.swift",
+      "sha256": "45d319f1707b699b8878499364cf4159ffed9fa228b11eaca46e022355f85a5c"
+    },
+    {
+      "file": "ios/Daylight/UITestSupport.swift",
+      "sha256": "7a56e57828b5b22756e3f9f07547efd121a0348f929bfc19144d7c0fc0ff7cb9"
+    },
+    {
+      "file": "ios/Daylight.xcodeproj/project.pbxproj",
+      "sha256": "8058623e92aab0c01282ca6777263b8d6557d17aa07cbf3b5169318e25c82a00"
+    },
+    {
+      "file": "ios/Daylight.xcodeproj/xcshareddata/xcschemes/Daylight.xcscheme",
+      "sha256": "1635b956463344a3124ca58292df3824252c32ca8b4a92685400706f9d3d8319"
+    },
+    {
+      "file": "ios/DaylightUITests/DaylightUITests.swift",
+      "sha256": "32d68bcffae3c51967e496f8863cedc0e875a9a9122d540b4bdbd3c4f62c654d"
+    },
+    {
+      "file": "tests/native/BankBalanceOrderTests.swift",
+      "sha256": "0143ee74480c45f4211ee6c12ac2fabdd613c60d3eb8beb9935f5c37803b72f3"
+    },
+    {
+      "file": "tests/native/BankNotificationTests.swift",
+      "sha256": "8b77efaead220c1dab8de43cf88bb6176f65d25d94de9cde0d4967d81a07f33f"
+    },
+    {
+      "file": "tests/native/BankScreenshotOCRTests.swift",
+      "sha256": "73a6563318fedc1c281a0c3474ed3a7cacc3c79774815086a1da6027c7cb5179"
+    },
+    {
+      "file": "tests/native/BankScreenshotTests.swift",
+      "sha256": "31b4b94e9e1c1565d8234ac5f81c65df765d89776ade4d7aafc620b77bd42a06"
+    },
+    {
+      "file": "tests/native/CareerModelTests.swift",
+      "sha256": "8f888eb36cda40fbe62626d344c7b4081b2dec8ea5fe5ad7891bbc2e13c2a29d"
+    },
+    {
+      "file": "tests/native/CareerTests.swift",
+      "sha256": "ceb7ce4a9a87a46b01b227a1a433304354f21788031c52aa4d43c1f2f0f6b1e5"
+    },
+    {
+      "file": "tests/native/CoreTests.swift",
+      "sha256": "3dea2de9ab84e9af43ecd303c55c4306d95a688c852fa5d174979fce5c7e27aa"
+    },
+    {
+      "file": "tests/native/PlannerIntegrationTests.swift",
+      "sha256": "ba4473d5a0ee3f38605a7a82e95ce168e8c0021e2234847d10752907ec55bdf1"
+    },
+    {
+      "file": "tests/native/PlannerNetworkTests.swift",
+      "sha256": "fa6f07facec6c7419d9d185784e88c1a7da6e058407b08565b11ddbd2699e255"
+    },
+    {
+      "file": "tests/native/PlannerTests.swift",
+      "sha256": "32963a8ba1df99f23399bd7e5c55a3f570a043f8d43ae649ebc03797c907cc4a"
+    },
+    {
+      "file": "tests/native/SMSDiagnosticsTests.swift",
+      "sha256": "0f6f8bd70e5b93a2bad5921c8a0c8dd7829e6f5278ad805739de882db3594e10"
+    },
+    {
+      "file": "tests/native/ScheduleTests.swift",
+      "sha256": "f13e6727bbf8ad8b7c4ca681199b2a10d6ef4935684d4df7acabf9e33447f6ed"
+    },
+    {
+      "file": ".github/workflows/ios-build.yml",
+      "sha256": "a4c390b38956201ff0cf750ac600b87c58ee1380553bf2349cbbbf16c7865d62"
+    },
+    {
+      "file": "scripts/career-adapters.cjs",
+      "sha256": "0dd8c5f27cfb9f747130ff11d1cfa117b13b4f6ad54273e17d3d29e2d366deef"
+    },
+    {
+      "file": "scripts/career-browser-collector.mjs",
+      "sha256": "36f4db06a1e88ea47692bb200f527d4a0ac83a2a90f2616b9423bbed41b88657"
+    },
+    {
+      "file": "scripts/career-browser-records.cjs",
+      "sha256": "8cb15f90d3da5d293f242d9f6334f47e95ea8eef2ac54b6ddcfe7e7c437dd3e0"
+    },
+    {
+      "file": "scripts/career-browser-runner.cjs",
+      "sha256": "7a580a79f7af0ef1b4abb1ce2b3d56247434716691cff892c652640639b9ac81"
+    },
+    {
+      "file": "scripts/career-constraints.cjs",
+      "sha256": "f1868942b2845b945a8a94f2ad133e27cde01d3e633ecd1427524a0ba0870f3a"
+    },
+    {
+      "file": "scripts/career-core.cjs",
+      "sha256": "4e2c6737282065e36ef6d1ecc0affac0fdc221ab1b097da00d9ea367edf2b776"
+    },
+    {
+      "file": "scripts/career-detail-queue.cjs",
+      "sha256": "61caa267499e1051034ab7c5a922ba4083f6f30ca3990a71498667c581a99a87"
+    },
+    {
+      "file": "scripts/career-live-check.cjs",
+      "sha256": "405b623592f1eb337dec542209e2777c69cef0fc4ac42b06ca52288f31e58422"
+    },
+    {
+      "file": "scripts/career-scheduler.cjs",
+      "sha256": "99a40c8328202289fde138fd8dde46fbf897b9d5a5eda6ec2067080ac484c7c3"
+    },
+    {
+      "file": "scripts/career-server.cjs",
+      "sha256": "16b828b0b0e96a2edfea2511e619827fab4054f5a2e306c5c6774c437c6c7275"
+    },
+    {
+      "file": "tests/career-constraints.test.cjs",
+      "sha256": "3576ec83e49d06a343eaa85460ff9a49966217cf08401e9ae97aeae1c381dbbc"
+    },
+    {
+      "file": "tests/career-detail-queue.test.cjs",
+      "sha256": "94f30ffdc278714c444ac72cc89f094a078e20d61b576c1f2c57edeb1e08332c"
+    },
+    {
+      "file": "tests/career-scheduler.test.cjs",
+      "sha256": "17c955863f04db91e70351d6421130794ae7550b0fa5e3e858407e9c395045a2"
+    },
+    {
+      "file": "tests/career-service.test.cjs",
+      "sha256": "0bfab5f8683ba898c8e8cc5bf59bb22c3e3d2de5a87cb8f637da21b68f72a507"
+    },
+    {
+      "file": "package.json",
+      "sha256": "bba8705fdcee40f28ccd357cec6544cb7209d0477ef04b12cf746898c5bedf27"
+    },
+    {
+      "file": "docs/career-service.md",
+      "sha256": "8edd942776eff7682a3ecf595ef2abc8034ec687817c481e4656ee1f1a795cc9"
+    },
+    {
+      "file": "scripts/start-career.cmd",
+      "sha256": "613ed2e1dc86f52ede7aaa98f8ec7e4c1067186816873273a1d3a05854c4e9d9"
+    },
+    {
+      "file": "scripts/generate-assets.cjs",
+      "sha256": "f29b276387bd2bcc5cdfbb9755208d64078bed399bb15f391a0904d6c8ea5a12"
+    },
+    {
+      "file": "scripts/generate-xcode.cjs",
+      "sha256": "89666b8cb24ce74b253635f929eb23d9dea65a29ea767a6067f56c47e0d0f99a"
+    },
+    {
+      "file": "scripts/prepare-ios.cjs",
+      "sha256": "aa798bd8b5bbb63e5666d8e0d7442f7883dba68236d8c7a81ca27d097d084a2c"
+    },
+    {
+      "file": "scripts/build-ios.sh",
+      "sha256": "c6c91b2d319dd453d0ae1f1108bc8388cd0a6c7120829ffa17884eaaa954b4ad"
+    },
+    {
+      "file": "scripts/capture-ios.sh",
+      "sha256": "1d430c0c189e48937f5f3b29aa978a318c8288f3c9b470663551bab2d9736aed"
+    },
+    {
+      "file": "scripts/ui-test-ios.sh",
+      "sha256": "ae75f76a316de43c0c9d518c96cebb68b253373dde0ba3d76d2fe86aec483977"
+    },
+    {
+      "file": "docs/planner.md",
+      "sha256": "a42bc46b18752f30378aea7de106f731c47d6b5c35c735e318f35b95ea52d237"
+    },
+    {
+      "file": "docs/bank-import.md",
+      "sha256": "033eec48f2c3c5519493be900eba0b3359bc53646c96dab78e47f28ae41b5042"
+    },
+    {
+      "file": "docs/career-module.md",
+      "sha256": "af7ab9978423a312b600f9c3c1af210cb9fc9f6a1f8eb4095d064d6d9ca2312c"
+    },
+    {
+      "file": ".gitignore",
+      "sha256": "46f03a299c723a7fa080e76a9a2d85728ec9c5a3d3112a69dea9ca34ab169832"
+    },
+    {
+      "file": "README.md",
+      "sha256": "ead6e2b873b43f28039d740c2191a8401d72990c777288d7dfc45c5806763f23"
+    },
+    {
+      "file": "docs/ios-install.md",
+      "sha256": "db1f7f599025de38cc473f5c6b82c602989e95c9649b05dff63238d58275a6e0"
+    },
+    {
+      "file": "docs/automated-testing.md",
+      "sha256": "3b8308a115be42cdcd284e95d41aab15ab2d92015a1c83393a109743ae89a5b6"
+    }
+  ]
+}

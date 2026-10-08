@@ -1,0 +1,18 @@
+{
+  "name": "daylight-personal-assistant",
+  "version": "0.3.8",
+  "private": true,
+  "description": "日常 · iPhone 原生应用与本地交互原型",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "bank": "node scripts/bank-server.cjs",
+    "bank:lan": "node scripts/bank-server.cjs --lan",
+    "ios:prepare": "node scripts/prepare-ios.cjs",
+    "ios:package": "node scripts/package-ios.cjs",
+    "career": "node scripts/career-server.cjs",
+    "career:lan": "node scripts/career-server.cjs --lan",
+    "career:login:boss": "node scripts/career-browser-collector.mjs --source boss --login",
+    "career:test": "node --test tests/career-*.test.cjs"
+  }
+}
