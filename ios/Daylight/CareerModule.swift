@@ -194,6 +194,7 @@ struct CareerModule: View {
                 }
             }
         }.buttonStyle(.plain).accessibilityIdentifier("career-job-\(item.id)")
+            .accessibilityValue(store.followUp(for: item.job).saved ? "已收藏" : "未收藏")
     }
 
     private var otherJobRecords: some View {

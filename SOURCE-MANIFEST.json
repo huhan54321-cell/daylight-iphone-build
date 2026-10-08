@@ -60,7 +60,7 @@
     },
     {
       "file": "ios/Daylight/CareerModule.swift",
-      "sha256": "14193c473de6c8774632246647d18e9454adc4ebb2a031896e00d8f76623278f"
+      "sha256": "a8149292de17e6781186234e50af3fb04c5e950eaefb738e347dcc5ca1b52733"
     },
     {
       "file": "ios/Daylight/CareerNetworking.swift",
@@ -184,7 +184,7 @@
     },
     {
       "file": "ios/DaylightUITests/DaylightUITests.swift",
-      "sha256": "32d68bcffae3c51967e496f8863cedc0e875a9a9122d540b4bdbd3c4f62c654d"
+      "sha256": "503e1ad61785c347f132de7f07b78dc5488779f6bd6f05ee7faa090189b80e65"
     },
     {
       "file": "tests/native/BankBalanceOrderTests.swift",
@@ -236,7 +236,7 @@
     },
     {
       "file": ".github/workflows/ios-build.yml",
-      "sha256": "5cb238d4c83d862cab9cc670cbeaa1feaa92f587ad07feb19dcf132857aad619"
+      "sha256": "6800422b2029cedd9577035596b5fca2afc560d2c6063cf24fdc2cf4c96fa763"
     },
     {
       "file": "scripts/career-adapters.cjs",
@@ -328,7 +328,7 @@
     },
     {
       "file": "scripts/ui-test-ios.sh",
-      "sha256": "ae75f76a316de43c0c9d518c96cebb68b253373dde0ba3d76d2fe86aec483977"
+      "sha256": "e4ced1afcd5ed5f8eef2ca5ce7775423440dbb06d7baeb98f0afc1329ba7a197"
     },
     {
       "file": "docs/planner.md",

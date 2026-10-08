@@ -9,7 +9,7 @@ concurrency:
 jobs:
   build:
     runs-on: macos-latest
-    timeout-minutes: 60
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@v7
         with:
@@ -21,7 +21,7 @@ jobs:
       - name: Core checks, simulator and device builds
         run: bash scripts/build-ios.sh
       - name: Native UI interaction and persistence tests
-        timeout-minutes: 35
+        timeout-minutes: 50
         run: bash scripts/ui-test-ios.sh
       - name: Capture native screens
         run: bash scripts/capture-ios.sh

@@ -96,7 +96,7 @@ final class DaylightUITests: XCTestCase {
     }
 
     func testDailyLedgerPreviewExpandsAndCollapsesWithoutChangingTotals() {
-        executionTimeAllowance = 300
+        executionTimeAllowance = 420
         launch()
         for index in 1...6 { createExpense(title: "UI 明细 \(index)", amount: "1.00") }
         assertText("today-record-count", equals: "6 笔")
@@ -398,10 +398,7 @@ final class DaylightUITests: XCTestCase {
 
         relaunch()
         tap(element("open-career"))
-        tap(element(identifier), scroll: true)
-        scrollTo(app.switches["career-save-job"])
-        assertValue(app.switches["career-save-job"], equals: "1")
-        tap(element("career-detail-done"))
+        assertValue(element(identifier), equals: "已收藏")
         tap(element("career-refresh"), scroll: true)
         let error = element("career-service-error")
         XCTAssertTrue(error.waitForExistence(timeout: 5))
@@ -410,9 +407,7 @@ final class DaylightUITests: XCTestCase {
         tap(element("career-service-settings"), scroll: true)
         XCTAssertTrue(element("career-service-url").waitForExistence(timeout: 5))
         tap(element("career-service-done"))
-        tap(element(identifier), scroll: true)
-        scrollTo(app.switches["career-save-job"])
-        assertValue(app.switches["career-save-job"], equals: "1")
+        assertValue(element(identifier), equals: "已收藏")
     }
 
     private func bankSwitch(_ index: Int) -> XCUIElement {

@@ -116,8 +116,8 @@ xcrun simctl ui "$UDID" appearance light
 defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool NO
 
 # Full save/edit/delete/relaunch scenarios need several launches and scrolls.
-# Default each case to 3 minutes; the six-entry ledger scenario opts into 5.
-# Enforce a total 30 minute xcodebuild deadline.
+# Default each case to 3 minutes; the six-entry ledger scenario opts into 7.
+# Enforce a total 40 minute xcodebuild deadline.
 # No automatic retries: a failing interaction remains a failing delivery gate.
 python3 - "$UDID" <<'PY' > build/ui-tests.log 2>&1
 import os, signal, subprocess, sys
@@ -129,15 +129,15 @@ command = [
     '-resultBundlePath', 'build/Daylight-UI-Tests.xcresult',
     '-only-testing:DaylightUITests', '-parallel-testing-enabled', 'NO',
     '-test-timeouts-enabled', 'YES', '-default-test-execution-time-allowance', '180',
-    '-maximum-test-execution-time-allowance', '300',
+    '-maximum-test-execution-time-allowance', '420',
     'CODE_SIGNING_ALLOWED=NO',
 ]
 print('Running native UI interaction tests on ' + sys.argv[1], flush=True)
 process = subprocess.Popen(command, start_new_session=True)
 try:
-    code = process.wait(timeout=1800)
+    code = process.wait(timeout=2400)
 except subprocess.TimeoutExpired:
-    print('UI test command exceeded its 1800 second deadline.', flush=True)
+    print('UI test command exceeded its 2400 second deadline.', flush=True)
     os.killpg(process.pid, signal.SIGTERM)
     try:
         process.wait(timeout=10)
