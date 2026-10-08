@@ -10,6 +10,6 @@ xcodebuild -project ios/Daylight.xcodeproj -scheme Daylight -configuration Debug
 xcodebuild -project ios/Daylight.xcodeproj -scheme Daylight -configuration Release -destination 'generic/platform=iOS' -derivedDataPath build/device CODE_SIGNING_ALLOWED=NO build > build/device-build.log 2>&1 || { tail -n 100 build/device-build.log; exit 1; }
 mkdir -p build/Payload
 ditto build/device/Build/Products/Release-iphoneos/Daylight.app build/Payload/Daylight.app
-ditto -c -k --keepParent build/Payload build/Daylight-0.3.8-unsigned.ipa
-shasum -a 256 build/Daylight-0.3.8-unsigned.ipa > build/SHA256.txt
+ditto -c -k --keepParent build/Payload build/Daylight-0.3.9-unsigned.ipa
+shasum -a 256 build/Daylight-0.3.9-unsigned.ipa > build/SHA256.txt
 printf 'Unsigned IPA created. Install using your personal signing tool.\n'

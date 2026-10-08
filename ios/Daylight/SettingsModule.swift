@@ -13,7 +13,7 @@ struct SettingsModule: View {
     @State private var diagnosticCapture = false
     private var backupName: String { let formatter = DateFormatter(); formatter.locale = Locale(identifier: "en_US_POSIX"); formatter.dateFormat = "yyyy-MM-dd"; return "日常备份-\(formatter.string(from: Date()))" }
     var body: some View {
-        SoftCard { Text("日常").font(.largeTitle.weight(.semibold)); Text("把生活，轻轻收好。").foregroundStyle(.secondary); Text("0.3.8 · iPhone 个人版").font(.caption).foregroundStyle(.secondary) }
+        SoftCard { Text("日常").font(.largeTitle.weight(.semibold)); Text("把生活，轻轻收好。").foregroundStyle(.secondary); Text("0.3.9 · iPhone 个人版").font(.caption).foregroundStyle(.secondary) }
         ModuleSection(title: "计划助手") {
             SoftCard {
                 Button("配置智能规划", systemImage: "sparkles") { plannerSettings = true }

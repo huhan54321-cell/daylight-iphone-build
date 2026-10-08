@@ -1,5 +1,5 @@
 {
-  "version": "0.3.8",
+  "version": "0.3.9",
   "built": false,
   "files": [
     {
@@ -56,7 +56,7 @@
     },
     {
       "file": "ios/Daylight/CareerModelMatching.swift",
-      "sha256": "2732e542c9eadc2a65966aec153dfff8a9001c10a967ff1dbeffe1328963c27a"
+      "sha256": "6f724914ea3071b1b27514d564455a1d1b77ef054c5bfb65fd3b7db9f847c7a9"
     },
     {
       "file": "ios/Daylight/CareerModule.swift",
@@ -100,7 +100,7 @@
     },
     {
       "file": "ios/Daylight/Info.plist",
-      "sha256": "2b38db6596883e47e857bba4ead495397a007d5e7d0014fc9256eab9bf268eac"
+      "sha256": "91c0144e9766e37ad604f434adef5d8092364876d83956ad64f0a0303a75e38e"
     },
     {
       "file": "ios/Daylight/Models.swift",
@@ -160,7 +160,7 @@
     },
     {
       "file": "ios/Daylight/SettingsModule.swift",
-      "sha256": "f6d1eea3efdb661e291dc44bf2c702e932ce2028dcd6509a788eceef1569126e"
+      "sha256": "265189068fc78cad90b641ee17c5ebc12b8c802886d1a99005fffdd3fee247db"
     },
     {
       "file": "ios/Daylight/SummaryNotifications.swift",
@@ -204,7 +204,7 @@
     },
     {
       "file": "tests/native/CareerModelTests.swift",
-      "sha256": "8f888eb36cda40fbe62626d344c7b4081b2dec8ea5fe5ad7891bbc2e13c2a29d"
+      "sha256": "deffad767958c9eecfc85b8014748463c9809c6e0e904434e61d77da24f2321c"
     },
     {
       "file": "tests/native/CareerTests.swift",
@@ -236,7 +236,7 @@
     },
     {
       "file": ".github/workflows/ios-build.yml",
-      "sha256": "a4c390b38956201ff0cf750ac600b87c58ee1380553bf2349cbbbf16c7865d62"
+      "sha256": "5cb238d4c83d862cab9cc670cbeaa1feaa92f587ad07feb19dcf132857aad619"
     },
     {
       "file": "scripts/career-adapters.cjs",
@@ -296,7 +296,7 @@
     },
     {
       "file": "package.json",
-      "sha256": "bba8705fdcee40f28ccd357cec6544cb7209d0477ef04b12cf746898c5bedf27"
+      "sha256": "32f0773e7e581ec5706ebd89b59cab010fe7f048362429de8ebb933b3be82808"
     },
     {
       "file": "docs/career-service.md",
@@ -320,7 +320,7 @@
     },
     {
       "file": "scripts/build-ios.sh",
-      "sha256": "c6c91b2d319dd453d0ae1f1108bc8388cd0a6c7120829ffa17884eaaa954b4ad"
+      "sha256": "a80fc73a8cf33f31a679cb94d87f6e19c6bde255a60a89d5ad0b2b9d732774ea"
     },
     {
       "file": "scripts/capture-ios.sh",
@@ -340,7 +340,7 @@
     },
     {
       "file": "docs/career-module.md",
-      "sha256": "af7ab9978423a312b600f9c3c1af210cb9fc9f6a1f8eb4095d064d6d9ca2312c"
+      "sha256": "ee375067dad34bee4720b8615b9ed12da912366f7b6dddb370fb30bff9773a5a"
     },
     {
       "file": ".gitignore",

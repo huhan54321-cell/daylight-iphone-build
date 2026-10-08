@@ -114,6 +114,21 @@ enum CareerModelTests {
             let exaggerated: [String: Any] = ["jobID": advancedInput.jobID, "direction": "systems", "assessments": [["skillID": skill, "level": "met", "quote": quote, "reason": "错误地把基础经验算作高级能力。"]], "summary": "错误的高级满足判断。"]
             try rejects(try json(exaggerated), input: advancedInput, "confirmed capability cannot overstate \(skill)")
         }
+        var rosJob = job
+        rosJob.description = "岗位需要熟练使用 ROS2 与 MoveIt2，完成机器人控制软件和机械臂规划联调。"
+        var negatedROS = prefs
+        negatedROS.capabilities = prefs.capabilities.map { item in
+            item.id == "ros_basics" ? CareerCapability(id: item.id, label: item.label, fact: "有 ROS 使用经历；未确认 ROS2／MoveIt 熟练经验。", status: "confirmed") : item
+        }
+        guard let negatedInput = CareerModelInput(job: rosJob, preferences: negatedROS) else { throw AppFailure.message("FAIL: negated ROS input") }
+        let rosClaim: [String: Any] = ["jobID": negatedInput.jobID, "direction": "systems", "assessments": [["skillID": "ros_basics", "level": "met", "quote": "ROS2 与 MoveIt2", "reason": "岗位要求与画像事实核对。"]], "summary": "ROS 相关。"]
+        try rejects(try json(rosClaim), input: negatedInput, "negative ROS2 mention is not confirmed experience")
+        var learnedROS = negatedROS
+        learnedROS.capabilities = negatedROS.capabilities.map { item in
+            item.id == "ros_basics" ? CareerCapability(id: item.id, label: item.label, fact: "完成 ROS2 与 MoveIt2 机械臂规划项目。", status: "confirmed") : item
+        }
+        guard let learnedInput = CareerModelInput(job: rosJob, preferences: learnedROS) else { throw AppFailure.message("FAIL: learned ROS input") }
+        try expect((try CareerModelAnalysis.decode(try json(rosClaim), input: learnedInput)).assessments[0].level == "met", "explicit new ROS2 practice can be credited")
         var freeClaim = object; freeClaim["summary"] = "用户精通 ROS2 与分布式大模型部署，必能录用。"
         let bounded = try CareerModelAnalysis.decode(try json(freeClaim), input: input)
         try expect(!bounded.safeSummary.contains("精通") && !bounded.safeSummary.contains("录用"), "UI summary is derived from validated enums rather than free claims")
