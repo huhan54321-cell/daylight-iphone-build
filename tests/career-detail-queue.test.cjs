@@ -20,3 +20,9 @@ test('unreadable details stay visible as restrictions and bound retries without 
   assert.equal(result.jobs.length, 0); assert.equal(result.unreadable, 1); assert.equal(rows[0].state, 'unreadable');
   const retry = await queue.processQueue(rows, () => { throw new Error('must not retry immediately'); }, '2026-10-06T03:00:00Z'); assert.equal(retry.attempted.length, 0);
 });
+
+test('search discoveries do not fetch details from a source whose automatic collection is disabled', async () => {
+  const rows=queue.addDiscoveries([], [{url:'https://www.zhipin.com/job_detail/example.html'}],stamp);
+  const result=await queue.processQueue(rows,()=>{throw new Error('disabled source must not be requested');},stamp,2,{disabledSources:['boss']});
+  assert.deepEqual(result.attempted,[]);assert.deepEqual(result.jobs,[]);assert.equal(rows[0].attempts,0);
+});

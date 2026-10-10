@@ -100,6 +100,14 @@ struct CareerFeedArticle: Codable, Identifiable, Sendable, Equatable {
     var summary: String
     var relevance: String
     var url: String
+    var sourceName: String? = nil
+    var authors: [String]? = nil
+    var topics: [String]? = nil
+    var highlights: [String]? = nil
+    var collectedAt: String? = nil
+    var dateVerified: Bool? = nil
+    var updatedAt: String? = nil
+    var kind: String? = nil
 }
 
 struct CareerFeed: Codable, Sendable, Equatable {
@@ -136,6 +144,10 @@ struct CareerFeed: Codable, Sendable, Equatable {
         }
         for article in value.articles {
             guard !article.id.isEmpty, article.title.count <= 500, article.summary.count <= 5000,
+                  article.date.count <= 80, (article.sourceName?.count ?? 0) <= 500,
+                  (article.authors?.count ?? 0) <= 30, (article.topics?.count ?? 0) <= 30,
+                  (article.highlights?.count ?? 0) <= 10,
+                  article.highlights?.allSatisfy({ $0.count <= 1000 }) ?? true,
                   validLink(article.url) else { throw CareerFeedError.invalidFeed }
         }
         return value

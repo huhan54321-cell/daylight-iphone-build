@@ -1,6 +1,6 @@
 'use strict';
 const crypto = require('node:crypto');
-const { text, safeURL, dateISO, deadlineISO, source } = require('./career-core.cjs');
+const { text, safeURL, dateISO, deadlineISO, source, exactPostingURL } = require('./career-core.cjs');
 const { applyConstraints } = require('./career-constraints.cjs');
 const UNITREE_URL = 'https://www.unitree.com/cn/position/';
 const ZJU_URL = 'https://www.career.zju.edu.cn/jyxt/sczp/zphgl/ckZphdwXq.zf?dwxxid=761C0E152EE024AFE055000000000001&zphbh=4A1E5434BDBC2BCEE0653A68DD0E9B18&zphsqbh=c580d07223d2c9238242b3455027755f';
@@ -129,7 +129,7 @@ function boundedFetch(fetchImpl = global.fetch, options = {}) {
     const pause = Math.max(0, gap - (Date.now() - lastStarted));
     if (pause) await new Promise(resolve => setTimeout(resolve, pause));
     lastStarted = Date.now();
-    const controller = new AbortController(), timer = setTimeout(() => controller.abort(), options.timeout || 10000);
+    const controller = new AbortController(), timer = setTimeout(() => controller.abort(), options.timeout || (new URL(url).hostname === 'api.tavily.com' ? 30000 : 10000));
     try {
       let current = new URL(url), response;
       for (let n = 0; n <= 2; n++) {
@@ -205,20 +205,33 @@ async function collectShixiAPI(request, env, checkedAt) {
 async function collectTavily(request, env) {
   if (!env.TAVILY_API_KEY) return { state: 'not_configured', jobs: [], message: '搜索 API Key 未配置；公司和招聘站检索尚未运行。' };
   const jobs = [];
+  let queriesRun = 0, failure = null;
   const queries = Array.isArray(env.CAREER_QUERIES) ? env.CAREER_QUERIES.slice(0, 8) : KEYWORDS.map(keyword => ({ keyword, city: '杭州' }));
   for (const { keyword, city } of queries) {
-    const raw = await request('https://api.tavily.com/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ api_key: env.TAVILY_API_KEY, query: `${city} ${keyword} 招聘`, search_depth: 'basic', max_results: 10, include_answer: false, include_raw_content: false, include_domains: source('tavily').hosts }) }, ['api.tavily.com']);
-    let parsed; try { parsed = JSON.parse(raw); } catch { throw new SourceError('error', '搜索服务返回非 JSON'); }
-    if (!Array.isArray(parsed.results)) throw new SourceError('error', '搜索结果结构不符');
+    let parsed;
+    try {
+      const raw = await request('https://api.tavily.com/search', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${env.TAVILY_API_KEY}` }, body: JSON.stringify({ query: `${city} ${keyword} 招聘`, search_depth: 'basic', auto_parameters: false, max_results: 10, include_answer: false, include_raw_content: false, include_domains: source('tavily').hosts, include_domains_mode: 'restrict' }) }, ['api.tavily.com']);
+      try { parsed = JSON.parse(raw); } catch { throw new SourceError('error', '搜索服务返回非 JSON'); }
+      if (!Array.isArray(parsed.results)) throw new SourceError('error', '搜索结果结构不符');
+    } catch (error) {
+      failure = error instanceof SourceError ? error : new SourceError('error', '搜索请求未完成，保留成功线索');
+      break;
+    }
+    queriesRun++;
     for (const row of parsed.results.slice(0, 10)) {
-      if (!/实习|招聘|岗位/.test(row.title || '') || !relevant((row.title || '') + (row.content || ''))) continue;
+      if (!row || typeof row !== 'object') continue;
+      const evidence = (row.title || '') + ' ' + (row.content || '');
+      if (!/实习|招聘|岗位|职位/.test(evidence) || !relevant(evidence)) continue;
       let url; try { url = safeURL(row.url, 'tavily'); } catch { continue; }
+      // A search/category page can mention many unrelated jobs and cities.
+      // Keep only recognized posting URLs; generic page titles still need JD verification.
+      if (!exactPostingURL(url)) continue;
       // Search snippets are clues; never synthesize employer requirements or an open status.
       const title = text(row.title, 180);
       jobs.push({ company: '公司待核查', title, city: /杭州/.test(title + row.content) ? '杭州' : '城市待核查', jobType: /实习/.test(title) ? '实习' : '类型未注明', salary: '未注明', url, description: text(row.content, 1000), requirements: [], tags: ['搜索线索', ...tagsFrom(title + row.content)], publishedAt: null, verification: 'listing_only', status: 'unconfirmed' });
     }
   }
-  return { state: 'ok', jobs, coverage: { queriesRun: queries.length, pagesRun: queries.length, detailsRun: 0, partial: true }, message: `公开搜索 ${queries.length} 组关键词，只提供待核查线索，不等同于招聘站全量或当前可投递岗位。` };
+  return { state: failure ? failure.state : 'ok', jobs, coverage: { queriesRun, pagesRun: queriesRun, detailsRun: 0, partial: true }, message: failure ? `${failure.message} 已完成 ${queriesRun}/${queries.length} 组查询，保留 ${jobs.length} 条具体页面线索；未完成的查询进度不跳过。` : `公开搜索 ${queriesRun} 组关键词，只提供待核查线索，不等同于招聘站全量或当前可投递岗位。` };
 }
 async function collectSource(sourceID, request, env, checkedAt) {
   const fixedCoverage = (jobs, pagesRun, detailsRun) => ({ mode: 'fixed_pages', cities: [...new Set(jobs.map(j=>j.city))], keywords: [], companies: [...new Set(jobs.map(j=>j.company))], totalQueries: 0, queriesRun: 0, pagesRun, detailsRun });

@@ -341,6 +341,7 @@ final class DaylightUITests: XCTestCase {
     }
 
     func testCareerDirectoryDetailsPreferencesAndReport() {
+        app.launchArguments.append("--ui-test-career-report")
         launch()
         tap(element("open-career"))
         XCTAssertTrue(app.navigationBars["求职与具身"].waitForExistence(timeout: 5))
@@ -356,11 +357,12 @@ final class DaylightUITests: XCTestCase {
         tap(app.navigationBars["公司介绍"].buttons["完成"])
         tap(app.segmentedControls["career-section"].buttons["具身观察"])
         tap(app.segmentedControls["career-report-period"].buttons["日报"])
-        XCTAssertTrue(element("career-article-lerobot06").exists)
-        XCTAssertFalse(element("career-article-lerobot05").exists)
+        scrollTo(element("career-article-ui-report-today"))
+        XCTAssertTrue(element("career-article-ui-report-today").exists)
+        XCTAssertFalse(element("career-article-ui-report-week").exists)
         tap(app.segmentedControls["career-report-period"].buttons["周报"])
-        scrollTo(element("career-article-lerobot05"))
-        XCTAssertTrue(element("career-article-lerobot05").exists)
+        scrollTo(element("career-article-ui-report-week"))
+        XCTAssertTrue(element("career-article-ui-report-week").exists)
     }
 
     func testCareerProfileEditCancelSaveAndRelaunch() {

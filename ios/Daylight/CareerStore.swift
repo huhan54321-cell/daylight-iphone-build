@@ -16,6 +16,9 @@ final class CareerStore: ObservableObject {
     @Published private(set) var lastSuccess: Date?
     @Published private(set) var followUps: [String: CareerFollowUp] = [:]
     @Published var configuration = CareerAPIConfiguration()
+    @Published var usePrivateService = UserDefaults.standard.bool(forKey: "career-use-private-service") {
+        didSet { UserDefaults.standard.set(usePrivateService, forKey: "career-use-private-service") }
+    }
     @Published var modelEnabled = UserDefaults.standard.bool(forKey: "career-model-enabled") {
         didSet { UserDefaults.standard.set(modelEnabled, forKey: "career-model-enabled") }
     }
@@ -25,9 +28,9 @@ final class CareerStore: ObservableObject {
     @Published private(set) var modelBudget = CareerModelDailyBudget(day: CareerModelDailyBudget.dayKey(Date()))
     private let directory: URL?
 
-    var configured: Bool { !configuration.baseURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+    var configured: Bool { usePrivateService ? !configuration.baseURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty : CareerPublicEndpoint.url != nil }
     var jobs: [CareerJob] {
-        var values = feed?.jobs ?? []
+        var values = (feed?.jobs ?? []).filter { !CareerPublicContent.excluded($0) }
         if let legacy = legacySavedJob(), !values.contains(where: { $0.stableID == legacy.stableID }) { values.append(legacy) }
         return values
     }
@@ -36,6 +39,7 @@ final class CareerStore: ObservableObject {
         self.directory = directory ?? Self.defaultDirectory()
         #if DEBUG && targetEnvironment(simulator)
         if ProcessInfo.processInfo.arguments.contains("--ui-test-career-failure") {
+            usePrivateService = true
             configuration = CareerAPIConfiguration(baseURL: "http://127.0.0.1:4180", token: "ui-fixture-token")
         } else {
             do { configuration = try CareerCredentials.load() } catch { self.error = error.localizedDescription }
@@ -58,6 +62,25 @@ final class CareerStore: ObservableObject {
         if let file = self.directory?.appendingPathComponent("career-model-budget-v1.json"), let data = try? Data(contentsOf: file),
            let value = try? JSONDecoder().decode(CareerModelDailyBudget.self, from: data), value.day == CareerModelDailyBudget.dayKey(Date()) { modelBudget = value }
         migrateLegacyFollowUp()
+        #if DEBUG && targetEnvironment(simulator)
+        if ProcessInfo.processInfo.arguments.contains("--ui-test-career-report") {
+            var calendar = Calendar(identifier: .gregorian); calendar.timeZone = TimeZone(identifier: "Asia/Shanghai")!
+            let today = calendar.startOfDay(for: Date())
+            let yesterday = calendar.date(byAdding: .day, value: -1, to: today)!
+            let formatter = ISO8601DateFormatter()
+            feed?.articles = [
+                CareerFeedArticle(id: "ui-report-today", title: "UI 测试：机器人策略", date: formatter.string(from: today), category: "技术进展", summary: "用于验证当日筛选的合成内容。", relevance: "", url: "https://huggingface.co/blog/test-robot", dateVerified: true),
+                CareerFeedArticle(id: "ui-report-week", title: "UI 测试：机器人论文", date: formatter.string(from: yesterday), category: "论文", summary: "用于验证周报筛选的合成内容。", relevance: "", url: "https://arxiv.org/abs/2610.00001", dateVerified: true)
+            ]
+        }
+        #endif
+    }
+
+    func refreshIfNeeded() async {
+        #if DEBUG && targetEnvironment(simulator)
+        if ProcessInfo.processInfo.arguments.contains("--ui-testing") || ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--capture-") }) { return }
+        #endif
+        if configured, lastSuccess.map({ Date().timeIntervalSince($0) >= 3600 }) ?? true { await connect(refresh: false) }
     }
 
     func saveConfiguration() throws {
@@ -85,15 +108,20 @@ final class CareerStore: ObservableObject {
         }
         #endif
         do {
-            try saveConfiguration()
+            if usePrivateService { try saveConfiguration() }
             notice = nil
-            let result = try await CareerNetworking(configuration: configuration).fetch(refresh: refresh)
+            let result: CareerFeed
+            if usePrivateService { result = CareerPublicContent.cleaned(try await CareerNetworking(configuration: configuration).fetch(refresh: refresh)) }
+            else {
+                guard let url = CareerPublicEndpoint.url else { throw CareerPublicError.unavailable }
+                result = try await CareerPublicNetworking().fetch(url: url)
+            }
             let receivedAt = Date()
             try persist(result, filename: "career-feed-v1.json")
-            feed = result; origin = "采集服务"; lastSuccess = receivedAt
+            feed = result; origin = usePrivateService ? "采集服务" : "公开自动更新"; lastSuccess = receivedAt
             UserDefaults.standard.set(receivedAt, forKey: "career-last-success")
             migrateLegacyFollowUp()
-            notice = result.scheduler?.running == true ? "电脑正在后台采集，已有岗位仍可查看。下次打开本页会读取最新结果。" : refresh ? "已读取采集结果。各来源登录与采集状态见下方。" : "服务连接成功，已读取当前岗位内容。"
+            notice = usePrivateService ? "已读取个人采集服务的当前内容。" : "已读取最新发布内容。资讯每日更新，岗位每三天更新；个人匹配在手机本地完成。"
         } catch is CancellationError {
             notice = "请求已取消，上次内容仍然可用。"
         } catch { self.error = error.localizedDescription }

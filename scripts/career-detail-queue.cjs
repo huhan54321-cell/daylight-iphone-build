@@ -41,9 +41,10 @@ function parseStructuredDetail(html, sourceID, url, now) {
   const requirements = data.qualifications ? plain(data.qualifications).split('\n').filter(Boolean) : [];
   return applyConstraints({ title: data.title, company: data.hiringOrganization.name, city: data.jobLocation.address.addressLocality, location: data.jobLocation.address.streetAddress, jobType: /实习|intern/i.test(data.title + data.employmentType) ? '实习' : '类型未注明', salary: '未注明', url, description: plain(data.description), requirements, publishedAt: data.datePosted, deadline: data.validThrough, checkedAt: now, verification: 'full_jd', status: 'unconfirmed', sourceNote: '公开搜索发现后，已读取来源页面的结构化职位正文；招聘资格仍需核实。' }, plain(data.description) + '\n' + requirements.join('\n'));
 }
-async function processQueue(rows, request, now, maximum = 2) {
+async function processQueue(rows, request, now, maximum = 2, options = {}) {
   const jobs = [], attempted = [];
-  const due = rows.filter(row => Date.parse(row.nextAttemptAt || 0) <= Date.parse(now)).sort((a, b) => String(a.lastAttemptAt || '').localeCompare(String(b.lastAttemptAt || '')) || a.firstSeenAt.localeCompare(b.firstSeenAt)).slice(0, Math.max(0, Math.min(4, maximum)));
+  const disabled = new Set(options.disabledSources || []);
+  const due = rows.filter(row => !disabled.has(row.sourceID) && Date.parse(row.nextAttemptAt || 0) <= Date.parse(now)).sort((a, b) => String(a.lastAttemptAt || '').localeCompare(String(b.lastAttemptAt || '')) || a.firstSeenAt.localeCompare(b.firstSeenAt)).slice(0, Math.max(0, Math.min(4, maximum)));
   for (const item of due) {
     item.lastAttemptAt = now; item.attempts = Math.min(50, item.attempts + 1); attempted.push(item.url);
     try {

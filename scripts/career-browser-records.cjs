@@ -27,6 +27,21 @@ function bossDetailRecord(previous, content, checkedAt) {
   const raw = { ...previous, description, verification: 'full_jd', status: closed ? 'closed' : 'unconfirmed', tags: [...new Set([...previous.tags, ...tagsFrom(description)])] };
   return normalizeJob(applyConstraints(raw, description), 'boss', checkedAt);
 }
+function bossDocumentIssue(value, body, allowLogin = false) {
+  let url;
+  try { url = new URL(value); } catch {}
+  if (!url || url.protocol !== 'https:' || !['www.zhipin.com', 'zhipin.com'].includes(url.hostname)) {
+    return { state: 'blocked', message: 'BOSS 页面退回空白页或离开官网；当前浏览器采集无法使用，未保存为已登录。请在普通浏览器核查，已有岗位保留。' };
+  }
+  if (/verify|security-check|\/web\/passport\/zp\/security\.html/.test(url.pathname) || /访问验证|安全验证|完成验证后|滑动.*验证|异常访问|验证您的身份/.test(body)) {
+    return { state: 'blocked', message: 'BOSS 要求安全验证；采集已停止，请在自己的浏览器处理后重试。' };
+  }
+  if (!String(body || '').trim()) return { state: 'error', message: 'BOSS 页面没有加载出内容；未将空白页当作登录或采集成功。' };
+  if (!allowLogin && (/\/web\/user\//.test(url.pathname) || /扫码登录后.*查看|请登录后.*查看|登录后查看职位/.test(body))) {
+    return { state: 'login_required', message: 'BOSS 会话尚未登录或已过期，请运行 --login。' };
+  }
+  return null;
+}
 function validServiceURL(value) {
   const url = new URL(value);
   const local = ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname) || /^(10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$/.test(url.hostname);
@@ -34,4 +49,4 @@ function validServiceURL(value) {
   url.pathname = '/'; url.search = ''; url.hash = '';
   return url;
 }
-module.exports = { bossListRecord, bossResponseRecords, bossDetailRecord, validServiceURL };
+module.exports = { bossListRecord, bossResponseRecords, bossDetailRecord, bossDocumentIssue, validServiceURL };

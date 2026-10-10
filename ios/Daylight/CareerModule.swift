@@ -29,10 +29,6 @@ struct CareerModule: View {
     private var duration: String { profile.durationMonths.map { "\($0) 个月" } ?? "未定" }
     private var start: String { profile.start }
 
-    private let historicalArticles = [
-        CareerFeedArticle(id: "lerobot06", title: "LeRobot 0.6：让评测与失败回流接起来", date: "2026-07-07", category: "开源工具", summary: "新增评测与 rollout 工具，支持部署时记录人工纠正数据，扩展策略与仿真基准。", relevance: "可结合本机画像和项目目标核对工具适用性及环境兼容性。", url: "https://huggingface.co/blog/lerobot-release-v060"),
-        CareerFeedArticle(id: "lerobot05", title: "LeRobot 0.5：仿真环境与 RTC 支持扩展", date: "2026-03-09", category: "操作学习", summary: "引入 EnvHub，扩展机器人与策略接入，并增加 Real-Time Chunking 相关支持。", relevance: "可作为操作策略项目的工具参考；具体能力状态以本机画像为准。", url: "https://huggingface.co/blog/lerobot-release-v050")
-    ]
     private var preferencesValue: CareerPreferences {
         CareerPreferences(focus: focus, cityScope: cityScope, attendanceDays: profile.attendanceDays, durationMonths: profile.durationMonths,
             start: start, expectedGraduationYear: profile.expectedGraduationYear, currentEducation: profile.currentEducation,
@@ -52,7 +48,7 @@ struct CareerModule: View {
                 if section == "岗位" { jobs }
                 else if section == "公司" { directory }
                 else { observation }
-                Text("电脑服务运行时按设定周期采集；手机读取结果，本机保留岗位与跟进状态。")
+                Text("资讯每日自动更新，岗位每三天更新；画像、收藏和匹配结果留在本机。")
                     .font(.caption).foregroundStyle(.secondary).accessibilityIdentifier("career-preview-notice")
             }.padding(20)
         }.scrollDismissesKeyboard(.interactively)
@@ -66,7 +62,7 @@ struct CareerModule: View {
             .onChange(of: scenePhase) { _, value in
                 if value == .active {
                     reloadProfile()
-                    if store.configured { Task { await store.connect(refresh: false) } }
+                    Task { await store.refreshIfNeeded() }
                 }
             }
             .onAppear { reloadProfile() }
@@ -76,7 +72,7 @@ struct CareerModule: View {
                 if args.contains("--capture-career-companies") { section = "公司" }
                 if args.contains("--capture-career-observation") { section = "具身观察" }
                 #endif
-                if store.configured { await store.connect(refresh: false) }
+                await store.refreshIfNeeded()
             }
     }
 
@@ -89,8 +85,7 @@ struct CareerModule: View {
             Spacer()
             Button {
                 companySearchFocused = false; jobSearchFocused = false
-                if store.configured { Task { await store.connect(refresh: store.feed?.scheduler?.running != true) } }
-                else { showServiceSettings = true }
+                Task { await store.connect(refresh: store.usePrivateService && store.feed?.scheduler?.running != true) }
             } label: {
                 if store.busy { ProgressView().padding(12) }
                 else { Image(systemName: "arrow.clockwise").padding(12).background(Color.blue.opacity(0.08), in: Circle()) }
@@ -105,11 +100,11 @@ struct CareerModule: View {
             HStack {
                 Label(store.origin, systemImage: store.origin == "采集服务" ? "network" : "tray").font(.caption)
                 Spacer()
-                Button("连接设置") { showServiceSettings = true }.font(.caption).accessibilityIdentifier("career-service-settings")
+                Button("更新设置") { showServiceSettings = true }.font(.caption).accessibilityIdentifier("career-service-settings")
             }
             if let last = store.lastSuccess { Text("上次成功读取：\(last.formatted(date: .abbreviated, time: .shortened))").font(.caption).foregroundStyle(.secondary) }
-            else { Text("尚未读取采集服务；内置资料的招聘状态请核对原页。").font(.caption).foregroundStyle(.secondary) }
-            if store.busy { Label("正在采集，等待电脑完成浏览", systemImage: "hourglass").font(.caption) }
+            else { Text("打开后自动读取公开更新；岗位状态以原页为准。").font(.caption).foregroundStyle(.secondary) }
+            if store.busy { Label("正在读取最新岗位与资讯", systemImage: "hourglass").font(.caption) }
             if let error = store.error { Text(error).font(.caption).foregroundStyle(.orange).accessibilityIdentifier("career-service-error") }
             if let notice = store.notice { Text(notice).font(.caption).foregroundStyle(.secondary).accessibilityIdentifier("career-service-notice") }
             if let sources = store.feed?.sources, !sources.isEmpty {
@@ -118,9 +113,9 @@ struct CareerModule: View {
                 }.font(.caption).accessibilityIdentifier("career-source-status")
             }
             if let schedule = store.feed?.scheduler {
-                Text(schedule.enabled ? "电脑定期采集：\(intervalLabel(schedule.intervalHours)) · 下次 \(displayTime(schedule.nextRunAt))" : "电脑定期采集已暂停")
+                Text(schedule.enabled ? "岗位更新：\(intervalLabel(schedule.intervalHours)) · 下次 \(displayTime(schedule.nextRunAt))" : "定期更新已暂停")
                     .font(.caption).foregroundStyle(.secondary)
-                Text("今日采集请求预算剩余 \(max(0, schedule.budgetLimit - schedule.budgetUsed))／\(schedule.budgetLimit)；电脑服务运行时才执行。")
+                Text("今日采集请求预算剩余 \(max(0, schedule.budgetLimit - schedule.budgetUsed))／\(schedule.budgetLimit)；采集由公开更新任务执行。")
                     .font(.caption).foregroundStyle(.secondary)
             }
         }
@@ -155,7 +150,7 @@ struct CareerModule: View {
                 .font(.caption).foregroundStyle(.secondary)
             if matches.isEmpty {
                 EmptyRecords(title: jobQuery.isEmpty ? "当前没有匹配的有效岗位资料" : "没有符合搜索的岗位", icon: "briefcase")
-                Text("请查看来源登录状态或调整搜索条件；刷新失败保留上次成功内容。").font(.caption).foregroundStyle(.secondary)
+                Text("可调整本地筛选条件；来源刷新失败时保留上次成功内容。").font(.caption).foregroundStyle(.secondary)
             } else if cityScope == "全国" {
                 matchGroup("相关岗位", values: matches, key: "all")
             } else {
@@ -337,29 +332,63 @@ struct CareerModule: View {
     }
 
     private var observation: some View {
-        let liveArticles = store.feed?.articles ?? []
-        let articles = liveArticles.isEmpty ? historicalArticles : liveArticles
+        let all = store.feed?.articles ?? []
+        let current = CareerReportPeriod.articles(all, days: report == "日报" ? 1 : 7)
+        let categories = ["行业动态", "技术进展", "操作与学习", "仿真与评测", "开源工具", "硬件与落地", "论文"]
+        let themes = Array(Set(current.flatMap { $0.topics ?? [] })).sorted()
+        let archive = all.filter { row in !current.contains(where: { $0.id == row.id }) }
         return VStack(alignment: .leading, spacing: 18) {
             Picker("报告周期", selection: $report) { Text("日报").tag("日报"); Text("周报").tag("周报") }.pickerStyle(.segmented).accessibilityIdentifier("career-report-period")
-            Text(liveArticles.isEmpty ? "具身资料，持续学习" : "具身观察").font(.title2.bold())
-            Text(liveArticles.isEmpty ? "历史资料版式样例 · 以下不属于当前日／周新闻。资讯采集未返回内容时，不生成实时日报或周报。" : "采集服务返回的资料，日期按原页保留。日报／周报切换展示篇幅，不代表这些文章均在当前周期发布。")
+            Text(report == "日报" ? "今天的具身观察" : "最近七天的具身观察").font(.title2.bold())
+            Text("按北京时间和原始发布日期筛选。论文以首次提交日期为准；预印本尚不代表经过同行评审。没有确定日期的内容放入资料库。")
                 .font(.caption).foregroundStyle(.secondary)
-            if report == "周报" && liveArticles.isEmpty {
+            if let generated = store.feed?.generatedAt { Text("内容更新：\(displayTime(generated))").font(.caption).foregroundStyle(.secondary) }
+            if !current.isEmpty {
                 SoftCard {
-                    Text("观察主线").font(.headline)
-                    Text("从训练单个策略，到数据、评测、执行和失败回流的完整闭环。")
-                    Text("实践建议：先明确任务、数据划分和评测条件，再逐步扩展操作策略方向。").font(.subheadline).foregroundStyle(.secondary)
+                    Text("\(current.count) 条观察 · \(current.filter { $0.category == "论文" }.count) 篇论文").font(.headline)
+                    if !themes.isEmpty { Text("技术线索：" + themes.joined(separator: "、")).font(.subheadline) }
+                    Text("覆盖产业、策略学习、仿真评测、开源工具与硬件落地；摘要与技术关键词来自来源内容，不额外调用模型。")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+            } else {
+                EmptyRecords(title: report == "日报" ? "今日暂无已核实日期的新内容" : "本周暂无已核实日期的新内容", icon: "newspaper")
+                Text("可以查看下方资料库，或点击顶部刷新读取最新发布内容。").font(.caption).foregroundStyle(.secondary)
+            }
+            ForEach(categories, id: \.self) { category in
+                let values = current.filter { $0.category == category }
+                if !values.isEmpty {
+                    Text("\(category) · \(values.count)").font(.title3.bold())
+                    ForEach(values) { article in articleCard(article) }
                 }
             }
-            ForEach(report == "日报" ? Array(articles.prefix(1)) : articles) { article in
-                SoftCard {
-                    HStack { Text(article.category).foregroundStyle(.blue); Spacer(); Text(article.date).foregroundStyle(.secondary) }.font(.caption)
-                    Text(article.title).font(.headline); Text(article.summary).font(.subheadline)
-                    Text("与你有关：\(article.relevance)").font(.subheadline).foregroundStyle(.secondary)
-                    if let url = URL(string: article.url) { Link("阅读来源原文", destination: url) }
-                }.accessibilityIdentifier("career-article-\(article.id)")
+            if !archive.isEmpty {
+                DisclosureGroup("资料库 · \(archive.count) 条历史或日期待核查内容") {
+                    ForEach(archive) { article in articleCard(article) }
+                }.accessibilityIdentifier("career-article-archive")
             }
         }
+    }
+
+    private func articleCard(_ article: CareerFeedArticle) -> some View {
+        SoftCard {
+            HStack {
+                Text(article.category).foregroundStyle(.blue)
+                Spacer()
+                Text(article.date.isEmpty ? "发布日期待核查" : String(article.date.prefix(10))).foregroundStyle(.secondary)
+            }.font(.caption)
+            Text(article.title).font(.headline)
+            if let source = article.sourceName { Text(source).font(.caption).foregroundStyle(.secondary) }
+            if let authors = article.authors, !authors.isEmpty { Text(authors.prefix(4).joined(separator: "、") + (authors.count > 4 ? " 等" : "")).font(.caption).foregroundStyle(.secondary) }
+            Text(article.summary).font(.subheadline).textSelection(.enabled)
+            if let topics = article.topics, !topics.isEmpty { Text("技术方向：" + topics.joined(separator: " · ")).font(.caption).foregroundStyle(.blue) }
+            if let points = article.highlights, !points.isEmpty {
+                DisclosureGroup("查看来源中的技术要点") {
+                    ForEach(Array(points.enumerated()), id: \.offset) { _, point in Text(point).font(.subheadline).padding(.vertical, 3) }
+                }.font(.caption)
+            }
+            if let updated = article.updatedAt, updated != article.date { Text("版本更新：\(String(updated.prefix(10)))").font(.caption).foregroundStyle(.secondary) }
+            if let url = URL(string: article.url) { Link(article.category == "论文" ? "阅读论文与摘要" : "阅读来源原文", destination: url) }
+        }.accessibilityIdentifier("career-article-\(article.id)")
     }
 
     private var preferences: some View {
@@ -404,8 +433,8 @@ struct CareerModule: View {
                     Text("填写实际做过的项目和结果，不要写姓名、电话或邮箱。导入后先检查内容，再点保存；取消会保留原画像。画像 JSON 请放在私人位置。").font(.caption).foregroundStyle(.secondary)
                 }
                 Section("数据与运行") {
-                    Text("岗位内容与收藏／投递状态保存在本机独立文件。规则匹配不消耗模型 Token。采集连接在岗位页的‘连接设置’中配置，电脑需运行采集服务。")
-                    Text("BOSS、实习僧登录在电脑浏览器完成；手机已有登录不能直接授权电脑。云端定时采集尚未启用。").font(.subheadline).foregroundStyle(.secondary)
+                    Text("岗位内容与收藏／投递状态保存在本机独立文件。规则匹配不消耗模型 Token。默认自动读取公开更新，无需电脑地址或访问令牌。")
+                    Text("BOSS 需要电脑会话，实际读取可能受网站限制；实习僧官方接口需要平台授权。各来源是否接通以采集状态为准。云端定时采集尚未启用。").font(.subheadline).foregroundStyle(.secondary)
                 }
                 modelPreferences
             }.navigationTitle("求职偏好").navigationBarTitleDisplayMode(.inline)
@@ -471,7 +500,14 @@ private struct CareerServiceSettings: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("采集服务连接") {
+                Section("自动更新") {
+                    Text("默认直接读取公开岗位和具身资讯。无需启动电脑脚本、填写 IP 地址或复制访问令牌。")
+                    Text("资讯每日更新，岗位每三天更新；顶部刷新读取最近发布的版本，不会立即触发全部网站重新采集。").font(.caption).foregroundStyle(.secondary)
+                    Button("读取最新公开内容") { store.usePrivateService = false; focusedField = nil; Task { await store.connect(refresh: false) } }.disabled(store.busy)
+                    Toggle("使用个人采集服务（高级）", isOn: $store.usePrivateService)
+                }
+                if store.usePrivateService {
+                Section("个人采集服务") {
                     TextField("例如 http://192.168.1.10:4176", text: $store.configuration.baseURL).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).focused($focusedField, equals: .address).accessibilityIdentifier("career-service-url")
                     SecureField("采集服务访问令牌", text: $store.configuration.token).textInputAutocapitalization(.never).autocorrectionDisabled().focused($focusedField, equals: .token).accessibilityIdentifier("career-service-token")
                     Text("地址和访问令牌由电脑采集服务提供，与 DeepSeek API Key 分开。保存在本机钥匙串，不随账本备份导出。").font(.caption).foregroundStyle(.secondary)
@@ -482,12 +518,13 @@ private struct CareerServiceSettings: View {
                     if let error = store.error { Text(error).font(.caption).foregroundStyle(.orange).accessibilityIdentifier("career-service-error") }
                     if let notice = store.notice { Text(notice).font(.caption).foregroundStyle(.secondary) }
                 }
-                Section("使用条件") {
-                    Text("电脑需开机并运行采集服务，手机和电脑需能够互相连接。本机服务关机时无法刷新，但已读岗位和收藏仍可查看。公网部署需要 HTTPS。")
-                    Text("登录、Cookie 和浏览器会话留在电脑。手机只读取岗位数据，不上传简历、账本、健康或日历。采集失败会显示具体来源状态并保留已有内容。")
+                }
+                Section("数据与来源") {
+                    Text("公开内容来源包括企业官网、公开招聘页、研究机构、arXiv 和开源项目。来源受限时保留缓存并显示状态，不保证全站覆盖。")
+                    Text("你的画像、收藏和投递记录保存在手机；公开更新任务不接收这些数据，也不接收账本、健康或日历内容。")
                         .font(.subheadline).foregroundStyle(.secondary)
                 }
-            }.scrollDismissesKeyboard(.interactively).navigationTitle("采集连接").navigationBarTitleDisplayMode(.inline)
+            }.scrollDismissesKeyboard(.interactively).navigationTitle("内容更新").navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("完成") { focusedField = nil } }
                     ToolbarItem(placement: .confirmationAction) { Button("完成") { focusedField = nil; dismiss() }.accessibilityIdentifier("career-service-done") }

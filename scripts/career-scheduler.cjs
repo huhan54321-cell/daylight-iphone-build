@@ -9,7 +9,7 @@ const DEFAULT_CONFIG = Object.freeze({
   // Internship eligibility and capability precision are checked after discovery.
   cities: ['杭州', '上海'], keywords: ['具身智能', '模仿学习', '机器人仿真', '机械臂', '机器人软件', '运动控制', 'MuJoCo', '操作学习'],
   companies: ['群核科技', '西湖机器人', '灵西机器人', '西湖数智', '宇树科技', '云深处', '千寻智能', '有鹿机器人', '原力灵机', '五八智能', '峦启', '炬坤', '骅羲', '海康机器人', '宇泛', '阿里巴巴', '蚂蚁', '网易雷火'],
-  browserCollectorEnabled: false, sources: {}
+  browserCollectorEnabled: false, browserChannel: 'chromium', sources: {}
 });
 function boundedNumber(value, fallback, minimum, maximum) { const n = Number(value); return Number.isFinite(n) ? Math.max(minimum, Math.min(maximum, Math.floor(n))) : fallback; }
 function strings(value, fallback, maximum) { return Array.isArray(value) && value.length ? [...new Set(value.slice(0, maximum).filter(s => typeof s === 'string').map(s => s.trim().slice(0, 100)).filter(Boolean))] : [...fallback]; }
@@ -20,6 +20,7 @@ function normalizeConfig(raw = {}) {
     maxQueriesPerSource: boundedNumber(raw.maxQueriesPerSource, 3, 1, 8), pagesPerQuery: boundedNumber(raw.pagesPerQuery, 2, 1, 3), maxDetailsPerSource: boundedNumber(raw.maxDetailsPerSource, 8, 0, 12),
     cities: strings(raw.cities, DEFAULT_CONFIG.cities, 4), keywords: strings(raw.keywords, DEFAULT_CONFIG.keywords, 16), companies: Array.isArray(raw.companies) ? strings(raw.companies, [], 40) : [...DEFAULT_CONFIG.companies],
     browserCollectorEnabled: raw.browserCollectorEnabled === true,
+    browserChannel: ['chromium', 'chrome', 'msedge'].includes(raw.browserChannel) ? raw.browserChannel : 'chromium',
     sources: raw.sources && typeof raw.sources === 'object' && !Array.isArray(raw.sources) ? Object.fromEntries(Object.entries(raw.sources).filter(([key, value]) => /^[a-z-]+$/.test(key) && typeof value === 'boolean')) : {}
   };
 }

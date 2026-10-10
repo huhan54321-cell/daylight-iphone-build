@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const SOURCES = Object.freeze([
+  { id: 'official', name: '企业官方招聘', hosts: ['talent.alibaba.com','careers.tencent.com','hr.163.com','career.huawei.com','jobs.bytedance.com','talent.baidu.com','hr.xiaomi.com','zhaopin.meituan.com','we.dji.com','job.hikrobotics.com','join.hikvision.com','www.unitree.com','unitree.com','www.deeprobotics.cn','www.wlrobo.com','wlrobo.com','www.linx-robot.com','www.westlakedi.com'] },
   { id: 'unitree', name: '宇树官方招聘', hosts: ['www.unitree.com', 'unitree.com'] },
   { id: 'zju', name: '浙大官方招聘', hosts: ['www.career.zju.edu.cn', 'career.zju.edu.cn'] },
   { id: 'shixiseng', name: '实习僧', hosts: ['www.shixiseng.com', 'shixiseng.com', 'open.shixiseng.com'] },
@@ -195,4 +196,4 @@ function researchToJob(raw, checkedAt) {
     status: raw.status === 'closed' || raw.status === 'expired' ? 'closed' : raw.status === 'historical' ? 'historical' : 'unconfirmed', minDays: raw.constraints?.daysPerWeek, minMonths: raw.constraints?.months,
     graduateYears: Array.isArray(raw.constraints?.graduationYear) ? raw.constraints.graduationYear : Number.isInteger(raw.constraints?.graduationYear) ? [raw.constraints.graduationYear] : [], relatedURLs: raw.listingUrl ? [raw.listingUrl] : [] }, sourceID, raw.lastCheckedAt || raw.observedAt || checkedAt);
 }
-module.exports = { SOURCES, source, text, safeURL, safeRelatedURL, dateISO, deadlineISO, sourceIdentity, normalizeJob, jobKey, strongKey, stableID, contentHash, crossSourceCompatible, mergeJobs, initialFeed, readFeed, writeFeed, publicFeed, applySourceResult, researchToJob };
+module.exports = { SOURCES, source, text, safeURL, safeRelatedURL, dateISO, deadlineISO, sourceIdentity, exactPostingURL, normalizeJob, jobKey, strongKey, stableID, contentHash, crossSourceCompatible, mergeJobs, initialFeed, readFeed, writeFeed, publicFeed, applySourceResult, researchToJob };

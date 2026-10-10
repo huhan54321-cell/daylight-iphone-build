@@ -1,0 +1,44 @@
+name: Update public jobs and embodied research
+on:
+  schedule:
+    - cron: '25 0 * * *'
+  workflow_dispatch:
+    inputs:
+      force_jobs:
+        description: Refresh job sources now
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: daylight-public-research
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Validate public source processing
+        run: node --test tests/career-public-feed.test.cjs
+      - name: Collect public sources
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          FORCE_JOBS: ${{ inputs.force_jobs }}
+        run: |
+          test -n "$TAVILY_API_KEY" || { echo 'Search credential missing; retain published feed'; exit 1; }
+          args=()
+          if [ "$FORCE_JOBS" = true ]; then args+=(--force-jobs); fi
+          node scripts/career-public-feed.cjs public/career-feed.json "${args[@]}"
+      - name: Publish public content only
+        run: |
+          git config user.name daylight-research-bot
+          git config user.email daylight-research-bot@users.noreply.github.com
+          git add public/career-feed.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public job sources and embodied research'
+            git push
+          fi

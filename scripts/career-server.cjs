@@ -8,6 +8,7 @@ const { boundedFetch, collectSource, SourceError } = require('./career-adapters.
 const scheduler = require('./career-scheduler.cjs');
 const { runBrowserCollector } = require('./career-browser-runner.cjs');
 const details = require('./career-detail-queue.cjs');
+const { createSearchFetch } = require('./career-search-transport.cjs');
 
 function loadToken(dataDir, env) {
   if (env.CAREER_SERVICE_TOKEN) {
@@ -56,6 +57,7 @@ function bootstrap(dataDir, seedFile) {
 function createCareerService(options = {}) {
   const dataDir = options.dataDir || path.resolve(__dirname, '../data/career-private');
   const env = options.env || process.env;
+  const fetchImpl = options.fetchImpl || createSearchFetch(global.fetch, env);
   const token = options.token || loadToken(dataDir, env);
   let feed = bootstrap(dataDir, options.seedFile);
   let queue = Promise.resolve(), refreshing = null, lastRefreshAt = 0;
@@ -99,7 +101,7 @@ function createCareerService(options = {}) {
           if (runRequests + count > config.maxRequestsPerRefresh || !scheduler.spendBudget(scheduleState, config, now(), count)) throw new SourceError('error', '本次或每日采集预算已用完；旧结果保留，下轮按来源和查询轮转继续。');
           runRequests += count; sourceRequests += count; scheduler.saveScheduler(dataDir, scheduleState);
         };
-        const request = options.request || boundedFetch(options.fetchImpl, { ...options.fetchOptions, maxRequests: Math.min(16, config.maxRequestsPerRefresh), onRequest: () => spend(1) });
+        const request = options.request || boundedFetch(fetchImpl, { ...options.fetchOptions, maxRequests: Math.min(16, config.maxRequestsPerRefresh), onRequest: () => spend(1) });
         const queryEnv = { ...env, CAREER_QUERIES: planned.queries, CAREER_PAGES_PER_QUERY: config.pagesPerQuery, CAREER_MAX_DETAILS: config.maxDetailsPerSource, CAREER_DETAIL_CURSOR: scheduleState.sources[provider.id]?.detailCursor || 0 };
         let result;
         try {
@@ -127,11 +129,11 @@ function createCareerService(options = {}) {
         writeFeed(dataDir, feed);
       }
       if (detailQueue.length && runRequests < config.maxRequestsPerRefresh && scheduler.remainingBudget(scheduleState, config, now()) > 0 && !options.collect) {
-        const request = options.request || boundedFetch(options.fetchImpl, { ...options.fetchOptions, maxRequests: 2, onRequest: () => {
+        const request = options.request || boundedFetch(fetchImpl, { ...options.fetchOptions, maxRequests: 2, onRequest: () => {
           if (runRequests >= config.maxRequestsPerRefresh || !scheduler.spendBudget(scheduleState, config, now(), 1)) throw new SourceError('error', '详情核查预算已用完');
           runRequests++; scheduler.saveScheduler(dataDir, scheduleState);
         } });
-        const result = await details.processQueue(detailQueue, request, now(), 2);
+        const result = await details.processQueue(detailQueue, request, now(), 2, { disabledSources: Object.keys(config.sources).filter(id => config.sources[id] === false) });
         if (result.jobs.length) feed.jobs = mergeJobs(feed.jobs, result.jobs);
         details.saveQueue(dataDir, detailQueue); writeFeed(dataDir, feed);
       }

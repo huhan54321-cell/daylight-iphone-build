@@ -1,6 +1,6 @@
 /** Optional, user-run collector. Reads a user's visible BOSS pages only.
  * No stealth flags, CAPTCHA bypass, chat, résumé access, or applications.
- * Requires separately installed official Playwright and Chromium. Not run by CI.
+ * Requires separately installed official Playwright. Defaults to its Chromium; can use local Chrome.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,13 +10,15 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const { mergeJobs, safeURL, contentHash } = require('./career-core.cjs');
 const { loadConfig, queryPlan } = require('./career-scheduler.cjs');
-const { bossListRecord, bossResponseRecords, bossDetailRecord, validServiceURL } = require('./career-browser-records.cjs');
+const { bossListRecord, bossResponseRecords, bossDetailRecord, bossDocumentIssue, validServiceURL } = require('./career-browser-records.cjs');
+const { browserLaunchOptions, browserProfileName } = require('./career-browser-launch.cjs');
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const value = flag => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : null; };
 const sourceID = value('--source') || 'boss';
 const dataDir = path.resolve(value('--data-dir') || path.join(directory, '../data/career-private'));
-const profile = path.join(dataDir, 'browser-boss');
+const launchOptions = browserLaunchOptions(args);
+const profile = path.join(dataDir, browserProfileName(launchOptions));
 const endpoint = validServiceURL(value('--endpoint') || process.env.CAREER_SERVICE_URL || 'http://127.0.0.1:4176');
 const tokenFile = path.join(dataDir, 'token.txt');
 const token = process.env.CAREER_SERVICE_TOKEN || (fs.existsSync(tokenFile) ? fs.readFileSync(tokenFile, 'utf8').trim() : '');
@@ -34,10 +36,10 @@ async function post(route, body) {
     return response.json();
   } finally { clearTimeout(timer); }
 }
-async function pageState(page) {
+async function pageState(page, allowLogin = false) {
   const body = (await page.locator('body').innerText({ timeout: 8000 })).slice(0, 30000);
-  if (/访问验证|安全验证|完成验证后|滑动.*验证|异常访问|验证您的身份/.test(body) || /verify|security-check|\/web\/passport\/zp\/security\.html/.test(page.url())) throw new CollectorError('blocked', 'BOSS 要求安全验证；采集已停止，请在自己的浏览器处理后重试。');
-  if (/\/web\/user\//.test(page.url()) || /扫码登录后.*查看|请登录后.*查看|登录后查看职位/.test(body)) throw new CollectorError('login_required', 'BOSS 会话尚未登录或已过期，请运行 --login。');
+  const issue = bossDocumentIssue(page.url(), body, allowLogin);
+  if (issue) throw new CollectorError(issue.state, issue.message);
   return body;
 }
 async function visibleDOMRows(page) {
@@ -87,6 +89,8 @@ async function collect(page) {
         await pageState(page);
         if (challengeFromResponse) throw new CollectorError('blocked', 'BOSS 返回安全验证响应；停止采集，保留旧结果。');
         await page.locator('.job-card-wrapper, .job-card-box').first().waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
+        // SPA startup can redirect to a challenge after the first page check.
+        await pageState(page);
         const rows = await visibleDOMRows(page);
         records = mergeJobs(records, rows.map(r => bossListRecord(r, checkedAt)).filter(Boolean));
         await Promise.allSettled(pending); pending = [];
@@ -154,11 +158,16 @@ try {
   let chromium;
   try { ({ chromium } = await import('playwright')); } catch { throw new Error('未安装可选 Playwright。请按 docs/career-service.md 安装官方依赖；没有自动下载或运行第三方采集项目。'); }
   fs.mkdirSync(dataDir, { recursive: true, mode: 0o700 }); fs.writeFileSync(path.join(dataDir, '.gitignore'), '*\n');
-  context = await chromium.launchPersistentContext(profile, { headless: args.includes('--scheduled'), viewport: { width: 1280, height: 900 }, serviceWorkers: 'block' });
+  context = await chromium.launchPersistentContext(profile, launchOptions);
   context.setDefaultTimeout(8000);
   const page = context.pages()[0] || await context.newPage();
   if (args.includes('--login')) {
-    await page.goto('https://www.zhipin.com/', { waitUntil: 'domcontentloaded', timeout: 25000 });
+    await page.goto('https://www.zhipin.com/web/user/?ka=header-login', { waitUntil: 'domcontentloaded', timeout: 25000 });
+    await page.bringToFront();
+    // Some pages return HTTP 200 and then leave the site during client startup.
+    // Wait for that startup before asking a user to scan a nonexistent login UI.
+    await page.waitForTimeout(1000);
+    await pageState(page, true);
     console.log('请在打开的浏览器中自行扫码登录。不要在终端输入密码。登录成功后返回终端按回车保存本机会话。');
     const input = readline.createInterface({ input: process.stdin, output: process.stdout });
     await input.question('完成本机登录后按回车：'); input.close();
@@ -170,7 +179,7 @@ try {
   const state = error.state || 'error';
   finalState = state; finalMessage = error.message;
   console.error(error.message);
-  if (token && args.includes('--collect') && !args.includes('--output-only')) await post('/v1/career/collector-status', { sourceID: 'boss', state, message: error.message }).catch(() => {});
+  if (token && (args.includes('--collect') || args.includes('--login')) && !args.includes('--output-only')) await post('/v1/career/collector-status', { sourceID: 'boss', state, message: error.message }).catch(() => {});
   process.exitCode = 1;
 } finally {
   if (args.includes('--collect') && fs.existsSync(dataDir)) fs.writeFileSync(path.join(dataDir, 'boss-last-state.json'), JSON.stringify({ state: finalState, message: finalMessage, coverage, partialSaved, finishedAt: new Date().toISOString() }, null, 2) + '\n', { mode: 0o600 });

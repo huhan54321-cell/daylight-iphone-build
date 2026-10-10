@@ -1,5 +1,5 @@
 {
-  "version": "0.3.9",
+  "version": "0.4.0",
   "built": false,
   "files": [
     {
@@ -52,7 +52,7 @@
     },
     {
       "file": "ios/Daylight/CareerFeed.swift",
-      "sha256": "4f385286b70d6bebd2a1c71d04b861868a3c1b723ec2a24f19e83751faae087b"
+      "sha256": "8f7f80062f5546a39e14fdb1957813a8ac99f480084b78abd3c865866a854266"
     },
     {
       "file": "ios/Daylight/CareerModelMatching.swift",
@@ -60,19 +60,23 @@
     },
     {
       "file": "ios/Daylight/CareerModule.swift",
-      "sha256": "a8149292de17e6781186234e50af3fb04c5e950eaefb738e347dcc5ca1b52733"
+      "sha256": "bdb1995c5de16e0e4237b81ff427b230e18bca3e3c0fe827eaf79bbe6c629cb5"
     },
     {
       "file": "ios/Daylight/CareerNetworking.swift",
       "sha256": "406504ede7c91df28c01f8d6865bd19ed3ee5f44dd70260fb0d69dd7ea0f014f"
     },
     {
+      "file": "ios/Daylight/CareerPublicNetworking.swift",
+      "sha256": "5492133697cfac4c9339f1a7fc675fb132c1a9a2215a98cdfff1d91fdcd78a9a"
+    },
+    {
       "file": "ios/Daylight/CareerSeed.json",
-      "sha256": "407a5dc7e9d20a3144fb64c531308188c8697322c88ab6024250985b58b10a61"
+      "sha256": "2f578c6fd7671368fa48938df6039c7b00eab1a0a8fe3fe80d76f724ba67851a"
     },
     {
       "file": "ios/Daylight/CareerStore.swift",
-      "sha256": "ef6bb65365567d363618aba3c112492c2eb5529fd06cb522c6d1cf6caf6059ef"
+      "sha256": "00c57207ed1e63f7eb90a70eae7d09cefa93fe7a5947de522febf045005a5fc4"
     },
     {
       "file": "ios/Daylight/ContentView.swift",
@@ -100,7 +104,7 @@
     },
     {
       "file": "ios/Daylight/Info.plist",
-      "sha256": "91c0144e9766e37ad604f434adef5d8092364876d83956ad64f0a0303a75e38e"
+      "sha256": "6aff8f1ab36d2c10a6245b88c91c5d0ddc8c2904942a88dbb551ef39d97066bc"
     },
     {
       "file": "ios/Daylight/Models.swift",
@@ -160,7 +164,7 @@
     },
     {
       "file": "ios/Daylight/SettingsModule.swift",
-      "sha256": "265189068fc78cad90b641ee17c5ebc12b8c802886d1a99005fffdd3fee247db"
+      "sha256": "39e0a3a06b6944b663bf5e4703169f9dd06851abc51c2e3533656afb31879a9c"
     },
     {
       "file": "ios/Daylight/SummaryNotifications.swift",
@@ -184,7 +188,7 @@
     },
     {
       "file": "ios/DaylightUITests/DaylightUITests.swift",
-      "sha256": "503e1ad61785c347f132de7f07b78dc5488779f6bd6f05ee7faa090189b80e65"
+      "sha256": "8f2faef5abf60c1263f2c79588a31ee36c8bdd8d337fb18a3499e45484622db4"
     },
     {
       "file": "tests/native/BankBalanceOrderTests.swift",
@@ -208,7 +212,7 @@
     },
     {
       "file": "tests/native/CareerTests.swift",
-      "sha256": "ceb7ce4a9a87a46b01b227a1a433304354f21788031c52aa4d43c1f2f0f6b1e5"
+      "sha256": "abf0f75c1f2c2a6913e32793c879d57822b402c04e326b64dc3dbad739c12aa9"
     },
     {
       "file": "tests/native/CoreTests.swift",
@@ -235,24 +239,32 @@
       "sha256": "f13e6727bbf8ad8b7c4ca681199b2a10d6ef4935684d4df7acabf9e33447f6ed"
     },
     {
+      "file": ".github/workflows/career-update.yml",
+      "sha256": "722a260525b8ad721e66b413fcd8df82c5cd17bad815fa85ed3651ac1d656aa5"
+    },
+    {
       "file": ".github/workflows/ios-build.yml",
-      "sha256": "6800422b2029cedd9577035596b5fca2afc560d2c6063cf24fdc2cf4c96fa763"
+      "sha256": "5ff8bd5817000dac522d60a82859983c90fc56bc698f51424b539093ff313ce0"
     },
     {
       "file": "scripts/career-adapters.cjs",
-      "sha256": "0dd8c5f27cfb9f747130ff11d1cfa117b13b4f6ad54273e17d3d29e2d366deef"
+      "sha256": "5323aea0d42f82cf366be96e75b9b99135a4cca94f6a16717f3cd00966fb568a"
     },
     {
       "file": "scripts/career-browser-collector.mjs",
-      "sha256": "36f4db06a1e88ea47692bb200f527d4a0ac83a2a90f2616b9423bbed41b88657"
+      "sha256": "6733e930578fef5e79454c3c3337085236fbd0dbb8cb77980ad1cc432eaaa7e5"
+    },
+    {
+      "file": "scripts/career-browser-launch.cjs",
+      "sha256": "184eee8041bdd4b66a174ad5780b39d426d8d3c7b6e4601c89e02d429722b945"
     },
     {
       "file": "scripts/career-browser-records.cjs",
-      "sha256": "8cb15f90d3da5d293f242d9f6334f47e95ea8eef2ac54b6ddcfe7e7c437dd3e0"
+      "sha256": "cf55d8ebe8b3848a754a4e7e8f34027cf37d3dd74a4b0e45b1665ea0d38020ae"
     },
     {
       "file": "scripts/career-browser-runner.cjs",
-      "sha256": "7a580a79f7af0ef1b4abb1ce2b3d56247434716691cff892c652640639b9ac81"
+      "sha256": "4d1127c8bff110cdd2416d38b970f72368f8b88192c39d0a643ced2b649514e5"
     },
     {
       "file": "scripts/career-constraints.cjs",
@@ -260,23 +272,51 @@
     },
     {
       "file": "scripts/career-core.cjs",
-      "sha256": "4e2c6737282065e36ef6d1ecc0affac0fdc221ab1b097da00d9ea367edf2b776"
+      "sha256": "76c48da8491933b731f4301e750bd1a35033b33c00e3dd449d1f5d498e65cfd8"
     },
     {
       "file": "scripts/career-detail-queue.cjs",
-      "sha256": "61caa267499e1051034ab7c5a922ba4083f6f30ca3990a71498667c581a99a87"
+      "sha256": "8083327d5659c0c6facbd7aeac416afb1f6e83a905516e872f3d0632cb86ed47"
     },
     {
       "file": "scripts/career-live-check.cjs",
       "sha256": "405b623592f1eb337dec542209e2777c69cef0fc4ac42b06ca52288f31e58422"
     },
     {
+      "file": "scripts/career-public-feed.cjs",
+      "sha256": "37eb7db97ada692feabfe30bb0b45ffb74315a53124f960baf7f809e6f07e954"
+    },
+    {
       "file": "scripts/career-scheduler.cjs",
-      "sha256": "99a40c8328202289fde138fd8dde46fbf897b9d5a5eda6ec2067080ac484c7c3"
+      "sha256": "88b6f9d63d8aaa269837acadf5e445eb170901b6bc965a2997f73fbf8ffadda1"
+    },
+    {
+      "file": "scripts/career-search-request.ps1",
+      "sha256": "595457174f97110d82e2819e261bdee98ae6f39df285848a43856e845a78265b"
+    },
+    {
+      "file": "scripts/career-search-transport.cjs",
+      "sha256": "421c1a96b508cb4213539ef5be7be0f16daab52385a5a010c4886fbaadb04119"
     },
     {
       "file": "scripts/career-server.cjs",
-      "sha256": "16b828b0b0e96a2edfea2511e619827fab4054f5a2e306c5c6774c437c6c7275"
+      "sha256": "ef1c7d720899f7bb927610d7f1549b5124e1b9efef0842c2ce5f0fc28a967fdb"
+    },
+    {
+      "file": "public/career-feed.json",
+      "sha256": "2f578c6fd7671368fa48938df6039c7b00eab1a0a8fe3fe80d76f724ba67851a"
+    },
+    {
+      "file": "docs/career-public-update.md",
+      "sha256": "d4380754eae251d393a543c3aea572356757612a578d37490358a38cf4d438fc"
+    },
+    {
+      "file": "tests/career-browser-launch.test.cjs",
+      "sha256": "5e876de1a60a70f3694763574ff7a79a6857bf63527e9b0800249d3f6552620a"
+    },
+    {
+      "file": "tests/career-browser-page.test.cjs",
+      "sha256": "67b04832d7ec499999f5e211a8111e0e0d09d1eedfdd9601b6c8edafa2bbde3c"
     },
     {
       "file": "tests/career-constraints.test.cjs",
@@ -284,11 +324,23 @@
     },
     {
       "file": "tests/career-detail-queue.test.cjs",
-      "sha256": "94f30ffdc278714c444ac72cc89f094a078e20d61b576c1f2c57edeb1e08332c"
+      "sha256": "d7fe870eed27446ce73d8a5fbc4167d39f877bebe6ddddbf047c0c045c7478fb"
+    },
+    {
+      "file": "tests/career-public-feed.test.cjs",
+      "sha256": "4e0fe9630ed1dea1eb1208aced620b32406ac6309ff6b0c4d8277dd57f0e68ab"
     },
     {
       "file": "tests/career-scheduler.test.cjs",
       "sha256": "17c955863f04db91e70351d6421130794ae7550b0fa5e3e858407e9c395045a2"
+    },
+    {
+      "file": "tests/career-search-transport.test.cjs",
+      "sha256": "53076ca8cf6afba76d53300b24e9a1e48f129a9a235ea23f57470a98f2269c64"
+    },
+    {
+      "file": "tests/career-search.test.cjs",
+      "sha256": "e8a0d2e1b503bd270e4da2be1fb35e421453197672fae861fe8bfd110a636449"
     },
     {
       "file": "tests/career-service.test.cjs",
@@ -296,15 +348,15 @@
     },
     {
       "file": "package.json",
-      "sha256": "32f0773e7e581ec5706ebd89b59cab010fe7f048362429de8ebb933b3be82808"
+      "sha256": "47746ff3ad22293a1d5fb29721699ca3b7a1aea76043b83ebaed9e1ca051acc9"
     },
     {
       "file": "docs/career-service.md",
-      "sha256": "8edd942776eff7682a3ecf595ef2abc8034ec687817c481e4656ee1f1a795cc9"
+      "sha256": "491e30357f99907eca89c9966bef2f23f117d3fdcb445060db10cba0f637264a"
     },
     {
       "file": "scripts/start-career.cmd",
-      "sha256": "613ed2e1dc86f52ede7aaa98f8ec7e4c1067186816873273a1d3a05854c4e9d9"
+      "sha256": "7ca87ba280afae4c981428d81b7a19daf35a144e7dab4db331f77a8a7e3c730b"
     },
     {
       "file": "scripts/generate-assets.cjs",
@@ -312,7 +364,7 @@
     },
     {
       "file": "scripts/generate-xcode.cjs",
-      "sha256": "89666b8cb24ce74b253635f929eb23d9dea65a29ea767a6067f56c47e0d0f99a"
+      "sha256": "8a272f459be15e6d8d1f36d62e7687e0fe475ed3de17e3a099d8cca32e9883bf"
     },
     {
       "file": "scripts/prepare-ios.cjs",
@@ -320,7 +372,7 @@
     },
     {
       "file": "scripts/build-ios.sh",
-      "sha256": "a80fc73a8cf33f31a679cb94d87f6e19c6bde255a60a89d5ad0b2b9d732774ea"
+      "sha256": "86aaebe20ba56a7c8d004f1aec921b430c1ede20697e7ddf3ea48081f1ffc391"
     },
     {
       "file": "scripts/capture-ios.sh",
@@ -340,7 +392,7 @@
     },
     {
       "file": "docs/career-module.md",
-      "sha256": "ee375067dad34bee4720b8615b9ed12da912366f7b6dddb370fb30bff9773a5a"
+      "sha256": "89a6f89786227c55246a5fb5845124c23e1a001d1dfe8cb1e4c7427c61a65018"
     },
     {
       "file": ".gitignore",

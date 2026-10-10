@@ -2,12 +2,16 @@
 const { spawn } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
+const { browserLaunchOptions, browserProfileName } = require('./career-browser-launch.cjs');
 function runBrowserCollector(dataDir, queries, config) {
   return new Promise(resolve => {
     const startedAt = Date.now();
-    if (!fs.existsSync(path.join(dataDir, 'browser-boss'))) return resolve({ state: 'login_required', jobs: [], message: '定期 BOSS 采集尚无本机授权会话；先自行运行 --login。' });
+    const args = [path.join(__dirname, 'career-browser-collector.mjs'), '--source', 'boss', '--collect', '--scheduled', '--output-only', '--data-dir', dataDir];
+    if (config.browserChannel && config.browserChannel !== 'chromium') args.push('--browser-channel', config.browserChannel);
+    const profile = browserProfileName(browserLaunchOptions(args));
+    if (!fs.existsSync(path.join(dataDir, profile))) return resolve({ state: 'login_required', jobs: [], message: '定期 BOSS 采集尚无所选浏览器的本机授权会话；先自行运行 --login。' });
     // Only this repository's fixed collector is launched, never a config-supplied command.
-    const child = spawn(process.execPath, [path.join(__dirname, 'career-browser-collector.mjs'), '--source', 'boss', '--collect', '--scheduled', '--output-only', '--data-dir', dataDir], {
+    const child = spawn(process.execPath, args, {
       cwd: path.resolve(__dirname, '..'), windowsHide: true, stdio: 'ignore', env: { ...process.env, CAREER_COLLECT_QUERIES: JSON.stringify(queries), CAREER_PAGES_PER_QUERY: String(config.pagesPerQuery), CAREER_MAX_DETAILS: String(config.maxDetailsPerSource), CAREER_MAX_PAGE_ACTIONS: String(Math.min(config.maxRequestsPerRefresh, queries.length * config.pagesPerQuery + config.maxDetailsPerSource)) }
     });
     let finished = false;

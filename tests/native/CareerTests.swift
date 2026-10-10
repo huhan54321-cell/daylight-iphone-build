@@ -94,6 +94,21 @@ enum CareerTests {
         CareerFixtureProtocol.reply = (200, Data("invalid".utf8))
         rejected = false; do { _ = try await client.fetch(refresh: false) } catch { rejected = true }
         try expect(rejected, "malformed response is not successful empty jobs")
+        try expect(CareerPublicContent.cleaned(feed).jobs.isEmpty, "removed providers are excluded from public and private display")
+        let publicURL = URL(string: "https://raw.githubusercontent.com/example/example/main/public/career-feed.json")!
+        try expect(CareerPublicEndpoint.validated(publicURL.absoluteString) != nil, "public HTTPS endpoint accepted")
+        try expect(CareerPublicEndpoint.validated("http://raw.githubusercontent.com/example/example/main/public/career-feed.json") == nil, "public plaintext rejected")
+        CareerFixtureProtocol.reply = (200, bytes)
+        let publicClient = CareerPublicNetworking(session: session)
+        _ = try await publicClient.fetch(url: publicURL)
+        try expect(CareerFixtureProtocol.captured?.httpMethod == "GET" && CareerFixtureProtocol.captured?.value(forHTTPHeaderField: "Authorization") == nil && CareerFixtureProtocol.captured?.httpBody == nil, "public read sends no profile or secret")
+        let today = CareerFeedArticle(id: "today", title: "Robot policy", date: "2026-10-06T00:00:00+08:00", category: "论文", summary: "Source abstract", relevance: "", url: "https://arxiv.org/abs/2610.00001")
+        var old = today; old.id = "old"; old.date = "2026-10-01T00:00:00+08:00"
+        var unknown = today; unknown.id = "unknown"; unknown.date = ""; unknown.dateVerified = false
+        var future = today; future.id = "future"; future.date = "2026-10-07T00:00:00+08:00"
+        let articles = [old, today, unknown, future]
+        try expect(CareerReportPeriod.articles(articles, days: 1, now: now).map(\.id) == ["today"], "daily report contains only today's confirmed publications")
+        try expect(Set(CareerReportPeriod.articles(articles, days: 7, now: now).map(\.id)) == Set(["today", "old"]), "weekly report excludes unknown dates and future papers")
         return checks
     }
 }

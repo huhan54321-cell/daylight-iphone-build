@@ -20,7 +20,7 @@
 | 浙大 | 官方招聘活动中公司岗位页 | 不需要第三方 Key | 真实页面只读验证；保留发布日、截止日与历史来源限制 |
 | 实习僧官方 API | `/intern/search`、`/intern/info` | 商务提供 APP_ID/APP_SECRET、IP 白名单 | 签名和结构通过模拟测试；未有商户账号真实联调 |
 | 实习僧公开详情 | 配置的公开详情及发现队列 | 页面能公开读取 | 真实详情验证；明确下线的 Palatial 岗已识别为关闭 |
-| BOSS | 本机用户授权浏览器采集器 | 首次本机登录、可选官方 Playwright | 实现定时执行、分页、详情缓存和部分结果 checkpoint；未通过本人登录会话现场联调 |
+| BOSS | 本机用户授权浏览器采集器 | 首次本机登录、可选官方 Playwright | 2026-10-09 在标准 Chrome 自动化窗口现场测试：首页、登录页 HTTP 200 后退回空白页，当前未接通；代码检查受限状态并保留缓存 |
 | 多源公开搜索 | Tavily 搜索和受限详情队列 | 服务端 Tavily Key | 结构、鉴权与队列测试；未使用真实收费 Key 联调 |
 | 智联 | 配置公开详情链接/发现队列 | 页面有支持的可读结构 | 格式测试；全站自动搜索未接入 |
 | 牛客 | 缓存与发现队列的结构化详情 | 支持的公开页面 | 独立全站采集器未接入 |
@@ -36,6 +36,8 @@ node scripts/career-server.cjs --lan
 ```
 
 默认端口 `4176`。不加 `--lan` 只监听 `127.0.0.1`；加上后 iPhone 和电脑同一局域网可通过电脑内网地址连接。App 的服务地址填 `http://你的电脑内网IP:4176`，服务连接凭据从 `data/career-private/token.txt` 复制到 App。它是独立随机访问令牌，和大模型 API Key、短信配对码不是同一个东西。请勿把令牌或私有目录上传到 GitHub。
+
+本机桌面已有 `启动岗位采集服务.cmd`：电脑重启或服务停止后双击一次，启动后保持服务窗口运行；重复双击会检查现有服务而不会启动第二份。脚本调用 `scripts/show-career-address.ps1` 显示当前地址。切换 Wi-Fi／热点后电脑 IP 可能变化，需要按脚本显示的地址更新 App；令牌通常保持不变。按用户选择未配置 Windows 登录后自动启动。
 
 `--no-schedule` 可临时只提供接口，`--refresh-on-start` 可手动提前刷新，`--port` 可指定其他端口，`--data-dir` 可指定私有缓存目录。没有缓存时，服务会从 `ios/Daylight/CareerSeed.json` 读取人工核查资料；这不会被标记成某招聘来源已经自动采集成功。
 
@@ -77,7 +79,7 @@ node scripts/career-server.cjs --lan
 
 ## BOSS 一次授权，后续周期采集
 
-这部分需要额外安装官方 Playwright，用独立私有浏览器会话。它没有隐身反检测参数，不绕过验证码，也不会投递、打招呼或读取简历。我们没有在此次验证中通过 Shell 启动或控制这个浏览器。
+这部分需要额外安装官方 Playwright，用独立私有浏览器会话。它没有隐身反检测参数，不绕过验证码，也不会投递、打招呼或读取简历。2026-10-09 已在本机启动标准 Chrome 现场检查：首页和官方登录页都在 HTTP 200 后退回空白页，普通 Chrome 可以访问。当前浏览器路线未接通，不应仅凭代码测试或会话目录存在启用定期采集。出现空白／离站页面时立即停止并显示受限状态，不提示授权成功。
 
 用户可以自行在项目目录安装：
 
@@ -87,9 +89,20 @@ npx playwright install chromium
 node scripts/career-browser-collector.mjs --source boss --login
 ```
 
-出现浏览器后由本人扫码登录，再回到终端按回车。手机已登录不等于此电脑会话已登录。之后将私有 `config.json` 的 `browserCollectorEnabled` 改成 `true`，保持岗位服务运行；定期任务会自动调用本机 collector，读取已授权会话，不需要每轮手工导入。可自行用 `--collect` 提前触发一轮。遇验证码会停并保留已成功读取的列表 checkpoint，提示 `blocked`；用户在自己浏览器处理后再试。
+如果此电脑已安装 Google Chrome，也可显式选择它。先安装上面第一行的 Playwright；下面两行要在同一个 PowerShell 窗口中执行，之后从这个窗口启动岗位服务，定时采集会沿用该设置：
+
+```powershell
+$env:CAREER_BROWSER_CHANNEL = 'chrome'
+node scripts/career-browser-collector.mjs --source boss --login
+```
+
+若 Chrome 的安装路径需要手动指定，可用 `CAREER_BROWSER_EXECUTABLE_PATH` 指向 `chrome.exe`，与 `CAREER_BROWSER_CHANNEL` 二选一。单次手动运行也支持 `--browser-channel chrome` 或 `--browser-executable "C:\Program Files\Google\Chrome\Application\chrome.exe"`；定时采集请使用环境变量，并在启动岗位服务前设置。没有设置时仍使用 Playwright 自带的 Chromium，并需要执行上面的 `npx playwright install chromium`。
+
+出现浏览器后由本人扫码登录，再回到终端按回车。手机已登录不等于此电脑会话已登录。之后将私有 `config.json` 的 `browserCollectorEnabled` 改成 `true`，保持岗位服务运行；定期任务会自动调用本机 collector，读取已授权会话，不需要每轮重新登录或手工导入。会话过期时再运行 `--login`。可自行用 `--collect` 提前触发一轮。遇验证码会停并保留已成功读取的列表 checkpoint，提示 `blocked`；用户在自己浏览器处理后再试。
 
 目前本机浏览器路径只实现 BOSS；实习僧用正式 API/公开详情，不声称另一个已登录采集器存在。默认浏览器城市映射仅验证代码支持杭州、北京、上海；其他城市报未验证，不混成杭州数据。
+
+2026-10-09 Edge 现场结果：用户通过 `scripts/boss-login-edge.cmd` 在普通 Edge 的独立 `browser-boss-edge` 目录扫码登录，并通过 `search` 参数打开杭州搜索、完成官网验证，确认能看到岗位列表。关闭普通窗口后，使用同一目录的 Playwright 后台和可见窗口采集都再次被跳转到 `/web/passport/zp/verify.html`。因此尚未取得实际岗位采集结果；私有配置保持 `browserCollectorEnabled: false`、`sources.boss: false`，来源状态为受限。`browserChannel: "msedge"` 已支持，但普通网页登录成功不代表自动读取成功。页面初次加载后、等待岗位卡片后均检查验证跳转，避免误报无岗位或成功。
 
 ## 服务端接口 Key
 
@@ -101,6 +114,10 @@ node scripts/career-browser-collector.mjs --source boss --login
 - `CAREER_SERVICE_TOKEN`：可自设至少 24 字符的随机 App 连接令牌；不设置则服务自动生成并持久化。
 
 这些配置留在电脑。模型分析仍在 App 现有配置中按需执行，采集和规则处理不消耗 DeepSeek token；设置模型 Key 不能替代招聘平台授权或搜索 Key。
+
+Windows 搜索 Key 一次配置：在私有 `data/career-private/search.env` 填写 `TAVILY_API_KEY=你的Key`，不要将 Key 放在聊天或 GitHub。`scripts/start-career.cmd` 启动时通过 Node 的 `--env-file` 读取该文件，仅传给服务进程。配置后需要重启已运行的服务；之后沿用桌面启动脚本即可。该文件在电脑本地以文本保存，不随 IPA 打包或上传，环境文件存在但 Key 为空时仍显示未配置。搜索请求使用 Bearer 鉴权，固定 `basic`、关闭自动参数与答案生成；摘要保持线索等级，不推测公司、资格或在招状态。
+
+本机 2026-10-09 对照：Node 经现有代理多次出现连接重置或超时，Windows 网络栈连续查询成功。因此私有环境启用 `CAREER_TAVILY_TRANSPORT=windows`，`CAREER_POWERSHELL` 使用本机已验证的 PowerShell 路径，`HTTPS_PROXY` 沿用本机现有代理。此模式只对 `https://api.tavily.com/search` 生效；Key 通过子进程标准输入传递，日志和命令行不包含凭据。Node 的取消信号会终止该子进程，响应受大小上限限制。代理客户端关闭时搜索可能失败，旧缓存保留。多查询中途失败也保留前面的成功线索，轮转游标不跳过未完成批次；招聘汇总／搜索页不作为具体岗位推荐。已关闭的来源不会因搜索发现链接而重新进行自动详情抓取。
 
 ## API Contract v1
 

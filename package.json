@@ -1,6 +1,6 @@
 {
   "name": "daylight-personal-assistant",
-  "version": "0.3.9",
+  "version": "0.4.0",
   "private": true,
   "description": "日常 · iPhone 原生应用与本地交互原型",
   "scripts": {

@@ -2,6 +2,14 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const base = path.resolve(__dirname, '../ios');
+const repository = process.env.GITHUB_REPOSITORY;
+if (repository && /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository)) {
+  const info = path.join(base, 'Daylight/Info.plist');
+  let xml = fs.readFileSync(info, 'utf8').replace(/<key>CareerPublicFeedURL<\/key><string>[^<]*<\/string>/g, '');
+  xml = xml.replace('</dict></plist>', `<key>CareerPublicFeedURL</key><string>https://raw.githubusercontent.com/${repository}/main/public/career-feed.json</string></dict></plist>`);
+  fs.writeFileSync(info, xml);
+}
+
 const files = fs.readdirSync(path.join(base, 'Daylight')).filter(f => f.endsWith('.swift')).sort();
 const testFolder = path.join(base, 'DaylightUITests');
 const testFiles = fs.existsSync(testFolder) ? fs.readdirSync(testFolder).filter(f => f.endsWith('.swift')).sort() : [];
