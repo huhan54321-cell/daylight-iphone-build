@@ -27,8 +27,19 @@ actor CareerPublicNetworking {
     }
     func fetch(url: URL) async throws -> CareerFeed {
         guard CareerPublicEndpoint.validated(url.absoluteString) != nil else { throw CareerServiceError.configuration }
+        do { return try await read(url: url, api: false) }
+        catch is CancellationError { throw CancellationError() }
+        catch {
+            let components = url.path.split(separator: "/")
+            guard components.count == 5, components[2] == "main",
+                  let backup = URL(string: "https://api.github.com/repos/\(components[0])/\(components[1])/contents/public/career-feed.json?ref=main") else { throw CareerPublicError.unavailable }
+            return try await read(url: backup, api: true)
+        }
+    }
+    private func read(url: URL, api: Bool) async throws -> CareerFeed {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(api ? "application/vnd.github.raw+json" : "application/json", forHTTPHeaderField: "Accept")
+        request.timeoutInterval = 15
         // Public feed GET contains no credentials, profile, search text or device data.
         do {
             let (bytes, response) = try await session.bytes(for: request)

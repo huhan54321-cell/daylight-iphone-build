@@ -68,11 +68,11 @@
     },
     {
       "file": "ios/Daylight/CareerPublicNetworking.swift",
-      "sha256": "5492133697cfac4c9339f1a7fc675fb132c1a9a2215a98cdfff1d91fdcd78a9a"
+      "sha256": "659b1ff2a8d0928d4114cd98103a54ac3aa603c323d7e2ea7544f3561b090305"
     },
     {
       "file": "ios/Daylight/CareerSeed.json",
-      "sha256": "2f578c6fd7671368fa48938df6039c7b00eab1a0a8fe3fe80d76f724ba67851a"
+      "sha256": "e9201b798e01c4ec3b89eaa58142b78bef41b138b2323c27851f1df7bea6db09"
     },
     {
       "file": "ios/Daylight/CareerStore.swift",
@@ -212,7 +212,7 @@
     },
     {
       "file": "tests/native/CareerTests.swift",
-      "sha256": "abf0f75c1f2c2a6913e32793c879d57822b402c04e326b64dc3dbad739c12aa9"
+      "sha256": "604de2971bc3c6917fa217b9e4a7a67d4d77a31e1a2ba90ca90eb7e91703abee"
     },
     {
       "file": "tests/native/CoreTests.swift",
@@ -304,7 +304,7 @@
     },
     {
       "file": "public/career-feed.json",
-      "sha256": "2f578c6fd7671368fa48938df6039c7b00eab1a0a8fe3fe80d76f724ba67851a"
+      "sha256": "e9201b798e01c4ec3b89eaa58142b78bef41b138b2323c27851f1df7bea6db09"
     },
     {
       "file": "docs/career-public-update.md",

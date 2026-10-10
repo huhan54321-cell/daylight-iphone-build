@@ -3,11 +3,13 @@ import Foundation
 private final class CareerFixtureProtocol: URLProtocol {
     static var reply: (Int, Data) = (200, Data())
     static var captured: URLRequest?
+    static var failPublicPrimary = false
     override class func canInit(with request: URLRequest) -> Bool { true }
     override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
     override func startLoading() {
         Self.captured = request
-        let response = HTTPURLResponse(url: request.url!, statusCode: Self.reply.0, httpVersion: "HTTP/1.1", headerFields: ["Content-Type":"application/json"])!
+        let code = Self.failPublicPrimary && request.url?.host == "raw.githubusercontent.com" ? 503 : Self.reply.0
+        let response = HTTPURLResponse(url: request.url!, statusCode: code, httpVersion: "HTTP/1.1", headerFields: ["Content-Type":"application/json"])!
         client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
         client?.urlProtocol(self, didLoad: Self.reply.1)
         client?.urlProtocolDidFinishLoading(self)
@@ -102,11 +104,16 @@ enum CareerTests {
         let publicClient = CareerPublicNetworking(session: session)
         _ = try await publicClient.fetch(url: publicURL)
         try expect(CareerFixtureProtocol.captured?.httpMethod == "GET" && CareerFixtureProtocol.captured?.value(forHTTPHeaderField: "Authorization") == nil && CareerFixtureProtocol.captured?.httpBody == nil, "public read sends no profile or secret")
+        CareerFixtureProtocol.failPublicPrimary = true
+        defer { CareerFixtureProtocol.failPublicPrimary = false }
+        _ = try await publicClient.fetch(url: publicURL)
+        try expect(CareerFixtureProtocol.captured?.url?.host == "api.github.com" && CareerFixtureProtocol.captured?.value(forHTTPHeaderField: "Authorization") == nil, "public CDN outage falls back to credential-free contents API")
         let today = CareerFeedArticle(id: "today", title: "Robot policy", date: "2026-10-06T00:00:00+08:00", category: "论文", summary: "Source abstract", relevance: "", url: "https://arxiv.org/abs/2610.00001")
         var old = today; old.id = "old"; old.date = "2026-10-01T00:00:00+08:00"
         var unknown = today; unknown.id = "unknown"; unknown.date = ""; unknown.dateVerified = false
         var future = today; future.id = "future"; future.date = "2026-10-07T00:00:00+08:00"
         let articles = [old, today, unknown, future]
+        try expect(CareerReportPeriod.date("2026-10-06T00:00:00.000Z") != nil, "real API fractional dates are supported")
         try expect(CareerReportPeriod.articles(articles, days: 1, now: now).map(\.id) == ["today"], "daily report contains only today's confirmed publications")
         try expect(Set(CareerReportPeriod.articles(articles, days: 7, now: now).map(\.id)) == Set(["today", "old"]), "weekly report excludes unknown dates and future papers")
         return checks
