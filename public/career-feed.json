@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T03:09:16.802Z",
+  "generatedAt": "2026-10-10T03:24:21.611Z",
   "jobs": [
     {
       "id": "job_2c84a6f6948339117c631b7b",
@@ -973,17 +973,17 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
-      "count": 4,
-      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "count": 3,
+      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -991,8 +991,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1000,17 +1000,17 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
-      "count": 8,
-      "message": "本轮读取 8 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
       "count": 2,
       "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1018,17 +1018,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "count": 2,
+      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
       "count": 36,
       "message": "本轮读取 36 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1036,33 +1036,33 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:09:16.802Z",
-      "lastSuccessAt": "2026-10-10T03:09:16.802Z",
+      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
+      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
     {
-      "id": "article-e5a48fb918b74ea03ef5e3bb",
-      "title": "GitHub - NVIDIA/Isaac-GR00T: NVIDIA Isaac GR00T N1.7 - A Foundation Model for Generalist Robots. · GitHub",
-      "date": "",
-      "category": "开源工具",
-      "summary": "### Embodiment Tags\nEvery inference or finetuning command requires an `--embodiment-tag`. The tag determines which modality config (state/action keys, normalization) the model uses. Tags are case-insensitive.\nFor the full list of pretrain and posttrain tags, see the Policy API Guide — Embodiment Tags.\n## Data Format\nGR00T uses a flavor of the LeRobot v2 dataset format with an additional `meta/modality.json` file that describes state/action/video structure. A dataset looks like: [...] 1. Prepare data — Collect robot demonstrations (video, state, action) and convert them to the GR00T LeRobot format. Demo datasets are included for quick testing.\n2. Run inference — Try zero-shot inference with the base model on pretrain embodiments, or use a finetuned checkpoint for benchmark tasks.\n3. Fine-tune — Adapt the model to your robot using `launch_finetune.py` with your own data and modality config",
+      "id": "article-d5fea414d61e112a2560121b",
+      "title": "5 Steps to Create SimReady Assets for Robotics with Frontier AI Models | NVIDIA Technical Blog",
+      "date": "2026-10-08T20:57:55.000Z",
+      "category": "硬件与落地",
+      "summary": "If manufacturer data is incomplete, you can ask the agent to identify missing parameters and check technical manuals or available URDF robot descriptions for the exact model. Where mass properties remain unavailable, estimate them from geometry using documented density or mass-distribution assumptions, following NVIDIA’s mass-property guidance. For example, when not given enough context, we observed the agent pulling a public URDF for the robot and used that to identify the correct axes for [...] Join us at NVIDIA GTC Berlin on October 20–22, 2026, to explore the latest developments in physical AI and robotics and connect with developers, researchers, and industry leaders.\nDiscuss (0)\n## Tags\nDeveloper Tools & Techniques | Simulation / Modeling / Design | General | Manufacturing | Isaac Sim | Intermediate Technical | Tutorial | DLI | featured | Omniverse | OpenUSD | Robotics Simulation\n#",
       "relevance": "",
-      "url": "https://github.com/Nvidia/Isaac-GR00T",
-      "sourceName": "github.com",
+      "url": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models",
+      "sourceName": "developer.nvidia.com",
       "authors": [],
       "topics": [
-        "数据与评测"
+        "仿真与迁移"
       ],
       "highlights": [
-        "## Data Format\nGR00T uses a flavor of the LeRobot v2 dataset format with an additional `meta/modality.json` file that describes state/action/video structure.",
-        "Prepare data — Collect robot demonstrations (video, state, action) and convert them to the GR00T LeRobot format.",
-        "Fine-tune — Adapt the model to your robot using `launch_finetune.py` with your own data and modality config."
+        "If manufacturer data is incomplete, you can ask the agent to identify missing parameters and check technical manuals or available URDF robot descriptions for the exact model.",
+        "For example, when not given enough context, we observed the agent pulling a public URDF for the robot and used that to identify the correct axes for [...] Join us at NVIDIA GTC Berlin on October 20–22, 2026, to explore t",
+        "Discuss (0)\n## Tags\nDeveloper Tools & Techniques | Simulation / Modeling / Design | General | Manufacturing | Isaac Sim | Intermediate Technical | Tutorial | DLI | featured | Omniverse | OpenUSD | Robotics Simulation\n## "
       ],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
-      "dateVerified": false,
+      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
     },
@@ -1094,7 +1094,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:58.000Z",
       "kind": "paper"
@@ -1125,7 +1125,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:51.000Z",
       "kind": "paper"
@@ -1155,7 +1155,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:50.000Z",
       "kind": "paper"
@@ -1180,7 +1180,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:20.000Z",
       "kind": "paper"
@@ -1207,7 +1207,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:58:47.000Z",
       "kind": "paper"
@@ -1240,7 +1240,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:58.000Z",
       "kind": "paper"
@@ -1271,7 +1271,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:27.000Z",
       "kind": "paper"
@@ -1299,7 +1299,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:01.000Z",
       "kind": "paper"
@@ -1330,7 +1330,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:55:12.000Z",
       "kind": "paper"
@@ -1352,7 +1352,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:45:04.000Z",
       "kind": "paper"
@@ -1377,7 +1377,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:29:08.000Z",
       "kind": "paper"
@@ -1401,7 +1401,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T16:36:19.000Z",
       "kind": "paper"
@@ -1424,7 +1424,7 @@
         "人形机器人的长隆首秀,它们被问倒,也学会了“放水”\n马斯克机器人核心旧将另起炉灶:带走多名前同事,推进1亿美元融资\n巡检、陪伴之后,机器狗行业的第二曲线往哪走?",
         "机器人终于有人买了\n具身进实景,劳动最光荣!2026全球开发者先锋大会暨国际具身智能技能大赛媒体通气会召开\n具身智能界的“美团”,能跑通吗?"
       ],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -1455,7 +1455,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:49:03.000Z",
       "kind": "paper"
@@ -1479,7 +1479,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:43:08.000Z",
       "kind": "paper"
@@ -1505,7 +1505,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:37:43.000Z",
       "kind": "paper"
@@ -1532,7 +1532,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:26:12.000Z",
       "kind": "paper"
@@ -1557,7 +1557,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:16:38.000Z",
       "kind": "paper"
@@ -1595,7 +1595,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:02:50.000Z",
       "kind": "paper"
@@ -1630,7 +1630,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:00:04.000Z",
       "kind": "paper"
@@ -1654,7 +1654,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:50:08.000Z",
       "kind": "paper"
@@ -1681,7 +1681,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:33:48.000Z",
       "kind": "paper"
@@ -1713,7 +1713,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:23:18.000Z",
       "kind": "paper"
@@ -1747,7 +1747,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:09:46.000Z",
       "kind": "paper"
@@ -1778,7 +1778,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:40:48.000Z",
       "kind": "paper"
@@ -1806,7 +1806,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:39:08.000Z",
       "kind": "paper"
@@ -1841,7 +1841,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:34:31.000Z",
       "kind": "paper"
@@ -1865,7 +1865,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T11:24:20.000Z",
       "kind": "paper"
@@ -1894,7 +1894,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:44:26.000Z",
       "kind": "paper"
@@ -1923,7 +1923,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:42:45.000Z",
       "kind": "paper"
@@ -1964,7 +1964,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:25:49.000Z",
       "kind": "paper"
@@ -1987,7 +1987,7 @@
         "面向Physical AI的Reality-to-Sim具身智能基础设施公司景立构(ScanArk),宣布完成Pre-天使轮融资,至此,公司在4个月内已完成种子轮、种子+轮及Pre-天使轮三轮融资,累计融资数千万元人民币,投资方包括小苗朗程、国海创新资本、头部具身机器人公司及知名产投机构等。",
         "具身智能与世界模型的发展,正面临数据供给在规模与质量上的双重挑战。互联网图像和人类第一视角视频记录了丰富的视觉信息,却往往缺少准确的空间结构、物理状态和动作反馈;真机采集能够提供真实交互经验,但成本高、效率有限,难以充分覆盖复杂任务和长尾环境。如何持续获得既贴近真实世界、又能支撑机器人学习的数据与经验,成为行业需要突破的关键瓶颈。"
       ],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -2011,7 +2011,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:46:08.000Z",
       "kind": "paper"
@@ -2042,7 +2042,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:45:58.000Z",
       "kind": "paper"
@@ -2068,7 +2068,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:33:59.000Z",
       "kind": "paper"
@@ -2098,7 +2098,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T06:23:24.000Z",
       "kind": "paper"
@@ -2135,7 +2135,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T05:49:24.000Z",
       "kind": "paper"
@@ -2160,7 +2160,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T04:52:35.000Z",
       "kind": "paper"
@@ -2177,26 +2177,114 @@
       "authors": [],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "collectedAt": "2026-10-10T03:24:21.611Z",
       "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-c9ff929e8c7d3137272465d3",
+      "title": "RTX Pro for Industrial Facility Digital Twins — Omniverse Reference Architectures",
+      "date": "2026-10-08T03:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Physically accurate industrial facility digital twins transform design and operations by helping teams catch errors early, optimize layouts, and test physical AI and autonomous robots. By integrating real-time data and AI, these digital twins allow teams to identify production bottlenecks and improve operational efficiency. [...] Simulations are run using Isaac Sim. These simulations utilize synthetic data for physical AI and autonomous robotics training, enabling training across a multitude of scenarios.\n### Real-Time Operations Data#\nReal-time operations data is collected from the facility in real-time. It includes the data from sensors, cameras, and other devices installed in the facility. This data is streamed into the digital twin for real-time operations.\n### Hardware# [...] ### Geometry Data#\nGeometry data is the foundation of a digital twin. It includes the physical layout of the",
+      "relevance": "",
+      "url": "https://docs.omniverse.nvidia.com/arch-diagrams/latest/ref-arch-diagrams/factory-dt-diagram.html",
+      "sourceName": "docs.omniverse.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "Physically accurate industrial facility digital twins transform design and operations by helping teams catch errors early, optimize layouts, and test physical AI and autonomous robots.",
+        "These simulations utilize synthetic data for physical AI and autonomous robotics training, enabling training across a multitude of scenarios.",
+        "Synthetic data is used to make variations of the facility for physical AI and autonomous robot training, allowing the rapid creation of training scenarios."
+      ],
+      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-2ce77ecb2116c6dfde34cbd2",
+      "title": "nobodyiam/lerobot_dataset_20261006_172352 · Datasets at ...",
+      "date": "2026-10-06T03:00:00.000Z",
+      "category": "开源工具",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "relevance": "",
+      "url": "https://huggingface.co/datasets/nobodyiam/lerobot_dataset_20261006_172352",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-966fe96a4f792895a19e893e",
+      "title": "FiftyOne Now Reads LeRobot: 50 Embodiments, 497 Episodes, One Indexed Dataset",
+      "date": "2026-10-05T14:21:29.000Z",
+      "category": "开源工具",
+      "summary": "FiftyOne is an open-source toolkit for loading, querying, visualizing, and curating ML datasets of images, videos, and multimodal data. LeRobot is Hugging Face's open-source framework for robot learning. It defines the standard v3 dataset format (Parquet + MP4 shards with episode metadata) the community uses to share teleoperation recordings.\n## LeRobot + FiftyOne [...] Rerun is an open-source SDK and viewer for multimodal data. You log images, point clouds, tensors, and scalars from your own code and scrub through them on a timeline, live or after the fact. LeRobot's own `lerobot-dataset-viz` tool is built on it.\n`lerobot-dataset-viz`\nBoth are the right tool when the question is about one run. What did the robot see at 12.4 seconds? Why did the gripper close early? Did the state stream drop frames? [...] FiftyOne now reads LeRobot v3 datasets natively with `fo.types.LeRobotDataset`. Poi",
+      "relevance": "",
+      "url": "https://huggingface.co/blog/harpreetsahota/fiftyone-now-reads-lerobot-50-embodiments-497-epis",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [
+        "数据与评测"
+      ],
+      "highlights": [
+        "LeRobot is Hugging Face's open-source framework for robot learning.",
+        "## LeRobot + FiftyOne [...] Rerun is an open-source SDK and viewer for multimodal data.",
+        "LeRobot's own `lerobot-dataset-viz` tool is built on it."
+      ],
+      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-e5a48fb918b74ea03ef5e3bb",
+      "title": "GitHub - NVIDIA/Isaac-GR00T: NVIDIA Isaac GR00T N1.7 - A Foundation Model for Generalist Robots. · GitHub",
+      "date": "",
+      "category": "开源工具",
+      "summary": "### Embodiment Tags\nEvery inference or finetuning command requires an `--embodiment-tag`. The tag determines which modality config (state/action keys, normalization) the model uses. Tags are case-insensitive.\nFor the full list of pretrain and posttrain tags, see the Policy API Guide — Embodiment Tags.\n## Data Format\nGR00T uses a flavor of the LeRobot v2 dataset format with an additional `meta/modality.json` file that describes state/action/video structure. A dataset looks like: [...] 1. Prepare data — Collect robot demonstrations (video, state, action) and convert them to the GR00T LeRobot format. Demo datasets are included for quick testing.\n2. Run inference — Try zero-shot inference with the base model on pretrain embodiments, or use a finetuned checkpoint for benchmark tasks.\n3. Fine-tune — Adapt the model to your robot using `launch_finetune.py` with your own data and modality config",
+      "relevance": "",
+      "url": "https://github.com/Nvidia/Isaac-GR00T",
+      "sourceName": "github.com",
+      "authors": [],
+      "topics": [
+        "数据与评测"
+      ],
+      "highlights": [
+        "## Data Format\nGR00T uses a flavor of the LeRobot v2 dataset format with an additional `meta/modality.json` file that describes state/action/video structure.",
+        "Prepare data — Collect robot demonstrations (video, state, action) and convert them to the GR00T LeRobot format.",
+        "Fine-tune — Adapt the model to your robot using `launch_finetune.py` with your own data and modality config."
+      ],
+      "collectedAt": "2026-10-10T03:09:16.802Z",
+      "dateVerified": false,
       "updatedAt": null,
       "kind": "news"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-10T03:09:16.802Z",
-    "newsAttemptAt": "2026-10-10T03:09:16.802Z",
+    "newsAttemptAt": "2026-10-10T03:24:21.611Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
-    "searchRequests": 18
+    "searchRequests": 6
   },
   "scheduler": {
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-10-13T03:09:16.802Z",
-    "lastRunAt": "2026-10-10T03:09:16.802Z",
-    "lastFinishedAt": "2026-10-10T03:09:16.802Z",
+    "lastRunAt": "2026-10-10T03:24:21.611Z",
+    "lastFinishedAt": "2026-10-10T03:24:21.611Z",
     "budgetDay": "2026-10-10",
-    "budgetUsed": 18,
+    "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
     "running": false
