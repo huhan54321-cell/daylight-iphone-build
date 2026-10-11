@@ -143,6 +143,13 @@ enum CareerTests {
         try JSONEncoder().encode(empty).write(to: directory.appendingPathComponent("career-feed-v1.json"), options: .atomic)
         let refreshed = CareerStore(directory: directory, seedData: emptyData)
         try expect(refreshed.savedJobs.count == 1, "subsequent public source removal cannot erase migrated bookmark")
+        let markerOnly = directory.appendingPathComponent("marker-only", isDirectory: true)
+        try FileManager.default.createDirectory(at: markerOnly, withIntermediateDirectories: true)
+        try JSONEncoder().encode([job.stableID: CareerFollowUp(saved: true, stage: "已投递")]).write(to: markerOnly.appendingPathComponent("career-follow-up-v1.json"), options: .atomic)
+        let legacy = CareerStore(directory: markerOnly, seedData: emptyData, legacySeedData: try JSONEncoder().encode(prior))
+        try expect(legacy.savedJobs.count == 1 && legacy.jobs.isEmpty, "old built-in bookmark marker migrates without a cached feed")
+        let legacyRelaunch = CareerStore(directory: markerOnly, seedData: emptyData)
+        try expect(legacyRelaunch.savedJobs.count == 1, "marker-only migration writes a durable snapshot independent of legacy catalog")
         return checks
     }
 }

@@ -19,6 +19,7 @@ const debug='AA000000000000000000000C', release='AA000000000000000000000D', targ
 const nativeSettings = `CODE_SIGN_STYLE = Automatic; CODE_SIGN_ENTITLEMENTS = Daylight/Daylight.entitlements; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Daylight/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks"); PRODUCT_BUNDLE_IDENTIFIER = com.personalassistant.Daylight; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;`;
 const assetRef='AA0000000000000000000012', assetBuild='AA0000000000000000000013', privacyRef='AA0000000000000000000014', privacyBuild='AA0000000000000000000015';
 const careerSeedRef='AA0000000000000000000016', careerSeedBuild='AA0000000000000000000017';
+const bookmarkRef='AA0000000000000000000018', bookmarkBuild='AA0000000000000000000019';
 const completeNativeSettings = nativeSettings + ' ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;';
 const testGroup='AD0000000000000000000001', testProduct='AD0000000000000000000002', testTarget='AD0000000000000000000003', testSources='AD0000000000000000000004', testFrameworks='AD0000000000000000000005', testResources='AD0000000000000000000006', testList='AD0000000000000000000007', testDebug='AD0000000000000000000008', testRelease='AD0000000000000000000009', testProxy='AD000000000000000000000A', testDependency='AD000000000000000000000B';
 const testSettings = `CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks"); PRODUCT_BUNDLE_IDENTIFIER = com.personalassistant.DaylightUITests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = Daylight;`;
@@ -32,18 +33,20 @@ const objects = [
   `${assetRef} = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };`,
   `${privacyRef} = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };`,
   `${careerSeedRef} = {isa = PBXFileReference; lastKnownFileType = text.json; path = CareerSeed.json; sourceTree = "<group>"; };`,
+  `${bookmarkRef} = {isa = PBXFileReference; lastKnownFileType = text.json; path = CareerBookmarkMigration.json; sourceTree = "<group>"; };`,
+  `${bookmarkBuild} = {isa = PBXBuildFile; fileRef = ${bookmarkRef}; };`,
   `${assetBuild} = {isa = PBXBuildFile; fileRef = ${assetRef}; };`,
   `${privacyBuild} = {isa = PBXBuildFile; fileRef = ${privacyRef}; };`,
   `${careerSeedBuild} = {isa = PBXBuildFile; fileRef = ${careerSeedRef}; };`,
   `${product} = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daylight.app; sourceTree = BUILT_PRODUCTS_DIR; };`,
   `${testProduct} = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaylightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };`,
   `${main} = {isa = PBXGroup; children = (${source}, ${testGroup}, ${products}); sourceTree = "<group>"; };`,
-  `${source} = {isa = PBXGroup; children = (${files.map((f,i)=>id('AC',i+1)).join(', ')}, ${info}, ${entitlements}, ${assetRef}, ${privacyRef}, ${careerSeedRef}); path = Daylight; sourceTree = "<group>"; };`,
+  `${source} = {isa = PBXGroup; children = (${files.map((f,i)=>id('AC',i+1)).join(', ')}, ${info}, ${entitlements}, ${assetRef}, ${privacyRef}, ${careerSeedRef}, ${bookmarkRef}); path = Daylight; sourceTree = "<group>"; };`,
   `${testGroup} = {isa = PBXGroup; children = (${testFiles.map((f,i)=>id('AF',i+1)).join(', ')}); path = DaylightUITests; sourceTree = "<group>"; };`,
   `${products} = {isa = PBXGroup; children = (${product}, ${testProduct}); name = Products; sourceTree = "<group>"; };`,
   `${sources} = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (${files.map((f,i)=>id('AB',i+1)).join(', ')}); runOnlyForDeploymentPostprocessing = 0; };`,
   `${frameworks} = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };`,
-  `${resources} = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (${assetBuild}, ${privacyBuild}, ${careerSeedBuild}); runOnlyForDeploymentPostprocessing = 0; };`,
+  `${resources} = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (${assetBuild}, ${privacyBuild}, ${careerSeedBuild}, ${bookmarkBuild}); runOnlyForDeploymentPostprocessing = 0; };`,
   `${testSources} = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (${testFiles.map((f,i)=>id('AE',i+1)).join(', ')}); runOnlyForDeploymentPostprocessing = 0; };`,
   `${testFrameworks} = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };`,
   `${testResources} = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };`,

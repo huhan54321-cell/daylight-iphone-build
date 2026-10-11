@@ -47,6 +47,10 @@
       "sha256": "04bdb608b96a6ea7b7a5dc9970389fcc398ad79b50ecf57925efd1f0171dd966"
     },
     {
+      "file": "ios/Daylight/CareerBookmarkMigration.json",
+      "sha256": "47cb143dfbd5d94a624d94a72f7d1a43e604a61927934450792665ec701505dd"
+    },
+    {
       "file": "ios/Daylight/CareerCompanies.swift",
       "sha256": "1fd39d7d062a77fece0518cdc7742939793e00fc373eca01e365a60076740bc3"
     },
@@ -76,7 +80,7 @@
     },
     {
       "file": "ios/Daylight/CareerStore.swift",
-      "sha256": "4bf87dcebf4cfa4daf715bc918650f1058107391c3afc2f7708e39ab9b617959"
+      "sha256": "74f3078d73697a785933290e3a98d2de50b4dcdd922f6813a0b431b219a79daf"
     },
     {
       "file": "ios/Daylight/ContentView.swift",
@@ -212,7 +216,7 @@
     },
     {
       "file": "tests/native/CareerTests.swift",
-      "sha256": "ab2c9acf1a3b042090dd610ac15237caad13e5ef3c414c13488f1913ae4d4af3"
+      "sha256": "2599234a66bd5a7bc5255e9de1ac734a3d4b94703991947f0fb56d93a446cf52"
     },
     {
       "file": "tests/native/CoreTests.swift",
@@ -364,7 +368,7 @@
     },
     {
       "file": "scripts/generate-xcode.cjs",
-      "sha256": "8a272f459be15e6d8d1f36d62e7687e0fe475ed3de17e3a099d8cca32e9883bf"
+      "sha256": "dc37128fc42265052bddb1f8a1f9ad10521c076c8f51f99224e2fff8e986a3fa"
     },
     {
       "file": "scripts/prepare-ios.cjs",

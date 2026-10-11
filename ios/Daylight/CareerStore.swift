@@ -40,7 +40,7 @@ final class CareerStore: ObservableObject {
             .sorted { $0.checkedAt == $1.checkedAt ? $0.stableID < $1.stableID : $0.checkedAt > $1.checkedAt }
     }
 
-    init(directory: URL? = nil, seedData: Data? = nil) {
+    init(directory: URL? = nil, seedData: Data? = nil, legacySeedData: Data? = nil) {
         self.directory = directory ?? Self.defaultDirectory()
         #if DEBUG && targetEnvironment(simulator)
         if ProcessInfo.processInfo.arguments.contains("--ui-test-career-failure") {
@@ -66,7 +66,9 @@ final class CareerStore: ObservableObject {
            let values = try? JSONDecoder().decode([String: CareerJob].self, from: data) { savedJobSnapshots = values }
         // Preserve pre-upgrade bookmarks before fetching a feed that no longer includes their source.
         var snapshots = savedJobSnapshots
-        for job in feed?.jobs ?? [] where followUp(for: job).saved { snapshots[job.stableID] = job }
+        let referenceData = legacySeedData ?? (!followUps.isEmpty ? Bundle.main.url(forResource: "CareerBookmarkMigration", withExtension: "json").flatMap { try? Data(contentsOf: $0) } : nil)
+        let references = referenceData.flatMap { try? CareerFeed.decode($0) }?.jobs ?? []
+        for job in (feed?.jobs ?? []) + references where followUp(for: job).saved && snapshots[job.stableID] == nil { snapshots[job.stableID] = job }
         if !snapshots.isEmpty {
             do { try persist(snapshots, filename: "career-saved-jobs-v1.json"); savedJobSnapshots = snapshots }
             catch { self.error = "旧收藏内容暂时无法保存，请检查手机存储空间。" }
