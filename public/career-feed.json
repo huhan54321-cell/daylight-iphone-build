@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T02:32:36.387Z",
+  "generatedAt": "2026-10-11T05:58:59.889Z",
   "jobs": [
     {
       "id": "job_2c84a6f6948339117c631b7b",
@@ -973,8 +973,8 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 3,
       "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -982,8 +982,8 @@
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -991,8 +991,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1000,8 +1000,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 3,
       "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1009,8 +1009,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1018,17 +1018,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
+      "count": 4,
+      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 36,
       "message": "本轮读取 36 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1036,13 +1036,35 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-11T02:32:36.387Z",
-      "lastSuccessAt": "2026-10-11T02:32:36.387Z",
+      "lastAttemptAt": "2026-10-11T05:58:59.889Z",
+      "lastSuccessAt": "2026-10-11T05:58:59.889Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-04d6221294dd01e2cb373147",
+      "title": "Robotics Simulation and Evaluation PhD Intern",
+      "date": "2026-10-09T05:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Experience deploying learned policies on real robot hardware (manipulators, humanoids, or mobile robots) and closing the sim-to-real gap. Experience with",
+      "relevance": "",
+      "url": "https://jobs.nvidia.com/careers/job/893398080232",
+      "sourceName": "jobs.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [
+        "Experience deploying learned policies on real robot hardware (manipulators, humanoids, or mobile robots) and closing the sim-to-real gap."
+      ],
+      "collectedAt": "2026-10-11T05:58:59.889Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "article-626ba721163355c45c995f6c",
       "title": "Paper page - DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
@@ -1062,7 +1084,26 @@
         "Training such a model on existing robot datasets faces two obstacles: imprecise calibration can impair action following, while limited coverage of unsuccessful interactions can bias predictions toward successful outcomes",
         "To provide feedback on these predictions without paired ground-truth futures, we construct a human-annotated video dataset covering robot, object, and interaction defects and use it to train an embodied video reward [..."
       ],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-0ad4e05871febd0f3dd97548",
+      "title": "Humanoid Robot Cost & Budget Guide | AGIBOT",
+      "date": "2026-10-09T03:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Depending on the application, the project may require site preparation, network setup, configuration, testing and operator training. Define the deployment responsibilities and acceptance criteria in the proposal. A useful criterion describes an observable result under agreed conditions.\n### Shipping and import costs [...] A lower equipment price does not necessarily mean a lower project cost. Compare proposals against the same tasks, operating conditions and scope. A practical comparison should cover:\n The product, configuration, quantity and included accessories.\n Included functions and any separate development work.\n Delivery, deployment, training and acceptance arrangements.\n One-time costs, recurring charges and exclusions.\n Warranty, support, payment terms and quote validity. [...] Contact AGIBOT sales to discuss your project, or explore the humanoid robot range.\nShare\n## Reading ne",
+      "relevance": "",
+      "url": "https://store.agibot.com/blogs/news/humanoid-robot-cost-budget-guide",
+      "sourceName": "store.agibot.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "[...] Contact AGIBOT sales to discuss your project, or explore the humanoid robot range."
+      ],
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -1088,7 +1129,7 @@
         "具身智能与世界模型的发展,正面临数据供给在规模与质量上的双重挑战。互联网图像和人类第一视角视频记录了丰富的视觉信息,却往往缺少准确的空间结构、物理状态和动作反馈;真机采集能够提供真实交互经验,但成本高、效率有限,难以充分覆盖复杂任务和长尾环境。如何持续获得既贴近真实世界、又能支撑机器人学习的数据与经验,成为行业需要突破的关键瓶颈。",
         "与此同时,GPT-6 Astra等通用大模型在复杂推理、工具使用和多步骤任务执行上的进展,正在拓展AI参与实际工作的能力边界,这也为具身智能和世界模型提出了新的命题:随着模型能力提升,训练体系需要进一步支持机器人通过行动获得反馈,在探索、试错和策略更新中持续积累经验。交互学习,有望成为具身智能下一阶段的重要学习范式。"
       ],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -1097,8 +1138,8 @@
       "id": "article-d5fea414d61e112a2560121b",
       "title": "5 Steps to Create SimReady Assets for Robotics with Frontier AI Models | NVIDIA Technical Blog",
       "date": "2026-10-08T20:57:55.000Z",
-      "category": "仿真与评测",
-      "summary": "At this stage, the OpenUSD asset contains the robot’s visual geometry, but joints, rigid bodies, and collision geometry have not yet been configured. Ask the agent to configure and validate the physics properties for both arms and grippers. The datasheet we have in the reference folder will be used by the agent to make sure the joint ranges and speed limits match the simulated robot. [...] These checks validated the simulation implementation. They did not establish agreement with real-world robot dynamics or collision safety across every possible pose.\nYuMi on a simulation ground plane with both arms raised, one extended outward and the other bent, and both grippers visible.\nFigure 5. YuMi asset in Isaac Sim after visual, physics, and SimReady validation steps [...] Mass and inertia: All 21 rigid bodies had positive masses and physically admissible inertia tensors; runtime values matched",
+      "category": "硬件与落地",
+      "summary": "If manufacturer data is incomplete, you can ask the agent to identify missing parameters and check technical manuals or available URDF robot descriptions for the exact model. Where mass properties remain unavailable, estimate them from geometry using documented density or mass-distribution assumptions, following NVIDIA’s mass-property guidance. For example, when not given enough context, we observed the agent pulling a public URDF for the robot and used that to identify the correct axes for [...] Join us at NVIDIA GTC Berlin on October 20–22, 2026, to explore the latest developments in physical AI and robotics and connect with developers, researchers, and industry leaders.\nDiscuss (0)\n## Tags\nDeveloper Tools & Techniques | Simulation / Modeling / Design | General | Manufacturing | Isaac Sim | Intermediate Technical | Tutorial | DLI | featured | Omniverse | OpenUSD | Robotics Simulation\n#",
       "relevance": "",
       "url": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models",
       "sourceName": "developer.nvidia.com",
@@ -1107,11 +1148,11 @@
         "仿真与迁移"
       ],
       "highlights": [
-        "At this stage, the OpenUSD asset contains the robot’s visual geometry, but joints, rigid bodies, and collision geometry have not yet been configured.",
-        "The datasheet we have in the reference folder will be used by the agent to make sure the joint ranges and speed limits match the simulated robot.",
-        "They did not establish agreement with real-world robot dynamics or collision safety across every possible pose."
+        "If manufacturer data is incomplete, you can ask the agent to identify missing parameters and check technical manuals or available URDF robot descriptions for the exact model.",
+        "For example, when not given enough context, we observed the agent pulling a public URDF for the robot and used that to identify the correct axes for [...] Join us at NVIDIA GTC Berlin on October 20–22, 2026, to explore t",
+        "Discuss (0)\n## Tags\nDeveloper Tools & Techniques | Simulation / Modeling / Design | General | Manufacturing | Isaac Sim | Intermediate Technical | Tutorial | DLI | featured | Omniverse | OpenUSD | Robotics Simulation\n## "
       ],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -1168,7 +1209,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:58.000Z",
       "kind": "paper"
@@ -1199,7 +1240,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:51.000Z",
       "kind": "paper"
@@ -1229,7 +1270,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:50.000Z",
       "kind": "paper"
@@ -1254,7 +1295,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:20.000Z",
       "kind": "paper"
@@ -1281,7 +1322,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:58:47.000Z",
       "kind": "paper"
@@ -1314,7 +1355,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:58.000Z",
       "kind": "paper"
@@ -1345,7 +1386,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:27.000Z",
       "kind": "paper"
@@ -1373,7 +1414,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:01.000Z",
       "kind": "paper"
@@ -1404,7 +1445,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:55:12.000Z",
       "kind": "paper"
@@ -1426,7 +1467,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:45:04.000Z",
       "kind": "paper"
@@ -1451,7 +1492,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:29:08.000Z",
       "kind": "paper"
@@ -1475,7 +1516,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T16:36:19.000Z",
       "kind": "paper"
@@ -1529,7 +1570,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:49:03.000Z",
       "kind": "paper"
@@ -1553,7 +1594,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:43:08.000Z",
       "kind": "paper"
@@ -1579,7 +1620,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:37:43.000Z",
       "kind": "paper"
@@ -1606,7 +1647,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:26:12.000Z",
       "kind": "paper"
@@ -1631,7 +1672,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:16:38.000Z",
       "kind": "paper"
@@ -1669,7 +1710,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:02:50.000Z",
       "kind": "paper"
@@ -1704,7 +1745,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:00:04.000Z",
       "kind": "paper"
@@ -1728,7 +1769,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:50:08.000Z",
       "kind": "paper"
@@ -1755,7 +1796,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:33:48.000Z",
       "kind": "paper"
@@ -1787,10 +1828,33 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:23:18.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-0482ad39d303e5d292a80f74",
+      "title": "马斯克机器人核心旧将另起炉灶:带走多名前同事,推进1亿美元融资-36氪",
+      "date": "2026-10-08T14:16:45.000Z",
+      "category": "行业动态",
+      "summary": "以装配为例,识别零件只是第一步。机器人还需要完成定位、接触、施力和结果检查。即使动作看上去相同,工件公差、材料特性或摆放位置变化,也可能影响执行结果。对航空航天等行业而言,作业是否符合质量要求,比一次演示是否流畅更关键。\n因此,从通用机器人转向工业任务,改变的是产品需要先证明什么。通用路线要不断扩展任务范围;工业路线则必须证明,在约定的作业条件下,系统能够持续达到客户要求。\n根据这些应用约束,新公司的后续进展更适合从任务成功率、运行稳定性、人工介入频率和部署成本等方面观察。外形与Optimus是否相似,无法替代这些验证。\n## 04|特斯拉旧将创业,已有另一条工业路线\n在库马尔之前,另一位参与过特斯拉早期人形机器人项目的负责人,已经选择了工业自动化。\nMytra联合创始人、首席执行官克里斯·沃尔蒂(Chris Walti)曾在特斯拉任职约七年半。根据Mytra的官方介绍,他负责过Model 3物料流自动化,组建并领导过工厂移动机器人团队,也参与创建和领导早期Tesla Bot项目。 [...] 特斯拉在官方网站上对Optimus的定位很清楚:开发能够承担危险、重复或枯燥任务的通用、自主双足人形机器人。它需要同时解决平衡、导航、感知,以及与物理世界交互等问题。\n人形路线的目标,是让同一种机器人进入多种为人设计的环境。特斯拉的相关招聘介绍也将工厂、家庭等列为应用方向。这样的产品目标,要求机器人具备广泛的移动和操作能力。\n从已披露的应用方向判断,Intelligent Machines更倾向于从工业作业切入。这意味着,新公司有机会围绕明确任务安排硬件和软件,而不必在一开始就满足完整的人形设计。\n例如,在固定工作站完成操作的机器人,其结构可以围绕工作范围、负载和工具需求设计;需要跨工位移动的产品,则必须进一步解决移动和现场协同问题。具体采用哪种结构,取决于任务要求。目前的报道尚不足以判断Intelligent Machines最终会选择固定机械臂、移动操作平台,还是其他形态。\n这也是非人形路线的实际边界:减少某些设计约束,并不会自动消除工业部署的难度。 [...] 2022年成",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/4016917482166148",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [
+        "以装配为例,识别零件只是第一步。机器人还需要完成定位、接触、施力和结果检查。即使动作看上去相同,工件公差、材料特性或摆放位置变化,也可能影响执行结果。对航空航天等行业而言,作业是否符合质量要求,比一次演示是否流畅更关键。",
+        "因此,从通用机器人转向工业任务,改变的是产品需要先证明什么。通用路线要不断扩展任务范围;工业路线则必须证明,在约定的作业条件下,系统能够持续达到客户要求。",
+        "## 04|特斯拉旧将创业,已有另一条工业路线\n在库马尔之前,另一位参与过特斯拉早期人形机器人项目的负责人,已经选择了工业自动化。"
+      ],
+      "collectedAt": "2026-10-11T05:58:59.889Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-6c5be47d4270114eb2abc5d1",
@@ -1821,7 +1885,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:09:46.000Z",
       "kind": "paper"
@@ -1852,7 +1916,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:40:48.000Z",
       "kind": "paper"
@@ -1880,7 +1944,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:39:08.000Z",
       "kind": "paper"
@@ -1915,7 +1979,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:34:31.000Z",
       "kind": "paper"
@@ -1939,7 +2003,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T11:24:20.000Z",
       "kind": "paper"
@@ -1968,7 +2032,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:44:26.000Z",
       "kind": "paper"
@@ -1997,7 +2061,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:42:45.000Z",
       "kind": "paper"
@@ -2038,7 +2102,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:25:49.000Z",
       "kind": "paper"
@@ -2085,7 +2149,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:46:08.000Z",
       "kind": "paper"
@@ -2116,7 +2180,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:45:58.000Z",
       "kind": "paper"
@@ -2142,7 +2206,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:33:59.000Z",
       "kind": "paper"
@@ -2172,7 +2236,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T06:23:24.000Z",
       "kind": "paper"
@@ -2209,10 +2273,29 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T05:49:24.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-50a7a5b8c01ba14ee37ec0eb",
+      "title": "估值100亿、累计营收1.35亿、不卖一台机器人",
+      "date": "2026-10-08T05:00:00.000Z",
+      "category": "行业动态",
+      "summary": "这件事最近有了新进展:做机器人\"通用大脑\"的美国公司FieldAI,传出要融资7亿美元,估值冲到100亿美元。它总部在加州,产品是给各种机器人——人形机器人、无人机、工业",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/4016951181711239",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "这件事最近有了新进展:做机器人\"通用大脑\"的美国公司FieldAI,传出要融资7亿美元,估值冲到100亿美元。它总部在加州,产品是给各种机器人——人形机器人、无人机、工业"
+      ],
+      "collectedAt": "2026-10-11T05:58:59.889Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-64f5cb44cf44734cb7cea529",
@@ -2234,7 +2317,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T04:52:35.000Z",
       "kind": "paper"
@@ -2299,6 +2382,31 @@
       "kind": "news"
     },
     {
+      "id": "article-f19924740584702f7c634a6b",
+      "title": "WasserMan: open-source underwater manipulation benchmark with SmolVLA baselines - Show and Tell - Hugging Face Forums",
+      "date": "2026-10-06T16:13:47.000Z",
+      "category": "仿真与评测",
+      "summary": "| Topic | | Replies | Views | Activity |\n --- --- \n| Physical Modelling of sim2real SO101 Arm Project Intermediate | 1 | 331 | May 30, 2026 |\n| Fine-tuning GR00T for Chess Setup on Unitree G1 Models | 2 | 585 | January 10, 2026 |\n| Visualization of Imitation Learning by smolvla(SO101) Beginners | 2 | 317 | October 5, 2026 |\n| A Gymnasium interface for a real $300 robot — mock backend works now, no hardware needed Research | 0 | 56 | May 15, 2026 | [...] # WasserMan: open-source underwater manipulation benchmark with SmolVLA baselines\nWe built WasserMan, an open-source benchmark with 10 underwater robot manipulation tasks in Isaac Sim: turning valves, opening hatches, inserting a hotstab and recovering objects.\nThe simulation includes water forces, currents and underwater camera effects. We evaluate ACT, Diffusion Policy and chunked BC on six tasks, and SmolVLA on three. [...] | How to us",
+      "relevance": "",
+      "url": "https://discuss.huggingface.co/t/wasserman-open-source-underwater-manipulation-benchmark-with-smolvla-baselines/188270",
+      "sourceName": "discuss.huggingface.co",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手",
+        "模仿学习",
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [
+        "| Topic | | Replies | Views | Activity |\n --- --- \n| Physical Modelling of sim2real SO101 Arm Project Intermediate | 1 | 331 | May 30, 2026 |\n| Fine-tuning GR00T for Chess Setup on Unitree G1 Models | 2 | 585 | January 1",
+        "[...] | How to use the `lerobot\\_eval` command Beginners | 4 | 458 | October 5, 2026 |"
+      ],
+      "collectedAt": "2026-10-11T05:58:59.889Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
       "id": "article-2ce77ecb2116c6dfde34cbd2",
       "title": "nobodyiam/lerobot_dataset_20261006_172352 · Datasets at ...",
       "date": "2026-10-06T03:00:00.000Z",
@@ -2313,6 +2421,29 @@
       ],
       "highlights": [],
       "collectedAt": "2026-10-10T03:24:21.611Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-fdee4919d6b650a46374b6b4",
+      "title": "What platform is used to train warehouse robots with realistic human-robot interaction in a physically accurate digital twin?",
+      "date": "2026-10-05T15:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "to test spatial AI agents against realistic collision dynamics, weight distribution, and friction before physical deployment. [...] collisions, and materials are embedded in a 3D asset. These properties travel with the asset, enabling content authored to the SimReady specification to work across every simulation environment without modification. The accurate physical properties within the digital twin help ensure reliable sim-to-real transfer for safe and efficient robot deployment. [...] Training warehouse robots to safely interact with humans and complex environments requires simulation capabilities that accurately mirror real-world physics and dynamics. Developing autonomous robots for warehouse environments demands a virtual training ground where AI agents can interact with unpredictable elements, such as dynamic logistics, potential hazards, and human workers, without real-world ris",
+      "relevance": "",
+      "url": "https://perspectives.nvidia.com/physical-ai/omniverse/task/faq/warehouse-robots-training-human-robot-interaction-digital-twin",
+      "sourceName": "perspectives.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "The accurate physical properties within the digital twin help ensure reliable sim-to-real transfer for safe and efficient robot deployment.",
+        "[...] Training warehouse robots to safely interact with humans and complex environments requires simulation capabilities that accurately mirror real-world physics and dynamics.",
+        "Developing autonomous robots for warehouse environments demands a virtual training ground where AI agents can interact with unpredictable elements, such as dynamic logistics, potential hazards, and human workers, without"
+      ],
+      "collectedAt": "2026-10-11T05:58:59.889Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -2366,7 +2497,7 @@
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-10T03:09:16.802Z",
-    "newsAttemptAt": "2026-10-11T02:32:36.387Z",
+    "newsAttemptAt": "2026-10-11T05:58:59.889Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -2374,8 +2505,8 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-10-13T03:09:16.802Z",
-    "lastRunAt": "2026-10-11T02:32:36.387Z",
-    "lastFinishedAt": "2026-10-11T02:32:36.387Z",
+    "lastRunAt": "2026-10-11T05:58:59.889Z",
+    "lastFinishedAt": "2026-10-11T05:58:59.889Z",
     "budgetDay": "2026-10-11",
     "budgetUsed": 6,
     "budgetLimit": 18,
