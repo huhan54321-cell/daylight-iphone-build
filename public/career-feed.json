@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T03:24:21.611Z",
+  "generatedAt": "2026-10-11T02:26:50.758Z",
   "jobs": [
     {
       "id": "job_2c84a6f6948339117c631b7b",
@@ -973,8 +973,8 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
       "count": 3,
       "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -982,8 +982,8 @@
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -991,17 +991,17 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
+      "count": 2,
+      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1009,26 +1009,26 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
-      "count": 2,
-      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
+      "count": 5,
+      "message": "本轮读取 5 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
-      "count": 2,
-      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
       "count": 36,
       "message": "本轮读取 36 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1036,13 +1036,101 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-10T03:24:21.611Z",
-      "lastSuccessAt": "2026-10-10T03:24:21.611Z",
+      "lastAttemptAt": "2026-10-11T02:26:50.758Z",
+      "lastSuccessAt": "2026-10-11T02:26:50.758Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-926acf362b2c42e4fc9d7c9f",
+      "title": "Paper page - In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks",
+      "date": "2026-10-10T02:00:00.000Z",
+      "category": "操作与学习",
+      "summary": "key properties of robot ICL, including action, semantic, composition, and affordance discrimination. We will fully open-source our data and training pipeline to facilitate systematic and reproducible research on robot ICL. The project page can be found at [...] We study robotic in-context learning (ICL), an emerging paradigm that enables robots to infer and execute tasks from visual demonstrations. Despite its growing promise, the problem itself remains under-defined: a visual demonstration simultaneously conveys action trajectories, object semantics, manipulation affordances, spatial relations, and task goals, making it unclear what information the robot is actually expected to follow. In this work, we first provide a clear problem definition of [...] ### Community\n· Sign up or log in to comment\nGet this paper in your agent:\n`hf papers read 2609.38173`\n`curl -LsSf | bash`\n## Models citi",
+      "relevance": "",
+      "url": "https://huggingface.co/papers/2609.38173",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手",
+        "数据与评测"
+      ],
+      "highlights": [
+        "key properties of robot ICL, including action, semantic, composition, and affordance discrimination.",
+        "We will fully open-source our data and training pipeline to facilitate systematic and reproducible research on robot ICL.",
+        "The project page can be found at [...] We study robotic in-context learning (ICL), an emerging paradigm that enables robots to infer and execute tasks from visual demonstrations."
+      ],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-0ad4e05871febd0f3dd97548",
+      "title": "Humanoid Robot Cost & Budget Guide | AGIBOT",
+      "date": "2026-10-09T03:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Depending on the application, the project may require site preparation, network setup, configuration, testing and operator training. Define the deployment responsibilities and acceptance criteria in the proposal. A useful criterion describes an observable result under agreed conditions.\n### Shipping and import costs [...] A lower equipment price does not necessarily mean a lower project cost. Compare proposals against the same tasks, operating conditions and scope. A practical comparison should cover:\n The product, configuration, quantity and included accessories.\n Included functions and any separate development work.\n Delivery, deployment, training and acceptance arrangements.\n One-time costs, recurring charges and exclusions.\n Warranty, support, payment terms and quote validity. [...] Contact AGIBOT sales to discuss your project, or explore the humanoid robot range.\nShare\n## Reading ne",
+      "relevance": "",
+      "url": "https://store.agibot.com/blogs/news/humanoid-robot-cost-budget-guide",
+      "sourceName": "store.agibot.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "[...] Contact AGIBOT sales to discuss your project, or explore the humanoid robot range."
+      ],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-fbbecfbb5704bb2d67762229",
+      "title": "IMCON/OMX_LeRobot_20261009_200905 · Datasets at Hugging Face",
+      "date": "2026-10-09T02:00:00.000Z",
+      "category": "开源工具",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "relevance": "",
+      "url": "https://huggingface.co/datasets/IMCON/OMX_LeRobot_20261009_200905",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-f6092e17827ddfe38df735e3",
+      "title": "同济博士团队让原生3DGS成为可交互的真实世界,4个月完成3轮融资-36氪",
+      "date": "2026-10-08T21:32:41.000Z",
+      "category": "行业动态",
+      "summary": "面向Physical AI的Reality-to-Sim具身智能基础设施公司景立构(ScanArk),宣布完成Pre-天使轮融资,至此,公司在4个月内已完成种子轮、种子+轮及Pre-天使轮三轮融资,累计融资数千万元人民币,投资方包括小苗朗程、国海创新资本、头部具身机器人公司及知名产投机构等。\n具身智能与世界模型的发展,正面临数据供给在规模与质量上的双重挑战。互联网图像和人类第一视角视频记录了丰富的视觉信息,却往往缺少准确的空间结构、物理状态和动作反馈;真机采集能够提供真实交互经验,但成本高、效率有限,难以充分覆盖复杂任务和长尾环境。如何持续获得既贴近真实世界、又能支撑机器人学习的数据与经验,成为行业需要突破的关键瓶颈。\n与此同时,GPT-6 Astra等通用大模型在复杂推理、工具使用和多步骤任务执行上的进展,正在拓展AI参与实际工作的能力边界,这也为具身智能和世界模型提出了新的命题:随着模型能力提升,训练体系需要进一步支持机器人通过行动获得反馈,在探索、试错和策略更新中持续积累经验。交互学习,有望成为具身智能下一阶段的重要学习范式。 [...] 人类的许多能力,来自长期与环境互动的积累。大语言模型也不再局限于海量文本的被动预训练,而是在交互式任务和结果反馈中不断修正与进化,由此释放出新的能力边界。这给具身智能带来的启发,是让机器人在已有示范的基础上,获得更充分的行动、探索和学习机会。\n机器人与3DGS场景交互案例展示\n交互学习有望成为具身智能下一阶段的重要学习范式。这是景立构构建数字世界的核心判断,也仍需更大规模的跨场景、跨任务和真机实验验证。当前,许多递归自我改进(RSI)方法,以及前沿的测试时训练(Test-Time Training),都把交互式 学习视为关键机制。景立构所押注的,是让机器人在已有示范之外,获得亲自尝试的机会:采取行动、经历失败、调整做法,并在持续的交互中形成新的能力。\n&amp;amp;amp;nbsp;\n从机器人足球赛场走出来的同济创业团 [...] 第一类从真实空间采集与三维重建出发。以其域创新为例,其LCC工作流已将真实场景重建、3DGS渲",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/4016850710351752",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手",
+        "仿真与迁移",
+        "世界模型",
+        "数据与评测"
+      ],
+      "highlights": [
+        "面向Physical AI的Reality-to-Sim具身智能基础设施公司景立构(ScanArk),宣布完成Pre-天使轮融资,至此,公司在4个月内已完成种子轮、种子+轮及Pre-天使轮三轮融资,累计融资数千万元人民币,投资方包括小苗朗程、国海创新资本、头部具身机器人公司及知名产投机构等。",
+        "具身智能与世界模型的发展,正面临数据供给在规模与质量上的双重挑战。互联网图像和人类第一视角视频记录了丰富的视觉信息,却往往缺少准确的空间结构、物理状态和动作反馈;真机采集能够提供真实交互经验,但成本高、效率有限,难以充分覆盖复杂任务和长尾环境。如何持续获得既贴近真实世界、又能支撑机器人学习的数据与经验,成为行业需要突破的关键瓶颈。",
+        "与此同时,GPT-6 Astra等通用大模型在复杂推理、工具使用和多步骤任务执行上的进展,正在拓展AI参与实际工作的能力边界,这也为具身智能和世界模型提出了新的命题:随着模型能力提升,训练体系需要进一步支持机器人通过行动获得反馈,在探索、试错和策略更新中持续积累经验。交互学习,有望成为具身智能下一阶段的重要学习范式。"
+      ],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "article-d5fea414d61e112a2560121b",
       "title": "5 Steps to Create SimReady Assets for Robotics with Frontier AI Models | NVIDIA Technical Blog",
@@ -1094,7 +1182,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:58.000Z",
       "kind": "paper"
@@ -1125,7 +1213,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:51.000Z",
       "kind": "paper"
@@ -1155,7 +1243,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:50.000Z",
       "kind": "paper"
@@ -1180,7 +1268,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:59:20.000Z",
       "kind": "paper"
@@ -1207,7 +1295,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:58:47.000Z",
       "kind": "paper"
@@ -1240,7 +1328,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:58.000Z",
       "kind": "paper"
@@ -1271,7 +1359,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:27.000Z",
       "kind": "paper"
@@ -1299,7 +1387,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:57:01.000Z",
       "kind": "paper"
@@ -1330,7 +1418,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:55:12.000Z",
       "kind": "paper"
@@ -1352,7 +1440,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:45:04.000Z",
       "kind": "paper"
@@ -1377,7 +1465,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T17:29:08.000Z",
       "kind": "paper"
@@ -1401,7 +1489,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T16:36:19.000Z",
       "kind": "paper"
@@ -1455,7 +1543,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:49:03.000Z",
       "kind": "paper"
@@ -1479,7 +1567,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:43:08.000Z",
       "kind": "paper"
@@ -1505,7 +1593,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:37:43.000Z",
       "kind": "paper"
@@ -1532,7 +1620,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:26:12.000Z",
       "kind": "paper"
@@ -1557,7 +1645,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:16:38.000Z",
       "kind": "paper"
@@ -1595,7 +1683,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:02:50.000Z",
       "kind": "paper"
@@ -1630,7 +1718,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:00:04.000Z",
       "kind": "paper"
@@ -1654,7 +1742,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:50:08.000Z",
       "kind": "paper"
@@ -1681,7 +1769,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:33:48.000Z",
       "kind": "paper"
@@ -1713,7 +1801,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:23:18.000Z",
       "kind": "paper"
@@ -1747,7 +1835,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T14:09:46.000Z",
       "kind": "paper"
@@ -1778,7 +1866,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:40:48.000Z",
       "kind": "paper"
@@ -1806,7 +1894,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:39:08.000Z",
       "kind": "paper"
@@ -1841,7 +1929,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T13:34:31.000Z",
       "kind": "paper"
@@ -1865,7 +1953,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T11:24:20.000Z",
       "kind": "paper"
@@ -1894,7 +1982,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:44:26.000Z",
       "kind": "paper"
@@ -1923,7 +2011,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:42:45.000Z",
       "kind": "paper"
@@ -1964,7 +2052,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T08:25:49.000Z",
       "kind": "paper"
@@ -2011,7 +2099,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:46:08.000Z",
       "kind": "paper"
@@ -2042,7 +2130,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:45:58.000Z",
       "kind": "paper"
@@ -2068,7 +2156,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T07:33:59.000Z",
       "kind": "paper"
@@ -2098,7 +2186,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T06:23:24.000Z",
       "kind": "paper"
@@ -2135,7 +2223,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T05:49:24.000Z",
       "kind": "paper"
@@ -2160,27 +2248,10 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": "2026-10-08T04:52:35.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "article-bb2961b3cb35e3637e6963eb",
-      "title": "马斯克机器人核心旧将另起炉灶:带走多名前同事",
-      "date": "2026-10-08T03:00:00.000Z",
-      "category": "行业动态",
-      "summary": "据新浪财经10月7日消息,库马尔联合创办的Intelligent Machines位于旧金山,已经招揽数名Optimus团队前成员,正在推进可能达到约1亿美元的种子轮融资。新公司瞄准制造业、",
-      "relevance": "",
-      "url": "https://36kr.com/p/4016917482166148",
-      "sourceName": "36kr.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
     },
     {
       "id": "article-c9ff929e8c7d3137272465d3",
@@ -2206,11 +2277,47 @@
       "kind": "news"
     },
     {
+      "id": "article-bb2961b3cb35e3637e6963eb",
+      "title": "马斯克机器人核心旧将另起炉灶:带走多名前同事",
+      "date": "2026-10-08T02:00:00.000Z",
+      "category": "行业动态",
+      "summary": "据新浪财经10月7日消息,库马尔联合创办的Intelligent Machines位于旧金山,已经招揽数名Optimus团队前成员,正在推进可能达到约1亿美元的种子轮融资。新公司瞄准制造业、",
+      "relevance": "",
+      "url": "https://36kr.com/p/4016917482166148",
+      "sourceName": "36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-c0d7ee18b19d7d48b5e020a2",
+      "title": "估值100亿、累计营收1.35亿、不卖一台机器人",
+      "date": "2026-10-08T02:00:00.000Z",
+      "category": "行业动态",
+      "summary": "这件事最近有了新进展:做机器人\"通用大脑\"的美国公司FieldAI,传出要融资7亿美元,估值冲到100亿美元。它总部在加州,产品是给各种机器人——人形机器人、无人机、工业",
+      "relevance": "",
+      "url": "https://36kr.com/p/4016951181711239",
+      "sourceName": "36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "这件事最近有了新进展:做机器人\"通用大脑\"的美国公司FieldAI,传出要融资7亿美元,估值冲到100亿美元。它总部在加州,产品是给各种机器人——人形机器人、无人机、工业"
+      ],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
       "id": "article-2ce77ecb2116c6dfde34cbd2",
-      "title": "nobodyiam/lerobot_dataset_20261006_172352 · Datasets at ...",
-      "date": "2026-10-06T03:00:00.000Z",
+      "title": "nobodyiam/lerobot_dataset_20261006_172352 · Datasets at Hugging Face",
+      "date": "2026-10-07T03:55:28.000Z",
       "category": "开源工具",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "summary": "`{\n\"codebase_version\": \"v3.0\",\n\"fps\": 25,\n\"features\": {\n\"action\": {\n\"dtype\": \"float32\",\n\"names\": [\n\"shoulder_pan.pos\",\n\"shoulder_lift.pos\",\n\"elbow_flex.pos\",\n\"wrist_flex.pos\",\n\"wrist_roll.pos\",\n\"gripper.pos\"\n],\n\"shape\": [\n6\n]\n},\n\"observation.state\": {\n\"dtype\": \"float32\",\n\"names\": [\n\"shoulder_pan.pos\",\n\"shoulder_lift.pos\",\n\"elbow_flex.pos\",\n\"wrist_flex.pos\",\n\"wrist_roll.pos\",\n\"gripper.pos\"\n],\n\"shape\": [\n6\n]\n},\n\"observation.images.top\": {\n\"dtype\": \"video\",\n\"shape\": [\n1080,\n1920,\n3\n],\n\"names\": [ [...] \"video_path\": \"videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4\",\n\"robot_type\": \"so_follower\",\n\"splits\": {\n\"train\": \"0:50\"\n}\n}` [...] \"episode_index\": {\n\"dtype\": \"int64\",\n\"shape\": [\n1\n],\n\"names\": null\n},\n\"index\": {\n\"dtype\": \"int64\",\n\"shape\": [\n1\n],\n\"names\": null\n},\n\"task_index\": {\n\"dtype\": \"int64\",\n\"shape\": [\n1\n],\n\"names\": null\n}\n},\n\"total_episodes\": 50,\n\"total_frames\": 186",
       "relevance": "",
       "url": "https://huggingface.co/datasets/nobodyiam/lerobot_dataset_20261006_172352",
       "sourceName": "huggingface.co",
@@ -2218,8 +2325,85 @@
       "topics": [
         "数据与评测"
       ],
+      "highlights": [
+        "`{\n\"codebase_version\": \"v3.0\",\n\"fps\": 25,\n\"features\": {\n\"action\": {\n\"dtype\": \"float32\",\n\"names\": [\n\"shoulder_pan.pos\",\n\"shoulder_lift.pos\",\n\"elbow_flex.pos\",\n\"wrist_flex.pos\",\n\"wrist_roll.pos\",\n\"gripper.pos\"\n],\n\"shape\": "
+      ],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-6aea084a46162f599e7ea2a2",
+      "title": "lerobot_SO101_mirrors_yellow_ball_in_blue_cup_20261007_112821",
+      "date": "2026-10-07T02:00:00.000Z",
+      "category": "开源工具",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "relevance": "",
+      "url": "https://huggingface.co/datasets/rob089/lerobot_SO101_mirrors_yellow_ball_in_blue_cup_20261007_112821",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-6cbe40178f54b8b917ad4bb1",
+      "title": "2026-10-07_insert_02-lerobot-with-rinse - Hugging Face",
+      "date": "2026-10-07T02:00:00.000Z",
+      "category": "开源工具",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "relevance": "",
+      "url": "https://huggingface.co/datasets/lyl472324464/2026-10-07_insert_02-lerobot-with-rinse",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [],
+      "highlights": [],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-36bcbfc14323723b42137571",
+      "title": "Uranus0301/lerobot_so101_battery_sort_20261007_202803 ...",
+      "date": "2026-10-07T02:00:00.000Z",
+      "category": "开源工具",
+      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "relevance": "",
+      "url": "https://huggingface.co/datasets/Uranus0301/lerobot_so101_battery_sort_20261007_202803",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [],
+      "highlights": [],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-0e14abc0b22ba09a5d5b2524",
+      "title": "Paper page - PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation",
+      "date": "2026-10-06T00:56:50.000Z",
+      "category": "操作与学习",
+      "summary": "co-evolve in 3D space over time, then retargets the forecast hand motion to robot actions. Pre-training on human videos improves average DexJoCo success by 56.9 percentage points, and scene-trajectory supervision adds 10.9 points over forecasting the hands alone. With both, PointWAM surpasses the prior state of the art on ten DexJoCo tasks by 11.7 points and outperforms strong VLAs on a real robot. [...] World action models jointly learn to forecast world dynamics and predict robot actions, such that the learned internal world dynamics guide accurate actions. Existing approaches typically represent the world as RGB frames or latent counterparts while predicting actions as end-effector poses or joint angles, but they often struggle to capture the 3D spatial structure and contact geometry central to dexterous manipulation. We introduce Point World Action Model (PointWAM), a 3D world action",
+      "relevance": "",
+      "url": "https://huggingface.co/papers/2610.02840",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手"
+      ],
+      "highlights": [
+        "co-evolve in 3D space over time, then retargets the forecast hand motion to robot actions.",
+        "With both, PointWAM surpasses the prior state of the art on ten DexJoCo tasks by 11.7 points and outperforms strong VLAs on a real robot.",
+        "[...] World action models jointly learn to forecast world dynamics and predict robot actions, such that the learned internal world dynamics guide accurate actions."
+      ],
+      "collectedAt": "2026-10-11T02:26:50.758Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -2273,7 +2457,7 @@
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-10T03:09:16.802Z",
-    "newsAttemptAt": "2026-10-10T03:24:21.611Z",
+    "newsAttemptAt": "2026-10-11T02:26:50.758Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -2281,9 +2465,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-10-13T03:09:16.802Z",
-    "lastRunAt": "2026-10-10T03:24:21.611Z",
-    "lastFinishedAt": "2026-10-10T03:24:21.611Z",
-    "budgetDay": "2026-10-10",
+    "lastRunAt": "2026-10-11T02:26:50.758Z",
+    "lastFinishedAt": "2026-10-11T02:26:50.758Z",
+    "budgetDay": "2026-10-11",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
