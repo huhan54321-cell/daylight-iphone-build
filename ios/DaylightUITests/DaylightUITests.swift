@@ -405,6 +405,7 @@ final class DaylightUITests: XCTestCase {
         XCTAssertTrue(element("career-saved-count").exists)
         let savedCard = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "career-saved-job-")).firstMatch
         XCTAssertTrue(savedCard.waitForExistence(timeout: 5), "Bookmarks have their own visible list after relaunch and failed refresh.")
+        scrollTo(app.segmentedControls["career-section"], direction: .down)
         tap(app.segmentedControls["career-section"].buttons["岗位"])
         tap(element("career-refresh"), scroll: true)
         let error = element("career-service-error")

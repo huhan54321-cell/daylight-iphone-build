@@ -77,6 +77,9 @@ final class CareerStore: ObservableObject {
            let value = try? JSONDecoder().decode(CareerModelDailyBudget.self, from: data), value.day == CareerModelDailyBudget.dayKey(Date()) { modelBudget = value }
         migrateLegacyFollowUp()
         #if DEBUG && targetEnvironment(simulator)
+        if ProcessInfo.processInfo.arguments.contains("--capture-career-saved"), let job = jobs.first(where: { $0.status != "historical" }) {
+            setFollowUp(CareerFollowUp(saved: true, stage: "准备投递"), for: job)
+        }
         if ProcessInfo.processInfo.arguments.contains("--ui-test-career-report") {
             var calendar = Calendar(identifier: .gregorian); calendar.timeZone = TimeZone(identifier: "Asia/Shanghai")!
             let today = calendar.startOfDay(for: Date())

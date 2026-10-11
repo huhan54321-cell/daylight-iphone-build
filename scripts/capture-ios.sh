@@ -26,7 +26,7 @@ for theme in light dark; do
     sleep 3
     xcrun simctl io "$UDID" screenshot "build/screenshots/$page-$theme.png"
   done
-  for page in career career-companies career-observation; do
+  for page in career career-companies career-observation career-saved; do
     xcrun simctl launch --terminate-running-process "$UDID" com.personalassistant.Daylight --capture-tab today "--capture-$page"
     sleep 5
     xcrun simctl io "$UDID" screenshot "build/screenshots/$page-$theme.png"

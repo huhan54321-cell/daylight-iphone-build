@@ -72,6 +72,7 @@ struct CareerModule: View {
                 let args = ProcessInfo.processInfo.arguments
                 if args.contains("--capture-career-companies") { section = "公司" }
                 if args.contains("--capture-career-observation") { section = "具身观察" }
+                if args.contains("--capture-career-saved") { section = "收藏" }
                 #endif
                 await store.refreshIfNeeded()
             }
