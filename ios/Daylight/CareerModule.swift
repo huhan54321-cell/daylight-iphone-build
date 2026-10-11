@@ -43,9 +43,10 @@ struct CareerModule: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 header
-                Picker("内容", selection: $section) { Text("岗位").tag("岗位"); Text("公司").tag("公司"); Text("具身观察").tag("具身观察") }
+                Picker("内容", selection: $section) { Text("岗位").tag("岗位"); Text("收藏").tag("收藏"); Text("公司").tag("公司"); Text("具身观察").tag("具身观察") }
                     .pickerStyle(.segmented).accessibilityIdentifier("career-section")
                 if section == "岗位" { jobs }
+                else if section == "收藏" { savedJobs }
                 else if section == "公司" { directory }
                 else { observation }
                 Text("资讯每日自动更新，岗位每三天更新；画像、收藏和匹配结果留在本机。")
@@ -141,6 +142,10 @@ struct CareerModule: View {
     private var jobs: some View {
         VStack(alignment: .leading, spacing: 18) {
             serviceStatus
+            Button { jobSearchFocused = false; section = "收藏" } label: {
+                HStack { Label("已收藏岗位", systemImage: "bookmark.fill"); Spacer(); Text("\(store.savedJobs.count)"); Image(systemName: "chevron.right") }
+                    .padding(14).background(Color.blue.opacity(0.08), in: RoundedRectangle(cornerRadius: 16))
+            }.accessibilityIdentifier("career-open-saved")
             HStack {
                 TextField("搜索岗位、公司或技能", text: $jobQuery).focused($jobSearchFocused)
                     .autocorrectionDisabled().submitLabel(.done).onSubmit { jobSearchFocused = false }.accessibilityIdentifier("career-job-search")
@@ -158,6 +163,25 @@ struct CareerModule: View {
                 if cityScope != "只看杭州" { matchGroup("其他城市", values: matches.filter { !CareerMatching.isHangzhou($0.job.city) }, key: "other") }
             }
             otherJobRecords
+        }
+    }
+
+    private var savedJobs: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("我的收藏 · \(store.savedJobs.count)").font(.title2.bold()).accessibilityIdentifier("career-saved-count")
+            Text("独立于推荐和城市筛选。已关闭、历史资料或不再采集的来源会保留在这里；收藏不代表仍在招聘。")
+                .font(.caption).foregroundStyle(.secondary)
+            if store.savedJobs.isEmpty { EmptyRecords(title: "还没有收藏岗位", icon: "bookmark"); Text("打开岗位详情，开启‘收藏这个岗位’即可保存。").font(.subheadline).foregroundStyle(.secondary) }
+            ForEach(store.savedJobs) { job in
+                Button { selectedJob = job } label: {
+                    SoftCard {
+                        Text(job.title).font(.headline)
+                        Text("\(job.company) · \(job.city)").font(.subheadline).foregroundStyle(.secondary)
+                        Text(jdSummary(job)).font(.subheadline).lineLimit(3)
+                        HStack { Text(job.statusLabel).font(.caption).foregroundStyle(.secondary); Spacer(); Text(store.followUp(for: job).stage).font(.caption).foregroundStyle(.blue) }
+                    }
+                }.buttonStyle(.plain).accessibilityIdentifier("career-saved-\(job.stableID)")
+            }
         }
     }
 

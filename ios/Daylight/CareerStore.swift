@@ -15,6 +15,7 @@ final class CareerStore: ObservableObject {
     @Published private(set) var notice: String?
     @Published private(set) var lastSuccess: Date?
     @Published private(set) var followUps: [String: CareerFollowUp] = [:]
+    @Published private(set) var savedJobSnapshots: [String: CareerJob] = [:]
     @Published var configuration = CareerAPIConfiguration()
     @Published var usePrivateService = UserDefaults.standard.bool(forKey: "career-use-private-service") {
         didSet { UserDefaults.standard.set(usePrivateService, forKey: "career-use-private-service") }
@@ -33,6 +34,10 @@ final class CareerStore: ObservableObject {
         var values = (feed?.jobs ?? []).filter { !CareerPublicContent.excluded($0) }
         if let legacy = legacySavedJob(), !values.contains(where: { $0.stableID == legacy.stableID }) { values.append(legacy) }
         return values
+    }
+    var savedJobs: [CareerJob] {
+        CareerMatching.merge(jobs: jobs + Array(savedJobSnapshots.values)).filter { followUp(for: $0).saved }
+            .sorted { $0.checkedAt == $1.checkedAt ? $0.stableID < $1.stableID : $0.checkedAt > $1.checkedAt }
     }
 
     init(directory: URL? = nil, seedData: Data? = nil) {
@@ -57,6 +62,15 @@ final class CareerStore: ObservableObject {
         }
         if let file = self.directory?.appendingPathComponent("career-follow-up-v1.json"), let data = try? Data(contentsOf: file),
            let values = try? JSONDecoder().decode([String: CareerFollowUp].self, from: data) { followUps = values }
+        if let file = self.directory?.appendingPathComponent("career-saved-jobs-v1.json"), let data = try? Data(contentsOf: file), data.count <= 8_388_608,
+           let values = try? JSONDecoder().decode([String: CareerJob].self, from: data) { savedJobSnapshots = values }
+        // Preserve pre-upgrade bookmarks before fetching a feed that no longer includes their source.
+        var snapshots = savedJobSnapshots
+        for job in feed?.jobs ?? [] where followUp(for: job).saved { snapshots[job.stableID] = job }
+        if !snapshots.isEmpty {
+            do { try persist(snapshots, filename: "career-saved-jobs-v1.json"); savedJobSnapshots = snapshots }
+            catch { self.error = "旧收藏内容暂时无法保存，请检查手机存储空间。" }
+        }
         if let file = self.directory?.appendingPathComponent("career-model-analysis-v1.json"), let data = try? Data(contentsOf: file), data.count <= 8_388_608,
            let values = try? JSONDecoder().decode([String: CareerModelCachedAnalysis].self, from: data) { modelAnalyses = values }
         if let file = self.directory?.appendingPathComponent("career-model-budget-v1.json"), let data = try? Data(contentsOf: file),
@@ -206,7 +220,14 @@ final class CareerStore: ObservableObject {
         var updated = followUps
         updated[job.stableID] = value
         for url in job.sourceURLs { if let key = aliasKey(url) { updated[key] = value } }
-        do { try persist(updated, filename: "career-follow-up-v1.json"); followUps = updated }
+        var snapshots = savedJobSnapshots
+        if value.saved { snapshots[job.stableID] = job }
+        else { snapshots.removeValue(forKey: job.stableID) }
+        do {
+            try persist(snapshots, filename: "career-saved-jobs-v1.json")
+            savedJobSnapshots = snapshots
+            try persist(updated, filename: "career-follow-up-v1.json"); followUps = updated
+        }
         catch { self.error = "无法保存岗位跟进状态，请重试。" }
     }
 
@@ -218,7 +239,7 @@ final class CareerStore: ObservableObject {
     }
     private func aliasKey(_ url: String) -> String? {
         let canonical = CareerMatching.canonicalURL(url)
-        let related = CareerMatching.merge(jobs: jobs).filter { $0.sourceURLs.contains(where: { CareerMatching.canonicalURL($0) == canonical }) }
+        let related = CareerMatching.merge(jobs: jobs + Array(savedJobSnapshots.values)).filter { $0.sourceURLs.contains(where: { CareerMatching.canonicalURL($0) == canonical }) }
         guard Set(related.map(\.stableID)).count <= 1 else { return nil }
         return CareerMatching.identityKey(canonical, prefix: "url-")
     }

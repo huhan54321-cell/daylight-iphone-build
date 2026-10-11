@@ -60,7 +60,7 @@
     },
     {
       "file": "ios/Daylight/CareerModule.swift",
-      "sha256": "bdb1995c5de16e0e4237b81ff427b230e18bca3e3c0fe827eaf79bbe6c629cb5"
+      "sha256": "87a894e91121555a5c6370a024069d5c4f733f30048fda52180161bfa9d527ec"
     },
     {
       "file": "ios/Daylight/CareerNetworking.swift",
@@ -76,7 +76,7 @@
     },
     {
       "file": "ios/Daylight/CareerStore.swift",
-      "sha256": "00c57207ed1e63f7eb90a70eae7d09cefa93fe7a5947de522febf045005a5fc4"
+      "sha256": "9e8a196e2d51a6e03cb3209cc22d603eba0d1bbea9d851244ae997b94fa72ec1"
     },
     {
       "file": "ios/Daylight/ContentView.swift",
@@ -188,7 +188,7 @@
     },
     {
       "file": "ios/DaylightUITests/DaylightUITests.swift",
-      "sha256": "8f2faef5abf60c1263f2c79588a31ee36c8bdd8d337fb18a3499e45484622db4"
+      "sha256": "078dfee7cb746cfc00f1fe103ef5cff0ca26f2ee1c80c0884eea572c02593ef7"
     },
     {
       "file": "tests/native/BankBalanceOrderTests.swift",
@@ -212,7 +212,7 @@
     },
     {
       "file": "tests/native/CareerTests.swift",
-      "sha256": "604de2971bc3c6917fa217b9e4a7a67d4d77a31e1a2ba90ca90eb7e91703abee"
+      "sha256": "ab2c9acf1a3b042090dd610ac15237caad13e5ef3c414c13488f1913ae4d4af3"
     },
     {
       "file": "tests/native/CoreTests.swift",
@@ -308,7 +308,7 @@
     },
     {
       "file": "docs/career-public-update.md",
-      "sha256": "d4380754eae251d393a543c3aea572356757612a578d37490358a38cf4d438fc"
+      "sha256": "39632bc5e03dd4fbb24a72ca2fa4e3dff6cf9cfc40b040cf4d86275b72b006e5"
     },
     {
       "file": "tests/career-browser-launch.test.cjs",
@@ -372,7 +372,7 @@
     },
     {
       "file": "scripts/build-ios.sh",
-      "sha256": "86aaebe20ba56a7c8d004f1aec921b430c1ede20697e7ddf3ea48081f1ffc391"
+      "sha256": "0cc6c87c0930af2d68fa8ba254bcc42a094154b77c6622a8b257722aada198a0"
     },
     {
       "file": "scripts/capture-ios.sh",

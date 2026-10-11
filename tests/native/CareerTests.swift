@@ -116,6 +116,33 @@ enum CareerTests {
         try expect(CareerReportPeriod.date("2026-10-06T00:00:00.000Z") != nil, "real API fractional dates are supported")
         try expect(CareerReportPeriod.articles(articles, days: 1, now: now).map(\.id) == ["today"], "daily report contains only today's confirmed publications")
         try expect(Set(CareerReportPeriod.articles(articles, days: 7, now: now).map(\.id)) == Set(["today", "old"]), "weekly report excludes unknown dates and future papers")
+        return checks + (try await savedStoreChecks(job))
+    }
+
+    @MainActor private static func savedStoreChecks(_ job: CareerJob) throws -> Int {
+        var checks = 0
+        func expect(_ value: Bool, _ label: String) throws { checks += 1; if !value { throw AppFailure.message("FAIL: career saved store \(label)") } }
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent("career-saved-test-" + UUID().uuidString, isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let empty = CareerFeed(schemaVersion: 1, generatedAt: "2026-10-06T04:00:00Z", jobs: [], sources: [], articles: [])
+        let emptyData = try JSONEncoder().encode(empty)
+        let store = CareerStore(directory: directory, seedData: emptyData)
+        store.setFollowUp(CareerFollowUp(saved: true, stage: "准备投递"), for: job)
+        try expect(store.savedJobs.count == 1 && store.savedJobs.first?.stableID == job.stableID, "bookmark has independent snapshot even if excluded from recommendations")
+        let reopened = CareerStore(directory: directory, seedData: emptyData)
+        try expect(reopened.savedJobs.count == 1 && reopened.followUp(for: job).stage == "准备投递", "snapshot and follow-up survive relaunch with empty remote feed")
+        try expect(reopened.jobs.isEmpty, "saved removed source does not re-enter normal recommendations")
+        reopened.setFollowUp(CareerFollowUp(saved: false, stage: "准备投递"), for: job)
+        let removed = CareerStore(directory: directory, seedData: emptyData)
+        try expect(removed.savedJobs.isEmpty, "unbookmark survives relaunch")
+        let prior = CareerFeed(schemaVersion: 1, generatedAt: empty.generatedAt, jobs: [job], sources: [], articles: [])
+        try JSONEncoder().encode(prior).write(to: directory.appendingPathComponent("career-feed-v1.json"), options: .atomic)
+        try JSONEncoder().encode([job.stableID: CareerFollowUp(saved: true, stage: "已投递")]).write(to: directory.appendingPathComponent("career-follow-up-v1.json"), options: .atomic)
+        let migrated = CareerStore(directory: directory, seedData: emptyData)
+        try expect(migrated.savedJobs.count == 1 && migrated.followUp(for: job).stage == "已投递", "pre-upgrade cached removed source bookmark migrates before public update")
+        try JSONEncoder().encode(empty).write(to: directory.appendingPathComponent("career-feed-v1.json"), options: .atomic)
+        let refreshed = CareerStore(directory: directory, seedData: emptyData)
+        try expect(refreshed.savedJobs.count == 1, "subsequent public source removal cannot erase migrated bookmark")
         return checks
     }
 }

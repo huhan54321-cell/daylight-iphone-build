@@ -401,6 +401,11 @@ final class DaylightUITests: XCTestCase {
         relaunch()
         tap(element("open-career"))
         assertValue(element(identifier), equals: "已收藏")
+        tap(element("career-open-saved"), scroll: true)
+        XCTAssertTrue(element("career-saved-count").exists)
+        let savedCard = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "career-saved-job-")).firstMatch
+        XCTAssertTrue(savedCard.waitForExistence(timeout: 5), "Bookmarks have their own visible list after relaunch and failed refresh.")
+        tap(app.segmentedControls["career-section"].buttons["岗位"])
         tap(element("career-refresh"), scroll: true)
         let error = element("career-service-error")
         XCTAssertTrue(error.waitForExistence(timeout: 5))
@@ -515,9 +520,10 @@ final class DaylightUITests: XCTestCase {
     }
 
     private func assertValue(_ target: XCUIElement, equals expected: String, file: StaticString = #filePath, line: UInt = #line) {
-        let correct = NSPredicate(format: "value == %@", expected)
+        XCTAssertTrue(target.waitForExistence(timeout: 10), "Value target did not appear", file: file, line: line)
+        let correct = NSPredicate { _, _ in (target.value as? String) == expected }
         let expectation = XCTNSPredicateExpectation(predicate: correct, object: target)
-        XCTAssertEqual(XCTWaiter.wait(for: [expectation], timeout: 5), .completed,
+        XCTAssertEqual(XCTWaiter.wait(for: [expectation], timeout: 15), .completed,
                        "Expected value \(expected), got \(String(describing: target.value))", file: file, line: line)
     }
 }
