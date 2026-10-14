@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T06:53:14.252Z",
+  "generatedAt": "2026-10-14T05:02:40.477Z",
   "jobs": [
     {
       "id": "job_05835f734df7d7aa9d0a0c73",
@@ -1513,8 +1513,8 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1522,8 +1522,8 @@
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1531,8 +1531,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1540,8 +1540,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1549,8 +1549,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1558,8 +1558,8 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1567,8 +1567,8 @@
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 38,
       "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1576,13 +1576,1142 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-13T06:53:14.252Z",
-      "lastSuccessAt": "2026-10-13T06:53:14.252Z",
+      "lastAttemptAt": "2026-10-14T05:02:40.477Z",
+      "lastSuccessAt": "2026-10-14T05:02:40.477Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "paper-702188a205c7a001d44499d7",
+      "title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
+      "date": "2026-10-13T17:59:56.000Z",
+      "category": "论文",
+      "summary": "Scaling expert demonstrations alone does not enable generalist robot policies to improve from deployment. Real-world rollouts contain successes, suboptimal behavior, and failures: imitating every recorded action can reinforce poor behavior, while filtering out failures discards evidence of physical interactions and their consequences. We introduce \\textbf{LoopWAM}, a closed-loop world-action model that learns directly from this full quality spectrum, using rollouts from both itself and other deployed policies. Source-dependent noise sampling unifies behavior learning and action-conditioned world modeling, while quality steering and quality-weighted supervision retain full video supervision across qualities and regulate action imitation. Video and action tokens interact throughout parallel denoising, allowing learned consequences to inform action generation directly. On RoboChallenge Table30-V2, three deployment-and-training rounds raise success from 23.67\\% to 43.33\\%, a 19.7-percentag",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18873",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Wenxuan Guo",
+        "Yingping Liang",
+        "Zhaoguo Wang",
+        "Ziyuan Li",
+        "Angyuan Ma",
+        "Zhenyu Wu",
+        "Chengkun Wang",
+        "Bingyao Yu",
+        "Ze Chen",
+        "Borui Zhang",
+        "Xiuwei Xu",
+        "Meng Zhang",
+        "Erjin Zhou",
+        "Jiwen Lu"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "模仿学习",
+        "世界模型",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:59:56.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-e86142d2b29124e2f72304ed",
+      "title": "EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ",
+      "date": "2026-10-13T17:59:55.000Z",
+      "category": "论文",
+      "summary": "Learning humanoid loco-manipulation from human demonstrations rests on observing how locomotion, posture, and object interaction evolve together as tasks unfold. Scaling collection across diverse environments, in turn, favors lightweight, portable capture systems. Yet, existing datasets provide only partial views of this coordination. Thus, we introduce EgoExplorer, a 100-hour vision-motion-touch observatory of human loco-manipulation built with a wearable system. With an emphasis on professional activities, its continuous recordings align egocentric video with reconstructed whole-body motion, fine-grained finger articulation, and tactile observations, accompanied by step-level descriptions. To achieve this coverage with sparse body sensing, we develop the Calibrate-Complete-Constrain pipeline. Concretely, reusable calibration fixes participant geometry and sensor attachments before motion inference to disentangle mounting offsets from articulation. A temporal prior then completes unob",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18872",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Yunsong Zhou",
+        "Xuekun Jiang",
+        "Haiqi Shen",
+        "Hangxu Liu",
+        "Chaojian Shi",
+        "Yujie Liu",
+        "Jingyuan Li",
+        "Haoran Yang",
+        "Jiafei Cao",
+        "Dongzhan Zhou",
+        "Dong Wang",
+        "Yao Mu",
+        "Chunhua Shen",
+        "Weinan Zhang"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "仿真与迁移",
+        "数据与评测",
+        "运动控制"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:59:55.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-3d2f6cdf4abf6e993dc2705e",
+      "title": "Interaction Latents as Actions for Contact-Rich Manipulation",
+      "date": "2026-10-13T17:59:16.000Z",
+      "category": "论文",
+      "summary": "Contact-rich manipulation requires robots to coordinate not only where to move, but also how contact and force should evolve throughout an interaction. Yet most robot policies represent actions primarily as motion trajectories, using tactile signals as inputs or auxiliary prediction targets without explicitly encoding contact dynamics in the action representation. We propose ILA (Interaction Latents as Actions), which uses decodable interaction latents that jointly capture the evolution of motion, contact, and force application as policy action units, providing a shared representation for action generation, evaluation, and offline improvement. We learn these latents through visually conditioned joint action-tactile reconstruction with a time-conditioned implicit decoder. Using them as flow-matching generation targets supports post-training of pretrained vision-language-action models (VLAs) and world action models (WAMs), as well as training flow-matching policies from scratch. A shared",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18855",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Yuhang Zheng",
+        "Yujie Zang",
+        "Yuchen Liu",
+        "Yupeng Zheng",
+        "Zhennan Jiang",
+        "Zebin Xing",
+        "Shuai Tian",
+        "Songen Gu",
+        "Jingxiang Guo",
+        "Chen Gao",
+        "Zhongpu Xia",
+        "Shuicheng Yan"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:59:16.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-b6580ddb751d85d883019255",
+      "title": "ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation",
+      "date": "2026-10-13T17:58:44.000Z",
+      "category": "论文",
+      "summary": "Expert demonstrations show how to complete contact-rich tasks, but provide limited coverage of how interaction forces respond to different actions. Task-agnostic play provides broader experience of contact dynamics without specifying task goals. To fully leverage these two types of data, we introduce ForceWAM, a force world action model that decouples knowledge of task-compatible interaction outcomes from knowledge of how local actions change contact. A world model learns from successful demonstrations to jointly predict future video and six-axis force/torque trajectories. Together, these futures describe the expected evolution of motion and contact during the task. A separate inverse dynamics model (IDM) learns from both task and play, mapping current observations and recorded visual-wrench futures to their associated robot actions. Play data thus provide knowledge of force responses for goal-directed execution. At deployment, the IDM reactively translates generated futures into actio",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18852",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Zijun Xu",
+        "Wendi Chen",
+        "Xinkai Wang",
+        "Jiachen Zou",
+        "Hongjin Chen",
+        "Hairuo Liu",
+        "Bokai Lin",
+        "Shihao Ma",
+        "Ke Ma",
+        "Zhiwei Zhang",
+        "Zhuohao Yan",
+        "Ke Wu",
+        "Haoming Song",
+        "Xueqi Li",
+        "Chuan Wen",
+        "Jieru Zhao",
+        "Wenchao Ding",
+        "Cewu Lu",
+        "Lixin Yang"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "世界模型"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:58:44.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-10f7d1ea8aa3ef110345264f",
+      "title": "Contact Trajectory Prompting: In-Context Transfer of Contact-Rich Behaviors from a Single Demonstration",
+      "date": "2026-10-13T17:58:08.000Z",
+      "category": "论文",
+      "summary": "In-context robot learning enables robots to acquire new behaviors from demonstrations without test-time parameter updates. However, visual and kinematic specifications alone may not distinguish contact-rich behaviors that share similar motions but require different interaction intensities or patterns. We propose Contact Trajectory Prompting (CTP), a framework for one-shot transfer of contact-rich manipulation behaviors. CTP encodes motion and contact information from a single demonstration into an ordered contact trajectory prompt that captures their temporal evolution and specifies the desired physical interaction behavior. During execution, the policy uses online sensory feedback to retrieve interaction-relevant information from the prompt, conditioning closed-loop action generation on the demonstrated contact behavior. Across real-world wiping, rotation, and insertion tasks on objects excluded from training, CTP achieves 78.7% overall success, outperforming the strongest evaluated b",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18848",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Xian Nie",
+        "Yujie Zang",
+        "Yuhang Zheng",
+        "Yupeng Zheng",
+        "Songen Gu",
+        "Wendi Chen",
+        "Chuan Wen",
+        "Cewu Lu",
+        "Wenchao Ding",
+        "Junchi Yan",
+        "Shuicheng Yan"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "模仿学习"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:58:08.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-2fbe111cb39fe369a8409977",
+      "title": "RoboSimStudio: An Interactive Toolkit for Rapid Real2Sim of Robot Manipulation Tasks",
+      "date": "2026-10-13T17:55:14.000Z",
+      "category": "论文",
+      "summary": "It is difficult to accurately model the physics of the interaction between a robot and the objects it manipulates, including contact mechanics, coupled contact dynamics, deformations, stiffness and friction. We present RoboSimStudio (RSS), an interactive toolkit that makes choices of solver, contact model, and physical parameters explicit and editable, allowing both humans and coding agents to iteratively refine simulations based on observed physical behavior. We implement RSS with the open Newton physics simulation system and describe experiments with human-guided real2sim using (1) visual evaluation, (2) force-feedback and (3) agentic Real2Sim2Real. Code, video and additional information can be found on the project website.",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18835",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Kaiyuan Chen",
+        "Shuangyu Xie",
+        "Uksang Yoo",
+        "Xinyue Zhu",
+        "Cael Magner",
+        "Alvin Zhu",
+        "Daehwa Kim",
+        "Eric Heiden",
+        "Erwin Coumans",
+        "Miles Macklin",
+        "Spencer Huang",
+        "Ken Goldberg"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:55:14.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-61b70e358e8739da09e42619",
+      "title": "WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions",
+      "date": "2026-10-13T17:52:55.000Z",
+      "category": "论文",
+      "summary": "We introduce WorldOracle, a benchmark specifically designed to evaluate action-conditioned world models (ACWMs) against paired real-world executions. Given the same initial observation and low-level action sequence, WorldOracle asks whether a predicted rollout reproduces what happens in the real world, including physical consequences and task-state transitions. We evaluate models along four complementary dimensions: physical state correctness, interaction spatial alignment, key interaction area fidelity, and multi-view action coherence. To support this evaluation, we curate real-world training and evaluation suites that cover different interaction dynamics and embodiments. The evaluation suite contains long, multi-segment episodes with both successful and failed executions, enabling evaluation across varied action outcomes and behavior distributions. Experiments on seven representative ACWMs reveal distinct model strengths and failure modes. WorldOracle provides a systematic foundation",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18826",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Haoyi Duan",
+        "Liliang Chen",
+        "Nan Wang",
+        "Yang Zhang",
+        "Yuhang Lu",
+        "Xiaotong Chen",
+        "Wei-Cheng Tseng",
+        "Shenyuan Gao",
+        "Zhaoshuo Li",
+        "Jingyi Jin",
+        "Pooya Jannaty",
+        "Dhruv Shah",
+        "Yuke Zhu",
+        "Ming-Yu Liu",
+        "Maoqing Yao",
+        "Guanghui Ren"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "世界模型",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:52:55.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-af044b9be47d64c6c30b1eee",
+      "title": "EgoMatrix: Physically Faithful Dexterous Robot Demonstrations from Egocentric Human Videos",
+      "date": "2026-10-13T17:51:46.000Z",
+      "category": "论文",
+      "summary": "Egocentric human videos offer a scalable alternative to robot teleoperation for collecting dexterous manipulation data. However, two challenges limit their use as reliable training data: accurate hand-object interaction (HOI) reconstruction from monocular RGB and high-quality robot demonstrations, especially visual observations. We present EgoMatrix, an end-to-end data engine that converts monocular egocentric human videos into bimanual dexterous trajectories and paired robot observation videos, with the trajectories directly replayable on real robots. It reconstructs HOI with emphasis on relative geometry and contact rather than exact metric scene recovery, then uses retargeting and reinforcement learning (RL) to reproduce the demonstrated tasks in simulation. We jointly render robot hands and objects from these simulated trajectories to produce physically faithful observations synchronized with state and control records. Rendering the same trajectories in diverse, task-compatible bac",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18822",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Ziheng Wang",
+        "Yanming Shao",
+        "Ting Mao",
+        "Kaihan Chen",
+        "Yiqun Wang",
+        "Xuanye Wu",
+        "Yao Mu"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "强化学习",
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:51:46.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-31df68f593480ef27bade552",
+      "title": "EqC: Equilibrium Energy Control for Introspective Lifelong Robot Learning",
+      "date": "2026-10-13T17:39:36.000Z",
+      "category": "论文",
+      "summary": "Long-term robot autonomy depends on more than effective action generation: a policy must recognize when its behavior is no longer sufficiently supported and use assistance to improve. We introduce Equilibrium Energy Control (EqC), a framework for introspective lifelong robot learning built around an explicit conditional energy landscape. EqC casts generative action refinement as equilibrium-seeking optimization, while the geometry of the refinement process reveals whether the generated behavior remains consistent with the learned landscape. This competence signal enables Energy-Gated DAgger, where persistent energy-consistency violations trigger expert takeover and the resulting recovery trajectories are aggregated for subsequent policy updates. EqC integrates naturally into both Diffusion Transformer policies and flow-matching-based vision-language-action (VLA) policies. Across simulation and real-world bimanual manipulation, EqC matches or improves control performance and robustness ",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18790",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Haodong Yang",
+        "Runhan Huang",
+        "Bowen Zhang",
+        "Iofai Lei",
+        "Zunzhe Zhang",
+        "Xiangcheng Zhang",
+        "Shaoting Zhu",
+        "Linzhan Mou",
+        "Yicheng Liu",
+        "Hang Zhao"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "仿真与迁移"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:39:36.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-08e71edfedd62e1ac3097367",
+      "title": "GreenWAM: A World Foundation Model for Robotics",
+      "date": "2026-10-13T17:31:29.000Z",
+      "category": "论文",
+      "summary": "A robot needs a world model that predicts how its actions will change the scene and a policy that chooses those actions. Models are usually built and evaluated for only one of these roles, and every robot records its actions in its own format. We ask whether one robot world model can serve both roles across different bodies, and what makes this work. We present GreenWAM, a world foundation model for robotics, together with the recipe that produces it: (1) a shared anatomical action space that describes 20 robot families, from bimanual arms to dexterous humanoids, in common joint coordinates; (2) joint training on these families in visual, action-conditioned and world-action modes; and (3) policies that split an action expert off the generator. As a world model, GreenWAM attains top-tier trajectory, depth and 3D accuracy on WorldArena 1.0, ahead of every world-action model and video generator in our comparison. As a policy, it scores among the top entries of the RoboTwin 2.0 leaderboard",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18774",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Gennady Sidorov",
+        "Valerii Kornilov",
+        "Denis Grankin",
+        "Polina Fedotova",
+        "Aleksey Postnikov"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "世界模型"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T17:31:29.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-a8e5adf429cc2d92383721bd",
+      "title": "Steertuning Policies from a Few Human Videos",
+      "date": "2026-10-13T16:55:32.000Z",
+      "category": "论文",
+      "summary": "Current recipes for robot learning require massive amounts of robot demonstrations to obtain robust and adaptive policies. In this work, we introduce Steertuning, a system that enables robots to learn new tasks in new environments from 5 human demonstrations in under 5\n Steertuning consists of two parts. (1) We pretrain a 400M-parameter diffusion policy on our egocentric human dataset, which consists of 100 hours of densely annotated random interactions. This pretraining makes Steertuning robust to background differences and enables spatial and object generalization when deployed on new tasks. (2) Given 5 demonstrations of a new task, we finetune our model for only 2 minutes (2000 training updates) and steer the policy's actions during reverse sampling using the demonstration whose observation is closest to that of the deployment environment. Together with a carefully designed data processing pipeline for embodiment transfer, this enables Steertuning to achieve a 71% success rate acros",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18711",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Billy Yan",
+        "Isaac Tu",
+        "Kelly Lee",
+        "Blake Chang",
+        "Kenny Ma",
+        "Kanad Patel",
+        "Dhawal Kabra",
+        "Neer Patel",
+        "Kevin Wu",
+        "Lerrel Pinto",
+        "Irmak Guzey"
+      ],
+      "topics": [
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T16:55:32.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-07e335faaf0177a79be8a6f8",
+      "title": "RoboFQE: Rollout-Free Evaluation of Visual Robot Policies from Offline Trajectories",
+      "date": "2026-10-13T16:48:25.000Z",
+      "category": "论文",
+      "summary": "Evaluating robot policies before deployment typically requires producing new trajectories through real-world execution, simulators, or learned world models. These rollout-based approaches impose infrastructure requirements; simulator and world-model evaluators additionally face prediction errors that can compound over the evaluation horizon. In this paper, we study off-policy evaluation as an alternative to rollout-based robot-policy evaluation methods. Specifically, we introduce RoboFQE, an evaluator that estimates the discounted expected return of a target policy from offline robot trajectories without estimating a behavior-policy density, combining fitted Q-evaluation with a pretrained vision foundation model and learned terminal success annotation to bridge the gap between standard OPE benchmarks and continuous-control visual manipulation. Controlled experiments across simulated and real-world manipulation tasks show that RoboFQE produces accurate discounted-return estimates and pr",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18699",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Yunfu Deng",
+        "Sangwoo Shin",
+        "Brahma S. Pavse",
+        "Josiah P. Hanna"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "世界模型",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T16:48:25.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-5fe5e163fa6c9a0afb2fb138",
+      "title": "UniW(A)M: A Unified Mixture-of-Experts Framework for World and World-Action Models",
+      "date": "2026-10-13T16:47:16.000Z",
+      "category": "论文",
+      "summary": "World models (WMs) and world-action models (WAMs) focus on future world prediction and executable action generation, respectively. Although these models learn shared physical dynamics and interaction semantics from embodied trajectories, they are typically trained in isolation, which restricts knowledge reuse between prediction and control. The central challenge is therefore to develop a unified learning framework that shares these dynamics while preserving the distinct modeling capabilities required by each paradigm.\n We propose UniW(A)M, a mixture-of-experts world-(action) model built upon diffusion Transformers that unifies action-conditioned world modeling and diverse WAM variants. Shared experts capture common dynamics, while atomic capability experts are reused across interfaces so that each interface keeps its own conditional pathway. At deployment, a plug-in adaptive interface router (PAIR) learns from a small subset of target-task chunk scenarios to select a suitable WAM inter",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18697",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Jingbo Xu",
+        "Jianjie Fang",
+        "Zhuohang Li",
+        "Zihao Song",
+        "Zhaolu Wang",
+        "Xvyuan Liu",
+        "Xin Zhang",
+        "Haisheng Su",
+        "Yinzhou Tang",
+        "Chen Gao",
+        "Wei Wu",
+        "Yong Li"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "世界模型"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T16:47:16.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-902215de45edc7844e853c79",
+      "title": "Model-Based Online Decision Making via Generative Trajectory Planning",
+      "date": "2026-10-13T16:35:13.000Z",
+      "category": "论文",
+      "summary": "Online decision-making faces a tension between efficient inference and long-horizon reasoning. Value-based methods rely on short-horizon bootstrapping that limits the propagation of long-term information, while trajectory optimization methods plan explicitly but must solve a high-dimensional optimization problem at every decision step. We propose Generative Trajectory Planning (GTP), a model-based framework that addresses this tension by learning a generative model as a proposal distribution over action sequences. Instead of optimizing sequences from scratch, GTP samples candidate sequences from a diffusion prior and refines them using learned dynamics, reward, and value models, enabling efficient trajectory-level reasoning. Across continuous control and long-horizon manipulation tasks, GTP matches or exceeds state-of-the-art model-free, diffusion-policy, and model-based baselines, and remains stable in regimes where strong baselines degrade. Our results suggest that generative models ",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18677",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Haldun Balim",
+        "Yilun Du",
+        "Na Li"
+      ],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T16:35:13.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-8b30e383527ab69efeab8740",
+      "title": "Known-Voice Cloning and the Limits of Personality Transfer for Character Design",
+      "date": "2026-10-13T16:27:44.000Z",
+      "category": "论文",
+      "summary": "Recent advances in zero-shot voice cloning systems make it possible to reproduce a recognizable voice from a short recording and attach it to arbitrary virtual characters. Prior work suggests that familiar vocal identity can carry over associated personality impressions to new targets such as robots or virtual characters. However, these works have mainly examined familiarity and personalization effects rather than directly testing whether a cloned familiar voice systematically transfers personality impressions to an embodied virtual character. Such transference raises the concern that cloned voices could be used to manipulate people into engaging with virtual characters as capable social actors. Across two studies, we investigated whether personality impressions transfer when a virtual character speaks with the cloned voice of a familiar person. Study 1 examined this question in a real-world university setting using the cloned voice of a lecturer familiar to the participating students.",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18669",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Johanna Magdalena Kuch",
+        "Maud van Lier",
+        "Daksitha Senel Withanage Don",
+        "Patrick Gebhard",
+        "Tanja Schneeberger",
+        "Elisabeth André"
+      ],
+      "topics": [],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T16:27:44.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-bae873bfc6afecdc8c749bb6",
+      "title": "ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures",
+      "date": "2026-10-13T16:13:36.000Z",
+      "category": "论文",
+      "summary": "Vision-language-action (VLA) policies perform manipulation tasks using camera images and language instructions, but object slip or visual occlusion can disrupt execution. Recovery is typically learned during policy training or delegated to a monitor that triggers a scripted repair after detecting a failure. We introduce ForkCast, a predictive recovery framework that compares counterfactual futures to determine whether and how to intervene in a frozen VLA policy. At each decision point, ForkCast evaluates three candidates: executing the policy's nominal action chunk (Commit), adjusting the camera viewpoint (Reobserve), and replanning the arm trajectory (Replan). A candidate-conditioned world model forecasts the latent outcome of each candidate at a common future horizon, and a shared task-progress head scores the predicted outcomes. By evaluating the policy's own continuation alongside the repair candidates, a single comparison based on task progress determines both whether and how to i",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18650",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Chenru Wen",
+        "Huajian Zeng",
+        "Haokai Ding",
+        "Jian Kang",
+        "Anqing Duan",
+        "Dawei Zhou",
+        "Dezhen Song",
+        "Xingxing Zuo"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "世界模型"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T16:13:36.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-3e2e1d599162882148748ffc",
+      "title": "ACCRUE: Continual Off-Policy Reinforcement Learning for Robot Foundation Models",
+      "date": "2026-10-13T15:53:26.000Z",
+      "category": "论文",
+      "summary": "Reinforcement learning (RL) post-training improves robot foundation models (RFMs) beyond their demonstrations, but real-world deployment demands more: learning new tasks efficiently while retaining previously acquired behaviors. Existing continual RL methods on top of VLAs mitigate forgetting but rely on on-policy updates with limited forward transfer, whereas off-policy methods improve single-task sample efficiency without addressing learner persistence across tasks. We propose ACCRUE, a continual off-policy RL framework that carries lightweight actor and critic networks across tasks, allowing each stage to reuse behavioral and value knowledge acquired through prior RL. The inherited critic adapts only on current-task transitions and guides current-task actor learning, while prior behavior is preserved by distilling the actor toward cached targets on a small number of retained episodes. Fixed visual features keep the inherited learner and its replay compatible with base-policy updates",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18596",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Changyeon Kim",
+        "Kimin Lee",
+        "Yashraj Narang",
+        "Yijie Guo"
+      ],
+      "topics": [
+        "强化学习",
+        "仿真与迁移"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T15:53:26.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-20312bfbbe0e7f5c9383c38c",
+      "title": "WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction",
+      "date": "2026-10-13T15:37:50.000Z",
+      "category": "论文",
+      "summary": "Vision-language-action (VLA) policies excel at generalist robotic manipulation but generate actions without explicitly modeling their environmental consequences. World action models (WAMs) incorporate future prediction, yet most rely on costly video generation, while latent alternatives either use predicted futures only as auxiliary targets or infer latent actions from suboptimal visual transitions through costly large-scale video pretraining. We introduce WAVE-0 (World-model-Augmented VLA Execution), a framework that bridges VLAs and WAMs through a lightweight latent world model. By connecting the semantic understanding of pretrained VLAs with explicit future prediction, WAVE-0 allows anticipated action consequences to directly guide action generation. Built on a pretrained VLA, its 257M world model translates VLM-generated latent action plans into predicted future representations that condition the action expert, unifying latent planning, future prediction, and action generation. The",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18568",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Haomin Wang",
+        "Anqiong Ji",
+        "Ke Wang",
+        "Zhongshan Liu",
+        "Ru Ying",
+        "Ran Zheng",
+        "Zhipeng Zhang"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "世界模型"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T15:37:50.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-a966664326061569743ebb11",
+      "title": "MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation",
+      "date": "2026-10-13T14:40:04.000Z",
+      "category": "论文",
+      "summary": "Large vision-language models (LVLMs) have shown strong potential for embodied vision-language navigation (VLN), yet their performance degrades on long-horizon trajectories due to context-length limits, redundant historical observations, and unstable spatial alignment across time. These issues make it difficult to both compress long navigation histories and reliably reuse past spatial experience. To address these limitations, we propose \\textbf{MemoryVLN}, a unified memory-driven navigation system built around memory construction and management. During memory construction, \\emph{Long Sequence Compression} employs forgetting-curve-inspired temporal sampling to preserve dense recent evidence and sparse yet representative distant observations under a limited token budget. \\emph{Ego-Aware Memory Representation} further integrates 2D semantic tokens, 3D geometric tokens, and 6D agent poses, allowing each memory to encode both what was observed and where it was observed. During memory managem",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18478",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Xueyao Wei",
+        "Yifei Wang",
+        "Delun Li",
+        "Shaoan Wang",
+        "Junzhi Yu",
+        "Wenjie Song",
+        "Xingyu Chen"
+      ],
+      "topics": [
+        "模仿学习"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T14:40:04.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-8e1d551467824fccb840cff9",
+      "title": "Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence",
+      "date": "2026-10-13T14:18:47.000Z",
+      "category": "论文",
+      "summary": "World models have emerged as a promising paradigm for embodied AI, yet existing systems often remain fragmented in the modalities they model and the functions they support. In particular, visual dynamics, geometric structure, and executable action are commonly coupled through separate interfaces or downstream modules rather than being jointly represented and evolved within a shared dynamics model. In this work, we present Thinker-WM, a unified multimodal world model that jointly models and generates RGB, metric depth, and robot action through a shared intermediate Unified Dynamics Transformer with modality-specific encoders and decoders. The model performs multimodal unification at the representation level: appearance, geometry, and action are transformed into a common dynamic representation and jointly evolved by shared parameters, while their distinct output structures are preserved. The same parameterization supports multiple functions, including joint video-action generation, world",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18447",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Thinker Team",
+        "Peng Gao",
+        "Jichao Jiao",
+        "Chen Liao",
+        "Daqin Luo",
+        "Yiming Ma",
+        "Baiyu Pan",
+        "Hailin Shi",
+        "Jiyuan Wang",
+        "Xiangming Xu",
+        "Xiongwei Zhao"
+      ],
+      "topics": [
+        "仿真与迁移",
+        "世界模型",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T14:18:47.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-566f1b13fe0d45b7866b6269",
+      "title": "PACT: Posture-Aligned Co-Design Technique for Hand Configuration and Retargeting in Multi-Finger Imitation Learning",
+      "date": "2026-10-13T14:16:45.000Z",
+      "category": "论文",
+      "summary": "The fidelity of teleoperated demonstrations used for imitation learning is determined by how faithfully a robot hand can replicate the operator's posture. The posture retargeting law that the robot will execute is typically selected only once the hardware has been finalized, and conventional hand designs often neglect human-like grasping postures. We introduce PACT, an optimization based on human grasping postures that jointly optimizes the mechanical parameters of a 17-servo robot hand (link lengths, joint offsets, mounting angles, and base placements) and its nonlinear posture retargeter (a linear human-to-robot joint map, per-joint posture-IK weights, and damping). The optimization enforces full-finger correspondence (MCP, PIP, DIP, and tip of each finger) to human poses from the DexYCB dataset, and is constrained by servo interference, assembly clearances, and flat-hand protrusion, so the resulting design can be physically assembled. We fabricate the PACT Hand and validate it throu",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18443",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Koyo Sasazaki",
+        "Satoshi Funabashi",
+        "Pranav Ponnivalavan",
+        "Alexander Schmitz",
+        "Tetsuya Ogata",
+        "Shigeki Sugano"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "模仿学习",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T14:16:45.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-5b6172c97f62d92bb9727086",
+      "title": "CALM: Decentralized Control of Cooperative Aerial Manipulation with Multi-Agent Reinforcement Learning",
+      "date": "2026-10-13T14:03:36.000Z",
+      "category": "论文",
+      "summary": "Cooperative aerial manipulation is difficult under wind, payload motion, and noisy goal broadcasts because multiple Unmanned Aerial Vehicles (UAVs) are coupled through a shared payload. We present CALM (Cooperative Aerial Learned Manipulation), a decentralized controller for aerial manipulators carrying a basket while tracking a moving ground robot. CALM combines a parameter-shared Multi-Agent Reinforcement Learning (MARL) policy, trained using Multi-Agent Proximal Policy Optimization (MAPPO), with goal estimation, per-UAV Extended State Observers (ESOs), basket-mass estimation, and anticipatory formation-yaw feedforward. The anticipatory formation-yaw feedforward uses estimated goal motion to rotate the formation before position error develops, reducing basket-yaw lag without adding net commanded force. A disturbance-conditioned critic supports centralized training while execution remains decentralized. Across held-out trajectories, CALM achieves lower mean position and orientation er",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18425",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Jiaxi Huo",
+        "Petre Ricioppo",
+        "Fausto Francesco Lizzio"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "强化学习"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T14:03:36.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-bbb8c30d5cca21c23d1af030",
+      "title": "Intent-guided Adaptive Stiffening for Visuomotor Policies under Unknown Resistance",
+      "date": "2026-10-13T13:36:34.000Z",
+      "category": "论文",
+      "summary": "Manipulation tasks such as unscrewing a cap or sliding a part in contact with a surface require imposing force along a high-friction direction: the robot must overcome a resistance rather than yield to it. Generative visuomotor policies predict the motion for such tasks but not the authority needed to realize it, and that authority is bounded by the impedance controller beneath them: when the resistance exceeds what a compliant controller can exert under a bounded tracking error, the task is unattainable however accurate the prediction is. The required amount cannot be anticipated either, since it depends on a contact state the observation does not reveal. In this paper, we propose a residual stiffening layer placed underneath an unmodified policy. Resistance is recognized, without force sensing, from the mismatch between the motion the policy commands and the motion the robot realizes, and a four-mode supervisor raises the stiffness along a single direction read off the policy's own a",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18386",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Francesco Cufino",
+        "Carmela Mariniello",
+        "Mario Selvaggio",
+        "Andreas Sochopoulos",
+        "Fabio Ruggiero"
+      ],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T13:36:34.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-22e7c33848ce09e4a065739c",
+      "title": "Benchmarking Interaction-Oriented Aerial Mobility across Heterogeneous Environments",
+      "date": "2026-10-13T13:33:38.000Z",
+      "category": "论文",
+      "summary": "Aerial mobile manipulation requires unmanned aerial vehicles (UAVs) to traverse heterogeneous environments such as indoor and outdoor domains, and connect navigation with subsequent physical interaction within the same trajectories. Existing aerial benchmarks are typically confined to single-environment settings, limiting evaluation of agents across continuous environmental transitions. When interaction is evaluated, agents are often initialized near the target, leaving the transition from navigation to interaction largely unassessed. This work introduces CrossFly, a benchmark for long-horizon interaction-oriented aerial mobility across heterogeneous environments. CrossFly contains 15K trajectories across more than 20 reconstructed scenes under a unified simulation and evaluation framework, covering Indoor, Outdoor, and Indoor$\\leftrightarrow$Outdoor trajectories. It further introduces Interaction Readiness Rate (IRR) to assess whether terminal navigation states provide suitable condit",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18381",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Zhibo Duan",
+        "Hanlin Kong",
+        "Tianran Ma",
+        "Yuze Wu",
+        "Yuxuan Xu",
+        "Kenghou Hoi",
+        "Changheng Xie",
+        "Xin Zhou",
+        "Jianzhe Gao",
+        "Fei Gao",
+        "Wenguan Wang"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T13:33:38.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-892c5b5e920abe460c77a58e",
+      "title": "Let the Mind Conceive, Let the Hand Achieve: Following Multimodal Instructions for Long-Horizon Robotic Manipulation",
+      "date": "2026-10-13T13:20:59.000Z",
+      "category": "论文",
+      "summary": "A robot following a multi-step instruction needs to act on the right objects in the right order, even as the scene changes. It must also maintain awareness of task progress and determine when to advance. To address these challenges, we introduce Orchestra, an agent harness that separates task planning and execution management from action generation. Orchestra decomposes a complete multimodal instruction into ordered subtasks, tracks completed steps, and updates the locations of relevant objects and destinations during execution. It maintains a shared context containing the active subtask, spatial grounding, and recent observations. An action policy uses this context to generate actions, while a separately trained progress evaluator estimates when to advance to the next subtask. To evaluate whether robots trained on atomic instructions and short trajectories can execute longer subtask sequences, we introduce a benchmark named RMBench-Compose. Orchestra achieves a mean success rate of $6",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18352",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Youpeng Wen",
+        "Gang Wang",
+        "Tianyu Huang",
+        "Weiwei Zhang",
+        "Zhijian Huang",
+        "Wei Chen",
+        "Xieyuanli Chen",
+        "Yunhui Liu"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T13:20:59.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-f2eee502ce5245d943fec0e3",
+      "title": "I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation",
+      "date": "2026-10-13T12:52:13.000Z",
+      "category": "论文",
+      "summary": "Service and delivery robots often need to complete long-horizon navigation missions spanning indoor and outdoor environments. Existing embodied navigation benchmarks primarily evaluate isolated stages or partial cross-domain journeys, providing limited support for assessing how heterogeneous navigation capabilities compose under continuous execution. We introduce I2O2I-Nav, a physics-enabled benchmark of 20 real-world composite scenes spanning over 115,000 square meters across multiple buildings and floors, with aligned 3DGS rendering and collision geometry. Its three-level evaluation progresses from independent primitives to two-stage compositions and complete four-stage I2O2I missions. Each stage starts from its predecessor's actual endpoint, while stage-conditional metrics track completion and localize failures along the mission. We further propose the MODULAR-Agent that coordinates frozen navigation policies through completion verification, stage handoffs, and bounded recovery. Eva",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18307",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Zhengjie Shu",
+        "Wanyu Li",
+        "Di Xiao",
+        "Lingxin Jiang",
+        "Lai Jiang",
+        "Kaidi Hu",
+        "Xincheng Tang",
+        "Wenkang Hu",
+        "Haoran Wang",
+        "Jinchuan Zhang",
+        "Chang Chen",
+        "Wei Li",
+        "Jia Pan",
+        "Ruigang Yang"
+      ],
+      "topics": [
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T12:52:13.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-8051c5fab068cd23c27e8331",
+      "title": "Cross-Embodiment Affordance Transfer for Robotic Manipulation",
+      "date": "2026-10-13T11:31:44.000Z",
+      "category": "论文",
+      "summary": "Robotic manipulation systems commonly learn object affordances from human-annotated datasets, which reflect interaction possibilities for a human hand rather than the physical constraints of a specific robot. For example, a surface region of an object identified as graspable by a human annotator may be geometrically unreachable or mechanically infeasible for a robot, yet this mismatch is rarely addressed explicitly. To tackle this challenge, we proposed a framework that translates human affordance annotations into robot-executable affordance predictions conditioned on the physical properties of the robot. The network predicts which surface regions of an object are physically executable by the robot, given a 3D point cloud of an object and a descriptor encoding the robot's geometry and constraints. The model was trained using human-annotated affordances together with robotic execution outcomes from multiple sampled approach trials in simulation, where execution outcomes determined which",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18194",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Sawera Yaseen",
+        "Serge Thill",
+        "Rekha Raja"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T11:31:44.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-ebce3ed30fe9ee0c7c04c4b5",
+      "title": "OneDemo: Unified Policy Learning and Data Generation from a Single Demonstration",
+      "date": "2026-10-13T11:27:39.000Z",
+      "category": "论文",
+      "summary": "Learning robot policies from demonstrations is often limited by the cost of collecting diverse, high-quality expert data. While an appealing alternative is to expand a single successful demonstration into a diverse set of successful trajectories, existing augmentation methods typically rely on manually designed transformation rules or complex trajectory planning, requiring substantial task-specific engineering and human effort. We introduce OneDemo, a reinforcement learning framework that learns to edit a single successful demonstration for new task configurations. We formulate demonstration editing as a structured reinforcement learning problem, in which an editor learns, from sparse task-success rewards, both when to transition between object-centric trajectory segments and how to geometrically adapt each segment. The learned editor serves both as a task policy and as a reusable demonstration generator. Across 15 Meta-World tasks, OneDemo reaches a 92.7% success rate within 53.7k env",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18188",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Ying Qian",
+        "Jianshu Hu",
+        "Han Fang",
+        "Shuguang Li",
+        "Yutong Ban"
+      ],
+      "topics": [
+        "强化学习",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T11:27:39.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-e71b38d643d1bdc78aa218ee",
+      "title": "RESTA: Time-Scaling Augmentation for Data-Efficient Robot Imitation Learning",
+      "date": "2026-10-13T11:07:43.000Z",
+      "category": "论文",
+      "summary": "Robot manipulation policies trained through imitation learning commonly rely on costly demonstrations recorded in one task direction and at one temporal resolution. We propose Reversal and Stride-based Trajectory Augmentation (RESTA), which exploits time-scaling data augmentation to improve data efficiency through trajectory reversal and temporal resampling. Trajectory-reversal augmentation reverses and relabels demonstrations between paired tasks with opposite objectives, reusing recorded rollouts without additional environment interaction. Because contact-rich manipulation is not exactly reversible, we treat reversal as an approximate paired-task prior rather than a physical symmetry. Temporal-stride augmentation varies observation and action sampling strides and conditions the policy on the resulting offsets, enabling fixed or randomized temporal schedules. Experiments across 16 paired bimanual manipulation tasks show that trajectory reversal is particularly effective in the low-dat",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18163",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Yunpeng Jiang",
+        "Jianshu Hu",
+        "Han Fang",
+        "Zhiyuan Guan",
+        "Paul Weng",
+        "Yutong Ban"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "模仿学习"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T11:07:43.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-9b82888dbe71c2fc80c66d01",
+      "title": "Walk Like This: Stylized Locomotion for Physics-Based Characters through Example-Driven Diffusion",
+      "date": "2026-10-13T10:53:25.000Z",
+      "category": "论文",
+      "summary": "We present a real-time framework for expressive legged locomotion that enables independent control over velocity and style. Unlike existing data-driven controllers, which typically require explicit style labels for training, our method efficiently leverages large-scale unstructured motion data and generalizes to unseen styles. We disentangle style from functional locomotion through a tailored sampling strategy used to train a style encoder whose output conditions an autoregressive diffusion model. During inference, the user provides a style reference clip and a joystick velocity command. The diffusion model then generates a kinematic reference tracked by a reinforcement learning controller. To improve user controllability and stylization strength, we propose an attention biasing mechanism and a velocity command correction strategy. We demonstrate our method on a physics-based humanoid character in simulation and on a physical robot, showcasing robust real-time control and continuous st",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18147",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Joshua Aurand",
+        "Agon Serifi",
+        "Sammy Christen",
+        "Ruben Grandia",
+        "Espen Knoop",
+        "Marco Hutter",
+        "Moritz Bächer"
+      ],
+      "topics": [
+        "强化学习",
+        "仿真与迁移",
+        "运动控制"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T10:53:25.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-fab231f2c88ee19c2b365e7c",
+      "title": "MARTS: A Modular Agricultural Robot for Targeted Spraying of Diseased Tomato Plants in Greenhouses",
+      "date": "2026-10-13T10:36:15.000Z",
+      "category": "论文",
+      "summary": "Broadcast spraying remains the dominant method of disease control in greenhouse tomato production, yet it treats healthy and diseased tissue alike, exposes workers to hazardous aerosols, and depends on operator skill. This paper presents MARTS (Modular Agricultural Robot for Targeted Spraying), a low-cost robotic platform that closes the loop from plant-level disease detection to leaf-localised spray delivery in commercial greenhouses. MARTS integrates a Clearpath Husky A200 mobile base, a UR5 manipulator, a novel modular spraying end-effector built around a single 12 V micro-diaphragm pump, and a wrist-mounted Intel RealSense D435 RGB-D camera. Disease detection reuses our previously published Tomato Leaf Disease Vision Language Model (TLDVLM; Grounding DINO, SAM-2 and LoRA-tuned BLIP-2, 97.27% accuracy over 10 classes); this work focuses on actuation, control and system integration. A ROS pipeline lifts detections into 3D targets, generates collision-aware nozzle poses at a 120 mm st",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18123",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Rajmeet Singh",
+        "Manveen Kaur",
+        "Yusuf Adamu",
+        "Lochan Kshetrimayum",
+        "Irfan Hussain"
+      ],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T10:36:15.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-0acad06683c7506b13e49060",
+      "title": "ForeTac: Predictive Contact Guidance for Generative Robot Policies",
+      "date": "2026-10-13T10:28:49.000Z",
+      "category": "论文",
+      "summary": "Visually similar actions can produce contact loss, jamming, slippage, or irreversible damage, while tactile feedback may arrive after a critical transition. Contact-rich manipulation therefore requires generative policies to anticipate and evaluate whether candidate actions will produce desirable contact outcomes, then adjust action generation before execution. We present ForeTac, a predictive contact-guidance framework organized as a represent-predict-evaluate-guide loop. ForeTac encodes the current tactile state, predicts the tactile consequences of a candidate action sequence, and evaluates the predicted trajectory using a contact-quality objective learned from successful and failed physical interactions. At deployment, its gradient propagates through the tactile predictor to guide action generation while the pretrained model parameters remain frozen. We evaluate ForeTac on four real-robot tasks (planar and curved-surface wiping, card swiping, and fragile-object grasping) with diffu",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18118",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Zhiyuan Chen",
+        "Shuai Chen",
+        "Haoran Zhou",
+        "Yizhe Zhao",
+        "Kaiyuan Yang",
+        "Zhixiang Duan",
+        "Shaoqing Xu",
+        "Ran Cao",
+        "Diyun Xiang",
+        "Yangwei You"
+      ],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T10:28:49.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-c3bf595df224ca3ed4c6d868",
+      "title": "LynxScenes: A Large-Scale Real-World Benchmark for Outdoor Wheel-Legged Robot Perception, Navigation, Imagination and Reconstruction",
+      "date": "2026-10-13T10:12:55.000Z",
+      "category": "论文",
+      "summary": "Wheel-legged robots operating in outdoor spaces shared with humans require accurate perception, socially compliant navigation, future-scene reasoning, and scene reconstruction. However, existing datasets typically support these capabilities in isolation and rarely provide dense spatial and behavior-level supervision on real wheel-legged platforms. We introduce LynxScenes, a large-scale real-world dataset and benchmark collected with a LYNX M20 wheel-legged robot. It contains approximately 100K 30-s navigation clips spanning 833.6 h and 3,294.7 km, with 3.0M annotated frames. The synchronized recordings include four fisheye cameras, dual LiDARs, IMU, odometry, and robot states. Annotations comprise 20.82M oriented 3D boxes across 27 categories, 13.89M road-structure annotations, and 20 navigation instructions organized into three layers and aligned with continuous future trajectories. LynxScenes supports four complementary tasks: instruction-conditioned trajectory prediction, BEV-based ",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18093",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Jun Tian",
+        "Hao Wu",
+        "Ruo Chen",
+        "Yili Liao",
+        "Hongyi Lin",
+        "Jincheng Yu",
+        "Chao Li",
+        "Yingjie Niu"
+      ],
+      "topics": [
+        "模仿学习",
+        "世界模型",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T10:12:55.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-4ead4277527cc70283be4cce",
+      "title": "LADDER: A Long-Horizon Robot Manipulation Benchmark",
+      "date": "2026-10-13T09:42:04.000Z",
+      "category": "论文",
+      "summary": "General-purpose robot manipulation policies learn short-horizon skills effectively, but degrade rapidly on long-horizon tasks. Existing benchmarks cannot isolate failures because task horizon is either too short or entangled with scene and object variations. We propose LADDER, a long-horizon robot manipulation benchmark scaling from 1 to 10 subgoals within the same environment over three suites (SimplerEnv-Long, RobotArena-$\\infty$-Long, and RoboLab-Long), 145 tasks, eight categories, two embodiments, and 2,024 simulated episodes per system. We evaluate two orchestration paradigms: text subgoals for learned low-level policies (VoLo) and tool selection orchestration (CaP-X, GPT-Policy, PSP-Agent, TiPToP). Given the full instruction directly, low-level policies achieve 85.4% on single-subgoal tasks, but drop to near zero on extended tasks. While orchestration remedies this, it remains bounded by physical execution errors of the low-level policy rather than high-level planning and achieve",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.18053",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Petko Petkov",
+        "Giuliano Albanese",
+        "Nikolay Nikolov",
+        "Luc Van Gool",
+        "Jonathan Tremblay",
+        "Danda Pani Paudel"
+      ],
+      "topics": [
+        "操作与灵巧手",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T09:42:04.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-c6bc9f9e62e1272a5a704b1f",
+      "title": "TRACE: Efficient Transfer Learning for Neural Whole-Body Control Across Humanoid Embodiments",
+      "date": "2026-10-13T09:02:12.000Z",
+      "category": "论文",
+      "summary": "Humanoid behavior foundation models (BFMs) enable diverse whole-body control, but adapting a pretrained controller to a new embodiment remains challenging because of kinematic and dynamic mismatch. We present TRACE, a framework for efficient cross-embodiment adaptation that preserves pretrained motion representations while specializing feedback control to the target robot.TRACE first injects kinematic priors into input and output projection layers and aligns nominal joint dynamics to reduce embodiment mismatch and support stable fine-tuning. It then combines encoder distillation with low-rank reinforcement learning on a compact, quality-screened motion set, using a two-phase curriculum to establish stable tracking before refining difficult motions. We apply TRACE to transfer SONIC from Unitree G1 to Unitree H2 using 10 million motion frames and approximately eight hours of training on a single RTX PRO 6000 GPU, at less than 0.1% of the GPU-hour cost of training SONIC from scratch. The ",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.17999",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Qingyu Lan",
+        "Zhihao Tian",
+        "Zifan Wang",
+        "Junwei Liang"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "强化学习",
+        "数据与评测",
+        "运动控制"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T09:02:12.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-aa446cf236ee81f9b81de127",
+      "title": "Breaking the Average: Overcoming Convergent Defaults in Robotic Manipulation via Diagnostic Chain-of-Thought and Structured Guidance",
+      "date": "2026-10-13T08:52:05.000Z",
+      "category": "论文",
+      "summary": "Recent Vision-Language-Action (VLA) models, such as $π_{0.5}$, have demonstrated impressive generalization capabilities by scaling behavior cloning across massive datasets. However, these models frequently suffer from distributional convergence, a phenomenon where the policy regresses to \"safe\" but suboptimal mean behaviors due to mode averaging in the training data. This often results in generic grasp strategies, Convergent Defaults, that fail in constrained or long-tail scenarios. In this work, we propose a novel framework to identify and correct these behaviors without parameter updates. We introduce a three-stage methodology: (1) Probing for Defaults, identifying task-specific mode collapse; (2) Diagnostic Root Cause Analysis, utilizing the VLA's latent reasoning capabilities to verbalize the logic behind suboptimal actions; and (3) Structured Guidance Injection, where concrete, distinct alternatives are encoded into reusable \"Lens Prompts\" that shift the sampling distribution. We ",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.17983",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Mohammed Daba",
+        "Waleed Abdulrahman Saleh AlAkwa"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "模仿学习",
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T08:52:05.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-2217ae3ef002926d047c774e",
+      "title": "ReEnvision: Future-Guided Selective Action Repair for Long-Horizon Manipulation",
+      "date": "2026-10-13T08:49:55.000Z",
+      "category": "论文",
+      "summary": "Long-horizon robotic manipulation requires robust execution over sequences of interdependent actions. Existing methods typically handle execution deviations by replanning the remaining action chunk or correcting actions step by step as new observations arrive. However, a local deviation may affect only a few actions under distribution shift, yet replanning regenerates the entire chunk from an unfamiliar state, potentially introducing errors into otherwise valid actions. Step-wise correction may react too late, as it does not explicitly anticipate how the deviation affects subsequent actions. We propose ReEnvision, a future-guided selective action repair framework that updates a joint future-action belief using execution feedback. It then learns how the resulting belief revision affects each unexecuted action. The resulting belief revision enables selective repair of only the affected actions within a cached action chunk, preserving valid actions and reserving full replanning for severe",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.17977",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Xiyin Zeng",
+        "Xuewei Huang",
+        "Yi Lu",
+        "Weihao Yuan",
+        "Hao Wang"
+      ],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T08:49:55.000Z",
+      "kind": "paper"
+    },
+    {
+      "id": "paper-fc353ed24601b016339c4ebd",
+      "title": "WoVR+: World Model as Reliable Simulator for Versatile VLA Policy Optimization with RL",
+      "date": "2026-10-13T08:12:08.000Z",
+      "category": "论文",
+      "summary": "Action-conditioned world models can reduce costly real-robot interaction in reinforcement learning for Vision-Language-Action models (VLA-RL), but hallucinations can mislead policy optimization. Extending them to richer VLA interfaces and long-horizon tasks raises challenges in spatiotemporal and cross-modal consistency, exploration-reliability balance in RL, and compounding rollout errors. We present WoVR+, extending WoVR's hallucination-aware WM-RL framework by redesigning the learned environment and imagined interaction protocol: A VLA-interface-aligned world model provides multi-view prediction and proprioceptive updates while mitigating hallucinations. Chunk-wise noise preserves flow-based policy exploration while limiting prediction-degrading action jitter. For long-horizon tasks, stage-local imagined training combines stage-entry resets, stage-specific rewards, local horizons, and controllable sampling to shorten generated prefixes and balance training across stages. WoVR+ impro",
+      "relevance": "",
+      "url": "https://arxiv.org/abs/2610.17922",
+      "sourceName": "arXiv · 预印本",
+      "authors": [
+        "Shangqing Zhou",
+        "Zhennan Jiang",
+        "Ning Ma",
+        "Xin Fu",
+        "Yupeng Zheng",
+        "Shuai Tian",
+        "Huangrui Li",
+        "Jiahao Liu",
+        "Chao Yu",
+        "Zhongpu Xia",
+        "Haoran Li",
+        "Dongbin Zhao"
+      ],
+      "topics": [
+        "VLA 与动作模型",
+        "强化学习",
+        "世界模型"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-10-14T05:02:40.477Z",
+      "dateVerified": true,
+      "updatedAt": "2026-10-13T08:12:08.000Z",
+      "kind": "paper"
+    },
     {
       "id": "article-50a7a5b8c01ba14ee37ec0eb",
       "title": "估值100亿、累计营收1.35亿、不卖一台机器人:机器人的\"通用大脑\",正在变成最贵的\"故事\"-36氪",
@@ -3273,872 +4402,22 @@
       "dateVerified": true,
       "updatedAt": "2026-10-08T15:37:43.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-f68e7f29af31f267b4d41c12",
-      "title": "Leveraging Human-In-The-Loop Demonstrations in Reinforcement Learning for Digital Twin-Driven Robot Flexibility",
-      "date": "2026-10-08T15:26:12.000Z",
-      "category": "论文",
-      "summary": "Growing automation makes collaborative robots work in more variable environments, increasing the need for adaptation. We propose a human-in-the-loop online training framework combining a digital twin (DT), reinforcement learning (RL), and human demonstrations. Unlike DTs used mainly to generate synthetic data before task execution, our DT is synchronized with the physical system in real time through camera feeds, allowing the virtual robot to update its observations and policy from real-world feedback. A dual actor framework integrates imitation learning (IL) without adding a direct imitation loss to the RL actor, so demonstrations can guide adaptation instead of manual reprogramming. The proposed framework is demonstrated on the Ufactory Xarm5 collaborative robot, where the robot's end-effector aims to reach the target position while avoiding obstacles. The experiments show that the framework can resume training after a change in the physical workspace and that, with a fixed set of no",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12140",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Yuzhu Sun",
-        "Mien Van",
-        "Nguyen Minh Nhat",
-        "Stephen McIlvanna",
-        "Sean McLoone"
-      ],
-      "topics": [
-        "模仿学习",
-        "强化学习",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T15:26:12.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-5548bb6566f0b77ba9097d64",
-      "title": "PIER: An Evidence-Gated Execution Interface for Robotic Manipulation",
-      "date": "2026-10-08T15:16:38.000Z",
-      "category": "论文",
-      "summary": "Generating a plausible robot action does not establish that current observations justify its execution. Motivated by exploratory observations of high-confidence visual outputs under severe occlusion, we present PIER, an execution-authorization interface that separates evidence checks, decision provenance, and stage-scoped re-observation from hardware control. The deterministic gate evaluates declared visual and tactile inputs, while its caller maintains a budget of at most one re-observation per stage. We evaluate the implementation using 1,600 threshold-grid cases and 1,200 paired synthetic traces spanning score noise, missing tactile inputs, stale observations, and falsely reassuring scores. The finite grid yields zero declared invariant violations, and a matched Boolean baseline reproduces all non-recovery decisions. Under synthetic score noise, re-observation reduces valid-state denials from 57/120 to 18/120 while increasing invalid-state proceeds from 5/120 to 7/120. Stale and fal",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12123",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Zoe Li",
-        "Anze Wang",
-        "Zhongyu Chen",
-        "Jingran Hu"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "模仿学习"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T15:16:38.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-dc713d46ea7d07dc0bae9731",
-      "title": "UNITAS: A 3D-Native World Action Model for Embodied Manipulation",
-      "date": "2026-10-08T15:02:50.000Z",
-      "category": "论文",
-      "summary": "World action models (WAMs) aim to answer a coupled physical question: given a task instruction, what motion should the robot execute, and how will that motion change the surrounding world? Most existing WAMs build on pretrained video generators and represent world evolution through images or visual latents. Robotic interaction, however, takes place in metric three-dimensional space, while images are view-dependent projections whose pixel distances do not directly encode physical distances. We introduce UNITAS, to our knowledge the first 3D-native world action model that unifies observations, actions, and scene dynamics in a shared metric 3D frame within each interaction, using a common representation across robot embodiments and human hands. Action flow represents human hands and robot grippers as 3D point trajectories, while scene flow describes scene-point displacements conditioned on these trajectories. World-aligned 3D positional embeddings ground visual tokens with or without dept",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12099",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Ruixiang Wang",
-        "Yongyi Su",
-        "Wenlve Zhou",
-        "Bo Yue",
-        "Hengyan Liu",
-        "Dekun Lu",
-        "Yuxin Tian",
-        "Yihan Fang",
-        "Zerui Wu",
-        "Xing Hu",
-        "Jietao Chen",
-        "Yong Guo",
-        "Ziyan He",
-        "Junbin Yuan",
-        "Guiliang Liu",
-        "Xiaofen Xing",
-        "Kui Jia"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T15:02:50.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-08f60be8758202d271c6c38e",
-      "title": "ManiUnit: A Manipulation Skill Dataset and Benchmark for Long-Horizon Tasks",
-      "date": "2026-10-08T15:00:04.000Z",
-      "category": "论文",
-      "summary": "Long-horizon mobile manipulation requires a robot to navigate multi-room environments and execute a sequence of manipulation skills under a single natural language instruction. Learning and evaluating these skills present three challenges: similar observations under a fixed task instruction may make skill selection ambiguous; even when a preceding skill succeeds, the robot state inherited by the next skill may deviate from its demonstrated starting states and affect execution; and task-level metrics hinder skill-specific diagnosis, while early failures leave later skills untested. We therefore introduce ManiUnit, a manipulation skill dataset and benchmark built from 50 BEHAVIOR-1K activities. Its dataset contains 137,899 segments across 21 skill types and 417 subtasks, and its benchmark contains 1,260 test instances. Correspondingly, ManiUnit pairs each segment with an explicit subtask instruction; measures sensitivity to perturbations of the robot's starting base position or joint con",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12089",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Guoting Wei",
-        "Dawei Yan",
-        "Xia Yuan",
-        "Gengming Zhang",
-        "Yelin He",
-        "Guodong Du",
-        "Jiaquan Ye",
-        "Heng Zhang",
-        "Xinming Wei",
-        "Xianbiao Qi",
-        "Chunxia Zhao",
-        "Haokui Zhang",
-        "Rong Xiao"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T15:00:04.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-29c92d5ffb55737b81335928",
-      "title": "A Minimal Optical-Flow Representation for Vision-Based Tactile Rotation Classification in Robotic Manipulation Across Gravity Domains",
-      "date": "2026-10-08T14:50:08.000Z",
-      "category": "论文",
-      "summary": "Vision-based tactile sensors provide rich contact information, but processing high-resolution images can be costly for resource-constrained platforms such as space robots. This work investigates whether a compact representation of tactile motion can classify object rotation across different gravity conditions. Dense optical flow from a simulated GelSight Mini is aggregated over a 7x9 grid into 126 features and used to classify the direction of load-induced rotation under Earth, Mars, Moon, and orbital gravity. Gravity causes a small but significant shift in these features, accounting for 1.6% of their variance (R2 = 0.016). Despite its small magnitude, this shift affects models trained only on Earth data: XGBoost accuracy decreases from 94.4% on Earth to 75.9% in orbit. In contrast, a single model trained across all four gravity domains achieves 96.3% overall accuracy and 95.1%-97.0% across individual domains, without using gravity as an input. The representation can also be reduced to",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12073",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Oscar Martinez-Bernal",
-        "Mario Cavero-Vidal",
-        "Francesco Grella",
-        "Carol Martinez"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T14:50:08.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-579b34001706b72c235150a7",
-      "title": "SkillWeave: Weaving Heterogeneous Demonstrations into Long-Horizon Manipulation Skills",
-      "date": "2026-10-08T14:33:48.000Z",
-      "category": "论文",
-      "summary": "Dexterous manipulation requires both large-scale task progression and precise contact-rich interaction, making it challenging to collect demonstrations that effectively support both regimes. We present SkillWeave, a heterogeneous demonstration framework for long-horizon dexterous manipulation that combines teleoperation for coarse reaching and transport with kinesthetic teaching for precise, contact-rich skills. To address the visual mismatch introduced by the demonstrator's presence during kinesthetic data collection, we propose an object-mask-conditioned diffusion policy that uses offline object segmentation for training supervision and a lightweight learned mask predictor at deployment, avoiding online segmentation and image inpainting. To mitigate distribution shift between independently trained sub-task policies, we introduce successor-aware terminal steering, which selects among actions sampled from the predecessor policy to guide the system toward states supported by the success",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12046",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Ryosei Tamura",
-        "Xiaoxiang Dong",
-        "Uksang Yoo",
-        "Yuemin Mao",
-        "Romina Mir",
-        "Jonathan Francis",
-        "Jeffrey Ichnowski"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T14:33:48.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-d110f7ade597d52f61d9f9e4",
-      "title": "Humanoid World Action Model With Joint State--Action Generation",
-      "date": "2026-10-08T14:23:18.000Z",
-      "category": "论文",
-      "summary": "Humanoid robots are a promising platform for general-purpose manipulation. Recent Vision-Language-Action (VLA) policies learn actions directly from multimodal observations, while World Action Models (WAMs) further incorporate future visual prediction to improve action generation. However, in hierarchical humanoid systems, VLA and WAM policies output reference actions that are subsequently realized through whole-body control, robot dynamics, balance, and contact. This hierarchy creates an action--execution gap: the reference produced by the policy can differ from the motion realized by the robot. Without explicitly modeling the realized body state, future visual prediction must jointly explain scene evolution and discrepancies between reference actions and executed motion, making it difficult to associate an action with its physical outcome. We propose HWAM, a Humanoid World Action Model with joint state--action generation, which makes the robot's post-execution proprioceptive state an ",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12026",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Yan Yang",
-        "Jikun Rong",
-        "Minzhao Zhu",
-        "Zheyi Zhao",
-        "Qirui Hu",
-        "Zihan Lan",
-        "Weixin Mao",
-        "Yinhao Li",
-        "Zhen Fu",
-        "Hua Chen"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "运动控制"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T14:23:18.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "article-0482ad39d303e5d292a80f74",
-      "title": "马斯克机器人核心旧将另起炉灶:带走多名前同事,推进1亿美元融资-36氪",
-      "date": "2026-10-08T14:16:45.000Z",
-      "category": "行业动态",
-      "summary": "以装配为例,识别零件只是第一步。机器人还需要完成定位、接触、施力和结果检查。即使动作看上去相同,工件公差、材料特性或摆放位置变化,也可能影响执行结果。对航空航天等行业而言,作业是否符合质量要求,比一次演示是否流畅更关键。\n因此,从通用机器人转向工业任务,改变的是产品需要先证明什么。通用路线要不断扩展任务范围;工业路线则必须证明,在约定的作业条件下,系统能够持续达到客户要求。\n根据这些应用约束,新公司的后续进展更适合从任务成功率、运行稳定性、人工介入频率和部署成本等方面观察。外形与Optimus是否相似,无法替代这些验证。\n## 04|特斯拉旧将创业,已有另一条工业路线\n在库马尔之前,另一位参与过特斯拉早期人形机器人项目的负责人,已经选择了工业自动化。\nMytra联合创始人、首席执行官克里斯·沃尔蒂(Chris Walti)曾在特斯拉任职约七年半。根据Mytra的官方介绍,他负责过Model 3物料流自动化,组建并领导过工厂移动机器人团队,也参与创建和领导早期Tesla Bot项目。 [...] 特斯拉在官方网站上对Optimus的定位很清楚:开发能够承担危险、重复或枯燥任务的通用、自主双足人形机器人。它需要同时解决平衡、导航、感知,以及与物理世界交互等问题。\n人形路线的目标,是让同一种机器人进入多种为人设计的环境。特斯拉的相关招聘介绍也将工厂、家庭等列为应用方向。这样的产品目标,要求机器人具备广泛的移动和操作能力。\n从已披露的应用方向判断,Intelligent Machines更倾向于从工业作业切入。这意味着,新公司有机会围绕明确任务安排硬件和软件,而不必在一开始就满足完整的人形设计。\n例如,在固定工作站完成操作的机器人,其结构可以围绕工作范围、负载和工具需求设计;需要跨工位移动的产品,则必须进一步解决移动和现场协同问题。具体采用哪种结构,取决于任务要求。目前的报道尚不足以判断Intelligent Machines最终会选择固定机械臂、移动操作平台,还是其他形态。\n这也是非人形路线的实际边界:减少某些设计约束,并不会自动消除工业部署的难度。 [...] 2022年成",
-      "relevance": "",
-      "url": "https://m.36kr.com/p/4016917482166148",
-      "sourceName": "m.36kr.com",
-      "authors": [],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [
-        "以装配为例,识别零件只是第一步。机器人还需要完成定位、接触、施力和结果检查。即使动作看上去相同,工件公差、材料特性或摆放位置变化,也可能影响执行结果。对航空航天等行业而言,作业是否符合质量要求,比一次演示是否流畅更关键。",
-        "因此,从通用机器人转向工业任务,改变的是产品需要先证明什么。通用路线要不断扩展任务范围;工业路线则必须证明,在约定的作业条件下,系统能够持续达到客户要求。",
-        "## 04|特斯拉旧将创业,已有另一条工业路线\n在库马尔之前,另一位参与过特斯拉早期人形机器人项目的负责人,已经选择了工业自动化。"
-      ],
-      "collectedAt": "2026-10-12T06:09:37.579Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "paper-6c5be47d4270114eb2abc5d1",
-      "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
-      "date": "2026-10-08T14:09:46.000Z",
-      "category": "论文",
-      "summary": "Flow-based vision-language-action (VLA) models generate action chunks for temporally coherent robot motion, but chunked control creates a fundamental closed-loop trade-off: long chunks provide smooth execution, whereas frequent replanning improves reactivity at the cost of action discontinuities. We introduce REACT, a rolling-denoising framework that makes flow-based VLAs more reactive while preserving long-horizon context. Instead of regenerating entire action chunks from scratch, REACT maintains a persistent action buffer with staggered flow timesteps. At each control step, the full horizon is denoised using the latest observation, the cleanest action block is executed, partially refined future blocks are shifted forward, and fresh noise is appended to the tail. As a result, each executed action block is refined across multiple recent observations before deployment. To support real-time control, we further introduce dual decoupling, which separates sensing, VLM encoding, DiT denoisin",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.12007",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Houlong Xiong",
-        "Zhenqi Qiu",
-        "Zechen Wang",
-        "Suohang Zhang",
-        "Yiyu Ren",
-        "Wanting Xu",
-        "Hongfei Niu",
-        "Chengyang He",
-        "Ge Sun",
-        "Ran Cheng",
-        "Qian Zhu"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T14:09:46.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-360ff802b0685158e0f7a5d5",
-      "title": "Reliability-Aware Future Conditioning for Temporally Robust Robot Manipulation",
-      "date": "2026-10-08T13:40:48.000Z",
-      "category": "论文",
-      "summary": "A generated video of a task the robot is about to perform is useful guidance only if it depicts the phase the robot is actually in. We show that temporal misalignment can turn a task-consistent generated future into actively harmful guidance. On CALVIN, a five-frame early shift nearly erases the benefit of generated futures, reducing success from 81.3% to 54.8% against 54.0% without futures; imposed timing shifts reduce it even further to 34.2%, 19.8 points below the future-free policy. We introduce Reliability-Aware Future Conditioning (RAFC), which treats this as a control problem rather than a generation problem. At every step, RAFC estimates how far to trust the received clip and which nearby temporal hypothesis to prefer, falling back toward a static branch when neither fits, and it learns both from task reward alone without shift labels or alignment supervision. RAFC sits on top of Future-Experience Conditioning (FEC), which builds the clip once from task grounding, a robot-free ",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11956",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Mohammad Khoshnazar",
-        "Mohammad Dehghani Tezerjani",
-        "Zhiyuan Gao",
-        "Deyuan Qu",
-        "Max Gandyra",
-        "Yanxiang Zhan",
-        "Mehreen Naeem",
-        "Andrew Melnik",
-        "Jeroen Schafer",
-        "Qing Yang",
-        "Michael Beetz"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T13:40:48.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-60f7fd5ec6373d124d68a003",
-      "title": "Tell Robot What Not to Do: A Negation Understanding Perspective",
-      "date": "2026-10-08T13:39:08.000Z",
-      "category": "论文",
-      "summary": "Instruction following enables robots to perform diverse tasks specified in natural language, making it a fundamental capability for human-robot interaction. Beyond communicating desired outcomes, users also need to specify constraints on what not to do. We investigate how to enable vision-language-action models (VLAs) to follow negated instructions, where robots must accomplish task goals while respecting explicit exclusions. To this end, we propose NegaAlign, a parameter-efficient, plug-and-play framework that extends pretrained VLAs to follow negated instructions through image-language supervision alone. Specifically, we introduce Negation Transformation Layers into selected layers of the vision-language backbone to reshape intermediate instruction representations. Meanwhile, a teacher-guided alignment mechanism is designed to align instruction-relevant visual tokens, transferring action-relevant grounding from instructions that satisfy the negated constraint. The training phase uses",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11952",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Fazeng Li",
-        "Gan Sun",
-        "Hao Cheng",
-        "Weihong Ren",
-        "Yang Cong"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T13:39:08.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-3f5ba0d039c9a71ade917b9d",
-      "title": "TACROSS: An Efficient and Low-Cost Scalable Human Touch System Across Heterogeneous Tactile Sensors for Dexterous Robot Learning",
-      "date": "2026-10-08T13:34:31.000Z",
-      "category": "论文",
-      "summary": "Collecting tactile demonstrations on robots is costly and slow, motivating the use of lower-cost human tactile gloves for scalable data collection. However, human capacitive/piezoresistive gloves and robotic tactile sensors differ fundamentally in transduction principle, sensor layout, spatial resolution, and dynamic response, making alignment of raw sensor channels ill-posed. To address this problem, we present TACROSS, a scalable system for learning from human touch and transferring it to robots that bridges this heterogeneity by aligning tactile streams at the level of contact events rather than raw sensor values. The hardware component of TACROSS integrates a piezoresistive glove with five layers and a cost of USD 10.86 with 285 sensing points. To align contact semantics, we design canonicalizers and residual adapters that map heterogeneous signals into a shared tactile latent with 256 dimensions via a temporal Transformer with attention across fingers. We further introduce a robot",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11945",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Bo Chen",
-        "Huanzhang Hu",
-        "Junyang Ma",
-        "Bo Yue",
-        "Fangdi Yu",
-        "Haijier Chen",
-        "Xianxin Lai",
-        "Shuyu Pan",
-        "Zhen Yang",
-        "Xiaoquan Sun",
-        "Wenze Cui",
-        "Zhongliang Jiang",
-        "Shaopeng Liu",
-        "Jiayu Chen"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T13:34:31.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-4c33950b7621f9e5c015172f",
-      "title": "From Solo to Ensemble: A Hierarchical Framework for Composable Multi-Agent Human-Object Interaction",
-      "date": "2026-10-08T11:24:20.000Z",
-      "category": "论文",
-      "summary": "Physics-based human-object interaction has achieved robust single-agent manipulation skills, yet extending them to multi-agent cooperative tasks remains challenging. Existing approaches typically adapt interaction policies through task-specific fine-tuning, which entangles low-level contact-rich execution with high-level coordination and limits reuse across object geometries, interaction types, and team sizes. We propose a hierarchical framework that converts a single-agent HOI policy into a reusable Object-oriented Motion Skill. Specifically, we reinterpret teacher rollouts as object-oriented action supervision by extracting short-horizon object-proxy motions from executed trajectories, and distill task-specific teachers into a low-level skill operating in an Object-oriented Action Space. For downstream tasks, the distilled skill is frozen as a reusable executor, while a high-level policy coordinates multiple agents by generating region-wise object-oriented actions conditioned on the ",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11722",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Zekai Deng",
-        "Kangyi Chen",
-        "Ye Shi",
-        "Jingya Wang"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T11:24:20.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-3730f334392842ce81992f47",
-      "title": "WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models",
-      "date": "2026-10-08T08:44:26.000Z",
-      "category": "论文",
-      "summary": "Despite recent advances in Vision-Language-Action models (VLAs) for robotic manipulation, their performance remains sensitive to changes in camera configuration. The problem becomes more evident in cross-setup deployment, as reproducing the exact camera pose used for training is nearly impossible. Unlike fixed external views, wrist views are more challenging because the camera moves with the robot, causing even small mounting variations to alter fine-grained geometric cues. To address this, we propose WARP-VLA, a camera-view robust VLA for diverse wrist camera configurations. WARP-VLA adopts a Mixture-of-Experts (MoE) architecture where individual experts learn view-specific feature transformations, and a router combines them based on implicit view information. This allows the policy to be deployed without requiring camera extrinsic parameters as additional input. Through experiments on the LIBERO benchmark, WARP-VLA improves the average success rate of pi-0.5 from 39.2% to 78.3% under",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11508",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Junmyeong Lee",
-        "Dongmin Shin",
-        "Min-Gyu Park",
-        "Wooseok Jeon",
-        "Inho Chang",
-        "Hae-Gon Jeon"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T08:44:26.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-60adf405748fa08f91670c17",
-      "title": "DAMP: Humanoid Locomotion via Denoised Belief Learning and Adversarial Motion Priors",
-      "date": "2026-10-08T08:42:45.000Z",
-      "category": "论文",
-      "summary": "Humanoid robots possess the structural capability to traverse complex terrains. However, achieving stable t raversal without relying on perceived information remains challenging, particularly in complex environments. This paper introduces DAMP, a reinforcement learning framework aimed at achieving robust and naturalistic humanoid locomotion over challenging terrains, with the assumption that no perceived information is available. The framework leverages recurrent neural networks to capture temporal dependencies and implicitly infer privileged and other task-relevant latent information. By aligning the learned representations with the task objective, the method enables robust and goal-consistent policy learning. This end-to-end framework achieves transfer learning from simulation to real-world environments, demonstrating the proposed method's robustness and generalization capabilities. The video of the real-world demonstration can be found at the following link: https://youtu.be/AkI7TZB",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11505",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Puying Shen",
-        "Wenhao Cui",
-        "Huaxing Huang",
-        "Bangyu Qin",
-        "Shengtao Li",
-        "Ziyang Dong",
-        "Guoteng Zhang"
-      ],
-      "topics": [
-        "强化学习",
-        "仿真与迁移",
-        "运动控制"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T08:42:45.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-2165e1564564ed3938d2a40b",
-      "title": "RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes",
-      "date": "2026-10-08T08:25:49.000Z",
-      "category": "论文",
-      "summary": "Embodied coding agents can combine modular robot skills with frozen end-to-end policies, yet effective composition requires anticipating which policy family will succeed in the current physical state. We present RoboAware, which builds on coding agents' skill orchestration by learning only a state-conditioned responsibility coordinator from counterfactual outcomes. Inspired by the success of REPL, we propose the $P^5$ schema and formulate a hierarchical MDP based on it. $P^5$ organizes skills uniformly into five semantic stages, defining where responsibility can be compared. To address the lack of counterfactual branch outcomes in existing work, we introduce State-Locked Counterfactual Branching (SCB), which restores the same training state to generate and execute a code block from each admissible family, exposing outcomes that selected-branch experience leaves unobserved. Building on this, we propose Execution-Aware Learning (EAL), which combines Monte Carlo tree search with Q-learnin",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11480",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Bohan Zhou",
-        "Xingbei Chen",
-        "Emily Huang",
-        "Weilin Ruan",
-        "Haojian Huang",
-        "Yehang Zhang",
-        "Zexi Li",
-        "Wenqian Li",
-        "Qize Yu",
-        "Zetian Song",
-        "Leyi Wu",
-        "Jinghao Li",
-        "Mingxuan Song",
-        "Xinrun Xu",
-        "Zongyang Qiu",
-        "Yangkai Wei",
-        "Tianyi Zhang",
-        "Kaiwen Zhou",
-        "Yinchuan Li",
-        "James Cheng"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T08:25:49.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "article-c0f1ea339de0225b85c9dc5c",
-      "title": "同济博士团队让原生3DGS成为可交互的真实世界,4个月完成3轮融资-36氪",
-      "date": "2026-10-08T07:52:47.000Z",
-      "category": "行业动态",
-      "summary": "构建具身智能需要的真实世界。\n面向Physical AI的Reality-to-Sim具身智能基础设施公司景立构(ScanArk),宣布完成Pre-天使轮融资,至此,公司在4个月内已完成种子轮、种子+轮及Pre-天使轮三轮融资,累计融资数千万元人民币,投资方包括小苗朗程、国海创新资本、头部具身机器人公司及知名产投机构等。\n具身智能与世界模型的发展,正面临数据供给在规模与质量上的双重挑战。互联网图像和人类第一视角视频记录了丰富的视觉信息,却往往缺少准确的空间结构、物理状态和动作反馈;真机采集能够提供真实交互经验,但成本高、效率有限,难以充分覆盖复杂任务和长尾环境。如何持续获得既贴近真实世界、又能支撑机器人学习的数据与经验,成为行业需要突破的关键瓶颈。\n与此同时,GPT-6 Astra等通用大模型在复杂推理、工具使用和多步骤任务执行上的进展,正在拓展AI参与实际工作的能力边界,这也为具身智能和世界模型提出了新的命题:随着模型能力提升,训练体系需要进一步支持机器人通过行动获得反馈,在探索、试错和策略更新中持续积累经验。交互学习,有望成为具身智能下一阶段的重要学习范式。 [...] 人类的许多能力,来自长期与环境互动的积累。大语言模型也不再局限于海量文本的被动预训练,而是在交互式任务和结果反馈中不断修正与进化,由此释放出新的能力边界。这给具身智能带来的启发,是让机器人在已有示范的基础上,获得更充分的行动、探索和学习机会。\n机器人与3DGS场景交互案例展示\n交互学习有望成为具身智能下一阶段的重要学习范式。这是景立构构建数字世界的核心判断,也仍需更大规模的跨场景、跨任务和真机实验验证。当前,许多递归自我改进(RSI)方法,以及前沿的测试时训练(Test-Time Training),都把交互式 学习视为关键机制。景立构所押注的,是让机器人在已有示范之外,获得亲自尝试的机会:采取行动、经历失败、调整做法,并在持续的交互中形成新的能力。\n从机器人足球赛场走出来的同济创业团 [...] 账号设置我的关注我的收藏申请的项目退出登录\n 启动Power on\n 36Kr创新咨询\n 企业服务\n ",
-      "relevance": "",
-      "url": "https://www.36kr.com/p/4016850710351752",
-      "sourceName": "www.36kr.com",
-      "authors": [],
-      "topics": [
-        "世界模型"
-      ],
-      "highlights": [
-        "构建具身智能需要的真实世界。",
-        "面向Physical AI的Reality-to-Sim具身智能基础设施公司景立构(ScanArk),宣布完成Pre-天使轮融资,至此,公司在4个月内已完成种子轮、种子+轮及Pre-天使轮三轮融资,累计融资数千万元人民币,投资方包括小苗朗程、国海创新资本、头部具身机器人公司及知名产投机构等。",
-        "具身智能与世界模型的发展,正面临数据供给在规模与质量上的双重挑战。互联网图像和人类第一视角视频记录了丰富的视觉信息,却往往缺少准确的空间结构、物理状态和动作反馈;真机采集能够提供真实交互经验,但成本高、效率有限,难以充分覆盖复杂任务和长尾环境。如何持续获得既贴近真实世界、又能支撑机器人学习的数据与经验,成为行业需要突破的关键瓶颈。"
-      ],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "paper-e999d785b501f4dfea83e748",
-      "title": "Experience-Guided Initiation Search for Learned Skills in Skill Composition",
-      "date": "2026-10-08T07:46:08.000Z",
-      "category": "论文",
-      "summary": "Deploying frozen learned skills, such as Vision-Language-Action (VLA) policies, in new environments requires identifying initiation configurations that support reliable execution. In skill composition, an initiation configuration affects not only the current skill but also the physical state passed to subsequent skills, so successful execution of an individual skill does not necessarily imply successful completion of the composed task. Estimating target-specific capability through extensive rollouts is costly in real-world deployment, while directly reusing historical experience can be unreliable under environment changes. We propose EVIS, an Experience-Guided and Behavior-Validated Initiation Search framework for discovering reliable initiation configurations under limited target interaction. EVIS uses historical execution experience to prioritize promising candidates and target-environment behavior to validate whether they remain effective. We evaluate EVIS on single-skill and two-st",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11418",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Qixuan Li",
-        "Yanhong Zhao",
-        "Jincheng Yu"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T07:46:08.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-f3ce1f130826ef155772f612",
-      "title": "Rewiring Semantics, Dynamics, and Control: A Simple yet Effective Action-Centric Tri-Stream Transformer",
-      "date": "2026-10-08T07:45:58.000Z",
-      "category": "论文",
-      "summary": "Vision-Language-Action (VLA) models have emerged as a prominent framework for complex robotic manipulation, building on the strong semantic understanding of pretrained Vision-Language Models (VLMs). However, such VLM backbones offer insufficient physical dynamics priors, which limits the generalization capabilities of robot policies. Recent efforts therefore integrate video-generation World Models (WMs) into robot policies through various strategies, using predictive dynamics to facilitate action generation. Despite these advances, harnessing semantic understanding and dynamics prediction as complementary guidance for action generation remains challenging. In this paper, we introduce $\\mathrm{ACT}^3$, a simple yet effective Action-Centric Tri-Stream Transformer that fuses semantic and dynamics information into control actions while preserving the distinct roles of context streams. Specifically, $\\mathrm{ACT}^3$ enables the dedicated action expert to access VLM and WM representations th",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11416",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Shuang Luo",
-        "Yilun Kong",
-        "Yunpeng Qing",
-        "Yihang Jiao",
-        "Zhi Hou",
-        "Shunyu Liu",
-        "Xiaogang Wang",
-        "Dacheng Tao"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "世界模型",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T07:45:58.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-b0e085dc52ea54b0939d96be",
-      "title": "WAM-Cache: Staleness-Bounded KV Reuse for Efficient World Action Models",
-      "date": "2026-10-08T07:33:59.000Z",
-      "category": "论文",
-      "summary": "World Action Models (WAMs) enable generalist robot manipulation by conditioning an action expert on representations from a pretrained video Diffusion Transformer (DiT). In closed-loop control, the video DiT runs at every chunk to encode the current observation into layerwise key-value (KV) pairs that the action expert queries. This prefill dominates the per-chunk computational cost, yet existing training-free accelerations leave it fully dense. We present WAM-Cache, a training-free framework that retains layerwise key-value representations across chunks and recomputes only a sparse refresh set of tokens. Crucially, we find that the intuitive heuristic of refreshing visually drifted tokens plateaus far below the dense baseline, even with an oracle predicting ground-truth KV drift. Downstream action accuracy is instead governed by where the action expert attends, not by what moved. WAM-Cache therefore selects the refresh set by uniting the action expert's cross-attention with visual late",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11401",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Kai Ding",
-        "Yang He",
-        "Ruijie Quan",
-        "Yi Yang"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "仿真与迁移"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T07:33:59.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-f1853ebe8847a97c3b0a28a1",
-      "title": "USDCraft: Geometrically Grounded Programmatic Modeling of Articulated 3D Assets for Simulation",
-      "date": "2026-10-08T06:23:24.000Z",
-      "category": "论文",
-      "summary": "Geometrically faithful and functional articulated 3D assets are essential for real-to-sim robot manipulation, where policies trained in simulation must transfer to physical objects. Recent mesh-based methods learn to infer articulation from annotated 3D assets, but deployment remains challenging when real-world objects fall outside the training distribution or their meshes are incomplete or corrupted. To address these limitations, we formulate articulated asset reconstruction as programmatic modeling grounded in partial geometric evidence and introduce USDCraft, a framework in which a pretrained LLM writes and revises executable programs for simulation-ready articulated assets without task-specific training. We propose source geometry analysis, which converts the source mesh into a metric textual description that distinguishes observed surface from unknown space, and iterative geometric rechecking, which re-encodes each candidate in the same representation so that discrepancies point t",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11322",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Chuanrui Zhang",
-        "Zaijia Yang",
-        "Duomin Wang",
-        "Lu Shi",
-        "Daquan Zhou",
-        "Ruihua Zhang",
-        "Ziwei Wang"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "模仿学习",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T06:23:24.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-2cc8b57a3efd93591dcd3309",
-      "title": "Being-M0.7: A Latent World-Action Model for Humanoid Robots",
-      "date": "2026-10-08T05:49:24.000Z",
-      "category": "论文",
-      "summary": "Humanoid loco-manipulation requires coordinated locomotion and manipulation informed by future scene evolution and whole-body motion, yet learning these capabilities is constrained by scarce robot demonstrations. Human video and motion datasets offer scalable supervision, but many contain only video or motion rather than paired video-motion data. Moreover, human motion does not directly specify executable robot actions. We present Being-M0.7, a latent world-action model that transfers visual-motion priors learned from mixed-modality human data to humanoid control through pre-training, robot mid-training, and action post-training. We curate a corpus from more than 10,000 hours of raw human-centric data, integrating video-only, motion-only, and paired video-motion streams to learn complementary visual dynamics and whole-body kinematic structure. Joint prediction of future latent visual states and motion encourages visual representations to encode future kinematics. Robot mid-training ada",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11283",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Junpeng Yue",
-        "Boyuan Li",
-        "Yuxuan Wang",
-        "Zepeng Wang",
-        "Yuhui Fu",
-        "Feiyang Xie",
-        "Yu Zhang",
-        "Jing Zhang",
-        "Xianqi Zhang",
-        "Weibo Li",
-        "Xiaofei Zheng",
-        "Yuming Fang",
-        "Jiangxing Wang",
-        "Zongqing Lu"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "数据与评测",
-        "运动控制"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T05:49:24.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-64f5cb44cf44734cb7cea529",
-      "title": "SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation",
-      "date": "2026-10-08T04:52:35.000Z",
-      "category": "论文",
-      "summary": "Large-scale, diverse datasets have driven the success of LLMs and VLMs. But VLAs for robotics remain limited by the cost and complexity of real-world data collection. While simulation offers a scalable alternative, its potential for sim-to-real VLA learning in mobile manipulation remains largely underexplored. We introduce SimVLA, an end-to-end framework that trains VLAs entirely on synthetic simulation data without teleoperation for mobile manipulation. SimVLA is first pre-trained on two complementary simulation-derived datasets: SimAction, a large-scale robot action dataset spanning 35 diverse mobile manipulation tasks, generated by composing atomic skills, and SimVQA, which leverages privileged simulator state to provide spatial, geometric, and subtask-level visual-language supervision. We further post-train SimVLA on a mixture of SimAction and SimDeploy, a dataset collected from policy rollouts across diverse simulated environments. We evaluate SimVLA on tasks including restocking,",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.11248",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Kyoungin Baik",
-        "Youngwoon Lee"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-08T04:52:35.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "article-c9ff929e8c7d3137272465d3",
-      "title": "RTX Pro for Industrial Facility Digital Twins — Omniverse Reference Architectures",
-      "date": "2026-10-08T03:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "Physically accurate industrial facility digital twins transform design and operations by helping teams catch errors early, optimize layouts, and test physical AI and autonomous robots. By integrating real-time data and AI, these digital twins allow teams to identify production bottlenecks and improve operational efficiency. [...] Simulations are run using Isaac Sim. These simulations utilize synthetic data for physical AI and autonomous robotics training, enabling training across a multitude of scenarios.\n### Real-Time Operations Data#\nReal-time operations data is collected from the facility in real-time. It includes the data from sensors, cameras, and other devices installed in the facility. This data is streamed into the digital twin for real-time operations.\n### Hardware# [...] ### Geometry Data#\nGeometry data is the foundation of a digital twin. It includes the physical layout of the",
-      "relevance": "",
-      "url": "https://docs.omniverse.nvidia.com/arch-diagrams/latest/ref-arch-diagrams/factory-dt-diagram.html",
-      "sourceName": "docs.omniverse.nvidia.com",
-      "authors": [],
-      "topics": [
-        "仿真与迁移"
-      ],
-      "highlights": [
-        "Physically accurate industrial facility digital twins transform design and operations by helping teams catch errors early, optimize layouts, and test physical AI and autonomous robots.",
-        "These simulations utilize synthetic data for physical AI and autonomous robotics training, enabling training across a multitude of scenarios.",
-        "Synthetic data is used to make variations of the facility for physical AI and autonomous robot training, allowing the rapid creation of training scenarios."
-      ],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-bb2961b3cb35e3637e6963eb",
-      "title": "马斯克机器人核心旧将另起炉灶:带走多名前同事",
-      "date": "2026-10-08T02:00:00.000Z",
-      "category": "行业动态",
-      "summary": "据新浪财经10月7日消息,库马尔联合创办的Intelligent Machines位于旧金山,已经招揽数名Optimus团队前成员,正在推进可能达到约1亿美元的种子轮融资。新公司瞄准制造业、",
-      "relevance": "",
-      "url": "https://36kr.com/p/4016917482166148",
-      "sourceName": "36kr.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-c0d7ee18b19d7d48b5e020a2",
-      "title": "估值100亿、累计营收1.35亿、不卖一台机器人",
-      "date": "2026-10-08T02:00:00.000Z",
-      "category": "行业动态",
-      "summary": "这件事最近有了新进展:做机器人\"通用大脑\"的美国公司FieldAI,传出要融资7亿美元,估值冲到100亿美元。它总部在加州,产品是给各种机器人——人形机器人、无人机、工业",
-      "relevance": "",
-      "url": "https://36kr.com/p/4016951181711239",
-      "sourceName": "36kr.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [
-        "这件事最近有了新进展:做机器人\"通用大脑\"的美国公司FieldAI,传出要融资7亿美元,估值冲到100亿美元。它总部在加州,产品是给各种机器人——人形机器人、无人机、工业"
-      ],
-      "collectedAt": "2026-10-11T02:32:36.387Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-f19924740584702f7c634a6b",
-      "title": "WasserMan: open-source underwater manipulation benchmark with SmolVLA baselines - Show and Tell - Hugging Face Forums",
-      "date": "2026-10-06T16:13:47.000Z",
-      "category": "仿真与评测",
-      "summary": "| Topic | | Replies | Views | Activity |\n --- --- \n| Physical Modelling of sim2real SO101 Arm Project Intermediate | 1 | 331 | May 30, 2026 |\n| Fine-tuning GR00T for Chess Setup on Unitree G1 Models | 2 | 585 | January 10, 2026 |\n| Visualization of Imitation Learning by smolvla(SO101) Beginners | 2 | 317 | October 5, 2026 |\n| A Gymnasium interface for a real $300 robot — mock backend works now, no hardware needed Research | 0 | 56 | May 15, 2026 | [...] # WasserMan: open-source underwater manipulation benchmark with SmolVLA baselines\nWe built WasserMan, an open-source benchmark with 10 underwater robot manipulation tasks in Isaac Sim: turning valves, opening hatches, inserting a hotstab and recovering objects.\nThe simulation includes water forces, currents and underwater camera effects. We evaluate ACT, Diffusion Policy and chunked BC on six tasks, and SmolVLA on three. [...] | How to us",
-      "relevance": "",
-      "url": "https://discuss.huggingface.co/t/wasserman-open-source-underwater-manipulation-benchmark-with-smolvla-baselines/188270",
-      "sourceName": "discuss.huggingface.co",
-      "authors": [],
-      "topics": [
-        "操作与灵巧手",
-        "模仿学习",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [
-        "| Topic | | Replies | Views | Activity |\n --- --- \n| Physical Modelling of sim2real SO101 Arm Project Intermediate | 1 | 331 | May 30, 2026 |\n| Fine-tuning GR00T for Chess Setup on Unitree G1 Models | 2 | 585 | January 1",
-        "[...] | How to use the `lerobot\\_eval` command Beginners | 4 | 458 | October 5, 2026 |"
-      ],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-2ce77ecb2116c6dfde34cbd2",
-      "title": "nobodyiam/lerobot_dataset_20261006_172352 · Datasets at ...",
-      "date": "2026-10-06T03:00:00.000Z",
-      "category": "开源工具",
-      "summary": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-      "relevance": "",
-      "url": "https://huggingface.co/datasets/nobodyiam/lerobot_dataset_20261006_172352",
-      "sourceName": "huggingface.co",
-      "authors": [],
-      "topics": [
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-fdee4919d6b650a46374b6b4",
-      "title": "What platform is used to train warehouse robots with realistic human-robot interaction in a physically accurate digital twin?",
-      "date": "2026-10-05T15:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "to test spatial AI agents against realistic collision dynamics, weight distribution, and friction before physical deployment. [...] collisions, and materials are embedded in a 3D asset. These properties travel with the asset, enabling content authored to the SimReady specification to work across every simulation environment without modification. The accurate physical properties within the digital twin help ensure reliable sim-to-real transfer for safe and efficient robot deployment. [...] Training warehouse robots to safely interact with humans and complex environments requires simulation capabilities that accurately mirror real-world physics and dynamics. Developing autonomous robots for warehouse environments demands a virtual training ground where AI agents can interact with unpredictable elements, such as dynamic logistics, potential hazards, and human workers, without real-world ris",
-      "relevance": "",
-      "url": "https://perspectives.nvidia.com/physical-ai/omniverse/task/faq/warehouse-robots-training-human-robot-interaction-digital-twin",
-      "sourceName": "perspectives.nvidia.com",
-      "authors": [],
-      "topics": [
-        "仿真与迁移"
-      ],
-      "highlights": [
-        "The accurate physical properties within the digital twin help ensure reliable sim-to-real transfer for safe and efficient robot deployment.",
-        "[...] Training warehouse robots to safely interact with humans and complex environments requires simulation capabilities that accurately mirror real-world physics and dynamics.",
-        "Developing autonomous robots for warehouse environments demands a virtual training ground where AI agents can interact with unpredictable elements, such as dynamic logistics, potential hazards, and human workers, without"
-      ],
-      "collectedAt": "2026-10-11T05:58:59.889Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-966fe96a4f792895a19e893e",
-      "title": "FiftyOne Now Reads LeRobot: 50 Embodiments, 497 Episodes, One Indexed Dataset",
-      "date": "2026-10-05T14:21:29.000Z",
-      "category": "开源工具",
-      "summary": "FiftyOne is an open-source toolkit for loading, querying, visualizing, and curating ML datasets of images, videos, and multimodal data. LeRobot is Hugging Face's open-source framework for robot learning. It defines the standard v3 dataset format (Parquet + MP4 shards with episode metadata) the community uses to share teleoperation recordings.\n## LeRobot + FiftyOne [...] Rerun is an open-source SDK and viewer for multimodal data. You log images, point clouds, tensors, and scalars from your own code and scrub through them on a timeline, live or after the fact. LeRobot's own `lerobot-dataset-viz` tool is built on it.\n`lerobot-dataset-viz`\nBoth are the right tool when the question is about one run. What did the robot see at 12.4 seconds? Why did the gripper close early? Did the state stream drop frames? [...] FiftyOne now reads LeRobot v3 datasets natively with `fo.types.LeRobotDataset`. Poi",
-      "relevance": "",
-      "url": "https://huggingface.co/blog/harpreetsahota/fiftyone-now-reads-lerobot-50-embodiments-497-epis",
-      "sourceName": "huggingface.co",
-      "authors": [],
-      "topics": [
-        "数据与评测"
-      ],
-      "highlights": [
-        "LeRobot is Hugging Face's open-source framework for robot learning.",
-        "## LeRobot + FiftyOne [...] Rerun is an open-source SDK and viewer for multimodal data.",
-        "LeRobot's own `lerobot-dataset-viz` tool is built on it."
-      ],
-      "collectedAt": "2026-10-10T03:24:21.611Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-e5a48fb918b74ea03ef5e3bb",
-      "title": "GitHub - NVIDIA/Isaac-GR00T: NVIDIA Isaac GR00T N1.7 - A Foundation Model for Generalist Robots. · GitHub",
-      "date": "",
-      "category": "开源工具",
-      "summary": "### Embodiment Tags\nEvery inference or finetuning command requires an `--embodiment-tag`. The tag determines which modality config (state/action keys, normalization) the model uses. Tags are case-insensitive.\nFor the full list of pretrain and posttrain tags, see the Policy API Guide — Embodiment Tags.\n## Data Format\nGR00T uses a flavor of the LeRobot v2 dataset format with an additional `meta/modality.json` file that describes state/action/video structure. A dataset looks like: [...] 1. Prepare data — Collect robot demonstrations (video, state, action) and convert them to the GR00T LeRobot format. Demo datasets are included for quick testing.\n2. Run inference — Try zero-shot inference with the base model on pretrain embodiments, or use a finetuned checkpoint for benchmark tasks.\n3. Fine-tune — Adapt the model to your robot using `launch_finetune.py` with your own data and modality config",
-      "relevance": "",
-      "url": "https://github.com/Nvidia/Isaac-GR00T",
-      "sourceName": "github.com",
-      "authors": [],
-      "topics": [
-        "数据与评测"
-      ],
-      "highlights": [
-        "## Data Format\nGR00T uses a flavor of the LeRobot v2 dataset format with an additional `meta/modality.json` file that describes state/action/video structure.",
-        "Prepare data — Collect robot demonstrations (video, state, action) and convert them to the GR00T LeRobot format.",
-        "Fine-tune — Adapt the model to your robot using `launch_finetune.py` with your own data and modality config."
-      ],
-      "collectedAt": "2026-10-10T03:09:16.802Z",
-      "dateVerified": false,
-      "updatedAt": null,
-      "kind": "news"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-13T06:53:14.252Z",
-    "newsAttemptAt": "2026-10-13T06:53:14.252Z",
+    "newsAttemptAt": "2026-10-14T05:02:40.477Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
-    "searchRequests": 18
+    "searchRequests": 6
   },
   "scheduler": {
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-10-16T06:53:14.252Z",
-    "lastRunAt": "2026-10-13T06:53:14.252Z",
-    "lastFinishedAt": "2026-10-13T06:53:14.252Z",
-    "budgetDay": "2026-10-13",
-    "budgetUsed": 18,
+    "lastRunAt": "2026-10-14T05:02:40.477Z",
+    "lastFinishedAt": "2026-10-14T05:02:40.477Z",
+    "budgetDay": "2026-10-14",
+    "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
     "running": false
