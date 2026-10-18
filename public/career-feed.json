@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T04:39:05.706Z",
+  "generatedAt": "2026-10-18T04:44:32.357Z",
   "jobs": [
     {
       "id": "job_05835f734df7d7aa9d0a0c73",
@@ -1891,17 +1891,17 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
-      "count": 7,
-      "message": "本轮读取 7 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
+      "count": 6,
+      "message": "本轮读取 6 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
       "count": 7,
       "message": "本轮读取 7 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1909,8 +1909,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1918,8 +1918,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1927,8 +1927,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -1936,51 +1936,69 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
-      "count": 4,
-      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
+      "count": 9,
+      "message": "本轮读取 9 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
-      "state": "error",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-16T04:41:46.730Z",
-      "count": 0,
-      "message": "来源请求未完成，保留已有记录；下次定时任务重试。"
+      "state": "ok",
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
+      "count": 38,
+      "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-17T04:39:05.706Z",
-      "lastSuccessAt": "2026-10-17T04:39:05.706Z",
+      "lastAttemptAt": "2026-10-18T04:44:32.357Z",
+      "lastSuccessAt": "2026-10-18T04:44:32.357Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
     {
+      "id": "article-646340d5b74e9e4e53cd41b4",
+      "title": "Senior Robotics Software Engineer | NVIDIA Corporation",
+      "date": "2026-10-17T04:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "You will build working robotic systems and end-to-end workflows for engineers and AI agents. These workflows connect data, simulation, and real-world deployment",
+      "relevance": "",
+      "url": "https://jobs.nvidia.com/careers/job/893398213386?domain=nvidia.com&hl=he",
+      "sourceName": "jobs.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "You will build working robotic systems and end-to-end workflows for engineers and AI agents."
+      ],
+      "collectedAt": "2026-10-18T04:44:32.357Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
       "id": "article-e166b38d7961865ed5f88315",
       "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
       "date": "2026-10-16T16:00:00.000Z",
-      "category": "技术进展",
-      "summary": "Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Xi Chen, Krzysztof Choromanski, Tianli Ding, Danny Driess, Avinava Dubey, Chelsea Finn, et al. Rt-2: Vision-language-action models transfer web knowledge to robotic control. In Conference on Robot Learning (CoRL), 2023.\nShiyi Cao, Ziming Mao, Joseph Gonzalez, and Ion Stoica. K-search: LLM kernel generation via co-evolving intrinsic world model. arXiv preprint arXiv:2602.19128, 2026. [...] 29376. URL \nPhysical Intelligence, Kevin Black, Noah Brown, James Darpinian, Karan Dhabalia, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, et al. π0.5: a vision-language-action model with open-world generalization. In Conference on Robot Learning (CoRL), 2025.\nQwen Team. Qwen3.8-Max: A new bar for coding and cowork, 2026. URL \nid=qwen3.8. [...] Moo Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakri",
+      "category": "硬件与落地",
+      "summary": "Yu, Ao Zhang, Hao Zhang, Yizhou Zhao, Ruijie Zheng, and Yuke Zhu. Gr00t n1: An open foundation model for generalist humanoid robots. arXiv preprint arXiv:2503.14734, 2025. [...] On the deployment end, RealYamEnv owns camera acquisition and connects to the arm services through RPC. The CAP adapter routes actuation through one control worker. Trajectories are interpolated in time and streamed as joint and gripper position targets to the arm services and CAN motor drivers. Station profiles supply hardware endpoints, camera identities and calibration, robot models, joint limits, and home targets. Actuation requires explicit enablement at server startup. [...] Open the bottom drawer.\nThe bottom handle is too low for a level hand. The human tilts the hand and pulls the handle. Opus 5.5 and Astra do the same: they close the gripper, tilt it, hook the fingertips behind the handle, and drag the d",
       "relevance": "",
       "url": "https://research.nvidia.com/labs/gear/aspire/assets/aspire.pdf?v=20261016",
       "sourceName": "research.nvidia.com",
       "authors": [],
-      "topics": [
-        "VLA 与动作模型",
-        "世界模型"
-      ],
+      "topics": [],
       "highlights": [
-        "Rt-2: Vision-language-action models transfer web knowledge to robotic control.",
-        "In Conference on Robot Learning (CoRL), 2023.",
-        "In Conference on Robot Learning (CoRL), 2025."
+        "Gr00t n1: An open foundation model for generalist humanoid robots.",
+        "Station profiles supply hardware endpoints, camera identities and calibration, robot models, joint limits, and home targets.",
+        "40 ASPIRE: Agentic /Skills Discovery for Robotics Mug in the microwave."
       ],
-      "collectedAt": "2026-10-17T04:39:05.706Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -2036,7 +2054,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:59:59.000Z",
       "kind": "paper"
@@ -2067,7 +2085,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:59:31.000Z",
       "kind": "paper"
@@ -2103,7 +2121,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:59:07.000Z",
       "kind": "paper"
@@ -2132,7 +2150,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:59:02.000Z",
       "kind": "paper"
@@ -2174,7 +2192,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:56:17.000Z",
       "kind": "paper"
@@ -2205,7 +2223,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:55:50.000Z",
       "kind": "paper"
@@ -2235,7 +2253,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:54:16.000Z",
       "kind": "paper"
@@ -2261,7 +2279,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T17:51:58.000Z",
       "kind": "paper"
@@ -2288,7 +2306,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T16:44:18.000Z",
       "kind": "paper"
@@ -2320,7 +2338,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T16:40:48.000Z",
       "kind": "paper"
@@ -2345,7 +2363,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T16:32:58.000Z",
       "kind": "paper"
@@ -2372,7 +2390,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T16:17:18.000Z",
       "kind": "paper"
@@ -2398,7 +2416,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T15:59:04.000Z",
       "kind": "paper"
@@ -2424,7 +2442,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T15:01:01.000Z",
       "kind": "paper"
@@ -2450,7 +2468,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T14:42:23.000Z",
       "kind": "paper"
@@ -2480,7 +2498,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T14:34:44.000Z",
       "kind": "paper"
@@ -2508,7 +2526,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T14:14:10.000Z",
       "kind": "paper"
@@ -2539,7 +2557,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T14:05:28.000Z",
       "kind": "paper"
@@ -2561,7 +2579,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T14:00:05.000Z",
       "kind": "paper"
@@ -2589,7 +2607,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T12:48:10.000Z",
       "kind": "paper"
@@ -2619,7 +2637,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T12:45:26.000Z",
       "kind": "paper"
@@ -2650,7 +2668,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T11:53:10.000Z",
       "kind": "paper"
@@ -2677,7 +2695,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T11:11:27.000Z",
       "kind": "paper"
@@ -2699,7 +2717,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T10:48:12.000Z",
       "kind": "paper"
@@ -2725,7 +2743,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T10:02:57.000Z",
       "kind": "paper"
@@ -2778,7 +2796,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T08:49:53.000Z",
       "kind": "paper"
@@ -2810,7 +2828,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T07:54:39.000Z",
       "kind": "paper"
@@ -2839,7 +2857,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T07:45:17.000Z",
       "kind": "paper"
@@ -2866,7 +2884,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T07:40:22.000Z",
       "kind": "paper"
@@ -2897,7 +2915,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T07:05:16.000Z",
       "kind": "paper"
@@ -2924,7 +2942,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T06:41:20.000Z",
       "kind": "paper"
@@ -2953,7 +2971,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T06:30:20.000Z",
       "kind": "paper"
@@ -2978,7 +2996,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T05:38:07.000Z",
       "kind": "paper"
@@ -3005,7 +3023,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T05:21:54.000Z",
       "kind": "paper"
@@ -3048,7 +3066,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T04:37:31.000Z",
       "kind": "paper"
@@ -3073,7 +3091,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T04:09:42.000Z",
       "kind": "paper"
@@ -3083,7 +3101,7 @@
       "title": "AI Developer Technology Intern, Robotics - 2027",
       "date": "2026-10-15T04:00:00.000Z",
       "category": "技术进展",
-      "summary": "What You'll Be Doing: Develop and optimize training pipelines for robotics foundation models (e.g., vision-language-action models, world models) on NVIDIA GPU",
+      "summary": "Develop and optimize training pipelines for robotics foundation models (e.g., vision-language-action models, world models) on NVIDIA GPU clusters",
       "relevance": "",
       "url": "https://jobs.nvidia.com/careers/job/893397342814?ncid=GTC-NVCX1K07",
       "sourceName": "jobs.nvidia.com",
@@ -3093,9 +3111,9 @@
         "世界模型"
       ],
       "highlights": [
-        "What You'll Be Doing: Develop and optimize training pipelines for robotics foundation models (e.g., vision-language-action models, world models) on NVIDIA GPU"
+        "Develop and optimize training pipelines for robotics foundation models (e.g., vision-language-action models, world models) on NVIDIA GPU clusters"
       ],
-      "collectedAt": "2026-10-17T04:39:05.706Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -3114,7 +3132,47 @@
       "highlights": [
         "NVIDIA is searching for a senior or principal engineer who specializes in robotics systems in the Generalist Embodied Agent Research (GEAR) group."
       ],
-      "collectedAt": "2026-10-17T04:39:05.706Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-2a7ff7063168672408610abf",
+      "title": "Applied Research Intern, Robotics - 2027",
+      "date": "2026-10-15T04:00:00.000Z",
+      "category": "技术进展",
+      "summary": "Bring the latest advancements in embodied AI to simulated and real humanoid robots, successfully apply research in the challenging clinical environment scenes.",
+      "relevance": "",
+      "url": "https://jobs.nvidia.com/careers/job/893398124624?ncid=so-othe-529802",
+      "sourceName": "jobs.nvidia.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "Bring the latest advancements in embodied AI to simulated and real humanoid robots, successfully apply research in the challenging clinical environment scenes."
+      ],
+      "collectedAt": "2026-10-18T04:44:32.357Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-f25a191f3aaea7fd46e46ce1",
+      "title": "Senior Software Engineer, Humanoid Robotics",
+      "date": "2026-10-15T04:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Senior Software Engineer, Humanoid Robotics · Design and build agentic workflows that connect simulation, robot learning, and deployment on physical robots.",
+      "relevance": "",
+      "url": "https://jobs.nvidia.com/careers/job/893398109871?ncid=prsy-896405",
+      "sourceName": "jobs.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "Senior Software Engineer, Humanoid Robotics · Design and build agentic workflows that connect simulation, robot learning, and deployment on physical robots."
+      ],
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -3148,7 +3206,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T03:36:05.000Z",
       "kind": "paper"
@@ -3181,7 +3239,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": "2026-10-15T03:08:17.000Z",
       "kind": "paper"
@@ -3249,7 +3307,7 @@
         "RFMs such as vision-language-action models (VLAs) and world action models (WAMs) adapt pretrained language, visual or multimodal models for action prediction through finetuning on robot data.",
         "Octo: An Open-Source Generalist Robot Policy."
       ],
-      "collectedAt": "2026-10-17T04:39:05.706Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4264,7 +4322,7 @@
       "highlights": [
         "The focus is on learning embodied skills from large-scale human data."
       ],
-      "collectedAt": "2026-10-17T04:39:05.706Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4287,7 +4345,7 @@
         "Dexterous Hand\n Dex5-S\n 22 DoF per hand.",
         "Effortless dexterity, at your command\n Dex2/5\n Precise control for unbeatable strength."
       ],
-      "collectedAt": "2026-10-17T04:39:05.706Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4488,7 +4546,7 @@
         "# Wheeled Robot Assets#\nBrowse simulation-ready wheeled robots by manufacturer.",
         "[...] Clearpath, 2 assets, Browse Clearpath wheeled robots and their available variants."
       ],
-      "collectedAt": "2026-10-16T04:41:46.730Z",
+      "collectedAt": "2026-10-18T04:44:32.357Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4673,124 +4731,22 @@
       "dateVerified": true,
       "updatedAt": "2026-10-13T17:58:08.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-2fbe111cb39fe369a8409977",
-      "title": "RoboSimStudio: An Interactive Toolkit for Rapid Real2Sim of Robot Manipulation Tasks",
-      "date": "2026-10-13T17:55:14.000Z",
-      "category": "论文",
-      "summary": "It is difficult to accurately model the physics of the interaction between a robot and the objects it manipulates, including contact mechanics, coupled contact dynamics, deformations, stiffness and friction. We present RoboSimStudio (RSS), an interactive toolkit that makes choices of solver, contact model, and physical parameters explicit and editable, allowing both humans and coding agents to iteratively refine simulations based on observed physical behavior. We implement RSS with the open Newton physics simulation system and describe experiments with human-guided real2sim using (1) visual evaluation, (2) force-feedback and (3) agentic Real2Sim2Real. Code, video and additional information can be found on the project website.",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.18835",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Kaiyuan Chen",
-        "Shuangyu Xie",
-        "Uksang Yoo",
-        "Xinyue Zhu",
-        "Cael Magner",
-        "Alvin Zhu",
-        "Daehwa Kim",
-        "Eric Heiden",
-        "Erwin Coumans",
-        "Miles Macklin",
-        "Spencer Huang",
-        "Ken Goldberg"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-14T05:02:40.477Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-13T17:55:14.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-61b70e358e8739da09e42619",
-      "title": "WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions",
-      "date": "2026-10-13T17:52:55.000Z",
-      "category": "论文",
-      "summary": "We introduce WorldOracle, a benchmark specifically designed to evaluate action-conditioned world models (ACWMs) against paired real-world executions. Given the same initial observation and low-level action sequence, WorldOracle asks whether a predicted rollout reproduces what happens in the real world, including physical consequences and task-state transitions. We evaluate models along four complementary dimensions: physical state correctness, interaction spatial alignment, key interaction area fidelity, and multi-view action coherence. To support this evaluation, we curate real-world training and evaluation suites that cover different interaction dynamics and embodiments. The evaluation suite contains long, multi-segment episodes with both successful and failed executions, enabling evaluation across varied action outcomes and behavior distributions. Experiments on seven representative ACWMs reveal distinct model strengths and failure modes. WorldOracle provides a systematic foundation",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.18826",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Haoyi Duan",
-        "Liliang Chen",
-        "Nan Wang",
-        "Yang Zhang",
-        "Yuhang Lu",
-        "Xiaotong Chen",
-        "Wei-Cheng Tseng",
-        "Shenyuan Gao",
-        "Zhaoshuo Li",
-        "Jingyi Jin",
-        "Pooya Jannaty",
-        "Dhruv Shah",
-        "Yuke Zhu",
-        "Ming-Yu Liu",
-        "Maoqing Yao",
-        "Guanghui Ren"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "世界模型",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-14T05:02:40.477Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-13T17:52:55.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-af044b9be47d64c6c30b1eee",
-      "title": "EgoMatrix: Physically Faithful Dexterous Robot Demonstrations from Egocentric Human Videos",
-      "date": "2026-10-13T17:51:46.000Z",
-      "category": "论文",
-      "summary": "Egocentric human videos offer a scalable alternative to robot teleoperation for collecting dexterous manipulation data. However, two challenges limit their use as reliable training data: accurate hand-object interaction (HOI) reconstruction from monocular RGB and high-quality robot demonstrations, especially visual observations. We present EgoMatrix, an end-to-end data engine that converts monocular egocentric human videos into bimanual dexterous trajectories and paired robot observation videos, with the trajectories directly replayable on real robots. It reconstructs HOI with emphasis on relative geometry and contact rather than exact metric scene recovery, then uses retargeting and reinforcement learning (RL) to reproduce the demonstrated tasks in simulation. We jointly render robot hands and objects from these simulated trajectories to produce physically faithful observations synchronized with state and control records. Rendering the same trajectories in diverse, task-compatible bac",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.18822",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Ziheng Wang",
-        "Yanming Shao",
-        "Ting Mao",
-        "Kaihan Chen",
-        "Yiqun Wang",
-        "Xuanye Wu",
-        "Yao Mu"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "强化学习",
-        "仿真与迁移",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-14T05:02:40.477Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-13T17:51:46.000Z",
-      "kind": "paper"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-17T04:39:05.706Z",
-    "newsAttemptAt": "2026-10-17T04:39:05.706Z",
+    "newsAttemptAt": "2026-10-18T04:44:32.357Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
-    "searchRequests": 18
+    "searchRequests": 6
   },
   "scheduler": {
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-10-20T04:39:05.706Z",
-    "lastRunAt": "2026-10-17T04:39:05.706Z",
-    "lastFinishedAt": "2026-10-17T04:39:05.706Z",
-    "budgetDay": "2026-10-17",
-    "budgetUsed": 18,
+    "lastRunAt": "2026-10-18T04:44:32.357Z",
+    "lastFinishedAt": "2026-10-18T04:44:32.357Z",
+    "budgetDay": "2026-10-18",
+    "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
     "running": false
