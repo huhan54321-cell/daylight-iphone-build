@@ -244,7 +244,7 @@
     },
     {
       "file": "ios/DaylightUITests/DaylightUITests.swift",
-      "sha256": "4da80681ba6d12dbc4fdf5706f418daf86dd6fa3de4a1daeaee4ef24e1661a23"
+      "sha256": "5257445a80825ad1bb646453893eb95d6435882ac836efdb2b139d20e20d2dfc"
     },
     {
       "file": "tests/native/BankBalanceOrderTests.swift",

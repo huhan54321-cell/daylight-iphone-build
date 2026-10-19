@@ -411,7 +411,8 @@ final class DaylightUITests: XCTestCase {
         relaunch()
         tab("求职")
         tap(element("career-job-ui-mobile-job"), scroll: true)
-        XCTAssertTrue(app.staticTexts["UI 准备面试"].waitForExistence(timeout: 5))
+        // LabeledContent exposes its caption and value as one accessibility label.
+        XCTAssertTrue(app.staticTexts["下一步、UI 准备面试"].waitForExistence(timeout: 5))
         tab("今天")
         let interviews = app.buttons.matching(identifier: "plan-event-面试 · UI 测试团队 · UI 机器人实习")
         scrollTo(interviews.firstMatch)
