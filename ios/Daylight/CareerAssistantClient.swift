@@ -73,7 +73,7 @@ final class CareerAssistantClient: ObservableObject {
                     var patch: [String: CareerAssistantJSON] = [:]
                     if old.saved && !current["saved"].bool { patch["saved"] = .bool(true) }
                     if old.stage != "未投递", current["stage"].string == "未投递" {
-                        let mapped = ["准备投递": "准备材料", "已联系": "已打招呼", "已申请": "已投递", "已拒绝": "未通过"][old.stage] ?? old.stage
+                        let mapped = ["准备投递": "准备材料", "面试中": "面试", "已联系": "已打招呼", "已申请": "已投递", "已拒绝": "未通过"][old.stage] ?? old.stage
                         patch["stage"] = .string(CareerTrackingEditor.stages.contains(mapped) ? mapped : "准备材料")
                     }
                     if !patch.isEmpty { archive.enqueue(kind: "followups", targetID: id, patch: .object(patch)) }
@@ -99,7 +99,7 @@ final class CareerAssistantClient: ObservableObject {
             let value = try await request("snapshot")
             guard value["schemaVersion"].int == 2 else { throw AppFailure.message("请更新电脑端求职服务。") }
             guard !Task.isCancelled else { return }
-            _ = await mutate { state in
+            let cached = await mutate { state in
                 var incoming = value.dictionary
                 if value["articles"].array.isEmpty { incoming["articles"] = state.snapshot["articles"] }
                 // Keep historical favourites and unsynced phone records until the server acknowledges them.
@@ -109,6 +109,7 @@ final class CareerAssistantClient: ObservableObject {
                 for report in value["reports"].array where report.dictionary["leads"] != nil { state.reports[report.id] = report }
                 let keep = Set(value["reports"].array.prefix(60).map(\.id)); state.reports = state.reports.filter { keep.contains($0.key) }
             }
+            guard cached else { online = false; return }
             online = true; message = nil; await flush()
         } catch is CancellationError { online = false }
         catch { online = false; message = "电脑暂时无法连接。已显示本机内容，收藏和跟进会留待同步。" }
@@ -141,7 +142,8 @@ final class CareerAssistantClient: ObservableObject {
                 let operations = try JSONSerialization.jsonObject(with: bytes)
                 let response = try await request("sync", body: ["operations": operations])
                 guard response["results"].array.count == batch.count else { throw AppFailure.message("电脑返回的同步结果不完整") }
-                _ = await mutate { state in for result in response["results"].array { state.accept(result) } }
+                let saved = await mutate { state in for result in response["results"].array { state.accept(result) } }
+                guard saved else { return }
             } catch { online = false; message = "修改已保存在手机，电脑恢复连接后继续同步。"; return }
         }
     }

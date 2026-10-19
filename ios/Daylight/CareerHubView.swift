@@ -31,6 +31,8 @@ struct CareerAssistantView: View {
                     if client.busy { ProgressView().accessibilityLabel("正在后台同步") }
                 }.font(.subheadline)
                 Text(client.snapshot["generatedAt"].string.isEmpty ? "收藏、跟进和面试会先保存在手机。" : "内容更新于 \(CareerDates.label(client.snapshot["generatedAt"].string))").font(.caption).foregroundStyle(.secondary)
+                let incomplete = client.snapshot["sources"].array.filter { ["blocked", "error", "login_required", "partial"].contains($0["state"].string) }.count
+                if incomplete > 0 { NavigationLink("\(incomplete) 个来源尚未全部检查成功") { CareerSourceView(client: client) }.font(.caption) }
                 if !client.pending.isEmpty { NavigationLink("\(client.pending.count) 项本机修改待同步") { CareerSyncView(client: client) }.font(.caption).accessibilityIdentifier("career-pending") }
                 if let message = client.message { Text(message).font(.caption).foregroundStyle(.secondary).accessibilityIdentifier("career-message") }
                 Picker("求职内容", selection: $section) { ForEach(["机会", "进度", "报告"], id: \.self) { Text($0) } }.pickerStyle(.segmented).accessibilityIdentifier("career-sections")

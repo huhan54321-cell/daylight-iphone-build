@@ -5,6 +5,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createCareerAssistant } = require('../scripts/career-assistant.cjs');
 const { normalizeJob, initialFeed } = require('../scripts/career-core.cjs');
+const { AssistantStore } = require('../scripts/career-assistant-store.cjs');
+const { createMobileSync } = require('../scripts/career-mobile-sync.cjs');
 const stamp = '2026-10-19T02:00:00Z';
 async function setup(t) {
   fs.mkdirSync('.test-tmp', { recursive: true });
@@ -52,4 +54,19 @@ test('review returns immutable PDF version; requesting changes invalidates an al
   await assert.rejects(a.handle('POST',`/v2/career/applications/${app.id}/approve`,{reviewHash:app.reviewHash,confirmed:true}),/变化/);
   await a.handle('POST','/v2/career/materials',{id:m.id,title:m.title,content:'更新项目',confirmedFacts:true,attachment:null});
   const review=await a.handle('GET',`/v2/career/applications/${app.id}/review`);assert.equal(review.valid,false);assert.equal(review.material.version,1);assert.ok(review.material.attachment.base64);
+});
+
+test('mobile acknowledgment survives restart and a lost response cannot revert newer desktop changes', async t => {
+  fs.mkdirSync('.test-tmp', { recursive: true });
+  const dataDir=fs.mkdtempSync(path.resolve('.test-tmp/mobile-restart-'));
+  let store=new AssistantStore(dataDir);
+  t.after(()=>{store.close();fs.rmSync(dataDir,{recursive:true,force:true});});
+  store.put('jobs',{id:'job-restart'});
+  const operation={id:'operation-restart',kind:'followups',targetID:'job-restart',base:{saved:false},patch:{saved:true}};
+  const first=createMobileSync(store,()=>stamp).sync({operations:[operation]}).results[0];
+  assert.equal(first.state,'applied');store.close();store=new AssistantStore(dataDir);
+  const sync=createMobileSync(store,()=>stamp);sync.change('followups','job-restart',{notes:'电脑恢复后新增笔记',saved:false});
+  const replay=sync.sync({operations:[operation]}).results[0];
+  assert.equal(replay.state,'applied');assert.equal(replay.current.notes,'电脑恢复后新增笔记');assert.equal(replay.current.saved,false);
+  assert.equal(store.get('followups','job-restart').revision,2);
 });

@@ -16,6 +16,7 @@ struct CareerMobileArchive: Codable, Sendable {
     var pending: [CareerMobileOperation] = []
     var migratedLegacy = false
     var reports: [String: CareerAssistantJSON] = [:]
+    var planReferences: [String: String]? = nil
     var visible: CareerAssistantJSON {
         var result = snapshot.dictionary
         var jobs = snapshot["jobs"].array
@@ -32,6 +33,10 @@ struct CareerMobileArchive: Codable, Sendable {
             } else if let i = leads.firstIndex(where: { $0.id == op.targetID }) {
                 var row = leads[i].dictionary; op.patch.dictionary.forEach { row[$0.key] = $0.value }; row["pendingSync"] = .bool(true); leads[i] = .object(row)
             }
+        }
+        jobs = jobs.map { job in
+            guard let reference = planReferences?[job.id] else { return job }
+            var row = job.dictionary; row["planReference"] = .string(reference); return .object(row)
         }
         result["jobs"] = .array(jobs); result["leads"] = .array(leads)
         return .object(result)
@@ -60,6 +65,11 @@ struct CareerMobileArchive: Codable, Sendable {
         guard let index = pending.firstIndex(where: { $0.id == result.id }) else { return }
         if result["state"].string != "applied" { pending[index].conflict = result; return }
         let op = pending.remove(at: index), target = result["targetID"].string
+        if op.kind == "followups", target != op.targetID {
+            var references = planReferences ?? [:]
+            references[target] = references[op.targetID] ?? op.targetID
+            planReferences = references
+        }
         let key = op.kind == "followups" ? "jobs" : "leads"
         var rows = snapshot[key].array
         if op.kind == "followups" {

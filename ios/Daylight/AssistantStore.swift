@@ -222,7 +222,7 @@ final class AssistantStore: ObservableObject {
 
     func syncCareerInterviews(_ snapshot: CareerAssistantJSON) throws {
         for job in snapshot["jobs"].array {
-            let existing = data.events.first { $0.careerReference == job.id }
+            let existing = data.events.first { $0.careerReference == CareerPlanLink.reference(job) }
             if let value = CareerPlanLink.event(job: job, existing: existing) {
                 if let existing {
                     if existing.careerRevision != value.careerRevision { try updateEvent(value) }

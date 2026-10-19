@@ -18,6 +18,7 @@ enum CareerMobileTests {
         try expect(restored.pending.count == 2 && restored.pending[0].id == archive.pending[0].id, "restart preserves operation identity for safe retry")
         archive.accept(try .from(["id": archive.pending[0].id, "state": "applied", "targetID": "server-job", "current": ["saved": true, "stage": "未投递"]]))
         try expect(archive.pending.count == 1 && archive.pending[0].targetID == "server-job", "server alias rewrites dependent offline operations")
+        try expect(CareerPlanLink.reference(archive.visible["jobs"].array[0]) == job.id, "server identity migration keeps the original interview plan reference")
         try expect(archive.visible["jobs"].array[0]["followUp"]["stage"].string == "已投递", "acknowledgment preserves later pending edit")
         archive.accept(try .from(["id": archive.pending[0].id, "state": "conflict", "targetID": "server-job", "fields": ["stage"], "current": ["saved": true, "stage": "面试"]]))
         let conflictedID = archive.pending[0].id
