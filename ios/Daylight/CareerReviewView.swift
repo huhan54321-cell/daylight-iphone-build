@@ -55,7 +55,7 @@ struct CareerApplicationView: View {
                 if let message = client.message { Text(message).font(.caption).foregroundStyle(.orange) }
             }
         }.navigationTitle("材料审核").navigationBarTitleDisplayMode(.inline)
-            .task(id: current["reviewHash"].string) {
+            .task(id: current["reviewHash"].string + current["message"].string + String(client.online)) {
                 confirmed = false; review = nil
                 guard client.online else { loadError = "当前为缓存，连接电脑核对版本后才能批准。"; return }
                 do { review = try await client.request("applications/\(applicationID)/review"); loadError = nil } catch { loadError = "本次审核内容未能在线核对，请稍后重试。" }

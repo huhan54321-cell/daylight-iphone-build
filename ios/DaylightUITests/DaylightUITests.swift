@@ -355,12 +355,12 @@ final class DaylightUITests: XCTestCase {
         launch()
         tab("求职")
         tap(app.segmentedControls["career-sections"].buttons["报告"])
-        tap(app.buttons["UI 缓存招聘线索报告"], scroll: true)
+        tap(element("career-report-ui-mobile-report"), scroll: true)
         XCTAssertTrue(app.navigationBars["招聘线索报告"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["UI 招聘线索报告原帖"].exists)
         tap(app.navigationBars.buttons.firstMatch)
         tap(app.segmentedControls["career-sections"].buttons["进度"])
-        let review = app.buttons.matching(NSPredicate(format: "label CONTAINS %@ AND label CONTAINS %@", "UI 测试团队", "待审核")).firstMatch
+        let review = element("career-application-ui-mobile-review")
         tap(review, scroll: true)
         XCTAssertTrue(app.navigationBars["材料审核"].waitForExistence(timeout: 5))
         scrollTo(element("career-approve"))
@@ -409,7 +409,7 @@ final class DaylightUITests: XCTestCase {
         tap(element("career-job-ui-mobile-job"), scroll: true)
         XCTAssertTrue(app.staticTexts["UI 准备面试"].waitForExistence(timeout: 5))
         tab("今天")
-        let interviews = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "面试 · UI 测试团队 · UI 机器人实习"))
+        let interviews = app.buttons.matching(identifier: "plan-event-面试 · UI 测试团队 · UI 机器人实习")
         scrollTo(interviews.firstMatch)
         XCTAssertEqual(interviews.count, 1, "Interview resync must not create duplicate plans.")
     }

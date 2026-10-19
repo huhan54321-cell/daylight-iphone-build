@@ -23,6 +23,10 @@ enum CareerMobileTests {
         let conflictedID = archive.pending[0].id
         archive.resolve(conflictedID, usePhone: true)
         try expect(archive.pending[0].id != conflictedID && archive.pending[0].base["stage"].string == "面试", "explicit resolution uses new identity and current server base")
+        let rejectedID = archive.pending[0].id
+        archive.accept(try .from(["id": rejectedID, "state": "error", "message": "服务器暂不接受这项修改"]))
+        archive.enqueue(kind: "followups", targetID: "server-job", patch: .object(["stage": .string("准备材料"), "notes": .string("已修正")]))
+        try expect(archive.pending.count == 1 && archive.pending[0].id != rejectedID && archive.pending[0].conflict == nil && archive.pending[0].patch["notes"].string == "已修正", "corrected rejected edit can sync without a permanently blocked predecessor")
         let interview = try CareerAssistantJSON.from(["start":"2026-10-20T02:00:00Z","end":"2026-10-20T03:00:00Z","location":"在线","notes":"算法面试"])
         var row = job.dictionary; row["followUp"] = .object(["interview": interview]); let interviewJob = CareerAssistantJSON.object(row)
         let first = CareerPlanLink.event(job: interviewJob, existing: nil)!
@@ -36,15 +40,19 @@ enum CareerMobileTests {
         let roundtrip = try JSONDecoder().decode(Snapshot.self, from: JSONEncoder().encode(records))
         try expect(roundtrip.events[0].careerReference == job.id, "backup preserves interview link")
         let corrupt = Data("broken archive".utf8); try corrupt.write(to: directory.appendingPathComponent("mobile-v3.json"))
-        do { _ = try await disk.load(); throw AppFailure.message("corrupt cache unexpectedly accepted") } catch { try expect(try Data(contentsOf: directory.appendingPathComponent("mobile-v3.json")) == corrupt, "unreadable local edits remain intact") }
+        var rejected = false
+        do { _ = try await disk.load() } catch { rejected = true }
+        try expect(rejected && (try Data(contentsOf: directory.appendingPathComponent("mobile-v3.json"))) == corrupt, "unreadable local edits remain intact")
         let request = URLRequest(url: URL(string: "https://career-fixture.test/stall")!)
         let began = Date()
-        do { _ = try await CareerAssistantTransport.perform(request, timeout: 0.15, protocols: [CareerMobileSilentProtocol.self]); throw AppFailure.message("deadline did not interrupt stalled request") }
-        catch { try expect(Date().timeIntervalSince(began) < 2, "stalled service has a bounded deadline") }
+        var timedOut = false
+        do { _ = try await CareerAssistantTransport.perform(request, timeout: 0.15, protocols: [CareerMobileSilentProtocol.self]) } catch { timedOut = true }
+        try expect(timedOut && Date().timeIntervalSince(began) < 2, "stalled service has a bounded deadline")
         let task = Task { try await CareerAssistantTransport.perform(request, timeout: 5, protocols: [CareerMobileSilentProtocol.self]) }
         try await Task.sleep(for: .milliseconds(50)); let cancelledAt = Date(); task.cancel()
-        do { _ = try await task.value; throw AppFailure.message("cancellation did not interrupt request") }
-        catch { try expect(Date().timeIntervalSince(cancelledAt) < 1, "leaving a view cancels network promptly") }
+        var interrupted = false
+        do { _ = try await task.value } catch { interrupted = true }
+        try expect(interrupted && Date().timeIntervalSince(cancelledAt) < 1, "leaving a view cancels network promptly")
         return checks
     }
 }

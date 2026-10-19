@@ -118,7 +118,10 @@ final class CareerAssistantClient: ObservableObject {
         do {
             let value = try CareerAssistantJSON.from(patch)
             let saved = await mutate { $0.enqueue(kind: kind, targetID: id, patch: value) }
-            if saved, online, !busy { busy = true; await flush(); busy = false }
+            if saved, online, !busy {
+                busy = true
+                Task { @MainActor in await self.flush(); self.busy = false }
+            }
             return saved
         } catch { message = error.localizedDescription; return false }
     }

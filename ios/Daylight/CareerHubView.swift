@@ -116,14 +116,14 @@ struct CareerAssistantView: View {
         }
     }
     private func applicationLink(_ application: CareerAssistantJSON) -> some View {
-        NavigationLink { CareerApplicationView(client: client, applicationID: application.id) } label: { VStack(alignment: .leading, spacing: 5) { Text(application["company"].string + " · " + application["jobTitle"].string); Text(CareerApplicationView.stateName(application["state"].string)).font(.caption).foregroundStyle(.secondary) } }
+        NavigationLink { CareerApplicationView(client: client, applicationID: application.id) } label: { VStack(alignment: .leading, spacing: 5) { Text(application["company"].string + " · " + application["jobTitle"].string); Text(CareerApplicationView.stateName(application["state"].string)).font(.caption).foregroundStyle(.secondary) } }.accessibilityIdentifier("career-application-" + application.id)
     }
     private var reports: some View {
         Group {
             Section("小红书招聘线索") {
                 ForEach(client.snapshot["reports"].array) { report in NavigationLink { CareerAssistantReportView(client: client, report: report) } label: {
                     VStack(alignment: .leading, spacing: 5) { Text(report["title"].string); Text(report["message"].string).font(.caption).foregroundStyle(.secondary); if report["partial"].bool { Text("部分完成，详见搜索范围").font(.caption).foregroundStyle(.orange) } }
-                } }
+                }.accessibilityIdentifier("career-report-" + report.id) }
                 if client.snapshot["reports"].array.isEmpty { Text("还没有报告。电脑完成检索后，这里会显示新增及变化的招聘线索。").foregroundStyle(.secondary) }
             }
             Section("已收藏与未读线索") {
