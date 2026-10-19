@@ -20,6 +20,12 @@ test('v2 endpoints require authentication, allow only paired extension origin an
   assert.equal(response.status, 200); const snapshot = await response.json(); assert.equal(snapshot.schemaVersion, 2); assert.equal(snapshot.profiles.length, 1); assert.ok(snapshot.sources.length);
   assert.ok(!JSON.stringify(snapshot).includes(token));
   assert.equal((await get('/v1/career/feed', { Authorization: 'Bearer ' + token })).status, 200);
+  const html = await get('/career');
+  assert.equal(html.status, 200); assert.match(html.headers.get('content-security-policy'), /frame-ancestors 'none'/); assert.ok(!(await html.text()).includes(token));
+  assert.equal((await get('/career/workbench.js')).status,200);
+  assert.equal((await get('/career/../../data/career-private/token.txt')).status,401);
+  const sameOrigin = await fetch(endpoint+'/v2/career/sync',{method:'POST',headers:{Origin:endpoint,Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({operations:[]})});
+  assert.equal(sameOrigin.status,200);
   const imported = await fetch(endpoint + '/v2/career/browser/import', { method: 'POST', headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' }, body: JSON.stringify({ sourceID: 'boss', jobs: [{ company: '测试公司', title: '机器人实习', city: '杭州', url: 'http://127.0.0.1/secret' }] }) });
   assert.equal(imported.status, 400); assert.equal(s.assistant.snapshot().jobs.length, 0);
 });

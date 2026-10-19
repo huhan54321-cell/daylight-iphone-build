@@ -1,4 +1,4 @@
-param([switch]$Enable)
+﻿param([switch]$Enable)
 $ErrorActionPreference = 'Stop'
 $command = Get-Command tailscale -ErrorAction SilentlyContinue
 $binary = if ($command) { $command.Source } else { Join-Path $env:ProgramFiles 'Tailscale\tailscale.exe' }
@@ -6,11 +6,20 @@ if (!(Test-Path -LiteralPath $binary)) {
     Write-Output '尚未安装 Tailscale。请从 https://tailscale.com/download/windows 安装官方客户端，然后在电脑和 iPhone 登录同一账号。'
     exit 1
 }
+$statusText = & $binary status --json
+if ($LASTEXITCODE -ne 0) { throw 'Tailscale 服务状态无法读取。' }
+$status = $statusText | ConvertFrom-Json
+if ($status.BackendState -ne 'Running') {
+    Write-Output "Tailscale 状态：$($status.BackendState)。请先在电脑客户端完成登录并连接，然后重新运行此脚本。"
+    exit 1
+}
 if (!$Enable) {
-    & $binary status
+    Write-Output "Tailscale 已连接：$($status.Self.DNSName)"
     Write-Output '登录完成后运行 powershell -File scripts/setup-career-remote.ps1 -Enable，只将个人求职服务发布到自己的 tailnet。'
     exit
 }
+$health = Invoke-RestMethod -Uri 'http://127.0.0.1:4176/health' -TimeoutSec 5
+if ($health.service -ne 'daylight-career') { throw '请先启动本机求职服务。' }
 & $binary serve --bg http://127.0.0.1:4176
 if ($LASTEXITCODE -ne 0) { throw 'Tailscale Serve 尚未配置成功，请先完成账号登录和 HTTPS 配置。' }
 & $binary serve status

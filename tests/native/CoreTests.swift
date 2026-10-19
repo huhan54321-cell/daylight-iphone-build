@@ -212,6 +212,7 @@ struct CoreTests {
         checks += try await PlannerNetworkTests.run()
         checks += try await CareerTests.run()
         checks += try await CareerModelTests.run()
+        checks += try await CareerMobileTests.run()
         print("PASS: \(checks) native core checks")
     }
 }

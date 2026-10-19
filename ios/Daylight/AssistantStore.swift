@@ -220,6 +220,19 @@ final class AssistantStore: ObservableObject {
         }
     }
 
+    func syncCareerInterviews(_ snapshot: CareerAssistantJSON) throws {
+        for job in snapshot["jobs"].array {
+            let existing = data.events.first { $0.careerReference == job.id }
+            if let value = CareerPlanLink.event(job: job, existing: existing) {
+                if let existing {
+                    if existing.careerRevision != value.careerRevision { try updateEvent(value) }
+                } else { try addEvent(value) }
+            } else if let existing, job["followUp"].dictionary.keys.contains("interview"), job["followUp"]["interview"] == .null {
+                try deleteEvent(existing)
+            }
+        }
+    }
+
     func addEvent(_ value: PlanEvent) throws {
         var next = data; next.events.append(value); try commit(next)
         if apple.calendarAvailable {
@@ -369,8 +382,8 @@ final class AssistantStore: ObservableObject {
             let old = next.events
             let refreshed = events.map { remote in
                 var value = remote
-                if let local = old.first(where: { $0.eventID == remote.eventID && (abs($0.start.timeIntervalSince(remote.start)) < 1 || $0.tripID != nil) }) {
-                    value.id = local.id; value.tripID = local.tripID
+                if let local = old.first(where: { $0.eventID == remote.eventID && (abs($0.start.timeIntervalSince(remote.start)) < 1 || $0.tripID != nil || $0.careerReference != nil) }) {
+                    value.id = local.id; value.tripID = local.tripID; value.careerReference = local.careerReference; value.careerRevision = local.careerRevision
                     if value.navigationURL == nil { value.navigationURL = local.navigationURL }
                 }
                 return value

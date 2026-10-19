@@ -1,5 +1,6 @@
 'use strict';
 const http = require('node:http');
+const { serveWorkbench } = require('./career-workbench.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
@@ -156,10 +157,12 @@ function createCareerService(options = {}) {
     if (origin && origins.has(origin)) { headers['Access-Control-Allow-Origin'] = origin; headers.Vary = 'Origin'; }
     function reply(code, value) { if (!res.writableEnded) { res.writeHead(code, headers); res.end(JSON.stringify(value)); } }
     try {
-      if (origin && !origins.has(origin)) return reply(403, { error: '不允许此网页来源访问本地服务' });
+      const sameOrigin = origin && [`http://${req.headers.host}`, `https://${req.headers.host}`].includes(origin);
+      if (origin && !origins.has(origin) && !sameOrigin) return reply(403, { error: '不允许此网页来源访问本地服务' });
       if (!rateAllowed(req)) return reply(429, { error: '请求频率过高' });
       if (req.method === 'OPTIONS') { headers['Access-Control-Allow-Headers'] = 'Authorization, Content-Type'; headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'; return reply(204, {}); }
       const route = new URL(req.url, 'http://localhost').pathname;
+      if (serveWorkbench(req, res, route)) return;
       if (req.method === 'GET' && route === '/health') return reply(200, { status: 'ok', service: 'daylight-career', schemaVersion: 1 });
       if (!authorized(req.headers.authorization, token)) return reply(401, { error: '需要有效的服务连接凭据' });
       if (route.startsWith('/v2/career/')) {

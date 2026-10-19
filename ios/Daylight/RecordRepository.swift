@@ -89,12 +89,15 @@ enum BackupCodec {
         }
         throw AppFailure.message("无法读取该备份，请选择日常备份或电脑短信账本导出的 JSON 文件")
     }
-    private static let careerFileNames = Set(["career-feed-v1.json", "career-follow-up-v1.json", "career-saved-jobs-v1.json", "career-model-analysis-v1.json", "career-model-budget-v1.json", "assistant-v2.json"])
+    private static let careerFileNames = Set(["career-feed-v1.json", "career-follow-up-v1.json", "career-saved-jobs-v1.json", "career-model-analysis-v1.json", "career-model-budget-v1.json", "assistant-v2.json", "mobile-v3.json"])
     private static var careerDirectory: URL? { FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?.appendingPathComponent("DaylightCareer", isDirectory: true) }
     static func validateCareerArchive(_ files: [String: Data]?) throws {
         guard let files else { return }
         guard files.keys.allSatisfy({ careerFileNames.contains($0) }), files.values.reduce(0, { $0 + $1.count }) <= 12_000_000 else { throw AppFailure.message("求职备份文件范围或大小无效") }
-        for data in files.values { _ = try JSONSerialization.jsonObject(with: data) }
+        for (name, data) in files {
+            _ = try JSONSerialization.jsonObject(with: data)
+            if name == "mobile-v3.json" { let archive = try JSONDecoder().decode(CareerMobileArchive.self, from: data); guard archive.version == 1 else { throw AppFailure.message("求职缓存版本不兼容") } }
+        }
     }
     static func careerArchive() throws -> [String: Data] {
         guard let directory = careerDirectory else { return [:] }
@@ -124,7 +127,7 @@ enum BackupCodec {
         for task in imported.tasks where !next.tasks.contains(where: { $0.id == task.id || (task.reminderID != nil && $0.reminderID == task.reminderID) }) { next.tasks.append(task) }
         var eventMapping: [UUID: UUID] = [:]
         for event in imported.events {
-            let exact = next.events.firstIndex(where: { $0.id == event.id || (event.eventID != nil && $0.eventID == event.eventID && abs($0.start.timeIntervalSince(event.start)) < 1) })
+            let exact = next.events.firstIndex(where: { $0.id == event.id || (event.careerReference != nil && $0.careerReference == event.careerReference) || (event.eventID != nil && $0.eventID == event.eventID && abs($0.start.timeIntervalSince(event.start)) < 1) })
             let sameCalendar = event.eventID.map { identifier in next.events.indices.filter { next.events[$0].eventID == identifier } } ?? []
             // A saved trip creates individual events. Reconnect one moved occurrence while preserving
             // its live calendar time; ordinary recurring events still require the original start.
@@ -135,6 +138,7 @@ enum BackupCodec {
                 if next.events[index].navigationURL == nil { next.events[index].navigationURL = event.navigationURL }
                 if next.events[index].location == nil { next.events[index].location = event.location }
                 if next.events[index].tripID == nil { next.events[index].tripID = event.tripID }
+                if next.events[index].careerReference == nil { next.events[index].careerReference = event.careerReference; next.events[index].careerRevision = event.careerRevision }
             } else { next.events.append(event); eventMapping[event.id] = event.id }
         }
         for weight in imported.weights where !next.weights.contains(where: { $0.id == weight.id || (weight.healthID != nil && $0.healthID == weight.healthID) }) { next.weights.append(weight) }

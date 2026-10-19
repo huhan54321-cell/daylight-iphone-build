@@ -4,6 +4,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { AssistantStore, hash, fail } = require('./career-assistant-store.cjs');
 const domain = require('./career-assistant-domain.cjs');
+const { createMobileSync, defaults: followupDefaults } = require('./career-mobile-sync.cjs');
 const { mergeJobs, normalizeJob, safeRelatedURL } = require('./career-core.cjs');
 const { runXHSCollector } = require('./xhs-browser-runner.cjs');
 const { loadHistory } = require('./xhs-history.cjs');
@@ -12,6 +13,7 @@ const { normalizeConfig: collectorConfig } = require('./career-scheduler.cjs');
 function createCareerAssistant(options) {
   const now = options.now || (() => new Date().toISOString());
   const store = new AssistantStore(options.dataDir);
+  const mobile = createMobileSync(store, now);
   const xhsDir = options.xhsDir || path.resolve(__dirname, '../data/xhs-private');
   const runner = options.xhsRunner || runXHSCollector;
   const adapters = options.applicationAdapters || {};
@@ -40,11 +42,11 @@ function createCareerAssistant(options) {
   }
   function snapshot() {
     const profiles = store.list('profiles');
-    const jobs = store.list('jobs').map(job => ({ ...job, matches: profiles.filter(p => p.enabled).map(p => domain.matchJob(job, p)), followUp: store.get('followups', job.id) || { id: job.id, saved: false, stage: '未投递' } }));
+    const jobs = store.list('jobs').map(job => ({ ...job, matches: profiles.filter(p => p.enabled).map(p => domain.matchJob(job, p)), followUp: store.get('followups', job.id) || followupDefaults(job.id) }));
     const tasks = store.list('tasks').sort((a, b) => b.startedAt.localeCompare(a.startedAt)).slice(0, 30);
     const reports = store.list('reports').sort((a, b) => b.generatedAt.localeCompare(a.generatedAt));
     return { schemaVersion: 2, generatedAt: now(), online: true, profiles, jobs, sources: store.list('sources'),
-      leads: store.list('leads').map(({ text, ...lead }) => domain.refreshDateBucket(lead, now())), reports: reports.slice(0, 60).map(({ leads, priority, ...r }) => ({ ...r, count: leads.length, priority })),
+      leads: store.list('leads').map(({ text, ...lead }) => domain.refreshDateBucket(lead, now())), reports: reports.slice(0, 60).map(({ leads, priority, ...r }, index) => ({ ...r, count: leads.length, priority, ...(index < 10 ? { leads } : {}) })),
       materials: store.list('materials').map(({ attachment, ...m }) => ({ ...m, attachment: attachment ? { name: attachment.name, hash: attachment.hash, size: attachment.size } : null })),
       applications: store.list('applications'), opportunities: store.list('opportunities'), tasks, schedule: meta(),
       ai: store.get('settings', 'ai') || { id: 'ai', state: 'not_checked', message: '本机 Codex 尚未验证；规则筛选正常可用。' } };
@@ -215,6 +217,16 @@ function createCareerAssistant(options) {
     const pieces = route.replace(/^\/v2\/career\/?/, '').split('/').filter(Boolean);
     const [resource, id, action] = pieces;
     if (method === 'GET' && resource === 'snapshot') return snapshot();
+    if (method === 'POST' && resource === 'sync') return mobile.sync(body);
+    if (method === 'GET' && resource === 'applications' && action === 'review') {
+      const a = get('applications', id), material = get('materialVersions', a.materialID + ':' + a.materialVersion);
+      return { ...a, material, job: get('jobs', a.jobID), valid: a.materialVersion === get('materials', a.materialID).version && a.jobHash === get('jobs', a.jobID).contentHash };
+    }
+    if (method === 'POST' && resource === 'applications' && action === 'request-changes') {
+      const a = get('applications', id);
+      if (!['draft', 'approved'].includes(a.state) || a.reviewHash !== body.reviewHash) throw fail('审核内容已变化，请重新读取', 409);
+      return store.put('applications', { ...a, state: 'draft', approvalHash: null, revision: a.revision + 1, reviewHash: hash([a.reviewHash, a.revision + 1]), reviewNote: domain.text(body.note, 2000), message: '手机请求修改，请在电脑重新准备审核单。', updatedAt: now() });
+    }
     if (method === 'GET' && resource === 'migration') { const { payload, ...preview } = migrationPreview(); return preview; }
     if (method === 'POST' && resource === 'migration') {
       const preview = migrationPreview();
@@ -252,8 +264,7 @@ function createCareerAssistant(options) {
     }
     if (method === 'POST' && resource === 'jobs' && action === 'followup') {
       get('jobs', id);
-      if (typeof body.saved !== 'boolean') throw fail('收藏状态无效');
-      return store.put('followups', { id, saved: body.saved, stage: domain.text(body.stage || '未投递', 60) });
+      return mobile.change('followups', id, body);
     }
     if (method === 'POST' && resource === 'leads' && id) {
       const lead = get('leads', id);
@@ -278,7 +289,7 @@ function createCareerAssistant(options) {
     if (method === 'POST' && resource === 'restore') {
       if (active) throw fail('请等待当前任务完成后恢复', 409);
       if (body.schemaVersion !== 2 || !Array.isArray(body.records) || body.records.length > 30000) throw fail('备份格式无效');
-      const allowed = new Set(['profiles','jobs','sources','leads','reports','materials','materialVersions','applications','opportunities','followups','tasks','settings','migrations','aiCache']);
+      const allowed = new Set(['profiles','jobs','sources','leads','reports','materials','materialVersions','applications','opportunities','followups','tasks','settings','migrations','aiCache','mobileOperations']);
       for (const r of body.records) {
         if (!r || !allowed.has(r.kind) || typeof r.value?.id !== 'string' || !r.value.id || r.value.id.length > 200 || Array.isArray(r.value)) throw fail('备份记录无效');
         const v = r.value;

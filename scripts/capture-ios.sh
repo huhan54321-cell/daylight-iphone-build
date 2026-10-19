@@ -10,7 +10,7 @@ xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --ba
 xcrun simctl install "$UDID" build/simulator/Build/Products/Debug-iphonesimulator/Daylight.app
 for theme in light dark; do
   xcrun simctl ui "$UDID" appearance "$theme"
-  for tab in today finance plan health settings; do
+  for tab in today finance plan career settings; do
     xcrun simctl launch --terminate-running-process "$UDID" com.personalassistant.Daylight --capture-tab "$tab"
     sleep 2
     xcrun simctl io "$UDID" screenshot "build/screenshots/$tab-$theme.png"

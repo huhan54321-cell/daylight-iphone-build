@@ -151,10 +151,8 @@ actor CareerNetworking {
         request.setValue("Bearer " + configuration.token.trimmingCharacters(in: .whitespacesAndNewlines), forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = body
-        let (bytes, response) = try await session.bytes(for: request, delegate: redirectPolicy)
-        guard let http = response as? HTTPURLResponse, response.expectedContentLength <= 16_777_216 else { throw CareerServiceError.transport }
-        var data = Data()
-        for try await byte in bytes { guard data.count < 16_777_216 else { throw CareerFeedError.tooLarge }; data.append(byte) }
+        request.timeoutInterval = 8
+        let (data, http) = try await CareerAssistantTransport.perform(request)
         guard (200...299).contains(http.statusCode) else {
             if let error = try? JSONSerialization.jsonObject(with: data) as? [String: String], let message = error["error"] { throw AppFailure.message(message) }
             throw CareerServiceError.http(http.statusCode)

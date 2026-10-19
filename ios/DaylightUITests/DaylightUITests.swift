@@ -34,7 +34,7 @@ final class DaylightUITests: XCTestCase {
     func testFiveTabsAndCancelDoNotCreateRecords() {
         launch()
         assertText("today-record-count", equals: "0 笔")
-        for title in ["账本", "计划", "运动", "设置", "今天"] {
+        for title in ["账本", "计划", "求职", "我的", "今天"] {
             tab(title)
             XCTAssertTrue(app.navigationBars[title].waitForExistence(timeout: 5))
         }
@@ -340,91 +340,78 @@ final class DaylightUITests: XCTestCase {
         XCTAssertFalse(app.keyboards.firstMatch.exists)
     }
 
-    func testCareerDirectoryDetailsAndPreferences() {
-        app.launchArguments.append("--ui-test-career-report")
+    func testCareerCompanySharesUnifiedJobLibrary() {
         launch()
-        tap(element("open-career"))
-        XCTAssertTrue(app.navigationBars["求职与具身"].waitForExistence(timeout: 5))
-        tap(element("career-preferences"))
-        XCTAssertTrue(app.navigationBars["求职偏好"].waitForExistence(timeout: 5))
-        tap(element("career-preferences-done"))
-        tap(app.segmentedControls["career-section"].buttons["公司"])
-        replaceText("career-company-search", with: "Torch")
-        // Search by the Chinese brand also verifies CJK company content.
-        replaceText("career-company-search", with: "炬坤")
+        tab("求职")
+        tap(app.segmentedControls["career-filter"].buttons["公司"])
+        replaceText("career-search", with: "炬坤")
         tap(element("career-company-torch"), scroll: true)
-        XCTAssertTrue(app.navigationBars["公司介绍"].waitForExistence(timeout: 5))
-        tap(app.navigationBars["公司介绍"].buttons["完成"])
+        XCTAssertTrue(app.navigationBars["炬坤机器人"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["公司资料"].exists)
     }
 
-    func testCareerDailyAndWeeklyReport() {
-        // Keep report filtering independent of the company editor's keyboard and
-        // navigation work so both scenarios fit the same per-test time budget.
-        app.launchArguments.append("--ui-test-career-report")
+    func testCareerCachedReportAndOfflineApprovalGuard() {
+        app.launchArguments += ["--ui-test-career-mobile", "--ui-test-career-failure"]
         launch()
-        tap(element("open-career"))
-        tap(app.segmentedControls["career-section"].buttons["具身观察"])
-        tap(app.segmentedControls["career-report-period"].buttons["日报"])
-        scrollTo(element("career-article-ui-report-today"))
-        XCTAssertTrue(element("career-article-ui-report-today").exists)
-        XCTAssertFalse(element("career-article-ui-report-week").exists)
-        scrollTo(app.segmentedControls["career-report-period"], direction: .down)
-        tap(app.segmentedControls["career-report-period"].buttons["周报"])
-        scrollTo(element("career-article-ui-report-week"))
-        XCTAssertTrue(element("career-article-ui-report-week").exists)
+        tab("求职")
+        tap(app.segmentedControls["career-sections"].buttons["报告"])
+        tap(app.buttons["UI 缓存招聘线索报告"], scroll: true)
+        XCTAssertTrue(app.navigationBars["招聘线索报告"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["UI 招聘线索报告原帖"].exists)
+        tap(app.navigationBars.buttons.firstMatch)
+        tap(app.segmentedControls["career-sections"].buttons["进度"])
+        let review = app.buttons.matching(NSPredicate(format: "label CONTAINS %@ AND label CONTAINS %@", "UI 测试团队", "待审核")).firstMatch
+        tap(review, scroll: true)
+        XCTAssertTrue(app.navigationBars["材料审核"].waitForExistence(timeout: 5))
+        scrollTo(element("career-approve"))
+        XCTAssertFalse(element("career-approve").isEnabled, "Cached materials cannot be approved offline.")
     }
 
-    func testCareerProfileEditCancelSaveAndRelaunch() {
+    func testHealthAccessibleFromTodayAndMy() {
         launch()
-        tap(element("open-career"))
-        tap(element("career-preferences"))
-        replaceText("career-profile-education", with: "UI 测试硕士")
-        tap(element("career-profile-cancel"))
-        tap(element("career-preferences"))
-        XCTAssertNotEqual(element("career-profile-education").value as? String, "UI 测试硕士")
-        replaceText("career-profile-education", with: "UI 测试硕士")
-        tap(element("career-preferences-done"))
+        tab("我的")
+        tap(element("open-health"), scroll: true)
+        XCTAssertTrue(app.navigationBars["运动"].waitForExistence(timeout: 5))
+        tab("今天")
+        tap(element("open-health"), scroll: true)
+        XCTAssertTrue(app.navigationBars["运动"].waitForExistence(timeout: 5))
+    }
+
+    func testCareerOfflineBookmarkSurvivesRestartAndDoesNotBlockNavigation() {
+        app.launchArguments += ["--ui-test-career-mobile", "--ui-test-career-failure"]
+        launch()
+        tab("求职")
+        tap(element("career-job-ui-mobile-job"), scroll: true)
+        tap(element("career-save-job"))
+        XCTAssertTrue(app.buttons["已收藏"].waitForExistence(timeout: 5))
         relaunch()
-        tap(element("open-career"))
-        tap(element("career-preferences"))
-        assertValue(element("career-profile-education"), equals: "UI 测试硕士")
+        tab("求职")
+        tap(app.segmentedControls["career-filter"].buttons["收藏"])
+        XCTAssertTrue(element("career-job-ui-mobile-job").waitForExistence(timeout: 5))
+        tap(element("career-reload"))
+        tab("账本")
+        tab("求职")
+        XCTAssertTrue(element("career-job-ui-mobile-job").exists)
+        XCTAssertTrue(element("career-pending").exists)
     }
 
-    func testCareerMultipleJobsBookmarkPersistenceAndRefreshFailureKeepsCache() {
-        app.launchArguments.append("--ui-test-career-failure")
+    func testCareerInterviewPlanAndFollowupRemainSingleAfterRestart() {
+        app.launchArguments += ["--ui-test-career-mobile", "--ui-test-career-failure"]
         launch()
-        tap(element("open-career"))
-        XCTAssertTrue(app.navigationBars["求职与具身"].waitForExistence(timeout: 5))
-        let cards = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "career-job-job-"))
-        XCTAssertGreaterThan(cards.count, 1, "Multiple relevant jobs must be available independently of the company directory.")
-        let first = cards.firstMatch
-        let identifier = first.identifier
-        tap(first, scroll: true)
-        let bookmark = app.switches["career-save-job"]
-        scrollTo(bookmark)
-        XCTAssertEqual(bookmark.value as? String, "0")
-        toggle(bookmark)
-        assertValue(bookmark, equals: "1")
-        tap(element("career-detail-done"))
-
+        tab("求职")
+        tap(element("career-job-ui-mobile-job"), scroll: true)
+        tap(element("career-track-job"))
+        replaceText("career-next-action", with: "UI 准备面试")
+        tap(element("career-save-tracking"), scroll: true)
+        XCTAssertTrue(app.navigationBars["岗位详情"].waitForExistence(timeout: 5))
         relaunch()
-        tap(element("open-career"))
-        assertValue(element(identifier), equals: "已收藏")
-        tap(element("career-open-saved"), scroll: true)
-        XCTAssertTrue(element("career-saved-count").exists)
-        let savedCard = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "career-saved-job-")).firstMatch
-        XCTAssertTrue(savedCard.waitForExistence(timeout: 5), "Bookmarks have their own visible list after relaunch and failed refresh.")
-        scrollTo(app.segmentedControls["career-section"], direction: .down)
-        tap(app.segmentedControls["career-section"].buttons["岗位"])
-        tap(element("career-refresh"), scroll: true)
-        let error = element("career-service-error")
-        XCTAssertTrue(error.waitForExistence(timeout: 5))
-        XCTAssertFalse(error.label.isEmpty)
-        XCTAssertTrue(element(identifier).exists, "An offline refresh must not remove previous jobs.")
-        tap(element("career-service-settings"), scroll: true)
-        XCTAssertTrue(element("career-service-url").waitForExistence(timeout: 5))
-        tap(element("career-service-done"))
-        assertValue(element(identifier), equals: "已收藏")
+        tab("求职")
+        tap(element("career-job-ui-mobile-job"), scroll: true)
+        XCTAssertTrue(app.staticTexts["UI 准备面试"].waitForExistence(timeout: 5))
+        tab("今天")
+        let interviews = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "面试 · UI 测试团队 · UI 机器人实习"))
+        scrollTo(interviews.firstMatch)
+        XCTAssertEqual(interviews.count, 1, "Interview resync must not create duplicate plans.")
     }
 
     private func bankSwitch(_ index: Int) -> XCUIElement {

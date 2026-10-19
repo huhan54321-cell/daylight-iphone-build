@@ -116,6 +116,8 @@ struct PlanEvent: Identifiable, Codable {
     var navigationURL: String? = nil
     var tripID: UUID? = nil
     var allDay: Bool? = nil
+    var careerReference: String? = nil
+    var careerRevision: String? = nil
     var isAllDay: Bool { allDay == true }
 }
 

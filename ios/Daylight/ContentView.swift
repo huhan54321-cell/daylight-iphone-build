@@ -1,18 +1,20 @@
 import SwiftUI
 import EventKit
 
-private enum AppPage: String, CaseIterable { case today = "今天", finance = "账本", plan = "计划", health = "运动", settings = "设置" }
+private enum AppPage: String, CaseIterable { case today = "今天", finance = "账本", plan = "计划", career = "求职", settings = "我的" }
 struct ContentView: View {
     @EnvironmentObject private var store: AssistantStore
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage("appearance") private var appearance = "system"
     @State private var page: AppPage = ContentView.initialPage
     @State private var entry: EntryRequest?
+    @StateObject private var career = CareerAssistantClient()
     private static var initialPage: AppPage {
         #if DEBUG && targetEnvironment(simulator)
         // Launch directly into a read-only page for CI screenshots, avoiding URL confirmation dialogs.
         let arguments = ProcessInfo.processInfo.arguments
-        let pages: [String: AppPage] = ["today": .today, "finance": .finance, "plan": .plan, "health": .health, "settings": .settings]
+        let pages: [String: AppPage] = ["today": .today, "finance": .finance, "plan": .plan, "health": .settings, "career": .career, "settings": .settings, "me": .settings]
+        if arguments.contains(where: { $0.hasPrefix("--capture-career") }) { return .career }
         if let index = arguments.firstIndex(of: "--capture-tab"), arguments.indices.contains(index + 1), let selected = pages[arguments[index + 1]] { return selected }
         #endif
         return .today
@@ -22,30 +24,35 @@ struct ContentView: View {
             screen(.today).tabItem { Label("今天", systemImage: "sun.max") }.tag(AppPage.today)
             screen(.finance).tabItem { Label("账本", systemImage: "wallet.pass") }.tag(AppPage.finance)
             screen(.plan).tabItem { Label("计划", systemImage: "calendar") }.tag(AppPage.plan)
-            screen(.health).tabItem { Label("运动", systemImage: "waveform.path.ecg") }.tag(AppPage.health)
-            screen(.settings).tabItem { Label("设置", systemImage: "gearshape") }.tag(AppPage.settings)
+            screen(.career).tabItem { Label("求职", systemImage: "briefcase") }.tag(AppPage.career)
+            screen(.settings).tabItem { Label("我的", systemImage: "person.crop.circle") }.tag(AppPage.settings)
         }.tint(.blue).preferredColorScheme(appearance == "system" ? nil : appearance == "dark" ? .dark : .light)
             .sheet(item: $entry) { EntrySheet(request: $0) }
             .alert("日常", isPresented: Binding(get: { store.message != nil }, set: { if !$0 { store.message = nil } })) { Button("知道了") { store.message = nil } } message: { Text(store.message ?? "") }
-            .task { await store.refreshPlans() }
+            .task { await career.bootstrap(); await store.refreshPlans() }
+            .onChange(of: career.snapshot) { _, value in
+                do { try store.syncCareerInterviews(value) } catch { career.message = "面试已保存，计划同步未完成：" + error.localizedDescription }
+                Task { await CareerNotifications.sync(value) }
+            }
             .onChange(of: scenePhase) { _, phase in if phase == .active { store.reloadLocal(); Task { await store.refreshPlans() } } }
             .onReceive(NotificationCenter.default.publisher(for: .EKEventStoreChanged)) { _ in Task { await store.refreshPlans(center: store.apple.calendarFocus) } }
             .onOpenURL { url in
                 guard url.scheme == "daylight", url.host == "tab" else { return }
-                let pages: [String: AppPage] = ["today": .today, "finance": .finance, "plan": .plan, "health": .health, "settings": .settings]
+                let pages: [String: AppPage] = ["today": .today, "finance": .finance, "plan": .plan, "health": .settings, "career": .career, "settings": .settings, "me": .settings]
                 if let selected = pages[url.lastPathComponent] { page = selected }
             }
     }
     private func screen(_ selected: AppPage) -> some View {
         NavigationStack {
-            ScrollView {
+            if selected == .career { CareerAssistantView(client: career) }
+            else { ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     switch selected {
-                    case .today: TodayModule(entry: $entry)
+                    case .today: TodayModule(entry: $entry, openCareer: { page = .career })
                     case .finance: FinanceModule(entry: $entry)
                     case .plan: PlanModule(entry: $entry)
-                    case .health: HealthModule(entry: $entry)
-                    case .settings: SettingsModule()
+                    case .career: EmptyView()
+                    case .settings: SettingsModule(entry: $entry)
                     }
                 }.padding(20)
             }.scrollDismissesKeyboard(.interactively).background(Color(uiColor: .systemGroupedBackground)).navigationTitle(selected.rawValue)
@@ -62,33 +69,28 @@ struct ContentView: View {
                         }
                     }
                 }
+            }
         }
     }
 }
 struct TodayModule: View {
     @EnvironmentObject private var store: AssistantStore
     @Binding var entry: EntryRequest?
-    @State private var showCareer = false
+    var openCareer: () -> Void
     private var records: [MoneyRecord] { store.data.transactions.filter { Calendar.current.isDateInToday($0.date) } }
     private var tasks: [PlanTask] { store.data.tasks.filter { Calendar.current.isDateInToday($0.date) }.sorted { !$0.completed && $1.completed } }
     private var pendingCount: Int { store.data.smsInbox.filter { $0.status == .pending }.count }
     var body: some View {
         Text(Date().formatted(.dateTime.month(.wide).day().weekday(.wide))).font(.subheadline).foregroundStyle(.secondary)
-        Button { showCareer = true } label: {
+        Button { openCareer() } label: {
             SoftCard {
                 HStack {
                     Image(systemName: "sparkle.magnifyingglass").font(.title2).foregroundStyle(.blue)
-                    VStack(alignment: .leading, spacing: 4) { Text("求职与具身").font(.headline); Text("精选岗位 · 公司介绍 · 具身观察").font(.caption).foregroundStyle(.secondary) }
+                    VStack(alignment: .leading, spacing: 4) { Text("求职助手").font(.headline); Text("发现机会 · 审核材料 · 跟进面试").font(.caption).foregroundStyle(.secondary) }
                     Spacer(); Image(systemName: "chevron.right").font(.caption).foregroundStyle(.secondary)
                 }
             }
         }.buttonStyle(.plain).accessibilityIdentifier("open-career")
-            .navigationDestination(isPresented: $showCareer) { CareerModule() }
-            .task {
-                #if DEBUG && targetEnvironment(simulator)
-                if ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--capture-career") }) { showCareer = true }
-                #endif
-            }
         ModuleSection(title: "收支概览") {
             SoftCard {
                 Text("今天已记录净支出").font(.subheadline).foregroundStyle(.secondary)
@@ -108,6 +110,7 @@ struct TodayModule: View {
             }
         }
         ModuleSection(title: "照顾自己") {
+            NavigationLink("运动与健康", systemImage: "waveform.path.ecg") { ScrollView { VStack(alignment: .leading, spacing: 24) { HealthModule(entry: $entry) }.padding(20) }.navigationTitle("运动") }.accessibilityIdentifier("open-health")
             HStack(alignment: .top, spacing: 12) {
                 SoftCard { SmallMetric(title: "最近体重", value: store.data.weights.max(by: { $0.date < $1.date }).map { String(format: "%.1f kg", $0.kilograms) } ?? "— kg", valueIdentifier: "today-latest-weight") }.frame(maxWidth: .infinity)
                 SoftCard { SmallMetric(title: "今日运动", value: "\(Int(store.data.workouts.filter { Calendar.current.isDateInToday($0.date) }.reduce(0) { $0 + $1.minutes })) 分钟", valueIdentifier: "today-workout-minutes") }.frame(maxWidth: .infinity)
