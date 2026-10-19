@@ -41,7 +41,7 @@ struct CareerMobileArchive: Codable, Sendable {
         result["jobs"] = .array(jobs); result["leads"] = .array(leads)
         return .object(result)
     }
-    mutating func enqueue(kind: String, targetID: String, patch: CareerAssistantJSON) {
+    mutating func enqueue(kind: String, targetID: String, patch: CareerAssistantJSON, editingBase: CareerAssistantJSON? = nil) {
         let collection = kind == "followups" ? "jobs" : "leads"
         let row = visible[collection].array.first { $0.id == targetID } ?? .null
         if pending.contains(where: { $0.kind == kind && $0.targetID == targetID && $0.conflict?["state"].string == "error" }) {
@@ -57,7 +57,7 @@ struct CareerMobileArchive: Codable, Sendable {
             pending.append(CareerMobileOperation(kind: kind, targetID: targetID, base: .object(base), patch: .object(combined), job: kind == "followups" ? row : nil))
             return
         }
-        let before = kind == "followups" ? row["followUp"] : row
+        let before = editingBase ?? (kind == "followups" ? row["followUp"] : row)
         let base = Dictionary(uniqueKeysWithValues: patch.dictionary.keys.map { ($0, before[$0]) })
         pending.append(CareerMobileOperation(kind: kind, targetID: targetID, base: .object(base), patch: patch, job: kind == "followups" ? row : nil))
     }

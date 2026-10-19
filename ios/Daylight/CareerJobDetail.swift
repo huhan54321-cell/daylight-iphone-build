@@ -57,7 +57,14 @@ struct CareerTrackingEditor: View {
     @State private var location = ""
     @State private var interviewNotes = ""
     @State private var submitting = false
+    @State private var editingBase: CareerAssistantJSON?
+    @State private var initialValues: CareerAssistantJSON = .null
     private var job: CareerAssistantJSON { client.snapshot["jobs"].array.first { $0.id == jobID } ?? .null }
+    private func values() -> [String: Any] {
+        let formatter = ISO8601DateFormatter()
+        let interview: Any = hasInterview ? ["start": formatter.string(from: start), "end": formatter.string(from: end), "location": location, "notes": interviewNotes] : NSNull()
+        return ["stage": stage, "notes": notes, "nextAction": nextAction, "reminderAt": remind ? formatter.string(from: reminder) as Any : NSNull(), "interview": interview]
+    }
     var body: some View {
         Form {
             Section { Text(job["company"].display + " · " + job["title"].display); Picker("跟进阶段", selection: $stage) { ForEach(Self.stages, id: \.self) { Text($0) } }.accessibilityIdentifier("career-stage") }
@@ -81,9 +88,12 @@ struct CareerTrackingEditor: View {
                 Button(submitting ? "正在保存…" : "保存跟进") {
                     submitting = true
                     Task {
-                        let formatter = ISO8601DateFormatter()
-                        let interview: Any = hasInterview ? ["start": formatter.string(from: start), "end": formatter.string(from: end), "location": location, "notes": interviewNotes] : NSNull()
-                        let ok = await client.update(id: jobID, patch: ["stage": stage, "notes": notes, "nextAction": nextAction, "reminderAt": remind ? formatter.string(from: reminder) as Any : NSNull(), "interview": interview])
+                        let currentValues = values()
+                        let encoded = (try? CareerAssistantJSON.from(currentValues)) ?? .null
+                        let patch = currentValues.filter { encoded[$0.key] != initialValues[$0.key] }
+                        let ok: Bool
+                        if patch.isEmpty { ok = true }
+                        else { ok = await client.update(id: jobID, patch: patch, editingBase: editingBase) }
                         submitting = false; if ok { dismiss() }
                     }
                 }.disabled(submitting || client.saving || (hasInterview && (end <= start || end.timeIntervalSince(start) > 86400)) || notes.count > 4000 || nextAction.count > 200).accessibilityIdentifier("career-save-tracking")
@@ -91,11 +101,13 @@ struct CareerTrackingEditor: View {
                 if let message = client.message { Text(message).font(.caption).foregroundStyle(.orange) }
             }
         }.navigationTitle("跟进与面试").onAppear {
+            guard editingBase == nil else { return }
             let f = job["followUp"]
             stage = Self.stages.contains(f["stage"].string) ? f["stage"].string : "未投递"; notes = f["notes"].string; nextAction = f["nextAction"].string
             if let date = CareerDates.date(f["reminderAt"].string) { reminder = date; remind = true }
             if let date = CareerDates.date(f["interview"]["start"].string) { start = date; end = CareerDates.date(f["interview"]["end"].string) ?? date.addingTimeInterval(3600); hasInterview = true }
             location = f["interview"]["location"].string; interviewNotes = f["interview"]["notes"].string
+            editingBase = f; initialValues = (try? CareerAssistantJSON.from(values())) ?? .null
         }
     }
 }

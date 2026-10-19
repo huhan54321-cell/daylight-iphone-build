@@ -52,7 +52,7 @@
     },
     {
       "file": "ios/Daylight/CareerAssistantClient.swift",
-      "sha256": "51c35c103f050bc59e3c81cf2ec3c945b9a3b5818475e9c3a8a5f871ccc895cd"
+      "sha256": "0e966d3a7f7a396279416670be927e505d95d6840e9a492b58aaba2a64c616e1"
     },
     {
       "file": "ios/Daylight/CareerAssistantEditors.swift",
@@ -88,7 +88,7 @@
     },
     {
       "file": "ios/Daylight/CareerJobDetail.swift",
-      "sha256": "e63a8c375f69f8931fa82c9180fd3f6effab6c99f09c8db9ee905d440bb5c42e"
+      "sha256": "9810556d8765a34675f01ebb5d88635b7f20a05597dabe3dcd564d606082f815"
     },
     {
       "file": "ios/Daylight/CareerMobileFixtures.swift",
@@ -96,7 +96,7 @@
     },
     {
       "file": "ios/Daylight/CareerMobileState.swift",
-      "sha256": "03d53ae2a62a5d8f21919b4b7f40efd88bde19bef96b5f52dd842b46e441b135"
+      "sha256": "64c758314bddf5f01bfe9cb1216a5df530d357b1b6e9f742d5a7bbbd3a041119"
     },
     {
       "file": "ios/Daylight/CareerModelMatching.swift",
@@ -264,7 +264,7 @@
     },
     {
       "file": "tests/native/CareerMobileTests.swift",
-      "sha256": "3b1fbc5a9e8f40d5a7eb9a2b92b07bdc6b823555d390275cd19dc00f626f5335"
+      "sha256": "d51c5d958220056f109d8070019a27af89bb0d217a8f2e140e43700c26c6cdbd"
     },
     {
       "file": "tests/native/CareerModelTests.swift",

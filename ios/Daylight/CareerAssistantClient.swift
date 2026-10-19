@@ -114,11 +114,11 @@ final class CareerAssistantClient: ObservableObject {
         } catch is CancellationError { online = false }
         catch { online = false; message = "电脑暂时无法连接。已显示本机内容，收藏和跟进会留待同步。" }
     }
-    @discardableResult func update(kind: String = "followups", id: String, patch: [String: Any]) async -> Bool {
+    @discardableResult func update(kind: String = "followups", id: String, patch: [String: Any], editingBase: CareerAssistantJSON? = nil) async -> Bool {
         await bootstrap()
         do {
             let value = try CareerAssistantJSON.from(patch)
-            let saved = await mutate { $0.enqueue(kind: kind, targetID: id, patch: value) }
+            let saved = await mutate { $0.enqueue(kind: kind, targetID: id, patch: value, editingBase: editingBase) }
             if saved, online, !busy {
                 busy = true
                 Task { @MainActor in await self.flush(); self.busy = false }

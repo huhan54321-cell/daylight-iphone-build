@@ -28,6 +28,9 @@ enum CareerMobileTests {
         archive.accept(try .from(["id": rejectedID, "state": "error", "message": "服务器暂不接受这项修改"]))
         archive.enqueue(kind: "followups", targetID: "server-job", patch: .object(["stage": .string("准备材料"), "notes": .string("已修正")]))
         try expect(archive.pending.count == 1 && archive.pending[0].id != rejectedID && archive.pending[0].conflict == nil && archive.pending[0].patch["notes"].string == "已修正", "corrected rejected edit can sync without a permanently blocked predecessor")
+        var editing = CareerMobileArchive(); editing.snapshot = .object(["jobs": .array([job])])
+        editing.enqueue(kind: "followups", targetID: job.id, patch: .object(["notes": .string("phone edit")]), editingBase: .object(["notes": .string("text when editor opened")]))
+        try expect(editing.pending[0].base["notes"].string == "text when editor opened", "editor retains its original base even when a snapshot refreshes while typing")
         let interview = try CareerAssistantJSON.from(["start":"2026-10-20T02:00:00Z","end":"2026-10-20T03:00:00Z","location":"在线","notes":"算法面试"])
         var row = job.dictionary; row["followUp"] = .object(["interview": interview]); let interviewJob = CareerAssistantJSON.object(row)
         let first = CareerPlanLink.event(job: interviewJob, existing: nil)!
