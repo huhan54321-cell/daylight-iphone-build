@@ -340,7 +340,7 @@ final class DaylightUITests: XCTestCase {
         XCTAssertFalse(app.keyboards.firstMatch.exists)
     }
 
-    func testCareerDirectoryDetailsPreferencesAndReport() {
+    func testCareerDirectoryDetailsAndPreferences() {
         app.launchArguments.append("--ui-test-career-report")
         launch()
         tap(element("open-career"))
@@ -355,11 +355,20 @@ final class DaylightUITests: XCTestCase {
         tap(element("career-company-torch"), scroll: true)
         XCTAssertTrue(app.navigationBars["公司介绍"].waitForExistence(timeout: 5))
         tap(app.navigationBars["公司介绍"].buttons["完成"])
+    }
+
+    func testCareerDailyAndWeeklyReport() {
+        // Keep report filtering independent of the company editor's keyboard and
+        // navigation work so both scenarios fit the same per-test time budget.
+        app.launchArguments.append("--ui-test-career-report")
+        launch()
+        tap(element("open-career"))
         tap(app.segmentedControls["career-section"].buttons["具身观察"])
         tap(app.segmentedControls["career-report-period"].buttons["日报"])
         scrollTo(element("career-article-ui-report-today"))
         XCTAssertTrue(element("career-article-ui-report-today").exists)
         XCTAssertFalse(element("career-article-ui-report-week").exists)
+        scrollTo(app.segmentedControls["career-report-period"], direction: .down)
         tap(app.segmentedControls["career-report-period"].buttons["周报"])
         scrollTo(element("career-article-ui-report-week"))
         XCTAssertTrue(element("career-article-ui-report-week").exists)
