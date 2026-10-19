@@ -5,6 +5,7 @@ struct CareerAssistantView: View {
     @State private var section = "机会"
     @State private var filter = "全部"
     @State private var query = ""
+    @FocusState private var searchFocused: Bool
     @State private var city = "全部城市"
     @State private var profileID = ""
     @State private var includeClosed = false
@@ -40,7 +41,9 @@ struct CareerAssistantView: View {
             if section == "机会" { opportunities }
             else if section == "进度" { progress }
             else { reports }
-        }.navigationTitle("求职").listStyle(.insetGrouped)
+        }.navigationTitle("求职").listStyle(.insetGrouped).scrollDismissesKeyboard(.interactively)
+            .onDisappear { searchFocused = false }
+            .onChange(of: section) { _, _ in searchFocused = false }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) { NavigationLink { CareerConnectionView(client: client) } label: { Image(systemName: "gearshape") }.accessibilityLabel("求职设置").accessibilityIdentifier("career-settings") }
                 ToolbarItem(placement: .topBarTrailing) { Button { Task { await client.reload() } } label: { Image(systemName: "arrow.clockwise") }.disabled(client.busy).accessibilityLabel("同步求职内容").accessibilityIdentifier("career-reload") }
@@ -61,7 +64,12 @@ struct CareerAssistantView: View {
             if !approvals.isEmpty { Section { Button { section = "进度" } label: { Label("\(approvals.count) 份材料待你审核", systemImage: "checkmark.seal") } } }
             Section {
                 Picker("查看范围", selection: $filter) { Text("全部").tag("全部"); Text("收藏").tag("收藏"); Text("公司").tag("公司") }.pickerStyle(.segmented).accessibilityIdentifier("career-filter")
-                TextField("搜索公司、岗位或方向", text: $query).accessibilityIdentifier("career-search")
+                HStack {
+                    TextField("搜索公司、岗位或方向", text: $query)
+                        .focused($searchFocused).submitLabel(.search).autocorrectionDisabled()
+                        .onSubmit { searchFocused = false }.accessibilityIdentifier("career-search")
+                    if searchFocused { Button("完成") { searchFocused = false }.buttonStyle(.borderless).accessibilityIdentifier("career-dismiss-search-keyboard") }
+                }
                 if filter != "公司" {
                     HStack {
                         Picker("城市", selection: $city) { Text("全部城市").tag("全部城市"); ForEach(Set(client.snapshot["jobs"].array.map { $0["city"].string }).filter { !$0.isEmpty }.sorted(), id: \.self) { Text($0).tag($0) } }

@@ -59,6 +59,7 @@ struct CareerTrackingEditor: View {
     @State private var submitting = false
     @State private var editingBase: CareerAssistantJSON?
     @State private var initialValues: CareerAssistantJSON = .null
+    @FocusState private var focusedField: String?
     private var job: CareerAssistantJSON { client.snapshot["jobs"].array.first { $0.id == jobID } ?? .null }
     private func values() -> [String: Any] {
         let formatter = ISO8601DateFormatter()
@@ -69,8 +70,8 @@ struct CareerTrackingEditor: View {
         Form {
             Section { Text(job["company"].display + " · " + job["title"].display); Picker("跟进阶段", selection: $stage) { ForEach(Self.stages, id: \.self) { Text($0) } }.accessibilityIdentifier("career-stage") }
             Section("下一步") {
-                TextField("例如：等回复、准备一面", text: $nextAction).accessibilityIdentifier("career-next-action")
-                TextField("跟进笔记", text: $notes, axis: .vertical).lineLimit(3...8)
+                TextField("例如：等回复、准备一面", text: $nextAction).focused($focusedField, equals: "nextAction").submitLabel(.done).accessibilityIdentifier("career-next-action")
+                TextField("跟进笔记", text: $notes, axis: .vertical).focused($focusedField, equals: "notes").lineLimit(3...8)
                 Toggle("设置跟进提醒", isOn: $remind)
                 if remind { DatePicker("提醒时间", selection: $reminder) }
             }
@@ -79,8 +80,8 @@ struct CareerTrackingEditor: View {
                 if hasInterview {
                     DatePicker("开始", selection: $start).accessibilityIdentifier("career-interview-start")
                     DatePicker("结束", selection: $end)
-                    TextField("地点或会议链接", text: $location)
-                    TextField("面试备注", text: $interviewNotes, axis: .vertical)
+                    TextField("地点或会议链接", text: $location).focused($focusedField, equals: "location").submitLabel(.done)
+                    TextField("面试备注", text: $interviewNotes, axis: .vertical).focused($focusedField, equals: "interviewNotes")
                     Text("改期会更新同一条计划；关闭此开关会取消对应日程。").font(.caption).foregroundStyle(.secondary)
                 }
             }
@@ -100,7 +101,14 @@ struct CareerTrackingEditor: View {
                 Text("先保存到手机，电脑连接后同步。材料审批需要在线完成。").font(.caption).foregroundStyle(.secondary)
                 if let message = client.message { Text(message).font(.caption).foregroundStyle(.orange) }
             }
-        }.navigationTitle("跟进与面试").onAppear {
+        }.navigationTitle("跟进与面试").scrollDismissesKeyboard(.interactively)
+            .onSubmit { focusedField = nil }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    if focusedField != nil { Button("完成输入") { focusedField = nil }.accessibilityIdentifier("career-dismiss-tracking-keyboard") }
+                }
+            }
+            .onAppear {
             guard editingBase == nil else { return }
             let f = job["followUp"]
             stage = Self.stages.contains(f["stage"].string) ? f["stage"].string : "未投递"; notes = f["notes"].string; nextAction = f["nextAction"].string
