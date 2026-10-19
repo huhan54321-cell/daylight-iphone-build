@@ -84,7 +84,7 @@
     },
     {
       "file": "ios/Daylight/CareerHubView.swift",
-      "sha256": "47abf66554e17e931479bb289fbcf5a0f7734c963c84dab0caa93bc1c9966617"
+      "sha256": "e528dfb6eaf14ba6cb693bb7e37d243c53e195d87d3a9a034e7db0f792149e3c"
     },
     {
       "file": "ios/Daylight/CareerJobDetail.swift",
@@ -364,7 +364,7 @@
     },
     {
       "file": "scripts/career-mobile-sync.cjs",
-      "sha256": "67209bca3102d7222e1593451040d953976bab055913e36ed6db847767452179"
+      "sha256": "30809ba5b9a1635ecfa99b546f7bd046215c2cb145a91acfb5b8c54ef33d2674"
     },
     {
       "file": "scripts/career-public-discovery.cjs",
@@ -536,11 +536,11 @@
     },
     {
       "file": "desktop/career/workbench.css",
-      "sha256": "41df305d5356b01c64a39c8da94a35a2a1c37385a7ac4408063f160e05de0785"
+      "sha256": "0ad268ebd5d9195aa30e2d52893ada5dc8fa48670ef387c856c84e7131aa6719"
     },
     {
       "file": "desktop/career/workbench.js",
-      "sha256": "70decf232baa339e0b80f73305f8cdaed265ae5898541e2d3db7539b01dcea64"
+      "sha256": "2e575c457ff4163c1689a7cb8cf3687a41fa9cd72cc897a169c6e325fd88158d"
     },
     {
       "file": "scripts/start-career-background.cmd",

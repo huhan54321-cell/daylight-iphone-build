@@ -131,7 +131,16 @@ struct CareerAssistantView: View {
             }
             Section("待核查机会") { ForEach(client.snapshot["opportunities"].array) { row in NavigationLink(row["title"].string) { CareerOpportunityView(client: client, opportunity: row) } } }
             Section("具身观察 · 已保存资料") {
-                ForEach(client.snapshot["articles"].array) { row in if let url = URL(string: row["url"].string), url.scheme == "https" { Link(destination: url) { VStack(alignment: .leading) { Text(row["title"].string); Text(row["summary"].string).font(.caption).foregroundStyle(.secondary) } }.accessibilityIdentifier("career-article-" + row.id) }
+                ForEach(client.snapshot["articles"].array) { row in
+                    if let url = URL(string: row["url"].string), url.scheme == "https" {
+                        Link(destination: url) {
+                            VStack(alignment: .leading) {
+                                Text(row["title"].string)
+                                Text(row["summary"].string).font(.caption).foregroundStyle(.secondary)
+                            }
+                        }.accessibilityIdentifier("career-article-" + row.id)
+                    }
+                }
             }
         }
     }

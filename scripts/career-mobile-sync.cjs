@@ -49,7 +49,7 @@ function createMobileSync(store, now) {
         const digest = hash(canonical(op)), previous = store.get('mobileOperations', op.id);
         if (previous) {
           if (previous.digest !== digest) throw fail('操作编号已使用，请重新确认修改', 409);
-          return previous.result;
+          return { ...previous.result, current: store.get(op.kind, previous.result.targetID) || previous.result.current };
         }
         validatePatch(op.kind, op.patch);
         if (!op.base || typeof op.base !== 'object' || Object.keys(op.patch).some(k => !Object.hasOwn(op.base, k))) throw fail('缺少修改前的内容');
