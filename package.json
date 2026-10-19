@@ -2,6 +2,7 @@
   "name": "daylight-personal-assistant",
   "version": "0.4.0",
   "private": true,
+  "engines": { "node": ">=24.15.0" },
   "description": "日常 · iPhone 原生应用与本地交互原型",
   "scripts": {
     "start": "node scripts/serve.cjs",
@@ -13,6 +14,9 @@
     "career": "node scripts/career-server.cjs",
     "career:lan": "node scripts/career-server.cjs --lan",
     "career:login:boss": "node scripts/career-browser-collector.mjs --source boss --login",
-    "career:test": "node --test tests/career-*.test.cjs"
+    "career:test": "node --test tests/career-*.test.cjs",
+    "career:assistant:test": "node --test tests/career-assistant*.test.cjs tests/career-discovery.test.cjs",
+    "xhs": "node --env-file-if-exists=data/xhs-private/model.env scripts/xhs-server.cjs",
+    "xhs:test": "node --test tests/xhs-*.test.cjs"
   }
 }

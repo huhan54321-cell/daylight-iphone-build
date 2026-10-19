@@ -31,7 +31,7 @@ final class CareerStore: ObservableObject {
 
     var configured: Bool { usePrivateService ? !configuration.baseURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty : CareerPublicEndpoint.url != nil }
     var jobs: [CareerJob] {
-        var values = (feed?.jobs ?? []).filter { !CareerPublicContent.excluded($0) }
+        var values = (feed?.jobs ?? []).filter { usePrivateService || !CareerPublicContent.excluded($0) }
         if let legacy = legacySavedJob(), !values.contains(where: { $0.stableID == legacy.stableID }) { values.append(legacy) }
         return values
     }
@@ -130,7 +130,7 @@ final class CareerStore: ObservableObject {
             if usePrivateService { try saveConfiguration() }
             notice = nil
             let result: CareerFeed
-            if usePrivateService { result = CareerPublicContent.cleaned(try await CareerNetworking(configuration: configuration).fetch(refresh: refresh)) }
+            if usePrivateService { result = try await CareerNetworking(configuration: configuration).fetch(refresh: refresh) }
             else {
                 guard let url = CareerPublicEndpoint.url else { throw CareerPublicError.unavailable }
                 result = try await CareerPublicNetworking().fetch(url: url)

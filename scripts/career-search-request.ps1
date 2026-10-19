@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 [Console]::InputEncoding = New-Object System.Text.UTF8Encoding($false)
 [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
 try {
@@ -24,4 +24,3 @@ try {
     $result = @{ status = $status; body = '' }
 }
 [Console]::Out.Write(($result | ConvertTo-Json -Compress -Depth 3))
-

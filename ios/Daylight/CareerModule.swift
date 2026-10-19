@@ -43,6 +43,14 @@ struct CareerModule: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 header
+                NavigationLink { CareerAssistantView(configuration: store.configuration) } label: {
+                    HStack {
+                        Label("个人求职助手", systemImage: "briefcase.fill")
+                        Spacer()
+                        Text("岗位 · 招聘线索 · 投递").font(.caption)
+                        Image(systemName: "chevron.right")
+                    }.padding(16).background(Color.blue.opacity(0.08), in: RoundedRectangle(cornerRadius: 16))
+                }.accessibilityIdentifier("career-assistant-open")
                 Picker("内容", selection: $section) { Text("岗位").tag("岗位"); Text("收藏").tag("收藏"); Text("公司").tag("公司"); Text("具身观察").tag("具身观察") }
                     .pickerStyle(.segmented).accessibilityIdentifier("career-section")
                 if section == "岗位" { jobs }

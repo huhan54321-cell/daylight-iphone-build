@@ -57,32 +57,63 @@ enum BackupCodec {
         var exportedAt = Date()
         var records: Snapshot
         var careerProfile: CareerProfileDocument? = nil
+        var careerLocalFiles: [String: Data]? = nil
     }
     static func export(_ snapshot: Snapshot, careerProfile: CareerProfileDocument? = nil) throws -> Data {
         try SnapshotChecks.validate(snapshot)
         if let careerProfile, !careerProfile.isValid { throw CareerProfileError.invalid }
         let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-        return try encoder.encode(Envelope(records: snapshot, careerProfile: careerProfile))
+        let bytes = try encoder.encode(Envelope(records: snapshot, careerProfile: careerProfile, careerLocalFiles: try careerArchive()))
+        guard bytes.count <= 20_000_000 else { throw AppFailure.message("完整备份超过 20 MB，请先单独导出电脑端求职资料") }
+        return bytes
     }
     static func decode(_ data: Data) throws -> Snapshot {
         try decodeBundle(data).records
     }
-    static func decodeBundle(_ data: Data) throws -> (records: Snapshot, careerProfile: CareerProfileDocument?) {
+    static func decodeBundle(_ data: Data) throws -> (records: Snapshot, careerProfile: CareerProfileDocument?, careerLocalFiles: [String: Data]?) {
         guard data.count <= 20_000_000 else { throw AppFailure.message("备份文件不能超过 20 MB") }
         if let object = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any], object["format"] as? String == "daylight-backup" {
             let envelope = try JSONDecoder().decode(Envelope.self, from: data)
             try SnapshotChecks.validate(envelope.records)
             if let profile = envelope.careerProfile, !profile.isValid { throw CareerProfileError.invalid }
-            return (envelope.records, envelope.careerProfile)
+            try validateCareerArchive(envelope.careerLocalFiles)
+            return (envelope.records, envelope.careerProfile, envelope.careerLocalFiles)
         }
         if let envelope = try? JSONDecoder().decode(Envelope.self, from: data) {
             guard envelope.format == "daylight-backup" else { throw AppFailure.message("这不是日常的备份文件") }
-            try SnapshotChecks.validate(envelope.records); return (envelope.records, envelope.careerProfile)
+            try SnapshotChecks.validate(envelope.records); try validateCareerArchive(envelope.careerLocalFiles)
+            return (envelope.records, envelope.careerProfile, envelope.careerLocalFiles)
         }
         if let bank = try? JSONDecoder().decode(BankArchive.self, from: data) {
-            let snapshot = try bank.snapshot(); try SnapshotChecks.validate(snapshot); return (snapshot, nil)
+            let snapshot = try bank.snapshot(); try SnapshotChecks.validate(snapshot); return (snapshot, nil, nil)
         }
         throw AppFailure.message("无法读取该备份，请选择日常备份或电脑短信账本导出的 JSON 文件")
+    }
+    private static let careerFileNames = Set(["career-feed-v1.json", "career-follow-up-v1.json", "career-saved-jobs-v1.json", "career-model-analysis-v1.json", "career-model-budget-v1.json", "assistant-v2.json"])
+    private static var careerDirectory: URL? { FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?.appendingPathComponent("DaylightCareer", isDirectory: true) }
+    static func validateCareerArchive(_ files: [String: Data]?) throws {
+        guard let files else { return }
+        guard files.keys.allSatisfy({ careerFileNames.contains($0) }), files.values.reduce(0, { $0 + $1.count }) <= 12_000_000 else { throw AppFailure.message("求职备份文件范围或大小无效") }
+        for data in files.values { _ = try JSONSerialization.jsonObject(with: data) }
+    }
+    static func careerArchive() throws -> [String: Data] {
+        guard let directory = careerDirectory else { return [:] }
+        var files: [String: Data] = [:]
+        for name in careerFileNames {
+            let url = directory.appendingPathComponent(name)
+            if FileManager.default.fileExists(atPath: url.path) { files[name] = try Data(contentsOf: url) }
+        }
+        try validateCareerArchive(files); return files
+    }
+    static func restoreCareerArchive(_ files: [String: Data]?) throws {
+        try validateCareerArchive(files)
+        guard let files, let directory = careerDirectory else { return }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        for (name, bytes) in files {
+            let url = directory.appendingPathComponent(name)
+            // Restore missing caches/bookmarks without overwriting newer local records.
+            if !FileManager.default.fileExists(atPath: url.path) { try bytes.write(to: url, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication]) }
+        }
     }
     static func merge(_ imported: Snapshot, into current: Snapshot) throws -> Snapshot {
         try SnapshotChecks.validate(imported)

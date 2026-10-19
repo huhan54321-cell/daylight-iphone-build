@@ -20,6 +20,7 @@ function normalizeConfig(raw = {}) {
     maxQueriesPerSource: boundedNumber(raw.maxQueriesPerSource, 3, 1, 8), pagesPerQuery: boundedNumber(raw.pagesPerQuery, 2, 1, 3), maxDetailsPerSource: boundedNumber(raw.maxDetailsPerSource, 8, 0, 12),
     cities: strings(raw.cities, DEFAULT_CONFIG.cities, 4), keywords: strings(raw.keywords, DEFAULT_CONFIG.keywords, 16), companies: Array.isArray(raw.companies) ? strings(raw.companies, [], 40) : [...DEFAULT_CONFIG.companies],
     browserCollectorEnabled: raw.browserCollectorEnabled === true,
+    publicDiscovery: raw.publicDiscovery === true,
     browserChannel: ['chromium', 'chrome', 'msedge'].includes(raw.browserChannel) ? raw.browserChannel : 'chromium',
     sources: raw.sources && typeof raw.sources === 'object' && !Array.isArray(raw.sources) ? Object.fromEntries(Object.entries(raw.sources).filter(([key, value]) => /^[a-z-]+$/.test(key) && typeof value === 'boolean')) : {}
   };

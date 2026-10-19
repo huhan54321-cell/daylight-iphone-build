@@ -234,6 +234,8 @@ async function collectTavily(request, env) {
   return { state: failure ? failure.state : 'ok', jobs, coverage: { queriesRun, pagesRun: queriesRun, detailsRun: 0, partial: true }, message: failure ? `${failure.message} 已完成 ${queriesRun}/${queries.length} 组查询，保留 ${jobs.length} 条具体页面线索；未完成的查询进度不跳过。` : `公开搜索 ${queriesRun} 组关键词，只提供待核查线索，不等同于招聘站全量或当前可投递岗位。` };
 }
 async function collectSource(sourceID, request, env, checkedAt) {
+  if (env.CAREER_PUBLIC_DISCOVERY && sourceID === 'shixiseng-public') return require('./career-public-discovery.cjs').collectShixiSearch(request, env, checkedAt);
+  if (env.CAREER_PUBLIC_DISCOVERY && sourceID === 'official') return require('./career-public-discovery.cjs').collectCompanies(request, env);
   const fixedCoverage = (jobs, pagesRun, detailsRun) => ({ mode: 'fixed_pages', cities: [...new Set(jobs.map(j=>j.city))], keywords: [], companies: [...new Set(jobs.map(j=>j.company))], totalQueries: 0, queriesRun: 0, pagesRun, detailsRun });
   if (sourceID === 'unitree') { const jobs = parseUnitree(await request(UNITREE_URL, {}, source('unitree').hosts), checkedAt); return { state: 'ok', jobs, coverage: fixedCoverage(jobs, 1, 0), message: '已读取官方公开岗位列表；未注明的实习类型、薪资、毕业年份保持未知。' }; }
   if (sourceID === 'zju') { const jobs = parseZJU(await request(ZJU_URL, {}, source('zju').hosts), checkedAt); return { state: 'ok', jobs, coverage: fixedCoverage(jobs, 1, 0), message: '已读取浙大招聘来源，保留原发布日期和有效期；页面仍可读不保证仍有名额。' }; }

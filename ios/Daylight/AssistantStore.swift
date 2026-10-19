@@ -42,6 +42,7 @@ final class AssistantStore: ObservableObject {
         let before = data.transactions.count + data.tasks.count + data.events.count + data.weights.count + data.workouts.count + data.smsInbox.count + data.plannedTrips.count
         let bundle = try BackupCodec.decodeBundle(bytes)
         let next = try BackupCodec.merge(bundle.records, into: data)
+        try BackupCodec.restoreCareerArchive(bundle.careerLocalFiles)
         let existingProfile = try CareerProfileDocument.loadSaved()
         if loadFailed {
             // Preserve an unreadable original before accepting a user-selected valid backup.

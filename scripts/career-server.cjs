@@ -9,6 +9,7 @@ const scheduler = require('./career-scheduler.cjs');
 const { runBrowserCollector } = require('./career-browser-runner.cjs');
 const details = require('./career-detail-queue.cjs');
 const { createSearchFetch } = require('./career-search-transport.cjs');
+const { createCareerAssistant } = require('./career-assistant.cjs');
 
 function loadToken(dataDir, env) {
   if (env.CAREER_SERVICE_TOKEN) {
@@ -66,7 +67,7 @@ function createCareerService(options = {}) {
   let scheduleState = scheduler.loadScheduler(dataDir, now()), scheduleTimer = null;
   let detailQueue = details.loadQueue(dataDir);
   const buckets = new Map();
-  const origins = new Set(['http://127.0.0.1:4173', 'http://localhost:4173', ...(env.CAREER_ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean)]);
+  const origins = new Set(['http://127.0.0.1:4173', 'http://localhost:4173', 'chrome-extension://hlmdaklafhleodnklhdbkbjmkbkfmgpc', ...(env.CAREER_ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean)]);
   function viewFeed() {
     return { ...publicFeed(feed, now()), scheduler: { enabled: config.schedulingEnabled, running: Boolean(refreshing), intervalHours: config.intervalHours, nextRunAt: scheduleState.nextRunAt, lastRunAt: scheduleState.lastRunAt, lastFinishedAt: scheduleState.lastFinishedAt,
       budgetDay: scheduleState.daily.day, budgetUsed: scheduleState.daily.requests, budgetLimit: config.dailyRequestBudget, hostRequired: true, detailQueuePending: detailQueue.filter(row => row.state === 'pending' || row.state === 'error').length, detailQueueUnreadable: detailQueue.filter(row => row.state === 'unreadable' || row.state === 'blocked').length } };
@@ -80,12 +81,13 @@ function createCareerService(options = {}) {
     if (buckets.size > 200) for (const [ip, item] of buckets) if (stamp - item.since >= 60000) buckets.delete(ip);
     return bucket.count <= 80;
   }
-  async function refresh(force = true) {
+  async function refresh(force = true, configOverride = null) {
     if (refreshing) return refreshing;
     if (Date.now() - lastRefreshAt < (options.refreshCooldown ?? 60000)) throw Object.assign(new Error('请至少间隔一分钟刷新，避免重复请求招聘站'), { status: 429 });
     lastRefreshAt = Date.now();
     refreshing = enqueue(async () => {
-      if (!options.config) config = scheduler.loadConfig(dataDir);
+      if (configOverride) config = scheduler.normalizeConfig(configOverride);
+      else if (!options.config) config = scheduler.loadConfig(dataDir);
       scheduleState.lastRunAt = now();
       let runRequests = 0;
       const start = scheduleState.sourceCursor || 0;
@@ -95,14 +97,14 @@ function createCareerService(options = {}) {
         if (config.sources[provider.id] === false || !scheduler.shouldAttempt(scheduleState, provider.id, stamp, force)) continue;
         const planned = scheduler.queryPlan(config, scheduleState.sources[provider.id]?.queryCursor || {}, scheduleState.sources[provider.id]?.queryPages || {});
         let sourceRequests = 0;
-        const searching = ['shixiseng','boss','tavily'].includes(provider.id);
+        const searching = ['shixiseng','boss','tavily'].includes(provider.id) || provider.id === 'shixiseng-public' && config.publicDiscovery;
         const coverage = { mode: searching ? 'search' : 'fixed_pages', cities: [], keywords: [], companies: [], plannedKeywords: searching ? planned.queries.map(q=>q.keyword) : [], plannedCompanies: searching ? planned.queries.map(q=>q.company).filter(Boolean) : [], totalQueries: searching ? planned.totalQueries : 0, queriesRun: 0, pagesRun: 0, detailsRun: 0, requests: 0, partial: true, nextCursor: planned.nextCursor };
         const spend = count => {
           if (runRequests + count > config.maxRequestsPerRefresh || !scheduler.spendBudget(scheduleState, config, now(), count)) throw new SourceError('error', '本次或每日采集预算已用完；旧结果保留，下轮按来源和查询轮转继续。');
           runRequests += count; sourceRequests += count; scheduler.saveScheduler(dataDir, scheduleState);
         };
         const request = options.request || boundedFetch(fetchImpl, { ...options.fetchOptions, maxRequests: Math.min(16, config.maxRequestsPerRefresh), onRequest: () => spend(1) });
-        const queryEnv = { ...env, CAREER_QUERIES: planned.queries, CAREER_PAGES_PER_QUERY: config.pagesPerQuery, CAREER_MAX_DETAILS: config.maxDetailsPerSource, CAREER_DETAIL_CURSOR: scheduleState.sources[provider.id]?.detailCursor || 0 };
+        const queryEnv = { ...env, CAREER_PUBLIC_DISCOVERY: config.publicDiscovery, CAREER_QUERIES: planned.queries, CAREER_PAGES_PER_QUERY: config.pagesPerQuery, CAREER_MAX_DETAILS: config.maxDetailsPerSource, CAREER_DETAIL_CURSOR: scheduleState.sources[provider.id]?.detailCursor || 0 };
         let result;
         try {
           if (provider.id === 'boss' && config.browserCollectorEnabled && !options.collect) {
@@ -144,6 +146,10 @@ function createCareerService(options = {}) {
     }).finally(() => { refreshing = null; });
     return refreshing;
   }
+  let assistantInstance;
+  const getAssistant = () => assistantInstance ||= createCareerAssistant({ dataDir, now, xhsDir: options.xhsDir, xhsRunner: options.xhsRunner,
+    applicationAdapters: options.applicationAdapters, analyze: options.analyze, cooldownMs: options.refreshCooldown,
+    getFeed: viewFeed, getCollectorConfig: () => config, refreshJobs: settings => refresh(true, settings) });
   const server = http.createServer(async (req, res) => {
     const origin = req.headers.origin;
     const headers = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer' };
@@ -156,6 +162,10 @@ function createCareerService(options = {}) {
       const route = new URL(req.url, 'http://localhost').pathname;
       if (req.method === 'GET' && route === '/health') return reply(200, { status: 'ok', service: 'daylight-career', schemaVersion: 1 });
       if (!authorized(req.headers.authorization, token)) return reply(401, { error: '需要有效的服务连接凭据' });
+      if (route.startsWith('/v2/career/')) {
+        const body = req.method === 'POST' ? await readBody(req, 16 * 1024 * 1024) : {};
+        return reply(req.method === 'POST' && route === '/v2/career/refresh' ? 202 : 200, await getAssistant().handle(req.method, route, body));
+      }
       if (req.method === 'GET' && route === '/v1/career/feed') return reply(200, viewFeed());
       if (req.method === 'POST' && route === '/v1/career/refresh') {
         await readBody(req, 4096);
@@ -207,8 +217,10 @@ function createCareerService(options = {}) {
     }, delay);
     scheduleTimer.unref();
   }
-  server.on('close', stopScheduler);
-  return { server, refresh, waitForRefresh: () => refreshing || Promise.resolve(viewFeed()), getFeed: viewFeed, startScheduler, stopScheduler, dataDir };
+  server.on('close', () => { stopScheduler(); assistantInstance?.close().catch(() => {}); });
+  const service = { server, refresh, waitForRefresh: () => refreshing || Promise.resolve(viewFeed()), getFeed: viewFeed, startScheduler, stopScheduler, dataDir };
+  Object.defineProperty(service, 'assistant', { get: getAssistant });
+  return service;
 }
 if (require.main === module) {
   const args = process.argv.slice(2);
@@ -222,9 +234,8 @@ if (require.main === module) {
     console.log(`岗位接收服务：http://127.0.0.1:${port}，${args.includes('--lan') ? '允许同一局域网访问' : '只允许本机访问'}`);
     console.log(`连接凭据保存在 ${path.join(dataDir, 'token.txt')}；请在 App 服务连接中填写，不要上传此目录。`);
     if (!args.includes('--no-schedule')) {
-      service.startScheduler();
-      const hours = service.getFeed().scheduler.intervalHours;
-      console.log(`已启用持久化周期采集，每 ${hours % 24 === 0 ? hours / 24 + ' 天' : hours + ' 小时'}；电脑服务需保持运行。`);
+      service.assistant.startScheduler();
+      console.log('已启用每天北京时间 09:00 增量发现；错过后当日补做一次，电脑服务需保持运行。');
     }
   });
   service.server.on('error', error => { console.error(error.code === 'EADDRINUSE' ? '端口已占用，请使用 --port 指定其他端口。' : '服务启动失败。'); process.exitCode = 1; });

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "日常求职助手 · 当前页采集",
+  "version": "0.1.0",
+  "description": "由本人预览并导入当前招聘页面的可见岗位，不发送消息或投递简历。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:4176/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsKQmCacTROZl/kQnObroII2hC9d3dMYRns+Yc2NtIHKzeRy9xroxPfOeFosauK2tmlNzpnwWz+GmOLsbvt0DYot7ub7l72UKLcdjaHiguALSlJLEM0Pa9JwaxbM8ad/BwsJjBDQ7CQx4sxd2IdSFaTOEW1Ww0puYQqa3/Bj+UsDo16AeXCSn5HLGVs5MqyEH151wOh5iPUVTI1VyCkPTuLTQtt2gahb7HwLzSh3/KJjIe9yKVJZkDb+uB/O9p0x+XkcgoqmbUSY7Lse7O51TYnB1jE+2VigojRuPuhdraW9oEUwMGDwM7XwOgGcMePN9ApCdovn5YfS3XgvjBIm5jwIDAQAB"
+}

@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-19T04:52:14.799Z",
+  "projects": [
+    {
+      "repo": "JiemsLBJ/offer-harvester",
+      "url": "https://github.com/JiemsLBJ/offer-harvester",
+      "license": "MIT",
+      "referenceCommit": "cd0086ea48786c0216e6a5905be613bcfa8471cd",
+      "usage": "design-reference-only; no third-party source copied"
+    },
+    {
+      "repo": "Bynlk/JobHunter",
+      "url": "https://github.com/Bynlk/JobHunter",
+      "license": "MIT",
+      "referenceCommit": "4b5a69010a98b3d80b408fd983c1c2dfa60788e4",
+      "usage": "design-reference-only; no third-party source copied"
+    },
+    {
+      "repo": "S03-5/resume-autofill",
+      "url": "https://github.com/S03-5/resume-autofill",
+      "license": "MIT",
+      "referenceCommit": "45919a325be10f0960ea560fbdc28b7feef23d0d",
+      "usage": "design-reference-only; no third-party source copied"
+    },
+    {
+      "repo": "srbhr/Resume-Matcher",
+      "url": "https://github.com/srbhr/Resume-Matcher",
+      "license": "Apache-2.0",
+      "referenceCommit": "ff5b370372d39b6cb6b56fd0dad88a2fe5c3abce",
+      "usage": "design-reference-only; no third-party source copied"
+    }
+  ]
+}

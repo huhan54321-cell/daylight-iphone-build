@@ -1,0 +1,25 @@
+'use strict';
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { once } = require('node:events');
+const { createCareerService } = require('../scripts/career-server.cjs');
+test('v2 endpoints require authentication, allow only paired extension origin and preserve v1', async t => {
+  const parent = path.resolve('.test-tmp'); fs.mkdirSync(parent, { recursive: true });
+  const dataDir = fs.mkdtempSync(path.join(parent, 'assistant-http-'));
+  const token = 'local-test-token-with-enough-randomness';
+  const s = createCareerService({ dataDir, token, env: {}, xhsDir: path.join(dataDir, 'xhs'), refreshCooldown: 0, collect: async () => ({ state: 'not_configured', jobs: [], message: 'test' }) });
+  s.server.listen(0, '127.0.0.1'); await once(s.server, 'listening');
+  t.after(async () => { await s.assistant.close(); s.server.closeAllConnections(); await new Promise(r => s.server.close(r)); fs.rmSync(dataDir, { recursive: true, force: true }); });
+  const endpoint = `http://127.0.0.1:${s.server.address().port}`;
+  const get = (route, headers = {}) => fetch(endpoint + route, { headers });
+  assert.equal((await get('/v2/career/snapshot')).status, 401);
+  assert.equal((await get('/v2/career/snapshot', { Authorization: 'Bearer ' + token, Origin: 'https://evil.test' })).status, 403);
+  const response = await get('/v2/career/snapshot', { Authorization: 'Bearer ' + token, Origin: 'chrome-extension://hlmdaklafhleodnklhdbkbjmkbkfmgpc' });
+  assert.equal(response.status, 200); const snapshot = await response.json(); assert.equal(snapshot.schemaVersion, 2); assert.equal(snapshot.profiles.length, 1); assert.ok(snapshot.sources.length);
+  assert.ok(!JSON.stringify(snapshot).includes(token));
+  assert.equal((await get('/v1/career/feed', { Authorization: 'Bearer ' + token })).status, 200);
+  const imported = await fetch(endpoint + '/v2/career/browser/import', { method: 'POST', headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' }, body: JSON.stringify({ sourceID: 'boss', jobs: [{ company: '测试公司', title: '机器人实习', city: '杭州', url: 'http://127.0.0.1/secret' }] }) });
+  assert.equal(imported.status, 400); assert.equal(s.assistant.snapshot().jobs.length, 0);
+});

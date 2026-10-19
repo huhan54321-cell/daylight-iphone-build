@@ -20,7 +20,7 @@
     },
     {
       "file": "ios/Daylight/AssistantStore.swift",
-      "sha256": "850d8ddf7d2346efc0f971d433774dafe4dfd10d5de536b9103d609dbdf89bec"
+      "sha256": "45e5a702a4fb319c487add73d2c00e60bfc6ddb0091cfd0fd5ecfc854cbd9cd2"
     },
     {
       "file": "ios/Daylight/BankIntents.swift",
@@ -47,6 +47,18 @@
       "sha256": "04bdb608b96a6ea7b7a5dc9970389fcc398ad79b50ecf57925efd1f0171dd966"
     },
     {
+      "file": "ios/Daylight/CareerAssistant.swift",
+      "sha256": "01af07485c052d3aacf634ca5ba54835cee35beb69c471ac6235d072c8465d29"
+    },
+    {
+      "file": "ios/Daylight/CareerAssistantEditors.swift",
+      "sha256": "50583bc14a7c6590d84754fcf8ce58d6e3d4902faca7d2584c12f3f45ea42993"
+    },
+    {
+      "file": "ios/Daylight/CareerAssistantView.swift",
+      "sha256": "31e46bd217f8c8e465691842958c45343bc818325eafe7f6e7d430cf4d603754"
+    },
+    {
       "file": "ios/Daylight/CareerBookmarkMigration.json",
       "sha256": "47cb143dfbd5d94a624d94a72f7d1a43e604a61927934450792665ec701505dd"
     },
@@ -64,11 +76,11 @@
     },
     {
       "file": "ios/Daylight/CareerModule.swift",
-      "sha256": "403e7b8c6a19f0dda3cd800db6fe94b4a9f6c5c84dd046b285eca9eed03dce61"
+      "sha256": "8575dfc329408424b207857e2cf39d28759f42d425b2538312265b703484b149"
     },
     {
       "file": "ios/Daylight/CareerNetworking.swift",
-      "sha256": "406504ede7c91df28c01f8d6865bd19ed3ee5f44dd70260fb0d69dd7ea0f014f"
+      "sha256": "29350071fb83e8146c7196c39d4cca456ba46c8fd053444d61d9f4bcb18b0c04"
     },
     {
       "file": "ios/Daylight/CareerPublicNetworking.swift",
@@ -80,7 +92,7 @@
     },
     {
       "file": "ios/Daylight/CareerStore.swift",
-      "sha256": "74f3078d73697a785933290e3a98d2de50b4dcdd922f6813a0b431b219a79daf"
+      "sha256": "8e53144f1ead6eadc9fc3a61db95aa4bfde419af03bcb7dfab976b7704aa5219"
     },
     {
       "file": "ios/Daylight/ContentView.swift",
@@ -144,7 +156,7 @@
     },
     {
       "file": "ios/Daylight/RecordRepository.swift",
-      "sha256": "1f2732adb577b09b794d208d7c953f7cc7705fbc276a840d6ccb456e60c3318a"
+      "sha256": "8327b27f2b6a6e4a956fe776eb0c8921546f703d911b0a8759e4a6d6993ea342"
     },
     {
       "file": "ios/Daylight/SMSInboxPolicy.swift",
@@ -184,7 +196,7 @@
     },
     {
       "file": "ios/Daylight.xcodeproj/project.pbxproj",
-      "sha256": "8058623e92aab0c01282ca6777263b8d6557d17aa07cbf3b5169318e25c82a00"
+      "sha256": "7c7b36ee0d99cfd54e20637bed37bf0f1240d9e5905f7ce489c57ebb8f3a2e3d"
     },
     {
       "file": "ios/Daylight.xcodeproj/xcshareddata/xcschemes/Daylight.xcscheme",
@@ -248,11 +260,27 @@
     },
     {
       "file": ".github/workflows/ios-build.yml",
-      "sha256": "5ff8bd5817000dac522d60a82859983c90fc56bc698f51424b539093ff313ce0"
+      "sha256": "10c8c04347400113100073832605f2a45c33b8a01d83a6dd1b5d837dcb47ec69"
     },
     {
       "file": "scripts/career-adapters.cjs",
-      "sha256": "5323aea0d42f82cf366be96e75b9b99135a4cca94f6a16717f3cd00966fb568a"
+      "sha256": "6506b34b733d452db8e753b8bdc81dba47130ad0473ef3e50c325d55f8455124"
+    },
+    {
+      "file": "scripts/career-assistant-domain.cjs",
+      "sha256": "cfa5797798a3b592e2ffe578ef610eb4703486dd9da8f4da3d0e09da4e0ccf62"
+    },
+    {
+      "file": "scripts/career-assistant-live-check.cjs",
+      "sha256": "ac93b5d2868d622c9ad3d9d75712552c2d03f82c8fc2abc7683d06c3b5c85eb5"
+    },
+    {
+      "file": "scripts/career-assistant-store.cjs",
+      "sha256": "708c5ba910e6b341aaba98468bde97aa48f87d89aad35ac31c755d5beb49903c"
+    },
+    {
+      "file": "scripts/career-assistant.cjs",
+      "sha256": "4ef45f0590eec79edc1fc2b48291a0429cd6645b9c59c577642d266abdc601fc"
     },
     {
       "file": "scripts/career-browser-collector.mjs",
@@ -271,6 +299,10 @@
       "sha256": "4d1127c8bff110cdd2416d38b970f72368f8b88192c39d0a643ced2b649514e5"
     },
     {
+      "file": "scripts/career-codex.cjs",
+      "sha256": "d47fa42ec19075d38771923f74ff1f2fadd39763b2c5f8f1b475e6036ae9f794"
+    },
+    {
       "file": "scripts/career-constraints.cjs",
       "sha256": "f1868942b2845b945a8a94f2ad133e27cde01d3e633ecd1427524a0ba0870f3a"
     },
@@ -287,16 +319,20 @@
       "sha256": "405b623592f1eb337dec542209e2777c69cef0fc4ac42b06ca52288f31e58422"
     },
     {
+      "file": "scripts/career-public-discovery.cjs",
+      "sha256": "e486a8517d6ef7a75da2111b2ee1b46569c7725996ebe15827a1e99198c9b54d"
+    },
+    {
       "file": "scripts/career-public-feed.cjs",
       "sha256": "37eb7db97ada692feabfe30bb0b45ffb74315a53124f960baf7f809e6f07e954"
     },
     {
       "file": "scripts/career-scheduler.cjs",
-      "sha256": "88b6f9d63d8aaa269837acadf5e445eb170901b6bc965a2997f73fbf8ffadda1"
+      "sha256": "b913a9d398b53e6e5125c1471e95a0cbba82cb6321bfe2e49035614df75a227f"
     },
     {
       "file": "scripts/career-search-request.ps1",
-      "sha256": "595457174f97110d82e2819e261bdee98ae6f39df285848a43856e845a78265b"
+      "sha256": "eb2fceb8f0c1adc602255f4590a089565e3f4194bc0df9d6ab64b571072e577b"
     },
     {
       "file": "scripts/career-search-transport.cjs",
@@ -304,7 +340,43 @@
     },
     {
       "file": "scripts/career-server.cjs",
-      "sha256": "ef1c7d720899f7bb927610d7f1549b5124e1b9efef0842c2ce5f0fc28a967fdb"
+      "sha256": "728a5483cbf6e275b95787cf82cdd3a36ca7ed15b630c1d64a0d3d09bd106dc7"
+    },
+    {
+      "file": "scripts/xhs-core.cjs",
+      "sha256": "5a255a5791862b40f1fb7ea6ff2eb87089b131f3863b009bff7d08487fa1b64b"
+    },
+    {
+      "file": "scripts/xhs-relevance.cjs",
+      "sha256": "b2f9892f1eef2ef8156e865e1bfc55e1758d9617eb9173df11b4a0ab27189681"
+    },
+    {
+      "file": "scripts/xhs-history.cjs",
+      "sha256": "45f64677ceed9bca847d347a7b2d75748df022ade512f1451dfef553cadb429d"
+    },
+    {
+      "file": "scripts/xhs-dedup.cjs",
+      "sha256": "6965d7e5bfab5312dbc0ea7ebf9ea3c161a1a23995d02d8c6f75045106e4188b"
+    },
+    {
+      "file": "scripts/xhs-browser-runner.cjs",
+      "sha256": "e70dcaa75295a0a90e9652d2f4db96dd971cdb6b84ad62687e0c806909a27e38"
+    },
+    {
+      "file": "scripts/xhs-browser-collector.mjs",
+      "sha256": "d5472acf30f31d90ec522e7e1845a82a6c5ebf1d60ebf58f653e9f63227c7e4c"
+    },
+    {
+      "file": "scripts/xhs-browser-page.cjs",
+      "sha256": "524afecded24b8882db4590063ac501bc93f814d15309ed625a0dd831ed91000"
+    },
+    {
+      "file": "scripts/xhs-login-page.cjs",
+      "sha256": "d0f9b17824809bfa3d22af0c64ce6b68b52e89e1bb10400807ffe65f5eb8fe1e"
+    },
+    {
+      "file": "scripts/xhs-note-images.cjs",
+      "sha256": "46ecab15382c44d9bc571e95898111606d7e06844f3433683bf52bd3bb1eb747"
     },
     {
       "file": "public/career-feed.json",
@@ -313,6 +385,14 @@
     {
       "file": "docs/career-public-update.md",
       "sha256": "39632bc5e03dd4fbb24a72ca2fa4e3dff6cf9cfc40b040cf4d86275b72b006e5"
+    },
+    {
+      "file": "tests/career-assistant-http.test.cjs",
+      "sha256": "dcc6fef68069f5cb19671e5fb6dd59d01ed68c3c96b4eb970cd34b688ea248e1"
+    },
+    {
+      "file": "tests/career-assistant.test.cjs",
+      "sha256": "d27863b1746b6d2a57ed677fd8d7c5676392adbff8e08f9e667064ceebd78d25"
     },
     {
       "file": "tests/career-browser-launch.test.cjs",
@@ -329,6 +409,10 @@
     {
       "file": "tests/career-detail-queue.test.cjs",
       "sha256": "d7fe870eed27446ce73d8a5fbc4167d39f877bebe6ddddbf047c0c045c7478fb"
+    },
+    {
+      "file": "tests/career-discovery.test.cjs",
+      "sha256": "2c8b66b2618c1a7111ea35ab3b67575deed9b9800ba43ce0be3eb02cea49bae5"
     },
     {
       "file": "tests/career-public-feed.test.cjs",
@@ -352,15 +436,39 @@
     },
     {
       "file": "package.json",
-      "sha256": "47746ff3ad22293a1d5fb29721699ca3b7a1aea76043b83ebaed9e1ca051acc9"
+      "sha256": "8b4c030ca489f5fffb0bba77fab66d8160043b548faed104d583846134fc8285"
     },
     {
       "file": "docs/career-service.md",
       "sha256": "491e30357f99907eca89c9966bef2f23f117d3fdcb445060db10cba0f637264a"
     },
     {
+      "file": "docs/career-assistant.md",
+      "sha256": "96a718954dd81cd6e152a47e350dd68096f2f8746b7d1179c9d88fd73f5f8bfb"
+    },
+    {
+      "file": "docs/career-reference-projects.json",
+      "sha256": "ee2f185212c5753e6ff5cc7077b0eb7f888da3fd3a3cc87270fae1ece285187c"
+    },
+    {
+      "file": "scripts/setup-career-remote.ps1",
+      "sha256": "f2dfca6c605bbf313dbcb4f1e50093a8a4a624c4d633839ff09c37b76804e34a"
+    },
+    {
+      "file": "extensions/career-capture/manifest.json",
+      "sha256": "de8ec7f7262a59d89b0d63d6b1fb8ee3acc1d0cd55be4c5ab78460f206ac59bb"
+    },
+    {
+      "file": "extensions/career-capture/popup.html",
+      "sha256": "13ff9315083531a58e61b434d3a9c6463629c2df75896d262fa2aa02a5387a78"
+    },
+    {
+      "file": "extensions/career-capture/popup.js",
+      "sha256": "18b95bcf25846c38efec45db93e1af003b319a30213eabe67a3c7e55829256cb"
+    },
+    {
       "file": "scripts/start-career.cmd",
-      "sha256": "7ca87ba280afae4c981428d81b7a19daf35a144e7dab4db331f77a8a7e3c730b"
+      "sha256": "30c60ca2a10189ef64c0590dfe29fde5d3cadb775062c08dba8c9f8fcb0ae16d"
     },
     {
       "file": "scripts/generate-assets.cjs",

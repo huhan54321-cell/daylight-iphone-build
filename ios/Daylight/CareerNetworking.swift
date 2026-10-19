@@ -142,4 +142,23 @@ actor CareerNetworking {
             throw CareerFeedError.invalidFeed
         }
     }
+
+    func assistantRequest(route: String, body: Data?) async throws -> Data {
+        guard !route.isEmpty, route.count < 300, route.allSatisfy({ $0.isASCII && ($0.isLetter || $0.isNumber || $0 == "-" || $0 == "/" || $0 == ":") }) else { throw CareerServiceError.configuration }
+        let base = try configuration.endpoint(refresh: false).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
+        var request = URLRequest(url: base.appendingPathComponent("v2/career/" + route))
+        request.httpMethod = body == nil ? "GET" : "POST"
+        request.setValue("Bearer " + configuration.token.trimmingCharacters(in: .whitespacesAndNewlines), forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = body
+        let (bytes, response) = try await session.bytes(for: request, delegate: redirectPolicy)
+        guard let http = response as? HTTPURLResponse, response.expectedContentLength <= 16_777_216 else { throw CareerServiceError.transport }
+        var data = Data()
+        for try await byte in bytes { guard data.count < 16_777_216 else { throw CareerFeedError.tooLarge }; data.append(byte) }
+        guard (200...299).contains(http.statusCode) else {
+            if let error = try? JSONSerialization.jsonObject(with: data) as? [String: String], let message = error["error"] { throw AppFailure.message(message) }
+            throw CareerServiceError.http(http.statusCode)
+        }
+        return data
+    }
 }
