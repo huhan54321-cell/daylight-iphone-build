@@ -110,7 +110,7 @@ struct TodayModule: View {
             }
         }
         ModuleSection(title: "照顾自己") {
-            NavigationLink("运动与健康", systemImage: "waveform.path.ecg") { ScrollView { VStack(alignment: .leading, spacing: 24) { HealthModule(entry: $entry) }.padding(20) }.navigationTitle("运动") }.accessibilityIdentifier("open-health")
+            NavigationLink { ScrollView { VStack(alignment: .leading, spacing: 24) { HealthModule(entry: $entry) }.padding(20) }.navigationTitle("运动") } label: { Label("运动与健康", systemImage: "waveform.path.ecg") }.accessibilityIdentifier("open-health")
             HStack(alignment: .top, spacing: 12) {
                 SoftCard { SmallMetric(title: "最近体重", value: store.data.weights.max(by: { $0.date < $1.date }).map { String(format: "%.1f kg", $0.kilograms) } ?? "— kg", valueIdentifier: "today-latest-weight") }.frame(maxWidth: .infinity)
                 SoftCard { SmallMetric(title: "今日运动", value: "\(Int(store.data.workouts.filter { Calendar.current.isDateInToday($0.date) }.reduce(0) { $0 + $1.minutes })) 分钟", valueIdentifier: "today-workout-minutes") }.frame(maxWidth: .infinity)

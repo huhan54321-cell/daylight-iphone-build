@@ -185,6 +185,7 @@ function createCareerAssistant(options) {
       if (current && (current.revision !== previous.revision || !['draft', 'approved'].includes(current.state))) throw fail('申请已被更新，请重新读取', 409);
       if (!previous && store.list('applications').some(a => a.jobID === job.id && !['cancelled', 'rejected'].includes(a.state))) throw fail('该岗位已有申请，请继续已有记录', 409);
       store.event('prepare_application', row.id, now());
+      if (!store.get('followups', job.id) || store.get('followups', job.id).stage === '未投递') mobile.change('followups', job.id, { stage: '准备材料' });
       return store.put('applications', row);
     });
   }
@@ -210,6 +211,7 @@ function createCareerAssistant(options) {
       if (form.hash !== a.formHash || get('materials', m.id).version !== m.version || get('jobs', job.id).contentHash !== job.contentHash) return store.put('applications', { ...a, state: 'draft', approvalHash: null, message: '网页表单、岗位或材料已变化，本次未提交，请重新审核。' });
       const result = await adapter.submit({ job, material: m, fields: a.fields, action: a.action, idempotencyKey: a.reviewHash });
       const confirmed = result?.confirmed === true && typeof result.receipt === 'string' && result.receipt.length > 0;
+      mobile.change('followups', job.id, confirmed ? { stage: { greeting: '已打招呼', send_resume: '已发送简历', submit: '已投递' }[a.action] } : { nextAction: '核查本次投递结果，避免重复提交' });
       return store.put('applications', { ...get('applications', id), state: confirmed ? ({ greeting: 'greeting_sent', send_resume: 'resume_sent', submit: 'submitted' }[a.action]) : 'unknown', receipt: domain.text(result?.receipt, 2000), updatedAt: now(), message: confirmed ? '已取得平台回执' : '提交结果不明，请到原站核查；不会自动重试。' });
     } catch { return store.put('applications', { ...get('applications', id), state: 'unknown', updatedAt: now(), message: '执行未取得明确回执，请到原站核查；不会自动重试。' }); }
   }
@@ -260,7 +262,14 @@ function createCareerAssistant(options) {
       if (a.state === 'executing') throw fail('执行中不能修改状态', 409);
       if (!['draft', 'cancelled', 'greeting_sent', 'resume_sent', 'submitted', 'interview', 'offer', 'rejected', 'unknown'].includes(body.state)) throw fail('状态无效');
       if (body.interviewAt && !Number.isFinite(Date.parse(body.interviewAt))) throw fail('面试时间无效');
-      return store.put('applications', { ...a, state: body.state, approvalHash: null, interviewAt: body.interviewAt || null, receipt: domain.text(body.receipt, 2000), updatedAt: now(), message: '由本人记录，非自动取得的平台回执。' });
+      return store.transaction(() => {
+        const stage = { draft: '准备材料', cancelled: '已结束', greeting_sent: '已打招呼', resume_sent: '已发送简历', submitted: '已投递', interview: '面试', offer: 'Offer', rejected: '未通过' }[body.state];
+        const patch = stage ? { stage } : { nextAction: '核查本次投递结果，避免重复提交' };
+        if (body.interviewAt) patch.interview = { start: new Date(body.interviewAt).toISOString(), end: new Date(Date.parse(body.interviewAt) + 3600000).toISOString(), location: '', notes: domain.text(body.receipt, 2000) };
+        if (body.state === 'cancelled') patch.interview = null;
+        mobile.change('followups', a.jobID, patch);
+        return store.put('applications', { ...a, state: body.state, approvalHash: null, interviewAt: body.interviewAt || a.interviewAt || null, receipt: domain.text(body.receipt, 2000), updatedAt: now(), message: '由本人记录，非自动取得的平台回执。' });
+      });
     }
     if (method === 'POST' && resource === 'jobs' && action === 'followup') {
       get('jobs', id);

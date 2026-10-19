@@ -136,7 +136,7 @@
     },
     {
       "file": "ios/Daylight/ContentView.swift",
-      "sha256": "2f28febad76aab680bdd4b919fd1df0b7e54f16acdc4460dfbd60d43f3cd8552"
+      "sha256": "f7a6a39afe03ea898bb57af5c5a79e883bf8d9233de54419bd00d1459a74e7c2"
     },
     {
       "file": "ios/Daylight/Daylight.entitlements",
@@ -220,7 +220,7 @@
     },
     {
       "file": "ios/Daylight/SettingsModule.swift",
-      "sha256": "97f9dc3a07565f5ba62d287e35dbbf8901ac3bdc8c920b30ede5630267bbfc1f"
+      "sha256": "64eb28c682db1eb5896b6597727b426572b967c96d185603058b2ad080183168"
     },
     {
       "file": "ios/Daylight/SummaryNotifications.swift",
@@ -324,7 +324,7 @@
     },
     {
       "file": "scripts/career-assistant.cjs",
-      "sha256": "9f1c7746fab032c7a5cac5e2c41fbb233152d4f9b800a025e8eb1e8e57488c50"
+      "sha256": "902374d976dd533b10fcbd43c3b790243938299854e73d31cc5d8250e07c1104"
     },
     {
       "file": "scripts/career-browser-collector.mjs",
@@ -508,7 +508,7 @@
     },
     {
       "file": "docs/career-assistant.md",
-      "sha256": "857edd2a854f9e2deda2a881592b6a940c9d4bf1cf5d6cc36f1e99532f415b20"
+      "sha256": "c7bfa2f69e2d9db27a206a6000dd3d3529b6484b8a35000447007e9c1c0ef784"
     },
     {
       "file": "docs/career-reference-projects.json",
@@ -540,7 +540,7 @@
     },
     {
       "file": "desktop/career/workbench.js",
-      "sha256": "2e575c457ff4163c1689a7cb8cf3687a41fa9cd72cc897a169c6e325fd88158d"
+      "sha256": "7e70faec6431ef1ad7afa8e42af56b9804c8dc17f0398dcfa47c67aa9cecd253"
     },
     {
       "file": "scripts/start-career-background.cmd",
