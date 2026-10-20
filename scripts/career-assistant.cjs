@@ -139,7 +139,9 @@ function createCareerAssistant(options) {
       }
       if (!stopped) {
         const count = (rows, before) => ({ added: rows.filter(row => !before.has(row.id)).length, changed: rows.filter(row => before.has(row.id) && before.get(row.id) !== row.contentHash).length });
-        const changes = { jobs: count(store.list('jobs'), beforeJobs), leads: count(store.list('leads'), beforeLeads) };
+        const notes = store.list('leads');
+        const eligible = notes.filter(lead => !lead.ignored && !['excluded', 'closed'].includes(lead.category) && domain.refreshDateBucket(lead, now()).dateBucket !== 'historical');
+        const changes = { jobs: count(store.list('jobs'), beforeJobs), leads: count(eligible, beforeLeads), notes: count(notes, beforeLeads) };
         const summary = `岗位新增 ${changes.jobs.added}、变化 ${changes.jobs.changed}；招聘线索新增 ${changes.leads.added}、变化 ${changes.leads.changed}。`;
         store.put('tasks', { ...get('tasks', task.id), state: failures.length ? 'partial' : 'completed', finishedAt: now(), changes,
           message: summary + (failures.length ? `${failures.join('、')}未全部完成，请查看来源状态。` : '本轮检索完成；没有新增不代表平台没有相关机会。') });

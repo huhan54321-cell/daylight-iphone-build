@@ -157,6 +157,17 @@ test('manual discovery keeps unverified BOSS automation disabled and normalizes 
   assert.equal(settings.sources.boss, false);
   assert.deepEqual(settings.cities, ['杭州', '上海', '深圳', '北京']);
 });
+
+test('discovery counts eligible recruitment leads separately from read posts', async t => {
+  const a = await fixture(t, { xhsRunner: () => ({ promise: Promise.resolve({ state: 'ok', notes: [
+    note(), note('b'.repeat(24), { title: '机器人实习求捞帖' }),
+    note('c'.repeat(24), { dateText: '2026-01-01' })
+  ], coverage: { detailsVisited: 3 } }), cancel() {} }) });
+  a.startRefresh({ sourceID: 'xiaohongshu' }); await a.waitForTask();
+  const changes = a.snapshot().tasks[0].changes;
+  assert.equal(changes.notes.added, 3); assert.equal(changes.leads.added, 1);
+  assert.equal(a.snapshot().reports[0].count, changes.leads.added);
+});
 test('SQLite restart preserves data and interrupted execution is unknown, never retried', async t => {
   const root = path.resolve('.test-tmp'); fs.mkdirSync(root, { recursive: true }); const d = fs.mkdtempSync(path.join(root, 'restart-'));
   const db = new AssistantStore(d); db.put('applications', { id: 'a', state: 'executing' }); db.put('tasks', { id: 't', state: 'running' }); db.close();

@@ -332,7 +332,7 @@
     },
     {
       "file": "scripts/career-assistant.cjs",
-      "sha256": "c737e674639df39a5d487041450775ee3910df6018210ffc1e115c774afc37b8"
+      "sha256": "d95bedafa8ba0b42e5d6a335a037a42119f2a9c643ef265c09a2b0f196903c82"
     },
     {
       "file": "scripts/career-browser-collector.mjs",
@@ -464,7 +464,7 @@
     },
     {
       "file": "tests/career-assistant.test.cjs",
-      "sha256": "fa8e467bca6542e1e65b51a7c087ab925cf0ff0a6f2fe266d1eebba728b46d52"
+      "sha256": "2fe8be589773a5f6272c68a4d045d0066b78830100c4b8fdbbb05cd638ce4c9a"
     },
     {
       "file": "tests/career-browser-launch.test.cjs",
