@@ -222,7 +222,8 @@ final class DaylightUITests: XCTestCase {
         tap(element("bank-row-edit-0"))
         replaceText("bank-edit-title", with: "UI 截图核对")
         replaceText("bank-edit-amount", with: "8.50")
-        tap(element("bank-edit-save"))
+        tap(app.buttons["bank-edit-save"])
+        XCTAssertTrue(app.buttons["bank-edit-save"].waitForNonExistence(timeout: 5), "The review editor must close before inspecting the underlying row.")
         XCTAssertTrue(bankSwitch(0).waitForExistence(timeout: 5))
         XCTAssertTrue(bankSwitch(0).label.contains("UI 截图核对"))
         tap(element("bank-import-confirm"), scroll: true)
@@ -491,8 +492,15 @@ final class DaylightUITests: XCTestCase {
     private func tap(_ target: XCUIElement, scroll: Bool = false, file: StaticString = #filePath, line: UInt = #line) {
         if scroll { scrollTo(target, file: file, line: line) }
         XCTAssertTrue(target.waitForExistence(timeout: 5), "Missing element: \(target)", file: file, line: line)
-        XCTAssertTrue(target.isHittable, "Element is not hittable: \(target)", file: file, line: line)
-        target.tap()
+        // SwiftUI toolbars expose both an Other wrapper and the actual Button
+        // under the same identifier. Activate the control, not its container.
+        var control = target
+        if target.elementType == .other && !target.identifier.isEmpty {
+            let button = target.descendants(matching: .button).matching(identifier: target.identifier).firstMatch
+            if button.exists { control = button }
+        }
+        XCTAssertTrue(control.isHittable, "Element is not hittable: \(control)", file: file, line: line)
+        control.tap()
     }
 
     private func toggle(_ target: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
