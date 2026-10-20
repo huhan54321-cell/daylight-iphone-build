@@ -41,7 +41,7 @@ final class DaylightUITests: XCTestCase {
         openEntry("money")
         replaceText("entry-title", with: "UI 已取消记录")
         replaceText("entry-amount", with: "1.23")
-        tap(element("entry-cancel"))
+        tap(app.buttons["entry-cancel"])
         assertText("today-record-count", equals: "0 笔")
         relaunch()
         assertText("today-record-count", equals: "0 笔")
@@ -57,18 +57,18 @@ final class DaylightUITests: XCTestCase {
         assertText("today-record-count", equals: "1 笔")
 
         tab("账本")
-        tap(element("finance-record-UI 茶饮"), scroll: true)
+        tap(app.buttons["finance-record-UI 茶饮"], scroll: true)
         XCTAssertTrue(element("entry-save").waitForExistence(timeout: 5))
         replaceText("entry-amount", with: "2.50")
-        tap(element("entry-save"))
+        tap(app.buttons["entry-save"])
         tab("今天")
         assertText("today-net-expense", equals: "¥ 2.50")
         assertText("today-record-count", equals: "1 笔")
 
         tab("账本")
-        tap(element("finance-record-UI 茶饮"), scroll: true)
+        tap(app.buttons["finance-record-UI 茶饮"], scroll: true)
         XCTAssertTrue(element("entry-save").waitForExistence(timeout: 5))
-        tap(element("entry-delete"), scroll: true)
+        tap(app.buttons["entry-delete"], scroll: true)
         let alert = app.alerts.firstMatch
         XCTAssertTrue(alert.waitForExistence(timeout: 5))
         tap(alert.buttons["删除"])
@@ -84,12 +84,12 @@ final class DaylightUITests: XCTestCase {
         openEntry("money")
         replaceText("entry-title", with: "UI 无效金额")
         replaceText("entry-amount", with: "0")
-        tap(element("entry-save"))
+        tap(app.buttons["entry-save"])
         let error = element("entry-error")
         XCTAssertTrue(error.waitForExistence(timeout: 5))
         XCTAssertFalse(error.label.isEmpty)
         XCTAssertTrue(element("entry-save").exists, "Validation must keep the editor open.")
-        tap(element("entry-cancel"))
+        tap(app.buttons["entry-cancel"])
         assertText("today-record-count", equals: "0 笔")
         relaunch()
         assertText("today-record-count", equals: "0 笔")
@@ -108,9 +108,9 @@ final class DaylightUITests: XCTestCase {
         XCTAssertFalse(app.staticTexts["净支出趋势"].exists)
         assertText("finance-record-count", equals:"6 笔", scroll:true)
         XCTAssertFalse(element("finance-record-UI 明细 1").exists)
-        tap(element("finance-toggle-details"), scroll:true)
+        tap(app.buttons["finance-toggle-details"], scroll:true)
         XCTAssertTrue(element("finance-record-UI 明细 1").exists)
-        tap(element("finance-toggle-details"), scroll:true)
+        tap(app.buttons["finance-toggle-details"], scroll:true)
         XCTAssertFalse(element("finance-record-UI 明细 1").exists)
         tab("今天")
         assertText("today-record-count", equals:"6 笔")
@@ -122,16 +122,16 @@ final class DaylightUITests: XCTestCase {
     func testSpokenScheduleLocalSaveAndDuplicateSurviveRelaunch() {
         launch()
         tab("计划")
-        tap(element("plan-spoken-schedule"), scroll: true)
+        tap(app.buttons["plan-spoken-schedule"], scroll: true)
         let sync = app.switches["schedule-sync-calendar"]
         toggle(sync)
         XCTAssertEqual(sync.value as? String, "0")
         replaceText("schedule-input", with: "今天九点UI会议；今天UI健身")
-        tap(element("schedule-record"), scroll: true)
+        tap(app.buttons["schedule-record"], scroll: true)
         assertText("schedule-added-count", equals: "新增 2 项安排", scroll: true)
-        tap(element("schedule-record"), scroll: true)
+        tap(app.buttons["schedule-record"], scroll: true)
         assertText("schedule-added-count", equals: "新增 0 项安排", scroll: true)
-        tap(element("schedule-close"))
+        tap(app.buttons["schedule-close"])
         scrollTo(element("plan-event-UI会议"))
         XCTAssertTrue(element("plan-event-UI会议").exists)
         relaunch()
@@ -142,23 +142,26 @@ final class DaylightUITests: XCTestCase {
     }
 
     func testNotificationPromotionRejectedAndSmallPaymentPersists() {
+        // Three previews, a save and a relaunch are still making progress at
+        // 180 seconds on hosted simulators. Keep a bounded scenario allowance.
+        executionTimeAllowance = 300
         launch()
         tab("账本")
-        tap(element("finance-import-notification"), scroll: true)
+        tap(app.buttons["finance-import-notification"], scroll: true)
         replaceText("bank-notification-title", with: "支付好礼")
         replaceText("bank-notification-input", with: "绑卡支付享优惠，消费立减5元。")
-        tap(element("bank-notification-parse"), scroll: true)
+        tap(app.buttons["bank-notification-parse"], scroll: true)
         XCTAssertTrue(element("bank-import-error").waitForExistence(timeout: 5))
         XCTAssertFalse(bankSwitch(0).exists)
-        tap(element("bank-input-clear"), scroll: true)
+        tap(app.buttons["bank-input-clear"], scroll: true)
         replaceText("bank-notification-title", with: "动账通知")
         let body = syntheticSMS(amount: "5", balance: "95.00")
             .replacingOccurrences(of: "，余额95.00元。【工商银行】", with: "。请点击查看详情。")
         replaceText("bank-notification-input", with: body)
-        tap(element("bank-notification-parse"), scroll: true)
+        tap(app.buttons["bank-notification-parse"], scroll: true)
         XCTAssertTrue(bankSwitch(0).waitForExistence(timeout: 5))
         XCTAssertEqual(bankSwitch(0).value as? String, "1")
-        tap(element("bank-import-confirm"), scroll: true)
+        tap(app.buttons["bank-import-confirm"], scroll: true)
         acknowledgeSave(count: 1)
         tab("今天")
         assertText("today-net-expense", equals: "¥ 5.00")
@@ -166,9 +169,9 @@ final class DaylightUITests: XCTestCase {
         relaunch()
         assertText("today-record-count", equals: "1 笔")
         tab("账本")
-        tap(element("finance-import-notification"), scroll: true)
+        tap(app.buttons["finance-import-notification"], scroll: true)
         replaceText("bank-notification-input", with: body)
-        tap(element("bank-notification-parse"), scroll: true)
+        tap(app.buttons["bank-notification-parse"], scroll: true)
         XCTAssertTrue(bankSwitch(0).waitForExistence(timeout: 5))
         XCTAssertFalse(bankSwitch(0).isEnabled)
         scrollTo(element("bank-import-confirm"))
@@ -182,7 +185,7 @@ final class DaylightUITests: XCTestCase {
         let first = bankSwitch(0)
         XCTAssertTrue(first.waitForExistence(timeout: 5))
         XCTAssertEqual(first.value as? String, "1")
-        tap(element("bank-import-confirm"), scroll: true)
+        tap(app.buttons["bank-import-confirm"], scroll: true)
         acknowledgeSave(count: 1)
         assertText("finance-balance-value", equals: "¥ 361.93")
         tab("今天")
@@ -198,7 +201,7 @@ final class DaylightUITests: XCTestCase {
         XCTAssertEqual(duplicate.value as? String, "0")
         scrollTo(element("bank-import-confirm"))
         XCTAssertFalse(element("bank-import-confirm").isEnabled)
-        tap(element("bank-import-close"))
+        tap(app.buttons["bank-import-close"])
         tab("今天")
         assertText("today-net-expense", equals: "¥ 8.00")
         assertText("today-record-count", equals: "1 笔")
@@ -211,7 +214,7 @@ final class DaylightUITests: XCTestCase {
         app.launchArguments.append("--ui-test-bank-fixture")
         launch()
         tab("账本")
-        tap(element("finance-import-screenshots"), scroll: true)
+        tap(app.buttons["finance-import-screenshots"], scroll: true)
         let second = bankSwitch(1)
         scrollTo(second)
         XCTAssertEqual(second.value as? String, "1")
@@ -219,21 +222,21 @@ final class DaylightUITests: XCTestCase {
         XCTAssertEqual(second.value as? String, "0")
 
         scrollTo(element("bank-row-edit-0"), direction: .down)
-        tap(element("bank-row-edit-0"))
+        tap(app.buttons["bank-row-edit-0"])
         replaceText("bank-edit-title", with: "UI 截图核对")
         replaceText("bank-edit-amount", with: "8.50")
         tap(app.buttons["bank-edit-save"])
         XCTAssertTrue(app.buttons["bank-edit-save"].waitForNonExistence(timeout: 5), "The review editor must close before inspecting the underlying row.")
         XCTAssertTrue(bankSwitch(0).waitForExistence(timeout: 5))
         XCTAssertTrue(bankSwitch(0).label.contains("UI 截图核对"))
-        tap(element("bank-import-confirm"), scroll: true)
+        tap(app.buttons["bank-import-confirm"], scroll: true)
         acknowledgeSave(count: 1)
         assertText("finance-balance-value", equals: "¥ 361.93")
 
         relaunch()
         tab("账本")
         assertText("finance-balance-value", equals: "¥ 361.93")
-        tap(element("finance-import-screenshots"), scroll: true)
+        tap(app.buttons["finance-import-screenshots"], scroll: true)
         let duplicate = bankSwitch(0)
         XCTAssertTrue(duplicate.waitForExistence(timeout: 5))
         XCTAssertFalse(duplicate.isEnabled)
@@ -241,7 +244,7 @@ final class DaylightUITests: XCTestCase {
         scrollTo(bankSwitch(1))
         XCTAssertTrue(bankSwitch(1).isEnabled)
         XCTAssertEqual(bankSwitch(1).value as? String, "1")
-        tap(element("bank-import-close"))
+        tap(app.buttons["bank-import-close"])
     }
 
     func testTaskCompletionPersistsAndCanBeUndone() {
@@ -249,8 +252,8 @@ final class DaylightUITests: XCTestCase {
         openEntry("task")
         replaceText("entry-title", with: "UI 规划明天")
         replaceText("entry-notes", with: "先确定出发时间")
-        tap(element("entry-save"))
-        let completion = element("task-complete-UI 规划明天")
+        tap(app.buttons["entry-save"])
+        let completion = app.buttons["task-complete-UI 规划明天"]
         scrollTo(completion)
         XCTAssertEqual(completion.value as? String, "pending")
         tap(completion)
@@ -270,13 +273,13 @@ final class DaylightUITests: XCTestCase {
         launch()
         openEntry("weight")
         replaceText("entry-amount", with: "72.5")
-        tap(element("entry-save"))
+        tap(app.buttons["entry-save"])
         assertText("today-latest-weight", equals: "72.5 kg", scroll: true)
 
         openEntry("exercise")
         replaceText("entry-amount", with: "30")
         replaceText("entry-notes", with: "深蹲 3 组")
-        tap(element("entry-save"))
+        tap(app.buttons["entry-save"])
         assertText("today-workout-minutes", equals: "30 分钟", scroll: true)
         relaunch()
         assertText("today-latest-weight", equals: "72.5 kg", scroll: true)
@@ -286,9 +289,9 @@ final class DaylightUITests: XCTestCase {
     func testManualBalanceChangesOnlyForMarkedBankExpense() {
         launch()
         tab("账本")
-        tap(element("finance-set-balance"))
+        tap(app.buttons["finance-set-balance"])
         replaceText("balance-amount", with: "100.00")
-        tap(element("balance-save"))
+        tap(app.buttons["balance-save"])
         assertText("finance-balance-value", equals: "¥ 100.00")
         tab("今天")
         createExpense(title: "UI 现金消费", amount: "1.00")
@@ -303,7 +306,7 @@ final class DaylightUITests: XCTestCase {
         XCTAssertEqual(affectsBalance.value as? String, "0")
         toggle(affectsBalance)
         XCTAssertEqual(affectsBalance.value as? String, "1")
-        tap(element("entry-save"))
+        tap(app.buttons["entry-save"])
         assertText("finance-balance-value", equals: "¥ 87.66")
         relaunch()
         tab("账本")
@@ -332,12 +335,12 @@ final class DaylightUITests: XCTestCase {
         tab("账本")
         replaceText("finance-search", with: "keyboard")
         XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 5))
-        tap(element("finance-dismiss-keyboard"))
+        tap(app.buttons["finance-dismiss-keyboard"])
         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
         assertValue(element("finance-search"), equals: "keyboard")
-        tap(element("finance-record-UI keyboard"), scroll: true)
+        tap(app.buttons["finance-record-UI keyboard"], scroll: true)
         XCTAssertTrue(element("entry-save").waitForExistence(timeout: 5))
-        tap(element("entry-cancel"))
+        tap(app.buttons["entry-cancel"])
         XCTAssertFalse(app.keyboards.firstMatch.exists)
     }
 
@@ -346,9 +349,9 @@ final class DaylightUITests: XCTestCase {
         tab("求职")
         tap(app.segmentedControls["career-filter"].buttons["公司"])
         replaceText("career-search", with: "炬坤")
-        tap(element("career-dismiss-search-keyboard"))
+        tap(app.buttons["career-dismiss-search-keyboard"])
         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
-        tap(element("career-company-torch"), scroll: true)
+        tap(app.buttons["career-company-torch"], scroll: true)
         XCTAssertTrue(app.navigationBars["炬坤机器人"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["公司资料"].exists)
     }
@@ -358,12 +361,12 @@ final class DaylightUITests: XCTestCase {
         launch()
         tab("求职")
         tap(app.segmentedControls["career-sections"].buttons["报告"])
-        tap(element("career-report-ui-mobile-report"), scroll: true)
+        tap(app.buttons["career-report-ui-mobile-report"], scroll: true)
         XCTAssertTrue(app.navigationBars["招聘线索报告"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["UI 招聘线索报告原帖"].exists)
         tap(app.navigationBars.buttons.firstMatch)
         tap(app.segmentedControls["career-sections"].buttons["进度"])
-        let review = element("career-application-ui-mobile-review")
+        let review = app.buttons["career-application-ui-mobile-review"]
         tap(review, scroll: true)
         XCTAssertTrue(app.navigationBars["材料审核"].waitForExistence(timeout: 5))
         scrollTo(element("career-approve"))
@@ -373,10 +376,10 @@ final class DaylightUITests: XCTestCase {
     func testHealthAccessibleFromTodayAndMy() {
         launch()
         tab("我的")
-        tap(element("open-health"), scroll: true)
+        tap(app.buttons["open-health"], scroll: true)
         XCTAssertTrue(app.navigationBars["运动"].waitForExistence(timeout: 5))
         tab("今天")
-        tap(element("open-health"), scroll: true)
+        tap(app.buttons["open-health"], scroll: true)
         XCTAssertTrue(app.navigationBars["运动"].waitForExistence(timeout: 5))
     }
 
@@ -384,14 +387,14 @@ final class DaylightUITests: XCTestCase {
         app.launchArguments += ["--ui-test-career-mobile", "--ui-test-career-failure"]
         launch()
         tab("求职")
-        tap(element("career-job-ui-mobile-job"), scroll: true)
-        tap(element("career-save-job"))
+        tap(app.buttons["career-job-ui-mobile-job"], scroll: true)
+        tap(app.buttons["career-save-job"])
         XCTAssertTrue(app.buttons["已收藏"].waitForExistence(timeout: 5))
         relaunch()
         tab("求职")
         tap(app.segmentedControls["career-filter"].buttons["收藏"])
         XCTAssertTrue(element("career-job-ui-mobile-job").waitForExistence(timeout: 5))
-        tap(element("career-reload"))
+        tap(app.buttons["career-reload"])
         tab("账本")
         tab("求职")
         XCTAssertTrue(element("career-job-ui-mobile-job").exists)
@@ -402,16 +405,16 @@ final class DaylightUITests: XCTestCase {
         app.launchArguments += ["--ui-test-career-mobile", "--ui-test-career-failure"]
         launch()
         tab("求职")
-        tap(element("career-job-ui-mobile-job"), scroll: true)
-        tap(element("career-track-job"))
+        tap(app.buttons["career-job-ui-mobile-job"], scroll: true)
+        tap(app.buttons["career-track-job"])
         replaceText("career-next-action", with: "UI 准备面试")
-        tap(element("career-dismiss-tracking-keyboard"))
+        tap(app.buttons["career-dismiss-tracking-keyboard"])
         XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 5))
-        tap(element("career-save-tracking"), scroll: true)
+        tap(app.buttons["career-save-tracking"], scroll: true)
         XCTAssertTrue(app.navigationBars["岗位详情"].waitForExistence(timeout: 5))
         relaunch()
         tab("求职")
-        tap(element("career-job-ui-mobile-job"), scroll: true)
+        tap(app.buttons["career-job-ui-mobile-job"], scroll: true)
         // LabeledContent exposes its caption and value as one accessibility label.
         XCTAssertTrue(app.staticTexts["下一步、UI 准备面试"].waitForExistence(timeout: 5))
         tab("今天")
@@ -430,8 +433,8 @@ final class DaylightUITests: XCTestCase {
     }
 
     private func openEntry(_ kind: String) {
-        tap(element("add-record"))
-        tap(element("menu-action-\(kind)"))
+        tap(app.buttons["add-record"])
+        tap(app.buttons["menu-action-\(kind)"])
         XCTAssertTrue(element("entry-save").waitForExistence(timeout: 5))
     }
 
@@ -439,15 +442,15 @@ final class DaylightUITests: XCTestCase {
         openEntry("money")
         replaceText("entry-title", with: title)
         replaceText("entry-amount", with: amount)
-        tap(element("entry-save"))
+        tap(app.buttons["entry-save"])
         XCTAssertTrue(element("entry-save").waitForNonExistence(timeout: 5))
     }
 
     private func openSMS(_ body: String) {
         tab("账本")
-        tap(element("finance-import-sms"), scroll: true)
+        tap(app.buttons["finance-import-sms"], scroll: true)
         replaceText("bank-sms-input", with: body)
-        tap(element("bank-sms-parse"), scroll: true)
+        tap(app.buttons["bank-sms-parse"], scroll: true)
         XCTAssertTrue(bankSwitch(0).waitForExistence(timeout: 5))
     }
 
@@ -475,10 +478,10 @@ final class DaylightUITests: XCTestCase {
         // A newly presented sheet can expose a hittable field before its keyboard
         // is ready. Establish focus before sending text; never repeat the save.
         let keyboard = app.keyboards.firstMatch
-        if !keyboard.waitForExistence(timeout: 3) {
+        if !keyboard.exists && !keyboard.waitForExistence(timeout: 3) {
             field.coordinate(withNormalizedOffset: CGVector(dx: 0.15, dy: 0.5)).tap()
         }
-        guard keyboard.waitForExistence(timeout: 5) else {
+        guard keyboard.exists || keyboard.waitForExistence(timeout: 5) else {
             XCTFail("Keyboard did not appear for \(identifier)", file: file, line: line)
             return
         }
@@ -491,16 +494,11 @@ final class DaylightUITests: XCTestCase {
 
     private func tap(_ target: XCUIElement, scroll: Bool = false, file: StaticString = #filePath, line: UInt = #line) {
         if scroll { scrollTo(target, file: file, line: line) }
-        XCTAssertTrue(target.waitForExistence(timeout: 5), "Missing element: \(target)", file: file, line: line)
-        // SwiftUI toolbars expose both an Other wrapper and the actual Button
-        // under the same identifier. Activate the control, not its container.
-        var control = target
-        if target.elementType == .other && !target.identifier.isEmpty {
-            let button = target.descendants(matching: .button).matching(identifier: target.identifier).firstMatch
-            if button.exists { control = button }
-        }
-        XCTAssertTrue(control.isHittable, "Element is not hittable: \(control)", file: file, line: line)
-        control.tap()
+        // Callers use typed Button queries, avoiding SwiftUI toolbar wrappers
+        // and broad Any/firstMatch queries while list sections are changing.
+        XCTAssertTrue(target.exists || target.waitForExistence(timeout: 5), "Tap target did not appear", file: file, line: line)
+        XCTAssertTrue(target.isHittable, "Tap target is not hittable", file: file, line: line)
+        target.tap()
     }
 
     private func toggle(_ target: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
