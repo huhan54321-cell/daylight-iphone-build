@@ -471,10 +471,21 @@ final class DaylightUITests: XCTestCase {
         let field = element(identifier)
         scrollTo(field, file: file, line: line)
         tap(field, file: file, line: line)
+        // A newly presented sheet can expose a hittable field before its keyboard
+        // is ready. Establish focus before sending text; never repeat the save.
+        let keyboard = app.keyboards.firstMatch
+        if !keyboard.waitForExistence(timeout: 3) {
+            field.coordinate(withNormalizedOffset: CGVector(dx: 0.15, dy: 0.5)).tap()
+        }
+        guard keyboard.waitForExistence(timeout: 5) else {
+            XCTFail("Keyboard did not appear for \(identifier)", file: file, line: line)
+            return
+        }
         if let old = field.value as? String, !old.isEmpty, old != field.placeholderValue {
             field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: old.count))
         }
         field.typeText(text)
+        assertValue(field, equals: text, file: file, line: line)
     }
 
     private func tap(_ target: XCUIElement, scroll: Bool = false, file: StaticString = #filePath, line: UInt = #line) {
