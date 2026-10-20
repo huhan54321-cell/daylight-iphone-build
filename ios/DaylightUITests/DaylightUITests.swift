@@ -364,6 +364,7 @@ final class DaylightUITests: XCTestCase {
         tap(app.buttons["career-report-ui-mobile-report"], scroll: true)
         XCTAssertTrue(app.navigationBars["招聘线索报告"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["UI 招聘线索报告原帖"].exists)
+        XCTAssertTrue(app.buttons["career-open-source-aaaaaaaaaaaaaaaaaaaaaaaa"].exists, "Report offers a direct action for the specific note.")
         tap(app.navigationBars.buttons.firstMatch)
         tap(app.segmentedControls["career-sections"].buttons["进度"])
         let review = app.buttons["career-application-ui-mobile-review"]
@@ -388,6 +389,7 @@ final class DaylightUITests: XCTestCase {
         launch()
         tab("求职")
         tap(app.buttons["career-job-ui-mobile-job"], scroll: true)
+        XCTAssertTrue(app.buttons["career-open-source-official"].exists, "Source action is available before expanding saved prose.")
         tap(app.buttons["career-save-job"])
         XCTAssertTrue(app.buttons["已收藏"].waitForExistence(timeout: 5))
         relaunch()

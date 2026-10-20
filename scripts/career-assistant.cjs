@@ -26,6 +26,7 @@ function createCareerAssistant(options) {
   if (store.get('settings', 'ai')?.state === 'running') store.put('settings', { id: 'ai', state: 'interrupted', message: '上次分析被中断；规则结果保留，可重新发起。' });
   const get = (kind, id) => { const value = store.get(kind, id); if (!value) throw fail('记录不存在', 404); return value; };
   const meta = () => store.get('settings', 'schedule') || { id: 'schedule', enabled: true, lastDay: null, lastRecheckAt: null, lastRefreshAt: null };
+  const profiles = () => store.list('profiles').map(p => ({ ...p, cities: domain.cities(p.cities) }));
   function capabilities(sourceID) {
     const adapter = adapters[sourceID];
     const ready = adapter?.verifiedAt && typeof adapter?.inspect === 'function';
@@ -34,18 +35,22 @@ function createCareerAssistant(options) {
   function syncFeed(feed) {
     return store.transaction(() => {
       const jobs = mergeJobs(store.list('jobs'), feed.jobs || []);
-      for (const job of jobs) store.put('jobs', job);
+      for (const job of jobs) {
+        const old = store.get('jobs', job.id);
+        store.put('jobs', { ...job, firstSeenAt: old?.firstSeenAt || old?.checkedAt || now(),
+          contentUpdatedAt: old?.contentHash === job.contentHash ? old.contentUpdatedAt || old.checkedAt : now() });
+      }
       for (const source of feed.sources || []) store.put('sources', { ...source, capabilities: capabilities(source.id) });
       store.put('settings', { id: 'legacy-feed', generatedAt: feed.generatedAt });
       return jobs;
     });
   }
   function snapshot() {
-    const profiles = store.list('profiles');
-    const jobs = store.list('jobs').map(job => ({ ...job, matches: profiles.filter(p => p.enabled).map(p => domain.matchJob(job, p)), followUp: store.get('followups', job.id) || followupDefaults(job.id) }));
+    const targets = profiles();
+    const jobs = store.list('jobs').map(job => ({ ...job, matches: targets.filter(p => p.enabled).map(p => domain.matchJob(job, p, now())), followUp: store.get('followups', job.id) || followupDefaults(job.id) }));
     const tasks = store.list('tasks').sort((a, b) => b.startedAt.localeCompare(a.startedAt)).slice(0, 30);
     const reports = store.list('reports').sort((a, b) => b.generatedAt.localeCompare(a.generatedAt));
-    return { schemaVersion: 2, generatedAt: now(), online: true, profiles, jobs, sources: store.list('sources'),
+    return { schemaVersion: 2, generatedAt: now(), online: true, profiles: targets, jobs, sources: store.list('sources'),
       leads: store.list('leads').map(({ text, ...lead }) => domain.refreshDateBucket(lead, now())), reports: reports.slice(0, 60).map(({ leads, priority, ...r }, index) => ({ ...r, count: leads.length, priority, ...(index < 10 ? { leads } : {}) })),
       materials: store.list('materials').map(({ attachment, ...m }) => ({ ...m, attachment: attachment ? { name: attachment.name, hash: attachment.hash, size: attachment.size } : null })),
       applications: store.list('applications'), opportunities: store.list('opportunities'), tasks, schedule: meta(),
@@ -101,6 +106,8 @@ function createCareerAssistant(options) {
     if (!store.list('profiles').some(p => p.enabled)) throw fail('请先启用至少一个求职目标', 409);
     if (sourceID && !['jobs', 'xiaohongshu'].includes(sourceID)) throw fail('未知刷新来源');
     if (meta().lastRefreshAt && Date.parse(now()) - Date.parse(meta().lastRefreshAt) < (options.cooldownMs ?? 60000)) throw fail('请至少间隔一分钟刷新', 429);
+    const beforeJobs = new Map(store.list('jobs').map(j => [j.id, j.contentHash]));
+    const beforeLeads = new Map(store.list('leads').map(l => [l.id, l.contentHash]));
     const task = { id: crypto.randomUUID(), kind: 'refresh', state: 'running', startedAt: now(), message: '开始增量发现', resumeSources };
     store.put('tasks', task); store.put('settings', { ...meta(), lastRefreshAt: now() });
     active = { id: task.id, promise: null };
@@ -108,10 +115,11 @@ function createCareerAssistant(options) {
       const failures = [];
       if (!sourceID || sourceID === 'jobs') {
         try {
-          const targets = store.list('profiles').filter(p => p.enabled);
+          const targets = profiles().filter(p => p.enabled);
           const existing = options.getCollectorConfig?.() || {};
           const blocked = store.list('sources').filter(s => ['login_required', 'blocked'].includes(s.state));
-          const sourceSwitches = { ...existing.sources, official: true, boss: true, 'shixiseng-public': true };
+          const sourceSwitches = { ...existing.sources, official: true,
+            boss: Boolean(existing.browserCollectorEnabled && existing.sources?.boss !== false), 'shixiseng-public': true };
           if (!resumeSources) for (const s of blocked) if (s.id !== 'xiaohongshu') sourceSwitches[s.id] = false;
           const settings = collectorConfig({ ...existing, publicDiscovery: true, keywords: targets.flatMap(p => p.directions), cities: targets.flatMap(p => p.cities), sources: sourceSwitches });
           const feed = await options.refreshJobs(settings);
@@ -129,7 +137,13 @@ function createCareerAssistant(options) {
           }
         } catch { failures.push('小红书'); if (!stopped) store.put('sources', { ...(store.get('sources', 'xiaohongshu') || { id: 'xiaohongshu', name: '小红书招聘线索', count: 0 }), state: 'error', lastAttemptAt: now(), message: '采集异常，原报告保留。' }); }
       }
-      if (!stopped) store.put('tasks', { ...get('tasks', task.id), state: failures.length ? 'partial' : 'completed', finishedAt: now(), message: failures.length ? `${failures.join('、')}未全部完成，请查看来源状态；已有结果保留。` : '本轮增量发现完成' });
+      if (!stopped) {
+        const count = (rows, before) => ({ added: rows.filter(row => !before.has(row.id)).length, changed: rows.filter(row => before.has(row.id) && before.get(row.id) !== row.contentHash).length });
+        const changes = { jobs: count(store.list('jobs'), beforeJobs), leads: count(store.list('leads'), beforeLeads) };
+        const summary = `岗位新增 ${changes.jobs.added}、变化 ${changes.jobs.changed}；招聘线索新增 ${changes.leads.added}、变化 ${changes.leads.changed}。`;
+        store.put('tasks', { ...get('tasks', task.id), state: failures.length ? 'partial' : 'completed', finishedAt: now(), changes,
+          message: summary + (failures.length ? `${failures.join('、')}未全部完成，请查看来源状态。` : '本轮检索完成；没有新增不代表平台没有相关机会。') });
+      }
     })().finally(() => { active = null; });
     return task;
   }
@@ -245,8 +259,9 @@ function createCareerAssistant(options) {
     if (method === 'POST' && resource === 'refresh') return startRefresh(body);
     if (method === 'POST' && resource === 'browser' && id === 'import') {
       if (!['boss', 'shixiseng-public', 'official'].includes(body.sourceID) || !Array.isArray(body.jobs) || !body.jobs.length || body.jobs.length > 40) throw fail('请导入 1–40 条当前网页可见的岗位');
-      const records = body.jobs.map(raw => normalizeJob({ ...raw, status: 'unconfirmed' }, body.sourceID, now()));
-      syncFeed({ jobs: records, sources: [{ id: body.sourceID, name: records[0].sourceName, state: 'partial', count: records.length,
+      const records = mergeJobs([], body.jobs.map(raw => normalizeJob({ ...raw, status: 'unconfirmed' }, body.sourceID, now())));
+      const total = mergeJobs(store.list('jobs'), records).filter(job => job.sourceID === body.sourceID || job.sourceMembers?.some(member => member.sourceID === body.sourceID)).length;
+      syncFeed({ jobs: records, sources: [{ id: body.sourceID, name: records[0].sourceName, state: 'partial', count: total,
         lastAttemptAt: now(), lastSuccessAt: now(), message: '本人浏览器当前页面读取；仅覆盖实际可见内容，未完成全站搜索。', coverage: { partial: true, mode: 'browser_assisted', detailsRun: records.filter(r => r.verification === 'full_jd').length } }] });
       return { imported: records.length };
     }

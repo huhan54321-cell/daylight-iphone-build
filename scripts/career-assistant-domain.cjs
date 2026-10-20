@@ -4,12 +4,19 @@ const { hash, fail } = require('./career-assistant-store.cjs');
 const DAY = 86400000;
 const text = (v, n = 300) => String(v ?? '').replace(/\0/g, '').trim().slice(0, n);
 const words = (v, fallback = []) => [...new Set((Array.isArray(v) ? v : fallback).map(s => text(s, 80)).filter(Boolean))].slice(0, 16);
+function cities(values) {
+  const known = /杭州|上海|深圳|北京|广州|苏州|南京|成都|武汉|合肥|宁波|西安|天津|重庆|长沙|无锡|东莞|佛山|厦门|福州|济南|青岛|郑州|大连|沈阳|香港|澳门|远程/g;
+  return words(words(values).flatMap(value => value.split(/[，,、;；\s/]+/).flatMap(part => {
+    const matches = part.match(known);
+    return matches && matches.join('') === part ? matches : [part];
+  })));
+}
 const day = now => new Date(Date.parse(now) + 8 * 3600000).toISOString().slice(0, 10);
 function profile(raw, previous = {}) {
   const integer = (v, min, max) => v == null || v === '' ? null : Number.isInteger(Number(v)) && Number(v) >= min && Number(v) <= max ? Number(v) : (() => { throw fail('画像中的数字超出允许范围'); })();
   const result = { id: text(raw.id || previous.id || 'embodied', 100), name: text(raw.name || previous.name || '具身智能实习', 100),
     directions: words(raw.directions, previous.directions || ['具身智能', '机器人', 'VLA', '模仿学习', '机器人运控']),
-    cities: words(raw.cities, previous.cities || ['杭州', '上海']), skills: words(raw.skills, previous.skills || []),
+    cities: cities(raw.cities ?? previous.cities ?? ['杭州', '上海']), skills: words(raw.skills, previous.skills || []),
     graduationYear: integer(raw.graduationYear ?? previous.graduationYear, 2020, 2050), days: integer(raw.days ?? previous.days, 1, 7),
     months: integer(raw.months ?? previous.months, 1, 36), startDate: text(raw.startDate ?? previous.startDate, 10),
     enabled: raw.enabled ?? previous.enabled ?? true, version: (previous.version || 0) + 1 };
@@ -17,14 +24,22 @@ function profile(raw, previous = {}) {
   if (result.startDate && (!/^\d{4}-\d{2}-\d{2}$/.test(result.startDate) || !Number.isFinite(Date.parse(result.startDate)))) throw fail('到岗日期格式无效');
   return result;
 }
-function matchJob(job, target) {
+function matchJob(job, target, now = new Date().toISOString()) {
   const content = `${job.title} ${job.description || ''} ${(job.requirements || []).join(' ')} ${(job.tags || []).join(' ')}`.toLowerCase();
   const reasons = [], gaps = [], unknown = [];
   const hits = target.directions.filter(word => content.includes(word.toLowerCase()));
+  const titleHits = target.directions.filter(word => (job.title || '').toLowerCase().includes(word.toLowerCase()));
+  const bodySpecific = hits.filter(word => !['机器人', '人工智能', 'AI', '算法'].includes(word));
+  const roleRelevant = titleHits.length > 0 || bodySpecific.length > 0;
   if (!/实习|intern/i.test(`${job.title} ${job.jobType || ''}`)) gaps.push('实习身份未明确，不作为精准实习推荐');
-  if (hits.length) reasons.push('方向相关：' + hits.join('、')); else gaps.push('未发现目标方向的直接证据');
-  if (target.cities.length) {
-    if (target.cities.some(city => (job.city || '').includes(city))) reasons.push('地点符合偏好');
+  if (titleHits.length) reasons.push('职位标题匹配：' + titleHits.join('、'));
+  else if (bodySpecific.length) reasons.push('岗位内容提及：' + bodySpecific.join('、'));
+  else if (hits.length) unknown.push('仅正文提及宽泛方向，岗位相关性待核查');
+  else gaps.push('未发现目标方向的直接证据');
+  const preferredCities = cities(target.cities);
+  let cityMatches = !preferredCities.length;
+  if (preferredCities.length) {
+    if (preferredCities.some(city => (job.city || '').includes(city))) { cityMatches = true; reasons.push('地点符合偏好'); }
     else if (!job.city || /未|不详/.test(job.city)) unknown.push('地点未明确');
     else gaps.push('地点不在优先城市');
   }
@@ -41,8 +56,18 @@ function matchJob(job, target) {
   if (skillHits.length) reasons.push('已有技能：' + skillHits.join('、'));
   if (job.verification !== 'full_jd') unknown.push('尚未取得完整岗位正文');
   if (job.status === 'closed' || job.status === 'historical') gaps.push('岗位已关闭或为历史信息');
-  const lane = hits.length && !gaps.length && job.verification === 'full_jd' ? 'precise' : 'explore';
-  return { profileID: target.id, lane, score: Math.max(0, Math.min(100, hits.length * 16 + skillHits.length * 6 + reasons.length * 5 - gaps.length * 12)), reasons, gaps, unknown };
+  const checkedAge = (Date.parse(now) - Date.parse(job.checkedAt)) / DAY;
+  const stale = !Number.isFinite(checkedAge) || checkedAge > 30;
+  if (stale) unknown.push('超过 30 天未确认有效性，请先查看原站');
+  const changeAt = job.contentUpdatedAt || job.firstSeenAt || job.publishedAt || job.checkedAt;
+  const age = (Date.parse(now) - Date.parse(changeAt)) / DAY;
+  const freshness = Number.isFinite(age) && age >= 0 ? age <= 3 ? 10 : age <= 14 ? 6 : age <= 30 ? 2 : 0 : 0;
+  // List titles are valid relevance evidence; missing prose is uncertainty, not
+  // a reason to permanently exclude newly imported BOSS opportunities.
+  const lane = roleRelevant && !gaps.length && cityMatches && !stale ? 'precise' : 'explore';
+  const score = (titleHits.length ? 45 + Math.min(10, (titleHits.length - 1) * 5) : bodySpecific.length ? 28 : hits.length ? 10 : 0)
+    + (cityMatches ? 12 : 0) + Math.min(12, skillHits.length * 4) + (job.verification === 'full_jd' ? 5 : 0) + freshness - gaps.length * 18 - (stale ? 12 : 0);
+  return { profileID: target.id, lane, score: Math.max(0, Math.min(100, score)), reasons, gaps, unknown, freshnessAt: changeAt, algorithmVersion: 2 };
 }
 function xhsConfig(targets, now) {
   const directions = words(targets.filter(p => p.enabled).flatMap(p => p.directions), ['具身智能']);
@@ -56,10 +81,12 @@ function xhsConfig(targets, now) {
 function leadFromNote(raw, targets, previous, now) {
   const note = normalizeNote(raw, { maxCommentsPerNote: 0 });
   const content = `${note.title}\n${note.text}`;
-  const recruiting = /招聘|招募|招[\s\S]{0,10}实习生|内推|简历.{0,8}(投|发)|投递[：:]|投递.{0,8}(邮箱|简历)|岗位[：:].{0,40}实习|hiring/i.test(content);
+  const applyInstructions = /(?:CV|简历|履历).{0,10}(发送至|发至|发送到|投递至)|申请方式[\s\S]{0,160}(?:CV|简历|邮箱|投递)/i.test(content);
+  const recruiting = applyInstructions || /招聘|招募|招[\s\S]{0,10}实习生|内推|简历.{0,8}(投|发)|投递[：:]|投递.{0,8}(邮箱|简历)|岗位[：:].{0,40}实习|hiring/i.test(content);
   const seeking = /求捞|求内推|求实习|求职帖|找实习|蹲实习/.test(note.title) || /本人.{0,20}(求职|找实习)/.test(content);
   const ad = /付费内推|保offer|保录取|训练营|课程推广|辅导班/.test(content);
-  const experience = /面经|面试复盘|实习总结|实习体验|实习经历分享|实习经验|经验帖/.test(note.title);
+  const experience = /面经|面试复盘|实习总结|实习体验|实习经历分享|实习经验|经验帖/.test(note.title) ||
+    (!applyInstructions && /面试官/.test(content) && /(?:我|本人)[^\n。]{0,24}(?:面试|一面|二面|后悔|忍了|转正)/.test(content));
   const directions = words(targets.flatMap(p => p.directions));
   const hits = directions.filter(word => content.toLowerCase().includes(word.toLowerCase()));
   const internship = /实习|intern/i.test(content);
@@ -103,4 +130,4 @@ function refreshDateBucket(lead, now) {
   const age = lead.publishedDate ? Math.floor((Date.parse(day(now)) - Date.parse(lead.publishedDate)) / DAY) : null;
   return { ...lead, dateBucket: age === null ? 'unknown' : age < 0 || age > 89 ? 'historical' : age <= 29 ? 'recent' : 'within90' };
 }
-module.exports = { profile, matchJob, xhsConfig, leadFromNote, report, refreshDateBucket, day, hash, text, words, DAY };
+module.exports = { profile, cities, matchJob, xhsConfig, leadFromNote, report, refreshDateBucket, day, hash, text, words, DAY };

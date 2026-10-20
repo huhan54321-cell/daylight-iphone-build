@@ -4,6 +4,17 @@ enum CareerMobileTests {
     static func run() async throws -> Int {
         var checks = 0
         func expect(_ condition: Bool, _ reason: String) throws { checks += 1; if !condition { throw AppFailure.message("Career mobile: " + reason) } }
+        let noteID = String(repeating: "a", count: 24)
+        let noteURL = "https://www.xiaohongshu.com/explore/\(noteID)?xsec_token=fixture%2Bvalue&xsec_source=pc_search"
+        let noteLink = CareerSourceLink(urlString: noteURL, sourceID: "xiaohongshu", noteID: noteID)
+        try expect(noteLink?.appURL?.absoluteString == "xhsdiscover://item/\(noteID)", "note route opens specific ID, never home")
+        try expect(noteLink?.webURL.absoluteString == noteURL, "web fallback retains original note access parameters")
+        try expect(CareerSourceLink(urlString: noteURL, sourceID: "xiaohongshu", noteID: String(repeating: "b", count: 24)) == nil, "mismatched note ID rejected")
+        try expect(CareerSourceLink(urlString: "https://evil.test/explore/\(noteID)", sourceID: "xiaohongshu") == nil, "external host cannot become trusted note route")
+        try expect(CareerSourceLink(urlString: "https://www.xiaohongshu.com/explore/not-an-id", sourceID: "xiaohongshu") == nil, "invalid note identifier rejected")
+        let bossLink = CareerSourceLink(urlString: "https://www.zhipin.com/job_detail/example123.html", sourceID: "boss")
+        try expect(bossLink?.universalOnly == true && bossLink?.appURL == bossLink?.webURL, "BOSS opens exact source URL through platform association")
+        try expect(CareerSourceLink(urlString: "javascript:alert(1)", sourceID: "official") == nil, "non-HTTPS cannot open in source browser")
         let job = try CareerAssistantJSON.from(["id": "job-test", "title": "机器人实习", "company": "测试团队", "url": "https://example.com/jobs/test", "followUp": ["saved": false, "stage": "未投递", "notes": ""]])
         var archive = CareerMobileArchive(); archive.snapshot = .object(["jobs": .array([job]), "schemaVersion": .number(2)])
         archive.enqueue(kind: "followups", targetID: job.id, patch: .object(["saved": .bool(true)]))

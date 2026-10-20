@@ -31,9 +31,9 @@ jobs:
       - name: Upload verified installation package
         uses: actions/upload-artifact@v7
         with:
-          name: Daylight-0.5.0-unsigned
+          name: Daylight-0.5.1-unsigned
           path: |
-            build/Daylight-0.5.0-unsigned.ipa
+            build/Daylight-0.5.1-unsigned.ipa
             build/SHA256.txt
             docs/ios-install.md
           if-no-files-found: error

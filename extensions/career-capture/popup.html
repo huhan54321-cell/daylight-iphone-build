@@ -2,5 +2,5 @@
 <style>body{width:350px;padding:18px;font:14px system-ui;background:#f5f7fa;color:#172133}h1{font-size:20px}button,input{padding:10px;box-sizing:border-box;margin:5px 0;width:100%}button{border:0;border-radius:8px;background:#2356d8;color:white;cursor:pointer}button:disabled{opacity:.45}pre{white-space:pre-wrap;font:12px system-ui;max-height:260px;overflow:auto}p{line-height:1.6;color:#576477}</style>
 <h1>采集当前招聘页面</h1><p>在 BOSS、实习僧的搜索结果或岗位详情页打开。先预览，再保存到自己的电脑服务。</p>
 <label>个人服务令牌<input id="token" type="password" autocomplete="off"></label><button id="save">保存连接</button>
-<button id="preview">读取当前页面并预览</button><pre id="result" aria-live="polite"></pre><button id="import" disabled>将这些岗位导入助手</button>
-<p>仅访问本机 127.0.0.1:4176。不会发送消息、读取聊天记录或点击投递。</p><script src="popup.js"></script></html>
+<button id="preview">读取当前页面并预览</button><pre id="result" aria-live="polite"></pre><button id="import" disabled>将这些岗位导入助手</button><button id="diagnostic" hidden>保存页面诊断到电脑</button>
+<p>仅访问本机 127.0.0.1:4176。不会发送消息、读取聊天记录或点击投递。</p><script src="read-page.js"></script><script src="popup.js"></script></html>

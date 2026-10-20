@@ -34,6 +34,15 @@ test('seeking posts, experience and advertisements do not enter recruitment repo
   const l = domain.leadFromNote(note(undefined, { title: '机器人实习机会见图', text: '' }), p, null, stamp);
   assert.equal(l.category, 'insufficient'); assert.deepEqual(l.conditions, []);
 });
+
+test('first-person interview complaints are excluded while English intern posts with application instructions qualify', () => {
+  const p = [domain.profile({})];
+  const complaint = note(undefined, { title: '某机器人公司太离谱', text: '刷到机器人公司招实习生，我就想着面面看，同意面试是我最后悔的决定。面试官很不专业，二面只谈转正待遇。' });
+  assert.equal(domain.leadFromNote(complaint, p, null, stamp).category, 'excluded');
+  const vacancy = note(undefined, { title: 'Robotics Research Intern（远程）', text: '我们是具身智能团队。工作内容：训练 VLA。任职要求：熟悉仿真，每周三天。申请方式：CV 发送至 careers@example.test。' });
+  assert.equal(domain.leadFromNote(vacancy, p, null, stamp).category, 'recruitment');
+  assert.equal(domain.leadFromNote(note(undefined, { text: '我是面试官，机器人团队招实习生，CV 发送至 careers@example.test。' }), p, null, stamp).category, 'recruitment');
+});
 test('migration is previewed, backed up, idempotent and never claims live source success', async t => {
   const a = await fixture(t); assert.equal(a.snapshot().jobs.length, 0);
   const p = await a.handle('GET', '/v2/career/migration'); assert.equal(p.jobs, 1);
@@ -58,6 +67,41 @@ test('listing refresh preserves complete JD and recommendation explains unknown 
   const j = a.snapshot().jobs[0]; assert.equal(j.description, raw.description); assert.equal(j.minDays, 3);
   assert.ok(j.matches[0].unknown.length); assert.equal(j.matches[0].lane, 'precise');
 });
+
+test('assisted BOSS imports deduplicate, retain full prose and count all saved source jobs', async t => {
+  const a = await fixture(t);
+  const row = { ...raw, url: 'https://www.zhipin.com/job_detail/abcde123.html' };
+  const importRows = jobs => a.handle('POST', '/v2/career/browser/import', { sourceID: 'boss', jobs });
+  assert.equal((await importRows([row, row])).imported, 1);
+  await importRows([{ ...row, verification: 'listing_only', description: '' }]);
+  assert.equal(a.snapshot().jobs.length, 1);
+  assert.equal(a.snapshot().jobs[0].description, raw.description);
+  await importRows([{ ...row, url: 'https://www.zhipin.com/job_detail/other123.html' }]);
+  const source = a.snapshot().sources.find(s => s.id === 'boss');
+  assert.equal(source.count, 2); assert.equal(source.state, 'partial');
+  assert.equal(source.coverage.mode, 'browser_assisted');
+  assert.equal(source.capabilities.submit, false);
+});
+test('reimport fills company and Hangzhou district without changing job identity or saved followup', async t => {
+  let checkedAt = stamp;
+  const a = await fixture(t, { now: () => checkedAt });
+  const row = { ...raw, url: 'https://www.zhipin.com/job_detail/locality1.html', company: '公司待核查（未读取）',
+    city: '城市未注明', location: '', description: '', verification: 'listing_only' };
+  const importRows = jobs => a.handle('POST', '/v2/career/browser/import', { sourceID: 'boss', jobs });
+  await importRows([row]);
+  const id = a.snapshot().jobs[0].id;
+  await a.handle('POST', `/v2/career/jobs/${id}/followup`, { saved: true, nextAction: '核对通勤' });
+  checkedAt = '2026-10-20T02:00:00.000Z';
+  await importRows([{ ...row, company: '测试仓前团队', city: '杭州', location: '杭州·余杭区·仓前' }]);
+  await importRows([{ ...row, company: '测试仓前团队', city: '杭州', location: '杭州·余杭区·仓前' }]);
+  const jobs = a.snapshot().jobs;
+  assert.equal(jobs.length, 1); assert.equal(jobs[0].id, id);
+  assert.equal(jobs[0].company, '测试仓前团队'); assert.equal(jobs[0].city, '杭州');
+  assert.equal(jobs[0].location, '杭州·余杭区·仓前');
+  assert.equal(jobs[0].followUp.saved, true); assert.equal(jobs[0].followUp.nextAction, '核对通勤');
+  assert.equal(a.snapshot().sources.find(s => s.id === 'boss').count, 1);
+});
+
 test('approved material version cannot execute after edits, double execution is idempotent and ambiguous result never retries', async t => {
   let executions = 0;
   const a = await fixture(t, { applicationAdapters: { unitree: { verifiedAt: stamp, inspect: async () => ({ hash: 'form-v1' }), submit: async () => { executions++; return { confirmed: false }; } } } });
@@ -89,6 +133,29 @@ test('weekly saved lead recheck is bounded and no comments/images are requested'
   a.startRefresh({ sourceID: 'xiaohongshu' }); await a.waitForTask();
   assert.equal(calls.find(c => c.mode === 'recheck').config.recheckNotes.length, 10);
   assert.equal(calls[0].config.maxCommentsPerNote, 0); assert.equal(calls[0].config.collectImages, false);
+});
+
+test('discovery reports actual changes and unchanged sync retains discovery timestamps', async t => {
+  let current = stamp;
+  const a = await fixture(t, { now: () => current });
+  a.startRefresh({ sourceID: 'jobs' }); await a.waitForTask();
+  const initial = a.snapshot().jobs[0];
+  assert.equal(a.snapshot().tasks[0].changes.jobs.added, 1);
+  current = '2026-10-20T02:00:00Z';
+  a.startRefresh({ sourceID: 'jobs' }); await a.waitForTask();
+  assert.deepEqual(a.snapshot().tasks[0].changes.jobs, { added: 0, changed: 0 });
+  assert.equal(a.snapshot().jobs[0].firstSeenAt, initial.firstSeenAt);
+  assert.equal(a.snapshot().jobs[0].contentUpdatedAt, initial.contentUpdatedAt);
+});
+
+test('manual discovery keeps unverified BOSS automation disabled and normalizes saved city input', async t => {
+  let settings;
+  const a = await fixture(t, { getCollectorConfig: () => ({ browserCollectorEnabled: false, sources: { boss: false } }),
+    refreshJobs: async value => { settings = value; return core.initialFeed(); } });
+  a.store.put('profiles', { ...domain.profile({}), cities: ['杭州', '上海深圳北京'] });
+  a.startRefresh({ sourceID: 'jobs' }); await a.waitForTask();
+  assert.equal(settings.sources.boss, false);
+  assert.deepEqual(settings.cities, ['杭州', '上海', '深圳', '北京']);
 });
 test('SQLite restart preserves data and interrupted execution is unknown, never retried', async t => {
   const root = path.resolve('.test-tmp'); fs.mkdirSync(root, { recursive: true }); const d = fs.mkdtempSync(path.join(root, 'restart-'));

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "日常求职助手 · 当前页采集",
-  "version": "0.1.0",
+  "version": "0.3.2",
   "description": "由本人预览并导入当前招聘页面的可见岗位，不发送消息或投递简历。",
   "permissions": [
     "activeTab",

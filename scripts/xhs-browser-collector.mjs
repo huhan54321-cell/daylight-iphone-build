@@ -177,6 +177,11 @@ async function enrichImages(page) {
 }
 async function collect(page) {
   progress('search', '开始读取小红书搜索结果；只采集页面实际显示的内容。');
+  // Establish the signed-in site's normal entry page before deep-linking to
+  // search. A cold search navigation can stall in the site's redirect chain.
+  await page.goto('https://www.xiaohongshu.com/explore', { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.locator('.side-bar, .sidebar, .login-container, section.note-item, .note-item').first().waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
+  await inspect(page);
   candidateSchedule = createCandidateSchedule(config.excludeNoteIds, config);
   if (config.researchScope === SCOPE) coverage.relevance = { version: 1, strategy: '招聘、面经、实习分享轮转；补充材料至多20%，模糊标题至多10%（至少1条）；不以查询词、点赞或评论判定主题。', skippedExtras: 0, reviewedDetails: 0 };
   coverage.dedup = candidateSchedule.coverage();
@@ -218,7 +223,7 @@ async function collect(page) {
     candidateSchedule.recordAttempt(id);
     coverage.detailsVisited++;
     for (const query of coverage.queries) if (candidate.keywords.includes(query.keyword)) query.detailsVisited++;
-    progress('details', `正在读取第${coverage.detailsVisited}/${ordered.length}条帖子正文、图片与评论。`);
+    progress('details', `正在读取第${coverage.detailsVisited}/${ordered.length}条帖子的标题与正文${config.collectImages ? '、图片' : ''}${config.maxCommentsPerNote ? '、评论' : ''}。`);
     await page.goto(candidate.url, { waitUntil: 'domcontentloaded', timeout: 25000 });
     await inspect(page);
     await page.locator('#detail-desc, .note-content, .note-container .desc').first().waitFor({ state: 'visible', timeout: 7000 }).catch(() => {});
@@ -272,7 +277,7 @@ async function collect(page) {
   }
   if (!notes.length) throw new CollectorError('error', '未取得可用的新帖子正文或图片。可能需要登录、网页访问受限、没有新匹配结果或页面结构变化；已有报告保留。');
   coverage.finishedAt = new Date().toISOString();
-  state = 'ok'; message = `已取得${notes.length}条新的正文或图片帖子、${coverage.commentsCount}条可见评论、${coverage.imagesCount}张图片截图，跳过${candidateSchedule.coverage().skippedKnownNotes}条已入库帖子；日期与半年范围在报告中另行核对。`;
+  state = 'ok'; message = `已取得${notes.length}条新的正文或图片帖子、${coverage.commentsCount}条可见评论、${coverage.imagesCount}张图片截图，跳过${candidateSchedule.coverage().skippedKnownNotes}条已入库帖子；发布日期按 ${config.startDate} 至 ${config.endDate} 核对，未知日期单列。`;
   progress('complete', message);
 }
 async function recheck(page) {
@@ -317,6 +322,8 @@ try {
       });
     }
   }
+  if (!config.maxCommentsPerNote) coverage.commentScope = '本轮不读取评论。';
+  if (!config.collectImages) coverage.imageScope = '本轮读取标题和正文，不保存图片；图片中的招聘条件尚未识别。';
   const browserChannel = config.browserChannel || 'msedge';
   if (!['msedge', 'chrome', 'chromium'].includes(browserChannel)) throw new Error('浏览器选择无效。');
   const profile = path.join(dataDir, `browser-xhs-${browserChannel}`);
@@ -330,7 +337,9 @@ try {
     context = await chromium.launchPersistentContext(profile, { headless: false, ...(browserChannel !== 'chromium' ? { channel: browserChannel } : {}), viewport: { width: 1280, height: 900 } });
   } catch { throw new Error('无法打开所选浏览器。请关闭上次采集窗口，确认已安装Edge/Chrome，或按说明安装Chromium。'); }
   context.setDefaultTimeout(5000);
-  const page = context.pages()[0] || await context.newPage();
+  // Do not navigate Edge's startup/restored tab: its pending startup navigation
+  // can replace the collector URL with about:blank after goto has resolved.
+  const page = await context.newPage();
   if (mode === 'login') await login(page);
   else if (mode === 'recheck') await recheck(page);
   else if (mode === 'enrich-images') await enrichImages(page);
@@ -338,12 +347,17 @@ try {
 } catch (error) {
   state = cancelled ? 'cancelled' : error.state || 'error';
   // Do not publish browser error stacks, URLs with tokens, or a browser profile's contents.
-  message = cancelled ? '已停止；已取得的部分数据保留。' : error instanceof CollectorError || !context ? error.message : '页面读取失败或浏览器已关闭；已取得的部分内容保留。';
+  message = cancelled ? '已停止；已取得的部分数据保留。' : error instanceof CollectorError || !context ? error.message :
+    error.name === 'TimeoutError' ? '等待页面加载或可见内容超时；已有内容保留，本轮未完成，不能视为没有相关招聘。' :
+    '页面读取失败或浏览器已关闭；已取得的部分内容保留。';
   progress(state, message);
   process.exitCode = state === 'cancelled' ? 0 : 1;
 } finally {
   coverage.commentsCount = notes.reduce((sum, note) => sum + note.comments.length, 0);
   coverage.finishedAt = new Date().toISOString();
+  for (const query of coverage.queries) if (query.state === 'running') {
+    query.state = 'interrupted'; query.reason = message;
+  }
   checkpoint();
   if (context) await context.close().catch(() => {});
   process.stdin.pause();

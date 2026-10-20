@@ -7,6 +7,7 @@ final class CareerAssistantClient: ObservableObject {
     @Published private(set) var online = false
     @Published private(set) var busy = false
     @Published private(set) var saving = false
+    @Published private(set) var startingDiscovery = false
     @Published private(set) var pending: [CareerMobileOperation] = []
     @Published var message: String?
     private var configuration: CareerAPIConfiguration
@@ -16,6 +17,7 @@ final class CareerAssistantClient: ObservableObject {
     private var storageFailed = false
     private var mutation: Task<Bool, Never>?
     var configured: Bool { !configuration.baseURL.isEmpty && !configuration.token.isEmpty }
+    var discoveryRunning: Bool { snapshot["tasks"].array.contains { $0["state"].string == "running" } }
     static var directory: URL {
         let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
         #if DEBUG && targetEnvironment(simulator)
@@ -150,6 +152,12 @@ final class CareerAssistantClient: ObservableObject {
     func retrySync() async {
         _ = await mutate { state in for i in state.pending.indices where state.pending[i].conflict?["state"].string == "error" { state.pending[i].conflict = nil } }; await reload()
     }
+    func discover() async {
+        guard configured, !startingDiscovery, !discoveryRunning, !busy else { return }
+        startingDiscovery = true; defer { startingDiscovery = false }
+        do { _ = try await request("refresh", body: [:]); await reload() }
+        catch { message = "未能发起新检索：" + error.localizedDescription }
+    }
     func resolve(_ operation: CareerMobileOperation, usePhone: Bool) async {
         _ = await mutate { $0.resolve(operation.id, usePhone: usePhone) }; await reload()
     }
@@ -173,7 +181,7 @@ final class CareerAssistantClient: ObservableObject {
     func monitor() async {
         await reload()
         while !Task.isCancelled {
-            do { try await Task.sleep(for: .seconds(online ? 45 : 60)) } catch { return }
+            do { try await Task.sleep(for: .seconds(online ? (discoveryRunning ? 3 : 45) : 60)) } catch { return }
             await reload()
         }
     }

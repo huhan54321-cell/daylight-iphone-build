@@ -10,7 +10,9 @@ struct CareerAssistantJobView: View {
         List {
             Section {
                 Text(job["title"].string).font(.title3.weight(.semibold))
-                Text("\(job["company"].display) · \(job["city"].display)")
+                Text(job["company"].display)
+                Text(job["location"].string.isEmpty ? job["city"].display : job["location"].string).font(.subheadline)
+                CareerSourceActions(url: job["url"].string, sourceID: job["sourceID"].string, title: job["title"].string)
                 HStack {
                     Button { Task { await client.update(id: jobID, patch: ["saved": !job["followUp"]["saved"].bool]) } } label: { Label(job["followUp"]["saved"].bool ? "已收藏" : "收藏", systemImage: job["followUp"]["saved"].bool ? "bookmark.fill" : "bookmark") }.buttonStyle(.bordered).disabled(client.saving).accessibilityIdentifier("career-save-job")
                     NavigationLink { CareerTrackingEditor(client: client, jobID: jobID) } label: { Label("记录跟进", systemImage: "checklist") }.buttonStyle(.bordered).accessibilityIdentifier("career-track-job")
@@ -24,19 +26,18 @@ struct CareerAssistantJobView: View {
                 ForEach(match["gaps"].strings + match["unknown"].strings, id: \.self) { Text($0).font(.subheadline).foregroundStyle(.secondary) }
                 if match == .null { Text("这份岗位尚未按电脑端目标分析，请核对原始条件。").foregroundStyle(.secondary) }
             }
-            Section("来源与条件") {
+            Section("来源") {
                 LabeledContent("来源", value: job["sourceName"].display)
                 LabeledContent("最近检查", value: CareerDates.label(job["checkedAt"].string))
                 LabeledContent("地点", value: job["location"].display)
                 LabeledContent("薪资", value: job["salary"].display)
-                if let url = URL(string: job["url"].string), ["https", "http"].contains(url.scheme ?? "") { Link("打开原始岗位", destination: url) }
                 if ["closed", "historical"].contains(job["status"].string) { Text("这是一份历史或已结束岗位，请先确认招聘有效性。").foregroundStyle(.orange) }
             }
-            Section("岗位正文") { Text(job["description"].display).textSelection(.enabled); ForEach(job["requirements"].strings, id: \.self) { Text($0) } }
-            Section("材料与申请") {
+            Section { DisclosureGroup("已保存的岗位内容") { Text(job["description"].display).textSelection(.enabled); ForEach(job["requirements"].strings, id: \.self) { Text($0) } } }
+            if !client.snapshot["applications"].array.filter({ $0["jobID"].string == jobID }).isEmpty { Section("材料与申请") {
                 ForEach(client.snapshot["applications"].array.filter { $0["jobID"].string == jobID }) { app in NavigationLink("\(CareerApplicationView.stateName(app["state"].string)) · \(app["materialTitle"].display)") { CareerApplicationView(client: client, applicationID: app.id) } }
                 Text("在电脑工作台准备材料和填写申请；准备好后可在手机审核。收藏不会触发投递。").font(.caption).foregroundStyle(.secondary)
-            }
+            } }
         }.navigationTitle("岗位详情").navigationBarTitleDisplayMode(.inline)
     }
 }

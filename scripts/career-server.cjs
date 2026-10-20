@@ -11,6 +11,8 @@ const { runBrowserCollector } = require('./career-browser-runner.cjs');
 const details = require('./career-detail-queue.cjs');
 const { createSearchFetch } = require('./career-search-transport.cjs');
 const { createCareerAssistant } = require('./career-assistant.cjs');
+const { isLocalDesktopRequest, loginTarget, openLoginWindow } = require('./career-browser-recovery.cjs');
+const { normalizeBrowserDiagnostic } = require('./career-browser-diagnostics.cjs');
 
 function loadToken(dataDir, env) {
   if (env.CAREER_SERVICE_TOKEN) {
@@ -68,6 +70,7 @@ function createCareerService(options = {}) {
   let scheduleState = scheduler.loadScheduler(dataDir, now()), scheduleTimer = null;
   let detailQueue = details.loadQueue(dataDir);
   const buckets = new Map();
+  const loginOpenedAt = new Map();
   const origins = new Set(['http://127.0.0.1:4173', 'http://localhost:4173', 'chrome-extension://hlmdaklafhleodnklhdbkbjmkbkfmgpc', ...(env.CAREER_ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean)]);
   function viewFeed() {
     return { ...publicFeed(feed, now()), scheduler: { enabled: config.schedulingEnabled, running: Boolean(refreshing), intervalHours: config.intervalHours, nextRunAt: scheduleState.nextRunAt, lastRunAt: scheduleState.lastRunAt, lastFinishedAt: scheduleState.lastFinishedAt,
@@ -165,6 +168,28 @@ function createCareerService(options = {}) {
       if (serveWorkbench(req, res, route)) return;
       if (req.method === 'GET' && route === '/health') return reply(200, { status: 'ok', service: 'daylight-career', schemaVersion: 1 });
       if (!authorized(req.headers.authorization, token)) return reply(401, { error: '需要有效的服务连接凭据' });
+      if (route === '/v2/career/browser/diagnostics') {
+        if (req.method !== 'POST') return reply(405, { error: '请从本机扩展保存页面诊断' });
+        const local = origin === 'chrome-extension://hlmdaklafhleodnklhdbkbjmkbkfmgpc'
+          ? { socket: req.socket, headers: { ...req.headers, origin: undefined } } : req;
+        if (!isLocalDesktopRequest(local)) return reply(403, { error: '页面诊断只能由本机工作台或已配对扩展保存。' });
+        const diagnostic = normalizeBrowserDiagnostic(await readBody(req, 128 * 1024));
+        fs.writeFileSync(path.join(dataDir, 'browser-diagnostics-boss.json'), JSON.stringify({ ...diagnostic, capturedAt: now() }, null, 2), { mode: 0o600 });
+        return reply(200, { saved: true, message: '已保存到本机私人目录；包含页面结构和数量，不包含正文、聊天或账号信息。' });
+      }
+      if (route === '/v2/career/browser/login') {
+        if (req.method !== 'POST') return reply(405, { error: '请从电脑工作台打开登录窗口' });
+        if (!isLocalDesktopRequest(req)) return reply(403, { error: '登录窗口仅可从本机工作台打开；手机只读取求职数据。' });
+        const body = await readBody(req, 4096);
+        const xhsDir = options.xhsDir || path.resolve(__dirname, '../data/xhs-private');
+        loginTarget(body.sourceID, dataDir, xhsDir);
+        if (refreshing || getAssistant().snapshot().tasks.some(t => t.state === 'running')) return reply(409, { error: '请等待当前采集完成后再打开登录窗口，以免浏览器会话冲突。' });
+        const opened = loginOpenedAt.get(body.sourceID);
+        if (opened && Date.now() - opened < 15000) return reply(429, { error: '登录窗口刚刚打开，请检查桌面。' });
+        loginOpenedAt.set(body.sourceID, Date.now());
+        try { return reply(200, await (options.openLogin || openLoginWindow)({ sourceID: body.sourceID, dataDir, xhsDir })); }
+        catch (error) { loginOpenedAt.delete(body.sourceID); throw error; }
+      }
       if (route.startsWith('/v2/career/')) {
         const body = req.method === 'POST' ? await readBody(req, 16 * 1024 * 1024) : {};
         return reply(req.method === 'POST' && route === '/v2/career/refresh' ? 202 : 200, await getAssistant().handle(req.method, route, body));

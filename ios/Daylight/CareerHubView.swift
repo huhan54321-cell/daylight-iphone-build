@@ -9,6 +9,7 @@ struct CareerAssistantView: View {
     @State private var city = "全部城市"
     @State private var profileID = ""
     @State private var includeClosed = false
+    @State private var sortOrder = "综合推荐"
     init(client: CareerAssistantClient) { self.client = client }
     init(configuration: CareerAPIConfiguration) { self.client = CareerAssistantClient(configuration: configuration) }
     private var profiles: [CareerAssistantJSON] { client.snapshot["profiles"].array }
@@ -18,8 +19,15 @@ struct CareerAssistantView: View {
         client.snapshot["jobs"].array.filter { job in
             (includeClosed || filter == "收藏" || !["closed", "historical"].contains(job["status"].string)) &&
             (filter != "收藏" || job["followUp"]["saved"].bool) && (city == "全部城市" || job["city"].string == city) &&
-            (query.isEmpty || "\(job["title"].string) \(job["company"].string) \(job["description"].string)".localizedCaseInsensitiveContains(query))
-        }.sorted { matching($0)["score"].int == matching($1)["score"].int ? $0["checkedAt"].string > $1["checkedAt"].string : matching($0)["score"].int > matching($1)["score"].int }
+            (query.isEmpty || "\(job["title"].string) \(job["company"].string) \(job["location"].string) \(job["description"].string)".localizedCaseInsensitiveContains(query))
+        }.sorted {
+            let left = matching($0), right = matching($1)
+            let leftDate = left["freshnessAt"].string.isEmpty ? $0["checkedAt"].string : left["freshnessAt"].string
+            let rightDate = right["freshnessAt"].string.isEmpty ? $1["checkedAt"].string : right["freshnessAt"].string
+            if sortOrder == "综合推荐", left["score"].int != right["score"].int { return left["score"].int > right["score"].int }
+            if leftDate != rightDate { return leftDate > rightDate }
+            return $0.id < $1.id
+        }
     }
     private var approvals: [CareerAssistantJSON] { client.snapshot["applications"].array.filter { $0["state"].string == "draft" } }
     private var following: [CareerAssistantJSON] { client.snapshot["jobs"].array.filter { let f = $0["followUp"]; return !["", "未投递", "已结束"].contains(f["stage"].string) || !f["nextAction"].string.isEmpty || f["interview"] != .null } }
@@ -31,7 +39,15 @@ struct CareerAssistantView: View {
                     Spacer()
                     if client.busy { ProgressView().accessibilityLabel("正在后台同步") }
                 }.font(.subheadline)
-                Text(client.snapshot["generatedAt"].string.isEmpty ? "收藏、跟进和面试会先保存在手机。" : "内容更新于 \(CareerDates.label(client.snapshot["generatedAt"].string))").font(.caption).foregroundStyle(.secondary)
+                Text(client.snapshot["generatedAt"].string.isEmpty ? "收藏、跟进和面试会先保存在手机。" : "上次同步 \(CareerDates.label(client.snapshot["generatedAt"].string))").font(.caption).foregroundStyle(.secondary)
+                Button { Task { await client.discover() } } label: {
+                    Label(client.discoveryRunning ? "电脑正在检索…" : "查找新机会", systemImage: "magnifyingglass")
+                }.disabled(!client.configured || client.busy || client.startingDiscovery || client.discoveryRunning).accessibilityIdentifier("career-discover")
+                if let task = client.snapshot["tasks"].array.first {
+                    Text(task["message"].string).font(.caption).foregroundStyle(.secondary)
+                    Text("最近检索：\(CareerDates.label(task["startedAt"].string))").font(.caption2).foregroundStyle(.secondary)
+                }
+                Text("同步读取已有结果；查找新机会会让电脑启动检索。BOSS 仍需在电脑浏览后导入。").font(.caption).foregroundStyle(.secondary)
                 let incomplete = client.snapshot["sources"].array.filter { ["blocked", "error", "login_required", "partial"].contains($0["state"].string) }.count
                 if incomplete > 0 { NavigationLink("\(incomplete) 个来源尚未全部检查成功") { CareerSourceView(client: client) }.font(.caption) }
                 if !client.pending.isEmpty { NavigationLink("\(client.pending.count) 项本机修改待同步") { CareerSyncView(client: client) }.font(.caption).accessibilityIdentifier("career-pending") }
@@ -65,7 +81,7 @@ struct CareerAssistantView: View {
             Section {
                 Picker("查看范围", selection: $filter) { Text("全部").tag("全部"); Text("收藏").tag("收藏"); Text("公司").tag("公司") }.pickerStyle(.segmented).accessibilityIdentifier("career-filter")
                 HStack {
-                    TextField("搜索公司、岗位或方向", text: $query)
+                    TextField("搜索公司、岗位、方向或商圈", text: $query)
                         .focused($searchFocused).submitLabel(.search).autocorrectionDisabled()
                         .onSubmit { searchFocused = false }.accessibilityIdentifier("career-search")
                     if searchFocused { Button("完成") { searchFocused = false }.buttonStyle(.borderless).accessibilityIdentifier("career-dismiss-search-keyboard") }
@@ -76,22 +92,27 @@ struct CareerAssistantView: View {
                         if profiles.count > 1 { Picker("目标", selection: $profileID) { Text("默认目标").tag(""); ForEach(profiles) { Text($0["name"].string).tag($0.id) } } }
                     }
                     Toggle("包含已结束与历史岗位", isOn: $includeClosed).font(.caption)
+                    Picker("排序", selection: $sortOrder) { Text("综合推荐").tag("综合推荐"); Text("最新发现／变化").tag("最新发现") }.pickerStyle(.segmented)
                 }
             }
             if filter == "公司" { companyRows }
             else {
-                ForEach(["precise", "explore"], id: \.self) { lane in
+                if sortOrder == "最新发现" { Section("按新增或内容变化排序") { ForEach(jobs) { jobLink($0) } } }
+                else { ForEach(["precise", "explore"], id: \.self) { lane in
                     let rows = jobs.filter { (matching($0)["lane"].string == "precise" ? "precise" : "explore") == lane }
-                    if !rows.isEmpty { Section(lane == "precise" ? "精准推荐" : "拓展与待核查") { ForEach(rows) { row in jobLink(row) } } }
-                }
+                    if !rows.isEmpty { Section(lane == "precise" ? "优先查看" : "拓展与待核查") { ForEach(rows) { row in jobLink(row) } } }
+                } }
                 if jobs.isEmpty { Section { ContentUnavailableView(filter == "收藏" ? "还没有收藏" : "没有符合筛选的岗位", systemImage: "bookmark", description: Text(filter == "收藏" ? "在岗位详情收藏，之后可离线查看。" : "可以调整筛选；来源未检查成功时，已有内容仍然保留。")) } }
             }
             Section { NavigationLink { CareerSourceView(client: client) } label: { Label("来源状态与搜索范围", systemImage: "antenna.radiowaves.left.and.right") } }
         }
     }
     private func jobLink(_ job: CareerAssistantJSON) -> some View {
-        NavigationLink { CareerAssistantJobView(client: client, jobID: job.id, profileID: selectedProfile) } label: { CareerJobRow(job: job, reason: matching(job)["reasons"].strings.first) }
-            .accessibilityIdentifier("career-job-" + job.id)
+        VStack(alignment: .leading, spacing: 8) {
+            NavigationLink { CareerAssistantJobView(client: client, jobID: job.id, profileID: selectedProfile) } label: { CareerJobRow(job: job, reason: matching(job)["reasons"].strings.first) }
+                .accessibilityIdentifier("career-job-" + job.id)
+            CareerSourceActions(url: job["url"].string, sourceID: job["sourceID"].string, title: job["title"].string, compact: true)
+        }
     }
     private var companyRows: some View {
         let names = Set(CareerDirectory.companies.map(\.name) + client.snapshot["jobs"].array.map { $0["company"].string })
@@ -162,7 +183,8 @@ struct CareerJobRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(alignment: .top) { Text(job["title"].string).font(.headline); Spacer(); if job["followUp"]["saved"].bool { Image(systemName: "bookmark.fill").foregroundStyle(.blue) } }
-            Text("\(job["company"].display) · \(job["city"].display)").font(.subheadline)
+            Text(job["company"].display).font(.subheadline)
+            Text(job["location"].string.isEmpty ? job["city"].display : job["location"].string).font(.caption).foregroundStyle(.secondary)
             if let reason, !reason.isEmpty { Text(reason).font(.caption).foregroundStyle(.secondary).lineLimit(2) }
             HStack { Text(job["sourceName"].display); if !["", "未投递"].contains(job["followUp"]["stage"].string) { Text(job["followUp"]["stage"].string) }; if job["pendingSync"].bool { Text("待同步") }; if ["closed", "historical"].contains(job["status"].string) { Text("历史／已结束") } }.font(.caption2).foregroundStyle(.secondary)
         }.padding(.vertical, 4)

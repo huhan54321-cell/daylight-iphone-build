@@ -160,7 +160,9 @@ try {
   fs.mkdirSync(dataDir, { recursive: true, mode: 0o700 }); fs.writeFileSync(path.join(dataDir, '.gitignore'), '*\n');
   context = await chromium.launchPersistentContext(profile, launchOptions);
   context.setDefaultTimeout(8000);
-  const page = context.pages()[0] || await context.newPage();
+  // Edge may still be restoring its startup tab when the persistent context
+  // becomes ready. Use an owned tab so startup navigation cannot replace ours.
+  const page = await context.newPage();
   if (args.includes('--login')) {
     await page.goto('https://www.zhipin.com/web/user/?ka=header-login', { waitUntil: 'domcontentloaded', timeout: 25000 });
     await page.bringToFront();
