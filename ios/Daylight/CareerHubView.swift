@@ -34,24 +34,16 @@ struct CareerAssistantView: View {
     var body: some View {
         List {
             Section {
-                HStack {
-                    Label(client.online ? "电脑已连接" : client.configured ? "本机内容" : "尚未连接电脑", systemImage: client.online ? "checkmark.icloud" : "iphone")
-                    Spacer()
-                    if client.busy { ProgressView().accessibilityLabel("正在后台同步") }
+                connectionSummary
+                DisclosureGroup("同步与检索详情") {
+                    if let task = client.snapshot["tasks"].array.first {
+                        Text(task["message"].string).font(.caption)
+                        Text("最近检索：\(CareerDates.label(task["startedAt"].string))").font(.caption).foregroundStyle(.secondary)
+                    }
+                    Text("同步读取已有结果；查找新机会会让电脑启动检索。BOSS 仍需在电脑浏览后导入。").font(.caption).foregroundStyle(.secondary)
+                    if let message = client.message { Text(message).font(.caption).foregroundStyle(.secondary).accessibilityIdentifier("career-message") }
+                    if !approvals.isEmpty { Button("\(approvals.count) 份材料待你审核") { section = "进度" } }
                 }.font(.subheadline)
-                Text(client.snapshot["generatedAt"].string.isEmpty ? "收藏、跟进和面试会先保存在手机。" : "上次同步 \(CareerDates.label(client.snapshot["generatedAt"].string))").font(.caption).foregroundStyle(.secondary)
-                Button { Task { await client.discover() } } label: {
-                    Label(client.discoveryRunning ? "电脑正在检索…" : "查找新机会", systemImage: "magnifyingglass")
-                }.disabled(!client.configured || client.busy || client.startingDiscovery || client.discoveryRunning).accessibilityIdentifier("career-discover")
-                if let task = client.snapshot["tasks"].array.first {
-                    Text(task["message"].string).font(.caption).foregroundStyle(.secondary)
-                    Text("最近检索：\(CareerDates.label(task["startedAt"].string))").font(.caption2).foregroundStyle(.secondary)
-                }
-                Text("同步读取已有结果；查找新机会会让电脑启动检索。BOSS 仍需在电脑浏览后导入。").font(.caption).foregroundStyle(.secondary)
-                let incomplete = client.snapshot["sources"].array.filter { ["blocked", "error", "login_required", "partial"].contains($0["state"].string) }.count
-                if incomplete > 0 { NavigationLink("\(incomplete) 个来源尚未全部检查成功") { CareerSourceView(client: client) }.font(.caption) }
-                if !client.pending.isEmpty { NavigationLink("\(client.pending.count) 项本机修改待同步") { CareerSyncView(client: client) }.font(.caption).accessibilityIdentifier("career-pending") }
-                if let message = client.message { Text(message).font(.caption).foregroundStyle(.secondary).accessibilityIdentifier("career-message") }
                 Picker("求职内容", selection: $section) { ForEach(["机会", "进度", "报告"], id: \.self) { Text($0) } }.pickerStyle(.segmented).accessibilityIdentifier("career-sections")
             }
             if section == "机会" { opportunities }
@@ -75,24 +67,46 @@ struct CareerAssistantView: View {
                 await client.monitor()
             }
     }
+    private var connectionSummary: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Label(client.online ? "电脑已连接" : client.configured ? "本机内容" : "尚未连接电脑", systemImage: client.online ? "checkmark.icloud" : "iphone")
+                Spacer()
+                if client.busy { ProgressView().accessibilityLabel("正在后台同步") }
+                Button { Task { await client.discover() } } label: {
+                    Text(client.discoveryRunning ? "检索中…" : "查找新机会")
+                }.buttonStyle(.borderless).disabled(!client.configured || client.busy || client.startingDiscovery || client.discoveryRunning).accessibilityIdentifier("career-discover")
+            }.font(.subheadline)
+            Text(client.snapshot["generatedAt"].string.isEmpty ? "收藏、跟进和面试会先保存在手机。" : "上次同步 \(CareerDates.label(client.snapshot["generatedAt"].string))").font(.caption).foregroundStyle(.secondary)
+            if let task = client.snapshot["tasks"].array.first {
+                Text(task["message"].string).font(.caption).foregroundStyle(.secondary).lineLimit(2)
+            }
+            let incomplete = client.snapshot["sources"].array.filter { ["blocked", "error", "login_required", "partial"].contains($0["state"].string) }.count
+            if incomplete > 0 { NavigationLink("\(incomplete) 个来源尚未全部检查成功") { CareerSourceView(client: client) }.font(.caption) }
+            if !client.pending.isEmpty { NavigationLink("\(client.pending.count) 项本机修改待同步") { CareerSyncView(client: client) }.font(.caption).accessibilityIdentifier("career-pending") }
+        }.padding(.vertical, 3)
+    }
     private var opportunities: some View {
         Group {
-            if !approvals.isEmpty { Section { Button { section = "进度" } label: { Label("\(approvals.count) 份材料待你审核", systemImage: "checkmark.seal") } } }
             Section {
-                Picker("查看范围", selection: $filter) { Text("全部").tag("全部"); Text("收藏").tag("收藏"); Text("公司").tag("公司") }.pickerStyle(.segmented).accessibilityIdentifier("career-filter")
-                HStack {
-                    TextField("搜索公司、岗位、方向或商圈", text: $query)
-                        .focused($searchFocused).submitLabel(.search).autocorrectionDisabled()
-                        .onSubmit { searchFocused = false }.accessibilityIdentifier("career-search")
-                    if searchFocused { Button("完成") { searchFocused = false }.buttonStyle(.borderless).accessibilityIdentifier("career-dismiss-search-keyboard") }
-                }
-                if filter != "公司" {
+                VStack(alignment: .leading, spacing: 12) {
+                    Picker("查看范围", selection: $filter) { Text("全部").tag("全部"); Text("收藏").tag("收藏"); Text("公司").tag("公司") }.pickerStyle(.segmented).accessibilityIdentifier("career-filter")
                     HStack {
+                        TextField("搜索公司、岗位、方向或商圈", text: $query)
+                            .focused($searchFocused).submitLabel(.search).autocorrectionDisabled()
+                            .onSubmit { searchFocused = false }.accessibilityIdentifier("career-search")
+                        if searchFocused { Button("完成") { searchFocused = false }.buttonStyle(.borderless).accessibilityIdentifier("career-dismiss-search-keyboard") }
+                    }
+                    if filter != "公司" {
+                        Picker("排序", selection: $sortOrder) { Text("综合推荐").tag("综合推荐"); Text("最新发现／变化").tag("最新发现") }.pickerStyle(.segmented)
+                    }
+                }.padding(.vertical, 3)
+                if filter != "公司" {
+                    DisclosureGroup(city == "全部城市" ? "城市与更多筛选" : "\(city) · 更多筛选") {
                         Picker("城市", selection: $city) { Text("全部城市").tag("全部城市"); ForEach(Set(client.snapshot["jobs"].array.map { $0["city"].string }).filter { !$0.isEmpty }.sorted(), id: \.self) { Text($0).tag($0) } }
                         if profiles.count > 1 { Picker("目标", selection: $profileID) { Text("默认目标").tag(""); ForEach(profiles) { Text($0["name"].string).tag($0.id) } } }
-                    }
-                    Toggle("包含已结束与历史岗位", isOn: $includeClosed).font(.caption)
-                    Picker("排序", selection: $sortOrder) { Text("综合推荐").tag("综合推荐"); Text("最新发现／变化").tag("最新发现") }.pickerStyle(.segmented)
+                        Toggle("包含已结束与历史岗位", isOn: $includeClosed).font(.caption)
+                    }.font(.subheadline)
                 }
             }
             if filter == "公司" { companyRows }

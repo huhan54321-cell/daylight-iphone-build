@@ -48,6 +48,10 @@ final class DaylightUITests: XCTestCase {
     }
 
     func testExpenseCreateEditDeleteSurvivesRelaunch() {
+        // Hosted simulator trace reached delete confirmation at 179 seconds,
+        // with create/edit/persistence assertions passing. Allow the complete
+        // scenario, including its final relaunch, while retaining every check.
+        executionTimeAllowance = 300
         launch()
         createExpense(title: "UI 茶饮", amount: "1.23")
         assertText("today-net-expense", equals: "¥ 1.23")
@@ -394,12 +398,17 @@ final class DaylightUITests: XCTestCase {
         XCTAssertTrue(app.buttons["已收藏"].waitForExistence(timeout: 5))
         relaunch()
         tab("求职")
-        tap(app.segmentedControls["career-filter"].buttons["收藏"])
-        XCTAssertTrue(element("career-job-ui-mobile-job").waitForExistence(timeout: 5))
+        tap(app.segmentedControls["career-filter"].buttons["收藏"], scroll: true)
+        // List virtualizes rows below the viewport; reveal the saved job before
+        // checking persistence, also on smaller screens or with status notices.
+        scrollTo(app.buttons["career-job-ui-mobile-job"])
+        XCTAssertTrue(app.buttons["career-job-ui-mobile-job"].exists)
         tap(app.buttons["career-reload"])
         tab("账本")
         tab("求职")
-        XCTAssertTrue(element("career-job-ui-mobile-job").exists)
+        scrollTo(app.buttons["career-job-ui-mobile-job"])
+        XCTAssertTrue(app.buttons["career-job-ui-mobile-job"].exists)
+        scrollTo(element("career-pending"), direction: .down)
         XCTAssertTrue(element("career-pending").exists)
     }
 

@@ -84,7 +84,7 @@
     },
     {
       "file": "ios/Daylight/CareerHubView.swift",
-      "sha256": "b9f2e356e57e7c7f79fe21b77ba9250696bf2bab9d07509d252618cb88628f5d"
+      "sha256": "85c02997ca7880751d78540e886d7ad0a7b95c6626dedc0d932a872da32c65af"
     },
     {
       "file": "ios/Daylight/CareerJobDetail.swift",
@@ -252,7 +252,7 @@
     },
     {
       "file": "ios/DaylightUITests/DaylightUITests.swift",
-      "sha256": "e4ba8b2a4ef2b75102a9a268923abee65411d01aae101103a8867492d1d1d42f"
+      "sha256": "38d8093eb5a5f5462c68c1f83fcc39252b9f2ffdeccd1fdab4ffde5d57ebd52d"
     },
     {
       "file": "tests/native/BankBalanceOrderTests.swift",
@@ -532,7 +532,7 @@
     },
     {
       "file": "docs/career-assistant.md",
-      "sha256": "c7bfa2f69e2d9db27a206a6000dd3d3529b6484b8a35000447007e9c1c0ef784"
+      "sha256": "8cb3f8d4f1df6de9c4ae0747fddc322db3ee0b573b92f374b4ad133200cc637f"
     },
     {
       "file": "docs/career-reference-projects.json",
