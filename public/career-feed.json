@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T05:01:35.881Z",
+  "generatedAt": "2026-10-23T05:02:21.409Z",
   "jobs": [
     {
       "id": "job_05835f734df7d7aa9d0a0c73",
@@ -24,7 +24,7 @@
         "硬件",
         "不需要融资",
         "深圳",
-        "查看其他 281 个职位",
+        "查看其他 279 个职位",
         "0 笔试题目 3288 面试经验 707 面试短评"
       ],
       "tags": [
@@ -35,7 +35,7 @@
         "数据与评测"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-17T04:39:05.706Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "full_jd",
       "refreshedAt": null,
@@ -55,7 +55,7 @@
           "url": "https://www.nowcoder.com/jobs/detail/443001?urlSource=sitemap"
         }
       ],
-      "contentHash": "78247b5afdb0f2eb1281b77ebcbeec7b47aed0273b46446ff67fb8f7bce682ea"
+      "contentHash": "3b8da0b54dd6b7aca2870de42bea7cc4e0f37859581fdef16b2f2c02c19aa028"
     },
     {
       "id": "job_0db5804d8c44ff091fbbd2c6",
@@ -325,6 +325,43 @@
       "contentHash": "fac1d09e8455723684f6a9acfb0ecae56b7ff9a109dc3598bf83b1821817106b"
     },
     {
+      "id": "job_322477d2603e33b36101e6d9",
+      "sourceID": "official",
+      "sourceName": "企业官方招聘",
+      "company": "字节跳动",
+      "title": "机器人算法研究实习生 - Seed Model - 字节跳动",
+      "city": "城市待核查",
+      "jobType": "实习",
+      "salary": "未注明",
+      "location": "城市待核查",
+      "url": "https://jobs.bytedance.com/campus/position/7210243621324671288/detail",
+      "description": "字节跳动 校园 招聘 团队介绍: 字节跳动 Seed 团队成立于 2023 年,致力于寻找通用智能的新方法,追求智能上限,为科技和社会发展作出贡献。 Seed 团队在 AI 领域拥有长期愿景与决心,",
+      "requirements": [],
+      "tags": [],
+      "publishedAt": null,
+      "checkedAt": "2026-10-23T05:02:21.409Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。",
+      "sourceJobID": "https://jobs.bytedance.com/campus/position/7210243621324671288/detail|字节跳动|机器人算法研究实习生-seedmodel-字节跳动|城市待核查|intern",
+      "sourceMembers": [
+        {
+          "sourceID": "official",
+          "sourceJobID": "https://jobs.bytedance.com/campus/position/7210243621324671288/detail|字节跳动|机器人算法研究实习生-seedmodel-字节跳动|城市待核查|intern",
+          "url": "https://jobs.bytedance.com/campus/position/7210243621324671288/detail"
+        }
+      ],
+      "contentHash": "495557504b7ecf898136a62544aa1f5faa01496950ca6a53818b3b974d36caaf"
+    },
+    {
       "id": "job_33eb30bd495aeeebcc9eb44d",
       "sourceID": "nowcoder",
       "sourceName": "牛客招聘",
@@ -351,7 +388,7 @@
       ],
       "tags": [],
       "publishedAt": null,
-      "checkedAt": "2026-10-20T05:00:11.780Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "full_jd",
       "refreshedAt": null,
@@ -454,7 +491,7 @@
         "仿真与迁移"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-13T06:53:14.252Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "listing_only",
       "refreshedAt": null,
@@ -1017,7 +1054,7 @@
         "操作与灵巧手"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-20T05:00:11.780Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "listing_only",
       "refreshedAt": null,
@@ -1045,32 +1082,31 @@
       "sourceName": "牛客招聘",
       "company": "辉羲智能",
       "title": "具身智能VLA算法实习生_辉羲智能实习_牛客网",
-      "city": "城市待核查",
+      "city": "北京",
       "jobType": "实习",
       "salary": "未注明",
-      "location": "城市待核查",
-      "url": "https://www.nowcoder.com/jobs/detail/410671?urlSource=sitemap",
-      "description": "Title: 具身智能VLA算法实习生_辉羲智能实习_牛客网\n# 具身智能VLA算法实习生. 1. 参与基于大算力芯片的视觉语言模型(VLA)算法研究,探索其在机器人场景中的应用(如指令理解、场景描述生成)。 2. 开发并优化多模态(视觉-语言-动作)模型,结合芯片特性实现模型轻量化部署与加速推理。 3. 构建仿真环境(如MuJoCo、Isaac Sim)中的数据集,支持VLA模型的训练与评估。 4. 1. 硕士及以上学历在读,计算机、人工智能、自动化等相关专业。 2. 熟悉Python/C++,掌握PyTorch/TensorFlow等深度学习框架。 3. 熟悉Transformer、Diffusion Model等架构,并能应用于图像处理、生成建模或时间序列建模。 4. 有大模型(LLM)或芯片加速经验者优先(如模型量化、编译器优化)。 实习要求: 每周至少工作4天,连续实习6个月以上。 对具身智能领域有热情,具备快速学习能力与团队协作精神。 加分项: 熟悉机器人仿真环境(MuJoCo、PyBullet、Isaac Sim)及ROS框架。 熟悉强化学习(RL)或Sim2Real技术。 有开源项目贡献或顶会论文(ICRA/IROS/CoRL)经验。 有实际机器人开发经验(如机械臂、移动底盘)。. 牛客安全提示:如发现虚假招聘、广告,或以任何名义索要证件、费用,或诱导异地入职、参与培训等均属违法行为,发现请 立即举报. 0 笔试题目 0 面试经验 0 面试短评.",
+      "location": "北京",
+      "url": "https://www.nowcoder.com/jobs/detail/410671",
+      "description": "要求、工作内容、薪资待遇介绍等企业 招聘 信息。 智联 招聘 人才 招聘 网为求职者提供 字节跳动 2026年最新 招聘 信息,348个岗位在线直招,薪资待遇一目了然,求职找工作找人才就上 ... 智联 招聘 校园 招聘 专栏,为应届大学毕业生及在校生提供全面且准确的国企,外企等 实习 求职信息。最佳雇主校园 招聘实习 岗位,各大知名公司校园 招聘实习 职位,求职找工作、找人才就上智联 招... 字节跳动 在全球推出了多款有影响力的产品,包括今日头条、抖音、西瓜视频、飞书等。业务覆盖150个国家和地区,旗下产品全球月活跃用户数超19亿。加入我们,和优秀的人,做有挑战的事... 字节跳动 校园 招聘 团队介绍: 字节跳动 Seed 团队成立于 2023 年,致力于寻找通用智能的新方法,追求智能上限,为科技和社会发展作出贡献。 Seed 团队在 AI 领域拥有长期愿景与决心,",
       "requirements": [],
       "tags": [
-        "VLA 与动作模型",
-        "强化学习",
-        "仿真与迁移",
-        "数据与评测"
+        "VLA 与动作模型"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-20T05:00:11.780Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "listing_only",
       "refreshedAt": null,
       "deadline": null,
       "minDays": null,
-      "minMonths": 6,
+      "minMonths": null,
       "graduateYears": [],
-      "requiredDegree": "master",
-      "relatedURLs": [],
+      "requiredDegree": null,
+      "relatedURLs": [
+        "https://www.nowcoder.com/jobs/detail/410671?urlSource=sitemap"
+      ],
       "companyIntro": "",
-      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。\n正文明确条件:4. 1. 硕士及以上学历在读;连续实习6个月以上",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。",
       "sourceJobID": "410671",
       "sourceMembers": [
         {
@@ -1079,7 +1115,7 @@
           "url": "https://www.nowcoder.com/jobs/detail/410671?urlSource=sitemap"
         }
       ],
-      "contentHash": "36a689fa539f5804b209acbd0b0f68af8610a7708557e48b750a503f53a7035a"
+      "contentHash": "0977a5730dd7f7823cb745255f91dba4f9fe347a0cbe3509ea089a398d87bcf2"
     },
     {
       "id": "job_782f981fddbbcb377312edeb",
@@ -1155,7 +1191,7 @@
         "北京思灵机器人科技有限责任公司",
         "C轮 · 1000-9999人 · 人工智能、半导体/芯片、医疗设备/器械/耗材、工业自动化/机器人 已审核 已审核",
         "公司评价117条 面试经验65条",
-        "60 个在招职位"
+        "64 个在招职位"
       ],
       "tags": [
         "VLA 与动作模型",
@@ -1166,20 +1202,18 @@
         "运动控制"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-20T05:00:11.780Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "full_jd",
       "refreshedAt": null,
       "deadline": null,
       "minDays": null,
       "minMonths": null,
-      "graduateYears": [
-        2027
-      ],
+      "graduateYears": [],
       "requiredDegree": "master",
       "relatedURLs": [],
       "companyIntro": "",
-      "sourceNote": "来自公开来源的职责和要求摘录;请以原始招聘页确认名额与完整条件。\n正文明确条件:1、硕士及以上学历;### 【2027届】算法设计师(J10196)",
+      "sourceNote": "来自公开来源的职责和要求摘录;请以原始招聘页确认名额与完整条件。\n正文明确条件:1、硕士及以上学历",
       "sourceJobID": "CC822193520J40729675201",
       "sourceMembers": [
         {
@@ -1188,7 +1222,7 @@
           "url": "https://jobs.zhaopin.com/CC822193520J40729675201.htm"
         }
       ],
-      "contentHash": "166346075d2998c77196b29d4df921c3502e18bfe3815fb68077b39cbec38540"
+      "contentHash": "80e58abcea1b42ae621f3a75062630302b45dbd3ffe0f14c264de2618adc745c"
     },
     {
       "id": "job_7e008415cf4920b972b0fe6d",
@@ -1445,7 +1479,7 @@
         "运动控制"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-17T04:39:05.706Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "full_jd",
       "refreshedAt": null,
@@ -1458,7 +1492,7 @@
       "requiredDegree": "master",
       "relatedURLs": [],
       "companyIntro": "",
-      "sourceNote": "来自公开来源的职责和要求摘录;请以原始招聘页确认名额与完整条件。\n正文明确条件:硕士及以上学历;### 视觉算法(上海)(2027届校招)(J17808);### 视觉算法(上海)(博士)(2027届校招)(J17940);### 视觉应用开发(2027届校招)(J17847);### 视觉研发(2027届校招)(J17886);### 视觉算法(2027届校招)(J17888)",
+      "sourceNote": "来自公开来源的职责和要求摘录;请以原始招聘页确认名额与完整条件。\n正文明确条件:硕士及以上学历;### 视觉研发(2027届校招)(J17886);### 视觉算法(上海)(博士)(2027届校招)(J17940);### 视觉应用开发(2027届校招)(J17847);### 视觉算法(2027届校招)(J17888);### 视觉算法(上海)(2027届校招)(J17808)",
       "sourceJobID": "CCL1460798900J40842404714",
       "sourceMembers": [
         {
@@ -1744,34 +1778,74 @@
       "contentHash": "83a9b79d709b349d8139d880e3fedd3d781387e5d9e662c3a2d5858337c2cb56"
     },
     {
-      "id": "job_b0bcc8a3ab48fcc26952618f",
-      "sourceID": "zhaopin",
-      "sourceName": "智联招聘",
-      "company": "海康威视",
-      "title": "机器人-AI图像编解码算法-机器视觉-西安招聘_海康威视招聘 - 智联招聘",
-      "city": "杭州",
-      "jobType": "类型未注明",
+      "id": "job_afe8846039ac503c561bceaa",
+      "sourceID": "official",
+      "sourceName": "企业官方招聘",
+      "company": "字节跳动",
+      "title": "大模型数据运营(VLA方向)实习生 - AI数据与安全 - 字节跳动",
+      "city": "北京",
+      "jobType": "实习",
       "salary": "未注明",
-      "location": "杭州",
-      "url": "https://jobs.zhaopin.com/CC120975580J40965010315.htm",
-      "description": "职位描述: \n1、参与AI图像编解码算法(如基于深度学习的图像压缩、神经图像压缩NIC等)的研发与迭代,优化压缩率、重建图像质量及编解码耗时; \n2、参与编解码模型的训练、率失真优化、模型轻量化及工程部署,结合实际业务场景(如图片传输、存储优化、端侧计算等)进行针对性算法优化; \n3、跟踪AI编解码、生成式压缩、AIGC等方向的前沿学术研究,复现SOTA算法并探索在业务场景中的产品化落地。 \n任职资格: \n1、计算机、电子信息、通信或自动化等相关专业在读本科/硕士/博士,保证每周4天实习时长3个月以上; \n2、熟悉图像/视频编解码基本原理(如JPEG/H.264/H.265等),有深度学习图像压缩(如基于CNN/Transformer/GAN/Diffusion的压缩模型)研发经验或相关论文发表者优先; \n3、工程动手能力较强,熟练掌握Python/C++,熟悉PyTorch等深度学习框架,了解模型量化、剪枝及TensorRT等加速部署工具者优先; \n4、优秀的表达能力、良好的团队合作和沟通能力,对探索前沿AI技术有浓厚兴趣。\n登录查看完整内容\n工作地点\n工作地点\n陕西\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n位置图标\n工作地点\n公司信息\n杭州海康威视数字技术股份有限公司\n杭州海康威视数字技术股份有限公司\n已上市 · 10000人以上 · 仪器仪表、工业自动化/机器人、人工智能、物联网 已审核 已审核\n公司评价999+条 面试经验1116条\n745 个在招职位\n公司介绍\n【公司介绍】海康威视成立于2001年,是一家专注技术创新的科技公司,致力于将物联感知、人工智能、大数据技术服务于千行百业,引领智能物联新未来:以全面的感知技术,帮助人、物更好地链接,构筑智能世界的基础;以丰富的智能产品,洞察和满足多样化需求,让智能触手可及;以创新的智能物联应用,建设便捷、高效、安心的智能世界,助力人人享有美好未来。【公司实力】全球业务覆盖150+国家/地区,11大全球研发中心,7大全球制造基地;58000+全球员工,其中研发人员和技术服务人员超27951人,研发投入占全年营业收入11.80%,绝对数额占据业内前茅(2022年年报);视频感知—国家新一代人工智能开放创新平台(中华人民共和国科学技术部颁布);连续6年蝉联 “全球安防50强”第1位(a&s《安全自动化》);连续6年蝉联“中国最佳雇主”全国30强(智联招聘)。【薪酬福利】基础福利:五险一金、补充商业保险、年度健康体检;假期福利:带薪年假、全薪病假、婚假、产育假、母婴照顾假、育儿假等;多重补贴:餐饮补贴、交通补贴、通讯补贴、团队建设津贴;乐活配置:免息住房借款、特色员工餐厅、免费停车场、免费健身房、理疗室、定期义诊等园区服务等(园区服务部分区域可享,详请咨询当地HR);人才激励:年终奖、核心员工跟投创新业务计划股权激励、金砖奖;\\公司为常驻海内外的员工,提供健全的物质和人身保障、人性化的探亲福利。\n视频封面1\n视频封面2\n公司图片3\n公司图片4\n公司图片5\n公司图片6\n公司图片7\n公司图片8\n公司图片9\n工商信息\n企业名称 杭州海康威视数字技术股份有限公司\n企业类型 股份有限公司(港澳台投资、上市)\n法人代表 胡扬忠\n经营状态 在营(开业)\n成立时间 2001-11-30\n注册资本 916487.155万元\n查看全部信息\n完善简历\n认证资质\n营业执照信息\n相似职位\n查看更多\n### 油气-根因分析算法工程师 (MJ005747)\n 1.3-2.5万 和利时集团\n本科 3-5年 PyTorch TensorFlow Python\n### 信号处理工程师 1.2-2.4万·14薪 成都华兴汇明科技有限公司\n本科 1-3年 雷达 labview MATLAB\n### 雷达算法工程师 1.5-2.5万 北京理工雷科电子信息技术有限公司\n硕士 3-5年 雷达算法 雷达 雷达算法开发\n### 【27秋招】AI算法工程师\n 2-3万·13薪 西安知象光电科技有限公司\n硕士\n### 智能体开发工程师 2-3万·15薪 北京益恒达投资管理咨询有限公司\n本科 5-10年 LLM react FASTAPI MCP协议 LANGCHAIN 人工智能\n### 算法工程师 1.5-3万 北京玖瑞科技有限公司\n硕士 1-3年 深度学习 机器学习 图像算法 人工智能\n### 算法工程师 1.1-2.2万 西安兴汇电力科技有限公司\n本科 1-3年 大模型算法\n### 人工智能工程师 2.5-5万·14薪 遨天科技(北京)有限公司\n硕士 1-3年 AI AGENT定制研发 AI AGENT 船舶/航空/航天/军工 人工智能\n### 数智软件工程师 1.5-2.8万 特变电工新能源公司\n硕士 电力/水利/热力/燃气\n### 智能体编排工程师 1.5-2万 和利时集团\n硕士 1-3年 LANGGRAPH AGENT 工具调用 FUNCTION CALLING 工作流 状态机 HITL 智能体编排 智能体开发 大模型应用开发 人工智能\n### 模型开发工程师/算法工程师(时序方向) 1.8-2.7万·15薪 和利时集团\n硕士 3-5年 大模型算法\n### 油气-智能预警算法工程师 (MJ005748)\n 1.3-2.5万·14薪 和利时集团\n本科 3-5年 机器学习 多模态算法 大模型算法 Python PyTorch TensorFlow\n### 电力交易算法主管 2-3.5万 西安奇点能源股份有限公司\n本科 5-10年 精通电力现货出清结算逻辑 电力现货/VPP算法研发经验 电力/水利/热力/燃气\n### AI大模型应用及Agent开发工程师 1.5-2.3万 中创智维科技有限公司\n本科 3-5年 人工智能\n### 软件工程师(工业AI、制药) (MJ005749) 1.5-2.5万 和利时集团\n本科 3-5年 深度学习 机器学习 多模态算法\n### LLM应用运行时工程师 1.5-2万 和利时集团\n硕士 1-3年 LANGGRAPH AGENT 工具调用 FUNCTION CALLING 工作流 状态机 HITL 智能体编排 智能体开发 大模型应用开发 人工智能\n### 制药- 算法工程师 (MJ005750) 1.7-2.4万 和利时集团\n本科 3-5年 PyTorch TensorFlow\n### 大模型算法工程师(西安)(J12966) 面议 联通数字科技有限公司\n本科 5-10年 深度学习\n### AI研发工程师 8000-16000元 陕西元丰实业集团有限责任公司\n本科 3-5年 机器学习 TensorFlow PyTorch Python 运营数据挖掘 AI模型落地 数据可视化 人工智能 物联网 通信运营商/电信增值服务\n### 算法工程师(电力方向) 1-1.5万 深圳市双合电气股份有限公司\n硕士 1-3年 机器学习 电力大数据建模 MATLAB 电力系统 电力/水利/热力/燃气\n### 人工智能工程师(西安)\n 面议 陕西省通信服务有限公司\n本科\n### 算工程师 1-1.8万 东莞市中科原子精密制造科技有限公司\n本科 3-5年 图像算法 机器视觉 Python C++ 半导体/芯片 仪器仪表\n### AI算法工程师(西安) 120-150元/天 浙江宇视科技有限公司\n本科 人工智能\n### 储能PCS-高级算法工程师 2.5-4万·15薪 特变电工新能源公司\n本科 5-10年 新能源\n### AI算法工程师 1.2-2.4万 特变电工电气装备集团有限公司\n硕士 3-5年 人工智能\n### 算法工程师\n 9000-15000元 西安智周深鉴信息科技集团有限",
+      "location": "北京",
+      "url": "https://jobs.bytedance.com/campus/position/7584739374855473413/detail",
+      "description": "-参与 百度 智能云 具身智能 仿真评测平台研发,负责主流仿真环境与评测集(Isaac Lab / MuJoCo / ManiSkill / LIBERO 等)的集成与产品化,支撑 VLA 模型在云上的标准化评测 ... 工作职责: -负责通用具身大模型的训练与迭代,包括 VLA 、World Model、World Action Model 等方向的预训练、微调、评测与效果优化 -负责具身大模型在感知、理解、规划、动作生成与运... 我们的目标:在通用人型 机器人 上落地各项前沿工作,包括 VLA 、大小脑、协同操控等;确保算法能够在实际环境中运行,实现令人惊艳的效果 我们的优势:1. 顶级硬件,拥有行业内顶尖的硬... 辉羲智能 实习 具身智能VLA 算法 实习 生 2026最新 招聘 求职信息,薪资:250-300,地点:北京,点击查看更多辉羲智能 招聘 岗位、岗位职责要求、工作内容、薪资待遇介绍等企业 招聘 信息。 智联 招聘 人才 招聘 网为求职者提供 字节跳动 2026年最新 招聘 信息,348个岗位在线直招,薪资待遇一目了然,求职找工作找人才就上 ... 智联 招聘 校园 招聘 专栏,为应届大学毕业生及在校生提供全面且准确的国企,外企等 实习 求职信息。最佳雇主校园 招聘实习 岗位,各大知名公司校园 招聘实习 职位,求职找工作、找人才就上智联 招... 字节跳动 在全球推出了多款有影响力的产品,包括今日头条、抖音、西瓜视频、飞书等。业务覆盖150个国家和地区,旗下产品全球月活跃用户数超19亿。加入我们,和优秀的人,做有挑战的事... 字节跳动 校园 招聘 团队介绍: 字节跳动 Seed 团队成立于 2023 年,致力于寻找通用智能的新方法,追求智能上限,为科技和社会发展作出贡献。 Seed 团队在 AI 领域拥有长期愿景与决心,",
       "requirements": [],
-      "tags": [],
+      "tags": [
+        "VLA 与动作模型",
+        "仿真与迁移",
+        "世界模型",
+        "数据与评测"
+      ],
       "publishedAt": null,
-      "checkedAt": "2026-10-20T05:00:11.780Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "listing_only",
       "refreshedAt": null,
       "deadline": null,
-      "minDays": 4,
-      "minMonths": 3,
-      "graduateYears": [
-        2027
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。",
+      "sourceJobID": "https://jobs.bytedance.com/campus/position/7584739374855473413/detail|字节跳动|大模型数据运营vla方向实习生-ai数据与安全-字节跳动|北京|intern",
+      "sourceMembers": [
+        {
+          "sourceID": "official",
+          "sourceJobID": "https://jobs.bytedance.com/campus/position/7584739374855473413/detail|字节跳动|大模型数据运营vla方向实习生-ai数据与安全-字节跳动|北京|intern",
+          "url": "https://jobs.bytedance.com/campus/position/7584739374855473413/detail"
+        }
       ],
+      "contentHash": "270ca5cc55a7e8acf955711a0e5bc40b7f31169fa01c50dd4daf90a426eadafc"
+    },
+    {
+      "id": "job_b0bcc8a3ab48fcc26952618f",
+      "sourceID": "zhaopin",
+      "sourceName": "智联招聘",
+      "company": "公司待核查",
+      "title": "机器人-AI图像编解码算法-机器视觉-西安招聘",
+      "city": "城市待核查",
+      "jobType": "类型未注明",
+      "salary": "未注明",
+      "location": "城市待核查",
+      "url": "https://jobs.zhaopin.com/CC120975580J40965010315.htm",
+      "description": "海康威视招聘... 薪资4600-5200元,要求:工作经验经验不限,学历:本科,招聘负责人刚在线,随时沟通岗位。 总实习月数0个月周实习",
+      "requirements": [],
+      "tags": [],
+      "publishedAt": null,
+      "checkedAt": "2026-10-23T05:02:21.409Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
       "requiredDegree": "bachelor",
       "relatedURLs": [],
       "companyIntro": "",
-      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。\n正文明确条件:1、计算机、电子信息、通信或自动化等相关专业在读本科/硕士/博士;保证每周4天实习时长3个月以上;### AI应用工程师(面向2027届毕业生) 1.8-2.4万·14薪 西安华为技术有限公司",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。\n正文明确条件:学历:本科",
       "sourceJobID": "CC120975580J40965010315",
       "sourceMembers": [
         {
@@ -1780,7 +1854,7 @@
           "url": "https://jobs.zhaopin.com/CC120975580J40965010315.htm"
         }
       ],
-      "contentHash": "0542dd7ec47f9b3a6fa5c7a6e29b93049f931e45d27de36ed678da4d6efb9b08"
+      "contentHash": "8bce9ae10ed81b60bfd26432fb0b74fbdd35629b514b375746581a1ad0cfd53c"
     },
     {
       "id": "job_b86796de591d65ccfea15a32",
@@ -1936,17 +2010,59 @@
       "contentHash": "079b7336785d143e6b6b2afb143b64f5c3624c8575e7c0e66fc4f6a66272a6be"
     },
     {
+      "id": "job_c1b2c0e68c1501725b16e329",
+      "sourceID": "official",
+      "sourceName": "企业官方招聘",
+      "company": "字节跳动",
+      "title": "具身Infra实习生 - Seed Model - 字节跳动",
+      "city": "北京",
+      "jobType": "实习",
+      "salary": "未注明",
+      "location": "北京",
+      "url": "https://jobs.bytedance.com/campus/position/7599956731877705989/detail",
+      "description": "-参与 百度 智能云 具身智能 仿真评测平台研发,负责主流仿真环境与评测集(Isaac Lab / MuJoCo / ManiSkill / LIBERO 等)的集成与产品化,支撑 VLA 模型在云上的标准化评测 ... 工作职责: -负责通用具身大模型的训练与迭代,包括 VLA 、World Model、World Action Model 等方向的预训练、微调、评测与效果优化 -负责具身大模型在感知、理解、规划、动作生成与运... 我们的目标:在通用人型 机器人 上落地各项前沿工作,包括 VLA 、大小脑、协同操控等;确保算法能够在实际环境中运行,实现令人惊艳的效果 我们的优势:1. 顶级硬件,拥有行业内顶尖的硬... 辉羲智能 实习 具身智能VLA 算法 实习 生 2026最新 招聘 求职信息,薪资:250-300,地点:北京,点击查看更多辉羲智能 招聘 岗位、岗位职责要求、工作内容、薪资待遇介绍等企业 招聘 信息。 智联 招聘 人才 招聘 网为求职者提供 字节跳动 2026年最新 招聘 信息,348个岗位在线直招,薪资待遇一目了然,求职找工作找人才就上 ... 智联 招聘 校园 招聘 专栏,为应届大学毕业生及在校生提供全面且准确的国企,外企等 实习 求职信息。最佳雇主校园 招聘实习 岗位,各大知名公司校园 招聘实习 职位,求职找工作、找人才就上智联 招... 字节跳动 在全球推出了多款有影响力的产品,包括今日头条、抖音、西瓜视频、飞书等。业务覆盖150个国家和地区,旗下产品全球月活跃用户数超19亿。加入我们,和优秀的人,做有挑战的事... 字节跳动 校园 招聘 团队介绍: 字节跳动 Seed 团队成立于 2023 年,致力于寻找通用智能的新方法,追求智能上限,为科技和社会发展作出贡献。 Seed 团队在 AI 领域拥有长期愿景与决心,",
+      "requirements": [],
+      "tags": [
+        "VLA 与动作模型",
+        "仿真与迁移",
+        "世界模型",
+        "数据与评测"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-23T05:02:21.409Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [],
+      "requiredDegree": null,
+      "relatedURLs": [],
+      "companyIntro": "",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。",
+      "sourceJobID": "https://jobs.bytedance.com/campus/position/7599956731877705989/detail|字节跳动|具身infra实习生-seedmodel-字节跳动|北京|intern",
+      "sourceMembers": [
+        {
+          "sourceID": "official",
+          "sourceJobID": "https://jobs.bytedance.com/campus/position/7599956731877705989/detail|字节跳动|具身infra实习生-seedmodel-字节跳动|北京|intern",
+          "url": "https://jobs.bytedance.com/campus/position/7599956731877705989/detail"
+        }
+      ],
+      "contentHash": "e5e643e63946afd4789a344677fc4436149dc9bf9d707fb448f8cc9efd6e64da"
+    },
+    {
       "id": "job_ca0b666fd38c0eb531bdc2d7",
       "sourceID": "zju",
       "sourceName": "浙大官方招聘",
       "company": "公司待核查",
-      "title": "具身智能世界模型研究工程师",
-      "city": "城市待核查",
+      "title": "浙江大学就业服务平台",
+      "city": "杭州",
       "jobType": "类型未注明",
       "salary": "未注明",
-      "location": "城市待核查",
+      "location": "杭州",
       "url": "https://www.career.zju.edu.cn/jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=5BFA4E8EFCD9A81FE0653A68DD0E9B18",
-      "description": "- 有真实机器人数据、sim-to-real、域适配或跨场景泛化经验。- 有顶会论文发表、高质量论文复现或相关开源项目贡献。## 实习生要求- 每周可实习3 天以上",
+      "description": "| |\n| 我们正在基于可交互的 3D 仿真场景研发面向具身智能的世界模型。该岗位重点研究机器人动作与环境状态变化之间的关系,使模型能够从视觉、语言、机器人状态和动作序列中学习环境动力学,预测未来观测与状态,并服务于机器人规划、策略学习、数据生成和仿真到现实迁移。该岗位不是单纯的视频生成或 3D 场景制作岗位。候选人需要关注模型是否理解动作因果、物体持久性、空间关系、接触与交互结果,并建立能够衡量这些能力的训练和评测方法。## 工作职责- 基于厨房、客厅、商店等可交互 3D 仿真场景,构建世界模型训练与评测 pipeline。- 研究 action-conditioned video prediction、latent dynamics model、state-space model、video diffusion 和 autoregressive world model 等方法。- 融合 RGB、深度、点云、语义、机器人本体状态、动作、语言指令和物体状态等多模态信息。- 训练模型预测未来图像、3D 状态、物体轨迹、接触事件、奖励、成功概率或终止状态。- 利用仿真器生成大规模、可控且带有完整 ground truth 的交互轨迹,包括成功、失败、扰动和反事实数据。- 研究具有 3D 一致性、时间一致性、物体持久性和长时序记忆能力的世界表示。- 将世界模型用于机器人行为想象、model predictive control、策略规划、数据增强、奖励建模或策略预训练。- 设计世界模型 benchmark,评估视觉质量之外的动作可控性、动力学准确性、空间一致性、长期预测和下游任务收益。- 分析模型在遮挡、碰撞、物体状态变化、未见场景和未见动作组合上的失败模式与泛化能力。- 开发分布式训练、数据加载、实验管理、模型评测和可视化工具,提高研究迭代效率。- 与 3D 资产工程师协作扩展视觉与物体多样性,与机器人仿真工程师协作定义交互数据、状态标签和评测任务。- 跟踪并复现世界模型、视频生成、具身智能和 model-based reinforcement learning 的前沿工作,参与论文与开源项目。##",
       "requirements": [
         "- 熟悉 Python 和 PyTorch,能够独立完成模型训练、数据处理、实验设计和结果分析。- 理解 transformer、diffusion model、flow matching、VAE 或其他生成模型的基本原理。- 理解序列建模、表示学习、条件生成或动力学建模中的至少一个方向。- 具备机器人学习或 3D 视觉基础,理解观测、状态、动作、轨迹、坐标系和相机等概念。- 能够将研究问题转化为明确的数据协议、模型目标、消融实验和量化评测指标。- 具备较强的论文阅读、模型复现、工程调试和独立研究能力。## 加分项- 有 world model、video prediction、video generation、model-based RL、imagination-based planning 或 neural simulator 相关经验。- 熟悉 Dreamer、TD-MPC、MuZero、V-JEPA、Genie、GAIA 或同类世界模型工作。- 熟悉 Diffusion Transformer、Video Transformer、state-space model、tokeni",
         "职位类别:计算机软、硬件/互联网/IT",
@@ -1970,11 +2086,15 @@
         "生成式 AI Agent 与 3D 资产工程师"
       ],
       "tags": [
+        "VLA 与动作模型",
+        "模仿学习",
+        "强化学习",
         "仿真与迁移",
-        "世界模型"
+        "世界模型",
+        "数据与评测"
       ],
       "publishedAt": null,
-      "checkedAt": "2026-10-20T05:00:11.780Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "listing_only",
       "refreshedAt": null,
@@ -1982,10 +2102,10 @@
       "minDays": null,
       "minMonths": null,
       "graduateYears": [],
-      "requiredDegree": null,
+      "requiredDegree": "master",
       "relatedURLs": [],
       "companyIntro": "",
-      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。\n正文明确条件:实习 硕士及以上 1人 2026-12-31",
       "sourceJobID": "5BFA4E8EFCD9A81FE0653A68DD0E9B18",
       "sourceMembers": [
         {
@@ -1994,7 +2114,7 @@
           "url": "https://www.career.zju.edu.cn/jyxt/sczp/zpztgl/ckZpgwXq.zf?zpxxbh=5BFA4E8EFCD9A81FE0653A68DD0E9B18"
         }
       ],
-      "contentHash": "1883c49eee8c79a31a478cdb2db772d73e1c629ccf88515b1ba5fcb946048c72"
+      "contentHash": "08b4aa89637fc324ad46824bc826a26376f2fb51fea75cbb4ed53969249f5171"
     },
     {
       "id": "job_d37f525b972f7f4e5d287c97",
@@ -2051,7 +2171,7 @@
       "requirements": [],
       "tags": [],
       "publishedAt": null,
-      "checkedAt": "2026-10-13T06:53:14.252Z",
+      "checkedAt": "2026-10-23T05:02:21.409Z",
       "status": "unconfirmed",
       "verification": "listing_only",
       "refreshedAt": null,
@@ -2296,6 +2416,53 @@
       "contentHash": "4e4973181b1a0b7a0761812ce6df44bcf5842013f9dd9726dc4b40ef5c3afded"
     },
     {
+      "id": "job_e8192132b59b40b66890f97e",
+      "sourceID": "zhaopin",
+      "sourceName": "智联招聘",
+      "company": "上海金亥数智科技有限公司",
+      "title": "算法实习生招聘_上海金亥数智科技有限公司招聘 - 智联招聘",
+      "city": "上海",
+      "jobType": "实习",
+      "salary": "未注明",
+      "location": "上海",
+      "url": "https://www.zhaopin.com/jobdetail/CC318700230J40918977112.htm",
+      "description": "智联招聘\n 首页\n 职位\n 城市频道\n AI求职\n 找副业\n 政企\n 校招\n 高薪\n 海归\n 驻外\n 测评\n 职Q\n我要招人 登录/注册\n算法实习生\n\\\\-\\\\元 查看薪资\n 上海 徐汇区\n 经验不限\n 本科\nPyTorchTensorFlowPythonC++算法研究机器学习人工智能\n1、参与具身智能大模型前沿算法研究,包括框架设计、模型优化、面向操作/导航等下游任务的微调与部署;探索结合视觉-动作映射的“感知→决策→执行”端到端闭环。 \n2、参与可穿戴设备(数据手套、遥操作/动捕系统)的数据采集与处理,完成从本体采集数据到训练样本的转换、动作重定向与数据治理。 \n3、参与机器本体上的算法验证与真机系统集成:面向机械臂、双臂协调及足式机器人,实现路径规划、轨迹优化、力控/阻抗控制等规控算法的设计、仿真与实机部署调试。 \n4、基于仿真平台(Isaac Sim、MuJoCo等)构建训练环境,完成Sim-to-Real算法评测,并在真机上做行为验证与在环测试,提升操作鲁棒性与成功率。 \n5、参与 Linux/ROS2 环境下的传感器驱动调试、嵌入式控制与运动控制 SDK 开发,保障本体系统稳定运行。 \n1、计算机、人工智能、自动化、控制、机器人、机械等相关专业在校本科/硕士及以上,有相关方向研究或项目经历者优先。 \n2、扎实的数学与编程基础,熟悉深度学习理论;精通Python,熟悉 PyTorch/TensorFlow(模型研发方向)。 \n3、掌握机器人运动学/动力学基础,了解 MPC、轨迹优化、模仿学习(ACT、Diffusion Policy)或强化学习运动控制方案(规控方向)。 \n4、熟悉 C++、Linux 与 ROS/ROS2,了解多线程、实时性与常用通信协议;有传感器驱动或嵌入式开发经验(嵌入式方向)。 \n5、了解遥操作、动作捕捉、可穿戴数据采集流程,或有真机调试经验者优先。\n登录查看完整内容\n工作地点\n工作地点\n上海\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n位置图标\n工作地点\n公司信息\n上海金亥数智科技有限公司\n上海金亥数智科技有限公司\n未融资 · 100-299人 · 通信/网络设备、通信/网络设备 已审核 已审核\n公司评价9条 面试经验5条\n38 个在招职位\n公司介绍\n上海金亥通信设备有限公司:致力于成为结合典型行业的数字化解决方案提供商,在智能网联、智慧消防、智慧园区等领域拥有成熟的解决方案以及众多的实施案例,同时借助优秀的人才资源和渠道优势,为客户提供定制化的技术服务、数字集成及信息化解决方案。\n工商信息\n企业名称 上海金亥数智科技有限公司\n企业类型 有限责任公司(自然人投资或控股)\n法人代表 郭彪\n经营状态 在营(开业)\n成立时间 2015-05-25\n注册资本 1000万元\n查看全部信息\n完善简历\n认证资质\n营业执照信息\n相似职位\n查看更多\n### 智能驾驶算法工程师(规控、定位、感知) 2-4万 软通动力信息技术(集团)股份有限公司\n硕士 1-3年 算法\n### AI Agent开发工程师 1.4-1.8万 可利邦\n本科 1-3年 人工智能 软件/IT服务 就近分配 礼品多多 生日祝福 丰富多彩的团建活动\n### 分析计算工程师 1.5-2万 上海畅商亨霖信息技术有限公司\n硕士 电力/水利/热力/燃气\n### 几何算法工程师 1.9-3.5万 上海拓扑九章人工智能技术有限公司\n本科 3-5年 计算几何 CAM OPENCASCADE Mesh 人工智能 计算机软件\n### 多模态感知算法工程师(SY0006) 2.5-3.5万·15薪 时耘科技(天津)有限公司\n硕士 1-3年 多模态算法 ALIGN 人工智能\n### 运动控制算法工程师 2-3.5万·15薪 蓝星光域(上海)航天科技有限公司\n硕士 1-3年 深度学习 机器学习\n### 通信算法工程师(应届生) 1-1.5万·15薪 创远信科(上海)技术股份有限公司\n本科 C++\n### VLA算法工程师\n 4-8万·15薪 讯升(上海)人力资源有限公司成都分公司\n本科 大模型算法 多模态算法 VLA 具身智能 人工智能\n### 电机FOC控制算法工程师 2-3万 上海适途汽车技术有限公司\n大专 3-5年 FOC控制算法 新能源/燃油整车研发制造\n### 算法研究高级工程师-上海 2.5-3万·13薪 信泰(福建)科技有限公司\n本科 3-5年 图像算法 语音识别 大模型算法 机器视觉 OpenCV Python C语言 Java 13薪 五险一金\n### AI研发岗(J11792) 2-2.2万 光大证券\n硕士 3-5年 深度学习\n### 感知算法工程师 2.5-5万·13薪 上海友升铝业股份有限公司\n本科 5-10年 C++ 人工智能 工业自动化/机器人\n### 蛋白质大模型实习生\n 200-400元/天 天鹜科技\n硕士\n### 通信算法工程师\n 2-3.5万 上海特金信息科技有限公司\n硕士\n### SLAM工程师 3-5万·13薪 上海宇元智航科技有限公司\n本科 3-5年 图像算法 机器视觉 智能驾驶 导航算法 C++ PCL Ceres 人工智能\n### 优化算法(型材生产线)工程师(博士)\n 面议 江南造船\n博士\n### 算法工程师(AI应用) 2.9-4万 上海电气集团上海电机厂有限公司\n本科 3-5年 Python Java RAG MySQL SPRINGAI\n### 感知算法工程师(激光雷达传统算法) 3-4.5万 上海伯镭智能科技股份有限公司\n硕士 3-5年 感知算法 自动驾驶\n### 运动控制工程师 3-5万·15薪 蓝星光域(上海)航天科技有限公司\n硕士 5-10年 运动控制算法 船舶/航空/航天/军工\n### 软件开发实习\n 面议 上海芯无双仿真科技有限公司\n本科\n### AI智能体开发工程师 1.5-2.5万 上海探洇医学检验实验室有限公司\n硕士 深度学习 大模型算法 互联网医疗 医疗设备/器械/耗材 生物/制药\n### AI开发工程师 2-4万 浙江玉龙车业有限公司\n本科 3-5年 人工智能\n### 自动化算法工程师-临港(2027届校招)(J13774)\n 面议 中芯国际集成电路制造(上海)有限公司\n本科\n### AI算法开发 2-3万 桂林市人才服务中心(桂林市人才市场)\n本科 5-10年\n### AI 软件高级工程师|DSP/NPU 方向 3-4万·15薪 时擎智能科技(上海)有限公司\n本科 语音识别 多模态算法 算法部署 算法调优 算法移植 半导体/芯片 人工智能\n### 【集团】算法管培生\n 面议 极兔速递有限公司\n硕士\n### 算法工程师(开发)\n 面议 上海碳索能源服务股份有限公司\n本科\n### 低空技术研发工程师 面议 上勘集团\n硕士\n### 空调控制算法工程师(上海)(J11301) 1.5-2万·13薪 善诚科技发展(上海)有限公司\n本科 1-3年 MATLAB Java SIMULIN\n### 人工智能、知识工程、数据库工程师(博士)\n 面议 江南造船\n博士\n### AI工程师\n 面议 上海东成工具有限公司\n本科\n### 数字孪生开发工程师(实习生)\n 面议 蓝想大数据科技(上海)有限公司\n硕士\n### AI开发岗 1.2-2.4万 爱建证券有限责任公司\n硕士 机器学习 深度学习 证券/期货\n### 3D算法工程师(J11102) 1.5-2.5万 上海兰宝传感科技股份有限公司\n硕士 图像算法 深度学习 机器视觉 OpenCV HALCON\n### 大模型数据算法工程师 1.8-2.5万 科大讯飞股份有限公司\n本科 深度学习 机器学习 大模型算法 GP",
+      "requirements": [],
+      "tags": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "模仿学习",
+        "强化学习",
+        "仿真与迁移",
+        "数据与评测",
+        "运动控制"
+      ],
+      "publishedAt": null,
+      "checkedAt": "2026-10-23T05:02:21.409Z",
+      "status": "unconfirmed",
+      "verification": "listing_only",
+      "refreshedAt": null,
+      "deadline": null,
+      "minDays": null,
+      "minMonths": null,
+      "graduateYears": [
+        2027
+      ],
+      "requiredDegree": "bachelor",
+      "relatedURLs": [],
+      "companyIntro": "",
+      "sourceNote": "公开搜索摘要,尚未取得完整 JD;不表示目前可投递。\n正文明确条件:1、计算机、人工智能、自动化、控制、机器人、机械等相关专业在校本科/硕士及以上;### 自动化算法工程师-临港(2027届校招)(J13774)",
+      "sourceJobID": "CC318700230J40918977112",
+      "sourceMembers": [
+        {
+          "sourceID": "zhaopin",
+          "sourceJobID": "CC318700230J40918977112",
+          "url": "https://www.zhaopin.com/jobdetail/CC318700230J40918977112.htm"
+        }
+      ],
+      "contentHash": "d76417f018d1c87481a58d6e95d6fe18e209cc226020b281e2c2c1187a31da6e"
+    },
+    {
       "id": "job_f0d62a8c5bc678fdcc9b7101",
       "sourceID": "zju",
       "sourceName": "浙大官方招聘",
@@ -2420,26 +2587,26 @@
       "id": "public-jobs",
       "name": "企业官网与公开招聘",
       "state": "ok",
-      "lastAttemptAt": "2026-10-20T05:00:11.780Z",
-      "lastSuccessAt": "2026-10-20T05:00:11.780Z",
-      "count": 22,
-      "message": "本轮读取 22 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
+      "count": 15,
+      "message": "本轮读取 15 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
-      "count": 4,
-      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
+      "count": 3,
+      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2447,8 +2614,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2456,8 +2623,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2465,8 +2632,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2474,26 +2641,26 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
-      "count": 7,
-      "message": "本轮读取 7 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
-      "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
+      "state": "error",
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
       "lastSuccessAt": "2026-10-22T05:01:35.881Z",
-      "count": 38,
-      "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
+      "count": 0,
+      "message": "来源请求未完成，保留已有记录；下次定时任务重试。"
     },
     {
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-22T05:01:35.881Z",
-      "lastSuccessAt": "2026-10-22T05:01:35.881Z",
+      "lastAttemptAt": "2026-10-23T05:02:21.409Z",
+      "lastSuccessAt": "2026-10-23T05:02:21.409Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
@@ -2896,23 +3063,24 @@
     },
     {
       "id": "article-3dba48b1b32d6fbf43230d00",
-      "title": "Isaac Capture for Robot Learnin",
+      "title": "Isaac Capture for Robot Learnin | NVIDIA Developer",
       "date": "2026-10-21T14:00:00.000Z",
       "category": "开源工具",
-      "summary": "Collect Data With LeRobot. Follow the SO-101 workflow to connect teleoperation with robot demonstration datasets. Explore LeRobot Integration",
+      "summary": "Read the Reconstruction Guide\n Explore Video Capture\n Explore Batch Processing with OSMO\n### LeRobot Data Collection\nConnect Isaac Teleop to LeRobot for collecting robot demonstrations. Start with the SO-101 example and follow the guides for your simulation or hardware setup.\n Explore the LeRobot Workflow\n Collect Data on a Real Robot\n Collect Data in Simulation\n## More Resources\n Decorative image representing Community\n### Explore Developer Forums [...] Map tracking inputs to robot-specific actions with a configurable retargeting pipeline.\nRead the Retargeting Guide\n### Record and Replay Data\nUse MCAP recording and playback to inspect and reuse captured device streams.\nExplore Recording and Replay\n### Collect Data With LeRobot\nFollow the SO-101 workflow to connect teleoperation with robot demonstration datasets.\nExplore LeRobot Integration\n### Visualize Operator Feedback [...] Connect a",
       "relevance": "",
       "url": "https://developer.nvidia.com/isaac/capture",
       "sourceName": "developer.nvidia.com",
       "authors": [],
       "topics": [
+        "仿真与迁移",
         "数据与评测"
       ],
       "highlights": [
-        "Collect Data With LeRobot.",
-        "Follow the SO-101 workflow to connect teleoperation with robot demonstration datasets.",
-        "Explore LeRobot Integration"
+        "Read the Reconstruction Guide\n Explore Video Capture\n Explore Batch Processing with OSMO\n### LeRobot Data Collection\nConnect Isaac Teleop to LeRobot for collecting robot demonstrations.",
+        "Explore the LeRobot Workflow\n Collect Data on a Real Robot\n Collect Data in Simulation\n## More Resources\n Decorative image representing Community\n### Explore Developer Forums [...] Map tracking inputs to robot-specific a",
+        "Explore Recording and Replay\n### Collect Data With LeRobot\nFollow the SO-101 workflow to connect teleoperation with robot demonstration datasets."
       ],
-      "collectedAt": "2026-10-22T05:01:35.881Z",
+      "collectedAt": "2026-10-23T05:02:21.409Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -3109,20 +3277,21 @@
     },
     {
       "id": "article-ff477f1406bc88ed222164e8",
-      "title": "具身智能,热钱不念旧情 - 36氪",
+      "title": "具身智能赛道热钱洗牌 资本押注新风口不念旧情",
       "date": "2026-10-21T11:00:00.000Z",
       "category": "行业动态",
-      "summary": "上一波机器人公司们大多苦等融资未果,但热钱仍在涌向机器人赛道。 IT 桔子统计称,2026 上半年国内具身智能融资总额超过930 亿人民币,较去年同期暴涨5 倍。估值超百亿的",
+      "summary": "今年 5 月获 IPO 受理的云深处,去年营收 3.4 亿元,归母净利润 2868 万元,实现扭亏为盈。今年上半年,云深处营收同比翻倍,但却重回亏损。\n招股书显示,云深处过去两年 DR 系列人形机器人合计只卖出 4 台。上交所首轮问询中,尤为关注云深处收入是否持续、人形机器人何时规模化销售以及订单结构等问题。\n部分明星企业开始推迟上市规划。早在今年 7 月,智元就宣布启动港股上市筹备工作。彼时有投资人预计,公司最快 8 月就能挂牌。但几个月后,智元仍未如预期顺利上市。\n《财经》上周报道称,智元转而寻求新一轮融资,融资额约为 10-15 亿元,估值约 500 亿元,该轮融资已接近收尾。\n按照港交所要求,上市申请公司若在递表后、上市前完成新融资,如无特殊豁免,需融资完成后满 120 日方可挂牌交易。换言之,智元年内 IPO 无望。\n港交所《新上市申请人指南》 [...] 港交所《新上市申请人指南》\n但即便 IPO 降温,投资人们依然热情满满。宇树科技股价反弹同时,近期亦有不少具身智能企业完成多轮融资。星尘智能 10 月 13 日宣布完成新一轮 10 亿规模融资,公司估值达 150 亿元。法奥机器人也在 10 月宣布连续完成 C+轮、D 轮融资,两轮合计近 10 亿元。\n## 谁在为机器人买单?\n即便新一波的具身智能企业大多有着比上一代机器人公司更宏伟的愿景、更动人的演示,但它们面临的问题某种程度上却是相似的,如何真正商业化落地、如何持续自我造血。\nCounterpoint 统计显示,今年上半年,全球人形机器人出货量超过 2.2 万台,同比增长近 300%。但文娱商演、科研和数据采集仍占六成以上,智能制造和仓储物流分别只占 13%和 5%。也就是说,真正用于现实生产的机器人仍然是少数,多数机器人提供的还是情绪价值。\n就像今年春晚批发上台的国产机器人一样,他们更热衷的是表演而非生产。甚至这些表演同样代价不菲,行业流传登上春晚的机器人公司每家合作费用为 1 亿元——大概相当于宇树去年研发投入的一半以上。 [...] 深兰则同时涉足清洁、消毒、配送、割草乃至载人 AGV 等多个领域",
       "relevance": "",
       "url": "https://eu.36kr.com/zh/p/4035599191774855",
       "sourceName": "eu.36kr.com",
       "authors": [],
       "topics": [],
       "highlights": [
-        "上一波机器人公司们大多苦等融资未果,但热钱仍在涌向机器人赛道。",
-        "IT 桔子统计称,2026 上半年国内具身智能融资总额超过930 亿人民币,较去年同期暴涨5 倍。估值超百亿的"
+        "招股书显示,云深处过去两年 DR 系列人形机器人合计只卖出 4 台。上交所首轮问询中,尤为关注云深处收入是否持续、人形机器人何时规模化销售以及订单结构等问题。",
+        "港交所《新上市申请人指南》 [...] 港交所《新上市申请人指南》\n但即便 IPO 降温,投资人们依然热情满满。宇树科技股价反弹同时,近期亦有不少具身智能企业完成多轮融资。星尘智能 10 月 13 日宣布完成新一轮 10 亿规模融资,公司估值达 150 亿元。法奥机器人也在 10 月宣布连续完成 C+轮、D 轮融资,两轮合计近 10 亿元。",
+        "## 谁在为机器人买单?"
       ],
-      "collectedAt": "2026-10-22T05:01:35.881Z",
+      "collectedAt": "2026-10-23T05:02:21.409Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4284,7 +4453,7 @@
         "今年8月,LatentVerse(潜界科技)完成了数亿元种子轮融资,投资方阵容堪称豪华,包括高瓴创投、清流资本、英诺天使基金,以及智元和星动纪元这两家一线具身智能企业。观察公司今年最新的8月份这一轮融资,推进速度其实非常惊人,从启动到完成不到两个月。高瓴创投在公司成立前就与核心成员接触,融资启动后迅速成为首轮投资人,其负责人正是当年投资Minimax的关键人物。英诺天使同样积极,与团队沟通当天便给出投资意向书。多家一线VC已提前锁定下一",
         "## 07 胡钰承:LatentVerse(潜界科技)\n胡钰承是清华大学交叉信息研究院博士,2024年开始围绕具身模型开展研究。他所在的团队与“伯克利归国四子”有较深的师承关系:包括他在内的三位核心成员均为相关学者的学生,其中胡钰承与一位成员师从星动纪元创始人陈建宇,另一位成员师从破壳机器人创始人许华哲。"
       ],
-      "collectedAt": "2026-10-22T05:01:35.881Z",
+      "collectedAt": "2026-10-23T05:02:21.409Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4307,7 +4476,7 @@
         "在真实世界里迭代,这个过程比较长。虽然现在相比无人车刚开始的时候,已经有很多更好的技术,但这个过程仍然必须经历。它肯定不能像语言模型一样,大家已经有手机、电脑,只要能上ChatGPT的网站,就能用到这种智能。在具身领域,如何把智能用起来,本身就是一个很难的问题。",
         "陈茜:你刚才说,数据和模型都有进展,是这两个方面的进展让机器人又能往前迈一步了吗?"
       ],
-      "collectedAt": "2026-10-22T05:01:35.881Z",
+      "collectedAt": "2026-10-23T05:02:21.409Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5325,19 +5494,19 @@
     }
   ],
   "updateInfo": {
-    "jobsAttemptAt": "2026-10-20T05:00:11.780Z",
-    "newsAttemptAt": "2026-10-22T05:01:35.881Z",
+    "jobsAttemptAt": "2026-10-23T05:02:21.409Z",
+    "newsAttemptAt": "2026-10-23T05:02:21.409Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
-    "searchRequests": 6
+    "searchRequests": 18
   },
   "scheduler": {
     "enabled": true,
     "intervalHours": 72,
-    "nextRunAt": "2026-10-23T05:00:11.780Z",
-    "lastRunAt": "2026-10-22T05:01:35.881Z",
-    "lastFinishedAt": "2026-10-22T05:01:35.881Z",
-    "budgetDay": "2026-10-22",
-    "budgetUsed": 6,
+    "nextRunAt": "2026-10-26T05:02:21.409Z",
+    "lastRunAt": "2026-10-23T05:02:21.409Z",
+    "lastFinishedAt": "2026-10-23T05:02:21.409Z",
+    "budgetDay": "2026-10-23",
+    "budgetUsed": 18,
     "budgetLimit": 18,
     "hostRequired": false,
     "running": false
