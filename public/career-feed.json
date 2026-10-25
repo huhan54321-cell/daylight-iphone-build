@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T04:47:11.720Z",
+  "generatedAt": "2026-10-25T04:54:40.033Z",
   "jobs": [
     {
       "id": "job_05835f734df7d7aa9d0a0c73",
@@ -2596,17 +2596,17 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
-      "count": 3,
-      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
       "count": 2,
       "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2614,8 +2614,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2623,8 +2623,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2632,8 +2632,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2641,17 +2641,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
-      "count": 3,
-      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
+      "count": 6,
+      "message": "本轮读取 6 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
       "count": 37,
       "message": "本轮读取 37 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -2659,13 +2659,38 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-24T04:47:11.720Z",
-      "lastSuccessAt": "2026-10-24T04:47:11.720Z",
+      "lastAttemptAt": "2026-10-25T04:54:40.033Z",
+      "lastSuccessAt": "2026-10-25T04:54:40.033Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-9794b201a214a494f0246430",
+      "title": "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation | NVIDIA Technical Blog",
+      "date": "2026-10-23T14:58:32.000Z",
+      "category": "硬件与落地",
+      "summary": "This post walks through the workflow using Microduck as a reference robot, with Hermes, NVIDIA Nemotron, and Astra assisting with planning and preparation. You’ll learn how to create a simulated obstacle course, train a navigation policy, and evaluate its behavior in simulation—a process you can adapt to your own robots and tasks. This establishes a foundation for physical deployment, where differences between simulation and real-world behavior require further refinement. [...] ### Next Steps\n Access ungated assets from the SimReady Central Library to accelerate environment building.\n Explore the Isaac Lab documentation for reinforcement learning and imitation learning policy training.\n Follow the Microduck sim-to-real tutorial on Hugging Face to adapt the workflow for physical deployment.\nPowered by NVIDIA Nemotron. AI-generated content may summarize information incompletely. Verify imp",
+      "relevance": "",
+      "url": "https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation",
+      "sourceName": "developer.nvidia.com",
+      "authors": [],
+      "topics": [
+        "模仿学习",
+        "强化学习",
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "This post walks through the workflow using Microduck as a reference robot, with Hermes, NVIDIA Nemotron, and Astra assisting with planning and preparation.",
+        "You’ll learn how to create a simulated obstacle course, train a navigation policy, and evaluate its behavior in simulation—a process you can adapt to your own robots and tasks.",
+        "Learn more [...] Johnny Núñez works on applied research, Physical AI, and robotics at NVIDIA."
+      ],
+      "collectedAt": "2026-10-25T04:54:40.033Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "article-48e9d4da35bfa7b78825d7c7",
       "title": "全球具身智能产业发展分析报告2026-36氪",
@@ -2683,6 +2708,29 @@
         "图1-4全球和中国人形机器人出货量(2025-2050F)\n图1-5全球和中国人形机器人销售额(2025-2050F)\n图1-6全球具身智能领域投融资情况(2025-2050F)\n图1-7中国具身智能产业投融资规模(2025)\n图1-8中国具身智能企业订单规模(2025)\n图1-9全球人形机器人主要厂商出货量(2025)\n图1-10全球人形机器人细分领域出货量占比(2025) [...] ## 主要发现\n具身智能(Embodied AI"
       ],
       "collectedAt": "2026-10-24T04:47:11.720Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-09aa2cbee7524997c7c44d08",
+      "title": "Isaac GR00T | Humanoid Robot Development Platform | NVIDIA",
+      "date": "2026-10-23T04:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Use the Jetson Thor deployment guide for Docker setup and accelerated GR00T 1.7 inference with TensorRTTM NVFP4 quantization at 25 Hz.\nDecorative icon\n### Use GR00T on LeRobot\nGR00T 1.7 is available on LeRobot, streamlining model training, fine-tuning and deployment across a wide range of robots and tasks.\nEcosystem\n## Humanoid Robotics Ecosystem\nNVIDIA builds platforms, foundation models, acceleration libraries, and blueprints to accelerate the world’s ecosystem of humanoid developers. [...] AI robotics platform for robot simulation, training, and deployment\nCUDA-accelerated ROS 2 stack for perception and mobility\nGPU-accelerated robot learning on Isaac Sim\nRobotics simulation and synthetic data engine\nFoundation models and tools for humanoid robots\nCloud-native orchestration for large-scale robotics workflows\nVision AI platform for edge-to-cloud video analytics\nOpen-source GPU physics ",
+      "relevance": "",
+      "url": "https://www.nvidia.com/en-us/industries/robotics/isaac-groot",
+      "sourceName": "www.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "Decorative icon\n### Use GR00T on LeRobot\nGR00T 1.7 is available on LeRobot, streamlining model training, fine-tuning and deployment across a wide range of robots and tasks.",
+        "Ecosystem\n## Humanoid Robotics Ecosystem\nNVIDIA builds platforms, foundation models, acceleration libraries, and blueprints to accelerate the world’s ecosystem of humanoid developers.",
+        "[...] AI robotics platform for robot simulation, training, and deployment\nCUDA-accelerated ROS 2 stack for perception and mobility\nGPU-accelerated robot learning on Isaac Sim\nRobotics simulation and synthetic data engine"
+      ],
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -2708,7 +2756,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T17:59:51.000Z",
       "kind": "paper"
@@ -2743,7 +2791,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T17:59:06.000Z",
       "kind": "paper"
@@ -2775,7 +2823,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T17:41:13.000Z",
       "kind": "paper"
@@ -2803,7 +2851,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T17:40:19.000Z",
       "kind": "paper"
@@ -2838,7 +2886,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T17:12:16.000Z",
       "kind": "paper"
@@ -2863,7 +2911,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T16:02:16.000Z",
       "kind": "paper"
@@ -2888,7 +2936,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T15:30:33.000Z",
       "kind": "paper"
@@ -2914,7 +2962,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T15:27:10.000Z",
       "kind": "paper"
@@ -2939,7 +2987,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T15:25:02.000Z",
       "kind": "paper"
@@ -2964,7 +3012,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T13:43:47.000Z",
       "kind": "paper"
@@ -2993,7 +3041,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T12:24:25.000Z",
       "kind": "paper"
@@ -3020,7 +3068,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T12:07:31.000Z",
       "kind": "paper"
@@ -3047,7 +3095,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T11:39:01.000Z",
       "kind": "paper"
@@ -3074,7 +3122,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T10:42:38.000Z",
       "kind": "paper"
@@ -3105,7 +3153,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T09:54:38.000Z",
       "kind": "paper"
@@ -3133,7 +3181,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T09:46:52.000Z",
       "kind": "paper"
@@ -3163,7 +3211,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T09:35:56.000Z",
       "kind": "paper"
@@ -3190,7 +3238,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T09:34:18.000Z",
       "kind": "paper"
@@ -3215,7 +3263,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T09:14:01.000Z",
       "kind": "paper"
@@ -3249,7 +3297,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T07:56:54.000Z",
       "kind": "paper"
@@ -3272,7 +3320,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T06:46:34.000Z",
       "kind": "paper"
@@ -3299,7 +3347,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T06:45:34.000Z",
       "kind": "paper"
@@ -3331,7 +3379,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T06:36:39.000Z",
       "kind": "paper"
@@ -3355,7 +3403,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T04:05:43.000Z",
       "kind": "paper"
@@ -3379,7 +3427,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T03:35:04.000Z",
       "kind": "paper"
@@ -3404,7 +3452,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T02:15:39.000Z",
       "kind": "paper"
@@ -3431,7 +3479,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T02:08:58.000Z",
       "kind": "paper"
@@ -3458,7 +3506,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T01:44:10.000Z",
       "kind": "paper"
@@ -3481,7 +3529,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-22T01:38:34.000Z",
       "kind": "paper"
@@ -3514,7 +3562,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T23:54:17.000Z",
       "kind": "paper"
@@ -3540,7 +3588,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T22:31:27.000Z",
       "kind": "paper"
@@ -3559,7 +3607,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T21:54:57.000Z",
       "kind": "paper"
@@ -3585,7 +3633,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T20:49:25.000Z",
       "kind": "paper"
@@ -3608,7 +3656,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T18:52:28.000Z",
       "kind": "paper"
@@ -3635,7 +3683,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T18:33:13.000Z",
       "kind": "paper"
@@ -3676,7 +3724,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T17:59:56.000Z",
       "kind": "paper"
@@ -3701,7 +3749,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": "2026-10-21T17:55:53.000Z",
       "kind": "paper"
@@ -4054,7 +4102,7 @@
         "Explore the LeRobot Workflow\n Collect Data on a Real Robot\n Collect Data in Simulation\n## More Resources\n Decorative image representing Community\n### Explore Developer Forums [...] Map tracking inputs to robot-specific a",
         "Explore Recording and Replay\n### Collect Data With LeRobot\nFollow the SO-101 workflow to connect teleoperation with robot demonstration datasets."
       ],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4508,19 +4556,20 @@
     },
     {
       "id": "article-0eebdd8bbccd019ebec58c31",
-      "title": "Training a Reach Policy for Real Robot Deployment",
+      "title": "Training a Reach Policy for Real Robot Deployment | Isaac Lab",
       "date": "2026-10-21T05:00:00.000Z",
       "category": "硬件与落地",
-      "summary": "Train an end-effector pose-tracking policy for a robot arm. The policy learns to reach targets sampled within the workspace; the deployment steps use Isaac ROS.",
+      "summary": "The UR10e is a 6-DOF industrial robot with the following actuator configuration:\n```\nactuators = {\n\"shoulder\": ImplicitActuatorCfg(\njoint_names_expr=[\"shoulder_.\"],\nstiffness=1320.0,\ndamping=72.66,\nfriction=0.0,\narmature=0.0,\n),\n\"elbow\": ImplicitActuatorCfg(\njoint_names_expr=[\"elbow_joint\"],\nstiffness=600.0,\ndamping=34.64,\nfriction=0.0,\narmature=0.0,\n),\n\"wrist\": ImplicitActuatorCfg(\njoint_names_expr=[\"wrist_.\"],\nstiffness=216.0,\ndamping=29.39,\nfriction=0.0,\narmature=0.0, [...] armature=0.0,\n),\n}\n```\nEnd-Effector:\n Link: `wrist_3_link`\n Default orientation: End-effector facing down (roll = pi, yaw = -pi/2)\nTarget Workspace:\n```\n# Position (meters, relative to robot base)\npos_center = (0.8875, -0.225, 0.2)\npos_range = (0.25, 0.125, 0.1) # ±25cm x, ±12.5cm y, ±10cm z\n# Orientation (radians)\nrot_center = (pi, 0.0, -pi/2)\nrot_range = (pi/6, pi/6, pi2/3) # ±30 deg roll/pitch, ±120 deg yaw\n```\n",
       "relevance": "",
       "url": "https://docs.nvidia.com/isaaclab/resources/sim-2-real-deployment-of-policies-trained-in-isaac-lab/training-a-reach-policy-for-real-robot-deployment",
       "sourceName": "docs.nvidia.com",
       "authors": [],
       "topics": [],
       "highlights": [
-        "Train an end-effector pose-tracking policy for a robot arm."
+        "The UR10e is a 6-DOF industrial robot with the following actuator configuration:\n```\nactuators = {\n\"shoulder\": ImplicitActuatorCfg(\njoint_names_expr=[\"shoulder_.\"],\nstiffness=1320.0,\ndamping=72.66,\nfriction=0.0,\narmature",
+        "Key parameters you can adjust:\nTarget Position Range\nModify `target_pos_centre` and `target_pos_range` in the robot-specific config file (e.g., `joint_pos_env_cfg.py`):\n```\n# Center of the target workspace (meters, relat"
       ],
-      "collectedAt": "2026-10-22T05:01:35.881Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4546,7 +4595,7 @@
         "[...] NVIDIA is releasing three open source reference workflows for NVIDIA DGX StationTM that help developers refine GR00T 1.7 models with reinforcement learning, train dexterous manipulation skills in NVIDIA Isaac Lab a",
         "NVIDIA Halos provides a full-stack safety platform built on NVIDIA IGX ThorTM to help move autonomous vehicles and robots from development to safer real-world deployment at scale."
       ],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4844,7 +4893,7 @@
       "title": "An Open Model Suite for Scaling Robotics Data Engines",
       "date": "2026-10-20T19:00:00.000Z",
       "category": "硬件与落地",
-      "summary": "56.1 70.8 50.3 64.0 55.3 74.8 64.7 17.9 32.5 53.1 34.5 A.2. Timestamped captions: DenseCaptionBench Table 3: DenseCaptionBench results. Scores on 100 human, 100 parallel-gripper (Grip.), and 100 dexterous-hand (Dex.) episodes under the shared point-quality protocol (%, ↑). Off-the-shelf models use the common pipeline, and Flora uses its production pipeline (Section 4.1). [...] 3 6.20–8.40 s Put the orange on the pink plate with the left hand.\n5 11.45–13.70 s Put the apple into the yellow bowl with the right hand.\nDexterous hands Tool handover and film cutting 1 16.00 s L R 2 44.00 s L R 4 72.13 s L R Predicted segments (4) Time (s) 1 2 3 4 0.00 39.37 78.73 1 0.00–32.00 s Pick up the scissors from the table with the left hand.\n2 32.00–56.00 s Pass the scissors from the left hand to the right hand. [...] Model / system Segmentation F1@0.5 Oracle captioning Point quality Joint annotation Po",
+      "summary": "56.1 70.8 50.3 64.0 55.3 74.8 64.7 17.9 32.5 53.1 34.5 A.2. Timestamped captions: DenseCaptionBench Table 3: DenseCaptionBench results. Scores on 100 human, 100 parallel-gripper (Grip.), and 100 dexterous-hand (Dex.) episodes under the shared point-quality protocol (%, ↑). Off-the-shelf models use the common pipeline, and Flora uses its production pipeline (Section 4.1). [...] 3 6.20–8.40 s Put the orange on the pink plate with the left hand.\n5 11.45–13.70 s Put the apple into the yellow bowl with the right hand.\nDexterous hands Tool handover and film cutting 1 16.00 s L R 2 44.00 s L R 4 72.13 s L R Predicted segments (4) Time (s) 1 2 3 4 0.00 39.37 78.73 1 0.00–32.00 s Pick up the scissors from the table with the left hand.\n2 32.00–56.00 s Pass the scissors from the left hand to the right hand. [...] Embodiment Visual evidence Episodes References Human Egocentric camera 100 3,220 Paral",
       "relevance": "",
       "url": "https://research.nvidia.com/labs/gear/flora/assets/paper/flora.pdf?v=2026-10-19c",
       "sourceName": "research.nvidia.com",
@@ -4855,9 +4904,9 @@
       "highlights": [
         "Scores on 100 human, 100 parallel-gripper (Grip.), and 100 dexterous-hand (Dex.) episodes under the shared point-quality protocol (%, ↑).",
         "Dexterous hands Tool handover and film cutting 1 16.00 s L R 2 44.00 s L R 4 72.13 s L R Predicted segments (4) Time (s) 1 2 3 4 0.00 39.37 78.73 1 0.00–32.00 s Pick up the scissors from the table with the left hand.",
-        "[...] Model / system Segmentation F1@0.5 Oracle captioning Point quality Joint annotation Point F1@0.5 Human Robot Human Robot Human Robot Grip."
+        "[...] Embodiment Visual evidence Episodes References Human Egocentric camera 100 3,220 Parallel grippers Main and two wrist cameras 100 1,266 Dexterous hands Main and two wrist cameras 100 391 Total 300 4,877 Coverage-ba"
       ],
-      "collectedAt": "2026-10-24T04:47:11.720Z",
+      "collectedAt": "2026-10-25T04:54:40.033Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5386,56 +5435,11 @@
       "dateVerified": true,
       "updatedAt": "2026-10-20T10:37:39.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-2f6a89193151c28c08bd75b0",
-      "title": "Learning Tactile-Aware Hand Representations from Human Hand-Object Interaction Data",
-      "date": "2026-10-20T10:31:45.000Z",
-      "category": "论文",
-      "summary": "Tactile representation learning for dexterous manipulation often requires substantial robot-side data collection, limiting its scalability across different hands and sensors. We explore whether large-scale human hand-object interaction (HOI) data can provide a useful prior for robotic tactile learning. To this end, we propose HuTact, a framework that pretrains tactile-aware hand representations from human HOI data without requiring real tactile signals during pretraining. HuTact transfers the interaction structure learned from human hand motions to robotic tactile observations and can be further adapted with a small amount of unlabeled robot interaction data. We evaluate HuTact on tactile perception and manipulation tasks, including grasp prediction, slip detection, object classification, and tactile-conditioned policy learning. Across these tasks, human HOI pretraining improves data efficiency and provides a strong initialization for downstream learning. Notably, with HOI pretraining ",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.27995",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Yeonguk Yu",
-        "Jaehong Kim",
-        "Byungok Han"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-21T04:59:45.537Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-20T10:31:45.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "article-7496a4fdd6beb4addebe1e99",
-      "title": "00后们创业造机器人,最小的22岁-36氪",
-      "date": "2026-10-20T10:14:28.000Z",
-      "category": "行业动态",
-      "summary": "他认为,当前资本市场对技术突破的容忍度较高,但最终仍需模型具备泛化能力。潜界科技的目标是开发出能够进入家庭场景的通用机器人,初期可能从整理桌面、拆快递等简单任务切入。他特别强调,产品形态不一定是人形机器人,更重要的是与家庭环境自然融合。\n今年8月,LatentVerse(潜界科技)完成了数亿元种子轮融资,投资方阵容堪称豪华,包括高瓴创投、清流资本、英诺天使基金,以及智元和星动纪元这两家一线具身智能企业。观察公司今年最新的8月份这一轮融资,推进速度其实非常惊人,从启动到完成不到两个月。高瓴创投在公司成立前就与核心成员接触,融资启动后迅速成为首轮投资人,其负责人正是当年投资Minimax的关键人物。英诺天使同样积极,与团队沟通当天便给出投资意向书。多家一线VC已提前锁定下一轮融资席位。\n## 08 朱禹涵:火星登陆\n2001年出生的朱禹涵,是武汉大学在读硕士。\n自2022年起,他还在武汉大学读本科时,就带队征战国内各级科技创新赛事,接连斩获多项冠、亚军。赛事历练,让他学会自主分析问题、搭建团队、寻找解法的能力。 [...] 回头看,对秦深涛来说,过去多年的每一次训练、转向和停顿,都在把他推向OriginFlow。“命运不会浪费任何一段路,只是当时还看不见终点。”\nOriginFlow近期接连完成天使轮、战略轮、Pre-A1轮多轮融资,截至今年5月的最新融资消息,累计融资总额已超5亿元人民币,集结了蓝驰创投、绿洲资本、58战投、普华资本、水木清华种子校友基金、Monolith砺思资本、元禾璞华、元禾原点、国方创投等知名机构。\n## 07 胡钰承:LatentVerse(潜界科技)\n胡钰承是清华大学交叉信息研究院博士,2024年开始围绕具身模型开展研究。他所在的团队与“伯克利归国四子”有较深的师承关系:包括他在内的三位核心成员均为相关学者的学生,其中胡钰承与一位成员师从星动纪元创始人陈建宇,另一位成员师从破壳机器人创始人许华哲。 [...] 大一下学期,闵宇恒第一次创业,选择了商业清洁机器人赛道。创业失败后,第二次转向制冰机项目,尽管该项目拿到了A轮融资,但因为有更想做的事情,",
-      "relevance": "",
-      "url": "https://m.36kr.com/p/4033819286640516",
-      "sourceName": "m.36kr.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [
-        "他认为,当前资本市场对技术突破的容忍度较高,但最终仍需模型具备泛化能力。潜界科技的目标是开发出能够进入家庭场景的通用机器人,初期可能从整理桌面、拆快递等简单任务切入。他特别强调,产品形态不一定是人形机器人,更重要的是与家庭环境自然融合。",
-        "今年8月,LatentVerse(潜界科技)完成了数亿元种子轮融资,投资方阵容堪称豪华,包括高瓴创投、清流资本、英诺天使基金,以及智元和星动纪元这两家一线具身智能企业。观察公司今年最新的8月份这一轮融资,推进速度其实非常惊人,从启动到完成不到两个月。高瓴创投在公司成立前就与核心成员接触,融资启动后迅速成为首轮投资人,其负责人正是当年投资Minimax的关键人物。英诺天使同样积极,与团队沟通当天便给出投资意向书。多家一线VC已提前锁定下一",
-        "## 07 胡钰承:LatentVerse(潜界科技)\n胡钰承是清华大学交叉信息研究院博士,2024年开始围绕具身模型开展研究。他所在的团队与“伯克利归国四子”有较深的师承关系:包括他在内的三位核心成员均为相关学者的学生,其中胡钰承与一位成员师从星动纪元创始人陈建宇,另一位成员师从破壳机器人创始人许华哲。"
-      ],
-      "collectedAt": "2026-10-23T05:02:21.409Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-23T05:02:21.409Z",
-    "newsAttemptAt": "2026-10-24T04:47:11.720Z",
+    "newsAttemptAt": "2026-10-25T04:54:40.033Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -5443,9 +5447,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-10-26T05:02:21.409Z",
-    "lastRunAt": "2026-10-24T04:47:11.720Z",
-    "lastFinishedAt": "2026-10-24T04:47:11.720Z",
-    "budgetDay": "2026-10-24",
+    "lastRunAt": "2026-10-25T04:54:40.033Z",
+    "lastFinishedAt": "2026-10-25T04:54:40.033Z",
+    "budgetDay": "2026-10-25",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
