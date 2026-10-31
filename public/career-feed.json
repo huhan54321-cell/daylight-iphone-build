@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T05:59:47.463Z",
+  "generatedAt": "2026-10-31T05:55:34.065Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -3073,17 +3073,17 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "count": 3,
+      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3091,17 +3091,17 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3109,8 +3109,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3118,17 +3118,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
-      "count": 3,
-      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
       "count": 38,
       "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3136,13 +3136,34 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-30T05:59:47.463Z",
-      "lastSuccessAt": "2026-10-30T05:59:47.463Z",
+      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
+      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-aa78ce37898cdd4f650b9ec3",
+      "title": "具身机器人,凛冬将至-36氪",
+      "date": "2026-10-30T05:00:52.000Z",
+      "category": "行业动态",
+      "summary": "大额融资一笔接一笔。\n3月,银河通用完成25亿元融资,由国家人工智能产业投资基金领投;千寻智能接连完成四轮融资,累计近50亿元,估值摸到200亿元;智平方估值在四个月内从百亿元升至200亿元;4月,它石智航单笔融资4.55亿美元,创下当时的行业纪录;6月,人形机器人场景应用联盟统计的全球具身智能赛道单月融资达到315亿元。\n新入场者也越来越年轻。\n2004年出生的黄一在2025年创办RoboParty,到2026年7月融资已接近5亿元;清华在读博士秦深涛创办的渊澈太初,运营5个月融资超过5亿元;北大元培毕业的陈博远创立逆矩阵,种子++轮融资超过1亿美元,估值超过50亿元。\n热度的顶点是8月19日。\n宇树科技以150.80元的发行价登陆科创板,开盘报1100元,较发行价上涨629.44%,市值一度达到4449亿元。0.0181%的中签率,对应一签约47.5万元的最高账面浮盈,其219.23倍的发行市盈率,也远高于所属通用设备制造业38.56倍的静态市盈率。一位投资人表达的逻辑很直白:“别纠结估值,赶紧拿钱。”\n宇树科技上市\n转折的声音,最先来自投过的人。 [...] 10月15日,IT桔子的数据进一步显示:10月上半月,行业共发生19起融资、总额49.34亿元;8月则是91起、313.23亿元。10月仅统计半个月且横跨国庆假期,即便把上半月金额简单折算成整月,仍不足8月的三分之一。\n真实温度可能比披露数据更低。\n现在公布的融资,大多是数月前已经敲定的交易。正如一位业内人士所说:“市场的真实变化,往往要过一段时间才能从数据中体现出来。”\n钱没有离开赛道,而是进一步向头部集中。\n中泰证券10月13日的报告显示,上半年具身智能融资约438亿元,其中以具身大脑为核心业务的公司获得222.53亿元,本体整机公司获得56亿元,前者接近后者的四倍。\n头部仍在抢钱。\n据《财经》报道,智元启动新一轮10亿至15亿元融资,估值约500亿元,截至报道,智元未对此回应;星尘智能同日宣布完成10亿元B+轮融资,这是它半年内的第四轮;小鹏机器人业务则在8月完成首轮超9亿美元融资。\n小鹏机器人\n腰部开",
+      "relevance": "",
+      "url": "https://www.36kr.com/p/4047777107007113",
+      "sourceName": "www.36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "3月,银河通用完成25亿元融资,由国家人工智能产业投资基金领投;千寻智能接连完成四轮融资,累计近50亿元,估值摸到200亿元;智平方估值在四个月内从百亿元升至200亿元;4月,它石智航单笔融资4.55亿美元,创下当时的行业纪录;6月,人形机器人场景应用联盟统计的全球具身智能赛道单月融资达到315亿元。",
+        "中泰证券10月13日的报告显示,上半年具身智能融资约438亿元,其中以具身大脑为核心业务的公司获得222.53亿元,本体整机公司获得56亿元,前者接近后者的四倍。",
+        "据《财经》报道,智元启动新一轮10亿至15亿元融资,估值约500亿元,截至报道,智元未对此回应;星尘智能同日宣布完成10亿元B+轮融资,这是它半年内的第四轮;小鹏机器人业务则在8月完成首轮超9亿美元融资。"
+      ],
+      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "paper-13cc417ac258df2392d8995f",
       "title": "SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing",
@@ -3168,7 +3189,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:59:20.000Z",
       "kind": "paper"
@@ -3192,7 +3213,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:42:32.000Z",
       "kind": "paper"
@@ -3218,7 +3239,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:40:56.000Z",
       "kind": "paper"
@@ -3241,7 +3262,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:35:16.000Z",
       "kind": "paper"
@@ -3271,7 +3292,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:34:04.000Z",
       "kind": "paper"
@@ -3295,7 +3316,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:51:45.000Z",
       "kind": "paper"
@@ -3318,7 +3339,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:34:54.000Z",
       "kind": "paper"
@@ -3350,7 +3371,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:21:06.000Z",
       "kind": "paper"
@@ -3375,7 +3396,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:11:05.000Z",
       "kind": "paper"
@@ -3407,7 +3428,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:06:36.000Z",
       "kind": "paper"
@@ -3434,7 +3455,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T15:36:22.000Z",
       "kind": "paper"
@@ -3462,7 +3483,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T15:19:50.000Z",
       "kind": "paper"
@@ -3485,7 +3506,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T14:56:30.000Z",
       "kind": "paper"
@@ -3510,7 +3531,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T14:12:07.000Z",
       "kind": "paper"
@@ -3534,7 +3555,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T13:53:04.000Z",
       "kind": "paper"
@@ -3566,7 +3587,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T13:30:16.000Z",
       "kind": "paper"
@@ -3592,7 +3613,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T11:57:41.000Z",
       "kind": "paper"
@@ -3620,7 +3641,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T09:29:42.000Z",
       "kind": "paper"
@@ -3651,29 +3672,10 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T08:23:58.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "article-9fbc593bb272957dd0088fcb",
-      "title": "AGIBOT Introduces Worken to Measure Productive Robot Work at AGIBOT Innovation Day 2026-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
-      "date": "2026-10-29T08:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT A3\n ##### AGIBOT A3\n Silicon-based star born for the stage\n AGIBOT A2 Ultra\n ##### AGIBOT A2 Ultra\n Full-Size Humanoid Robot\n AGIBOT A2 Lite [...] AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBOT G2\n Universal Embodied Intelligent Robot\n AGIBOT G1 MAX\n ##### AGIBOT G1 MAX\n Flexible Manufacturing Robot\n AGIBOT G1\n ##### AGIBOT G1\n Universal Embodied Intelligent Robot [...] D1 MaxPro\n ##### D1 MaxPro\n Meets All Industrial \n Operational Demands\n + AGIBOT C5\n ##### AGIBOT C5\n AGIBOT's First Commercial Cle",
-      "relevance": "",
-      "url": "https://www.agibot.com/article/231/detail/131.html",
-      "sourceName": "www.agibot.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [
-        "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT"
-      ],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
     },
     {
       "id": "paper-4db9f4dfae998c236c76fbbb",
@@ -3701,7 +3703,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T07:44:54.000Z",
       "kind": "paper"
@@ -3731,7 +3733,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T07:25:08.000Z",
       "kind": "paper"
@@ -3760,7 +3762,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T06:24:09.000Z",
       "kind": "paper"
@@ -3786,7 +3788,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T06:19:44.000Z",
       "kind": "paper"
@@ -3815,7 +3817,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T06:07:04.000Z",
       "kind": "paper"
@@ -3843,10 +3845,29 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T05:18:16.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-9fbc593bb272957dd0088fcb",
+      "title": "AGIBOT Introduces Worken to Measure Productive Robot Work at AGIBOT Innovation Day 2026-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "date": "2026-10-29T05:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT A3\n ##### AGIBOT A3\n Silicon-based star born for the stage\n AGIBOT A2 Ultra\n ##### AGIBOT A2 Ultra\n Full-Size Humanoid Robot\n AGIBOT A2 Lite [...] AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBOT G2\n Universal Embodied Intelligent Robot\n AGIBOT G1 MAX\n ##### AGIBOT G1 MAX\n Flexible Manufacturing Robot\n AGIBOT G1\n ##### AGIBOT G1\n Universal Embodied Intelligent Robot [...] D1 MaxPro\n ##### D1 MaxPro\n Meets All Industrial \n Operational Demands\n + AGIBOT C5\n ##### AGIBOT C5\n AGIBOT's First Commercial Cle",
+      "relevance": "",
+      "url": "https://www.agibot.com/article/231/detail/131.html",
+      "sourceName": "www.agibot.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT"
+      ],
+      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-b4d2383ed50c061aeaf7f860",
@@ -3875,7 +3896,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T04:59:21.000Z",
       "kind": "paper"
@@ -3899,7 +3920,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T04:16:33.000Z",
       "kind": "paper"
@@ -3926,7 +3947,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:59:17.000Z",
       "kind": "paper"
@@ -3947,7 +3968,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:31:22.000Z",
       "kind": "paper"
@@ -3974,7 +3995,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:30:48.000Z",
       "kind": "paper"
@@ -4008,7 +4029,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:30:27.000Z",
       "kind": "paper"
@@ -4037,7 +4058,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T02:50:17.000Z",
       "kind": "paper"
@@ -4076,7 +4097,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T02:34:14.000Z",
       "kind": "paper"
@@ -4101,7 +4122,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T02:08:42.000Z",
       "kind": "paper"
@@ -4128,7 +4149,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T01:57:52.000Z",
       "kind": "paper"
@@ -4160,7 +4181,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T01:13:50.000Z",
       "kind": "paper"
@@ -4187,7 +4208,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T01:05:22.000Z",
       "kind": "paper"
@@ -4229,7 +4250,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-30T05:59:47.463Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T00:10:55.000Z",
       "kind": "paper"
@@ -4253,7 +4274,7 @@
         "今年5月底,《每日经济新闻》记者走进杭州滨江的宇树总部:门口,研发人员正在调试一台四足机器人;楼顶上,一台轮足机器狗在无人巡逻;一楼展厅已经搬空,销售团队正往一栋还没装修好的新楼里挪。公司长得比房子还快。",
         "智能汽车和人形机器人,在传感器、芯片、电机、电池、算法等领域,底层高度同源,据盖世汽车研究院测算,两者供应链重合度达到六到七成。中国新能源汽车产业链稍一延伸,就是机器人产业链。而事实上,中国车企也同样在积极布局机器人。"
       ],
-      "collectedAt": "2026-10-29T05:58:38.593Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5307,7 +5328,7 @@
         "[...] Behavior cloning for robotic manipulation is highly sensitive to the coverage of its training data, yet collecting diverse successful demonstrations remains costly.",
         "Across four manipulation tasks, DiscoDemo produces broader successful-state coverage and improves downstream visuomotor"
       ],
-      "collectedAt": "2026-10-28T05:54:42.992Z",
+      "collectedAt": "2026-10-31T05:55:34.065Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5915,49 +5936,22 @@
       "dateVerified": true,
       "updatedAt": "2026-10-26T04:38:02.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-56b328d2e9dcdd4df24d3628",
-      "title": "Networked Humanoid Intelligence: Communication, Coordination, Collaboration, and Social Interaction",
-      "date": "2026-10-26T02:40:41.000Z",
-      "category": "论文",
-      "summary": "Humanoid robots are moving from laboratory platforms toward connected fleets that share workspaces, infrastructure, tasks, and knowledge with other robots and humans. As deployments grow, the operation and improvement of each humanoid depend on information exchanged across the network. However, existing research has largely studied humanoids as individual systems. This survey examines networked humanoid intelligence through four functions of information exchange: communication, coordination, collaboration, and social intelligence with human interaction. We first establish the foundations of networked humanoid systems, define the question addressed by each function, and connect them through a common factory scenario. We review the literature along six dimensions: interaction architecture, exchanged information, physical coupling, operating timescale, system scale, and embodiment. We separate results obtained with physical and simulated humanoids from those based on other robotic platfor",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.34740",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Loc X. Nguyen",
-        "Huy Q. Le",
-        "Ji Su Yoon",
-        "Nguyen H. Tran",
-        "Eui-Nam Huh",
-        "Choong Seon Hong"
-      ],
-      "topics": [
-        "数据与评测",
-        "运动控制"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-27T05:16:00.419Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-26T02:40:41.000Z",
-      "kind": "paper"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-30T05:59:47.463Z",
-    "newsAttemptAt": "2026-10-30T05:59:47.463Z",
+    "newsAttemptAt": "2026-10-31T05:55:34.065Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
-    "searchRequests": 18
+    "searchRequests": 6
   },
   "scheduler": {
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-02T05:59:47.463Z",
-    "lastRunAt": "2026-10-30T05:59:47.463Z",
-    "lastFinishedAt": "2026-10-30T05:59:47.463Z",
-    "budgetDay": "2026-10-30",
-    "budgetUsed": 18,
+    "lastRunAt": "2026-10-31T05:55:34.065Z",
+    "lastFinishedAt": "2026-10-31T05:55:34.065Z",
+    "budgetDay": "2026-10-31",
+    "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
     "running": false
