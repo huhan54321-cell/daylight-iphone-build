@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T05:55:34.065Z",
+  "generatedAt": "2026-11-01T06:23:12.007Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -3073,8 +3073,8 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
       "count": 3,
       "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3082,35 +3082,35 @@
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
-      "count": 1,
-      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
-      "count": 1,
-      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3118,17 +3118,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
-      "count": 1,
-      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
+      "count": 4,
+      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
       "count": 38,
       "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -3136,13 +3136,76 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-10-31T05:55:34.065Z",
-      "lastSuccessAt": "2026-10-31T05:55:34.065Z",
+      "lastAttemptAt": "2026-11-01T06:23:12.007Z",
+      "lastSuccessAt": "2026-11-01T06:23:12.007Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-6ebfbc1aef26748fcb9cedfd",
+      "title": "Playlist | Robotics Conference Sessions | NVIDIA On-Demand",
+      "date": "2026-10-31T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Company Information\n About Us\n Investors\n Venture Capital (NVentures)\n NVIDIA Foundation\n Research\n Corporate Sustainability\n Technologies\n Careers\nNews and Events\n Newsroom\n Company Blog\n Technical Blog\n Webinars\n Stay Informed\n Events Calendar\n GTC AI Conference\n NVIDIA On-Demand\nPopular Links\n Developers\n Partners\n Executive Insights\n Startups and VCs\n Documentation\n Technical Training\n Professional Services for Data Science\nFollow NVIDIA\n\" alt=\"\" href=\" \" alt=\"\" href=\"",
+      "relevance": "",
+      "url": "https://www.nvidia.com/en-us/on-demand/playlist/gtcberlin26-robotics",
+      "sourceName": "www.nvidia.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [],
+      "collectedAt": "2026-11-01T06:23:12.007Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-a5a7821a1fe2c012e786d3c9",
+      "title": "机器人到底该先干什么?「特种四小虎」刷新了答案-36氪",
+      "date": "2026-10-30T23:30:51.000Z",
+      "category": "行业动态",
+      "summary": "在云深处,具身模型正在增强机器人理解任务和自主导航的能力。据公司招股材料披露,其DeepVLA1.0具身导航系统引入视觉语言模型,支持机器人理解自然语言指令,并结合路标、和方向描述规划路线,实现室内外环境中的长距离导航。这让用户能够以更接近日常交流的方式下达任务。\n云深处的探索也在向操作环节延伸。其近期公开的一项联合研究,将语言指令与力反馈结合,让机器人根据指令调整动作,并在接触物体时利用反馈修正执行过程,已开展插接、擦拭等实机任务测试。这些仍处于研究验证阶段的进展,为机器人从自主移动走向更复杂的现场操作提供了技术储备。\n七腾机器人则在把AI能力贯穿于巡检项目的部署与运行。今年9月,公司公开了“元域智巡”平台。据公司介绍,平台集成工业多模态大模型SevnceBrain,支持现场理解、异常识别和语音指令交互,并与机器人的运动控制系统协同,让巡检任务能够从指令下达进一步衔接到现场执行。 [...] Image 7\n图源:视觉中国\n而从更广泛的产业和社会视角看,高危、紧缺岗位背后,还连接着能源安全、重大基础设施运行和应急保障能力:电网与油气设施的巡检维护,关系到能源供应的稳定;水坝、隧道等设施的隐患排查,关系到公共基础设施的安全;矿山抢险、危化事故处置和灾害现场搜救,则直接关乎生命救援。机器人如果能承担其中的危险任务,它的价值也就从单个岗位的效率提升,延伸到了整个关键系统的持续运行与应急处置能力。\n这些价值点原本就是机器人产业发展的基础,但在过去一段时间的资本热潮中,技术演示、未来规模的想象以及融资估值,反而占据了更多注意力,有部分项目尚未证明自身持续解决客户问题的能力,市场预期就已经提前走了很远。\n当预期与兑现进度拉开距离,质疑就会随之出现。无论是上市企业的股价波动以及随之而来的舆论争议,还是梅卡曼德创始人邵天兰近期公开表达的、对部分具身智能企业数采中心业务收入可持续性的质疑,都是这种预期和现实脱节在不同侧面表现出来的结果。 [...] 有行业人士坦言, 市场对通用具身智能规模化放量的期待,可能需要更长时间才能兑现。\n“行业之前的期待是,人形机器人的数量可能超过汽车,甚至接",
+      "relevance": "",
+      "url": "https://36kr.com/p/4048416619133185",
+      "sourceName": "36kr.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手",
+        "运动控制"
+      ],
+      "highlights": [
+        "在云深处,具身模型正在增强机器人理解任务和自主导航的能力。据公司招股材料披露,其DeepVLA1.0具身导航系统引入视觉语言模型,支持机器人理解自然语言指令,并结合路标、和方向描述规划路线,实现室内外环境中的长距离导航。这让用户能够以更接近日常交流的方式下达任务。",
+        "云深处的探索也在向操作环节延伸。其近期公开的一项联合研究,将语言指令与力反馈结合,让机器人根据指令调整动作,并在接触物体时利用反馈修正执行过程,已开展插接、擦拭等实机任务测试。这些仍处于研究验证阶段的进展,为机器人从自主移动走向更复杂的现场操作提供了技术储备。",
+        "七腾机器人则在把AI能力贯穿于巡检项目的部署与运行。今年9月,公司公开了“元域智巡”平台。据公司介绍,平台集成工业多模态大模型SevnceBrain,支持现场理解、异常识别和语音指令交互,并与机器人的运动控制系统协同,让巡检任务能够从指令下达进一步衔接到现场执行。"
+      ],
+      "collectedAt": "2026-11-01T06:23:12.007Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-04d6221294dd01e2cb373147",
+      "title": "Robotics Simulation and Evaluation PhD Intern",
+      "date": "2026-10-30T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Experience deploying learned policies on real robot hardware (manipulators, humanoids, or mobile robots) and closing the sim-to-real gap. Experience with",
+      "relevance": "",
+      "url": "https://jobs.nvidia.com/careers/job/893398080232",
+      "sourceName": "jobs.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移",
+        "数据与评测"
+      ],
+      "highlights": [
+        "Experience deploying learned policies on real robot hardware (manipulators, humanoids, or mobile robots) and closing the sim-to-real gap."
+      ],
+      "collectedAt": "2026-11-01T06:23:12.007Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "article-aa78ce37898cdd4f650b9ec3",
       "title": "具身机器人,凛冬将至-36氪",
@@ -3159,7 +3222,7 @@
         "中泰证券10月13日的报告显示,上半年具身智能融资约438亿元,其中以具身大脑为核心业务的公司获得222.53亿元,本体整机公司获得56亿元,前者接近后者的四倍。",
         "据《财经》报道,智元启动新一轮10亿至15亿元融资,估值约500亿元,截至报道,智元未对此回应;星尘智能同日宣布完成10亿元B+轮融资,这是它半年内的第四轮;小鹏机器人业务则在8月完成首轮超9亿美元融资。"
       ],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -3189,7 +3252,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:59:20.000Z",
       "kind": "paper"
@@ -3213,7 +3276,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:42:32.000Z",
       "kind": "paper"
@@ -3239,7 +3302,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:40:56.000Z",
       "kind": "paper"
@@ -3262,7 +3325,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:35:16.000Z",
       "kind": "paper"
@@ -3292,7 +3355,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T17:34:04.000Z",
       "kind": "paper"
@@ -3316,7 +3379,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:51:45.000Z",
       "kind": "paper"
@@ -3339,7 +3402,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:34:54.000Z",
       "kind": "paper"
@@ -3371,7 +3434,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:21:06.000Z",
       "kind": "paper"
@@ -3396,7 +3459,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:11:05.000Z",
       "kind": "paper"
@@ -3428,7 +3491,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T16:06:36.000Z",
       "kind": "paper"
@@ -3455,7 +3518,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T15:36:22.000Z",
       "kind": "paper"
@@ -3483,7 +3546,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T15:19:50.000Z",
       "kind": "paper"
@@ -3506,7 +3569,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T14:56:30.000Z",
       "kind": "paper"
@@ -3531,7 +3594,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T14:12:07.000Z",
       "kind": "paper"
@@ -3555,7 +3618,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T13:53:04.000Z",
       "kind": "paper"
@@ -3587,7 +3650,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T13:30:16.000Z",
       "kind": "paper"
@@ -3613,7 +3676,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T11:57:41.000Z",
       "kind": "paper"
@@ -3641,7 +3704,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T09:29:42.000Z",
       "kind": "paper"
@@ -3672,7 +3735,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T08:23:58.000Z",
       "kind": "paper"
@@ -3703,7 +3766,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T07:44:54.000Z",
       "kind": "paper"
@@ -3733,7 +3796,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T07:25:08.000Z",
       "kind": "paper"
@@ -3762,7 +3825,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T06:24:09.000Z",
       "kind": "paper"
@@ -3788,7 +3851,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T06:19:44.000Z",
       "kind": "paper"
@@ -3817,10 +3880,29 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T06:07:04.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-9fbc593bb272957dd0088fcb",
+      "title": "AGIBOT Introduces Worken to Measure Productive Robot Work at AGIBOT Innovation Day 2026-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "date": "2026-10-29T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT A3\n ##### AGIBOT A3\n Silicon-based star born for the stage\n AGIBOT A2 Ultra\n ##### AGIBOT A2 Ultra\n Full-Size Humanoid Robot\n AGIBOT A2 Lite [...] AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBOT G2\n Universal Embodied Intelligent Robot\n AGIBOT G1 MAX\n ##### AGIBOT G1 MAX\n Flexible Manufacturing Robot\n AGIBOT G1\n ##### AGIBOT G1\n Universal Embodied Intelligent Robot [...] D1 MaxPro\n ##### D1 MaxPro\n Meets All Industrial \n Operational Demands\n + AGIBOT C5\n ##### AGIBOT C5\n AGIBOT's First Commercial Cle",
+      "relevance": "",
+      "url": "https://www.agibot.com/article/231/detail/131.html",
+      "sourceName": "www.agibot.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT"
+      ],
+      "collectedAt": "2026-11-01T06:23:12.007Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-597df9bbfb2f979525ad2847",
@@ -3845,29 +3927,10 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T05:18:16.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "article-9fbc593bb272957dd0088fcb",
-      "title": "AGIBOT Introduces Worken to Measure Productive Robot Work at AGIBOT Innovation Day 2026-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
-      "date": "2026-10-29T05:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT A3\n ##### AGIBOT A3\n Silicon-based star born for the stage\n AGIBOT A2 Ultra\n ##### AGIBOT A2 Ultra\n Full-Size Humanoid Robot\n AGIBOT A2 Lite [...] AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBOT G2\n Universal Embodied Intelligent Robot\n AGIBOT G1 MAX\n ##### AGIBOT G1 MAX\n Flexible Manufacturing Robot\n AGIBOT G1\n ##### AGIBOT G1\n Universal Embodied Intelligent Robot [...] D1 MaxPro\n ##### D1 MaxPro\n Meets All Industrial \n Operational Demands\n + AGIBOT C5\n ##### AGIBOT C5\n AGIBOT's First Commercial Cle",
-      "relevance": "",
-      "url": "https://www.agibot.com/article/231/detail/131.html",
-      "sourceName": "www.agibot.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [
-        "Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT"
-      ],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
     },
     {
       "id": "paper-b4d2383ed50c061aeaf7f860",
@@ -3896,7 +3959,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T04:59:21.000Z",
       "kind": "paper"
@@ -3920,7 +3983,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T04:16:33.000Z",
       "kind": "paper"
@@ -3947,7 +4010,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:59:17.000Z",
       "kind": "paper"
@@ -3968,7 +4031,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:31:22.000Z",
       "kind": "paper"
@@ -3995,7 +4058,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:30:48.000Z",
       "kind": "paper"
@@ -4029,7 +4092,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T03:30:27.000Z",
       "kind": "paper"
@@ -4058,7 +4121,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T02:50:17.000Z",
       "kind": "paper"
@@ -4097,7 +4160,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T02:34:14.000Z",
       "kind": "paper"
@@ -4122,7 +4185,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T02:08:42.000Z",
       "kind": "paper"
@@ -4149,7 +4212,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T01:57:52.000Z",
       "kind": "paper"
@@ -4181,7 +4244,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T01:13:50.000Z",
       "kind": "paper"
@@ -4208,7 +4271,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T01:05:22.000Z",
       "kind": "paper"
@@ -4250,7 +4313,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": "2026-10-29T00:10:55.000Z",
       "kind": "paper"
@@ -4274,7 +4337,7 @@
         "今年5月底,《每日经济新闻》记者走进杭州滨江的宇树总部:门口,研发人员正在调试一台四足机器人;楼顶上,一台轮足机器狗在无人巡逻;一楼展厅已经搬空,销售团队正往一栋还没装修好的新楼里挪。公司长得比房子还快。",
         "智能汽车和人形机器人,在传感器、芯片、电机、电池、算法等领域,底层高度同源,据盖世汽车研究院测算,两者供应链重合度达到六到七成。中国新能源汽车产业链稍一延伸,就是机器人产业链。而事实上,中国车企也同样在积极布局机器人。"
       ],
-      "collectedAt": "2026-10-31T05:55:34.065Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4300,7 +4363,7 @@
         "image\nimage\n· Sign up or log in to comment\nGet this paper in your agent:\n`hf papers read 2610.36420`\n`curl -LsSf | bash`\n## Models citing this paper 0\nNo model linking this paper\n## Datasets citing this paper 0\nNo datase",
         "The twin ranks policies as the real robot does: five policies trained without real data, four VLAs and an LLM agent, keep their exact ranking when the same weights run on the physical arm in an unseen"
       ],
-      "collectedAt": "2026-10-28T05:54:42.992Z",
+      "collectedAt": "2026-11-01T06:23:12.007Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5079,6 +5142,25 @@
       "kind": "news"
     },
     {
+      "id": "article-91cd8f3f42210e678524a266",
+      "title": "AGIBOT Launches Genie Studio 2.0 to Bring Robots into Real Workplaces-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "date": "2026-10-27T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBOT G2\n Universal Embodied Intelligent Robot\n AGIBOT G1 MAX\n ##### AGIBOT G1 MAX\n Flexible Manufacturing Robot\n AGIBOT G1\n ##### AGIBOT G1\n Universal Embodied Intelligent Robot [...] Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT A3\n ##### AGIBOT A3\n Silicon-based star born for the stage\n AGIBOT A2 Ultra\n ##### AGIBOT A2 Ultra\n Full-Size Humanoid Robot\n AGIBOT A2 Lite [...] D1 MaxPro\n ##### D1 MaxPro\n Meets All Industrial \n Operational Demands\n + AGIBOT C5\n ##### AGIBOT C5\n AGIBOT's First Commercial Cle",
+      "relevance": "",
+      "url": "https://www.agibot.com/article/231/detail/130.html",
+      "sourceName": "www.agibot.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBO"
+      ],
+      "collectedAt": "2026-11-01T06:23:12.007Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
       "id": "paper-f7353d38ebdd055ade1667f4",
       "title": "RoboSTD: Zero-Shot Single-to-Dual Transfer via Sagittal Mirroring for Bimanual Learning",
       "date": "2026-10-27T05:56:15.000Z",
@@ -5157,25 +5239,6 @@
         "黄金平:我们投宇树的时候大模型概念还没起来,就是单纯看好机器人这条赛道,花时间把市面上同期相关的项目基本都看了一遍。",
         "王兴兴当时给我印象最深的有两点。第一是他对机器人技术近乎痴迷。不管是早期四足机器人,还是后续人形产品,本体研发本身技术门槛极高,而王兴兴完全是发烧友式的钻研状态,愿意沉下心打磨产品,做到性能极致。当时的产业链配套并不完善,头部供应链都不愿为小众机器人厂商供货,大量零部件、调试工作必须自己搞定,这种痴迷和极致的特质就显得特别重要。",
         "黄金平告诉硬氪,具身泡沫当下,市场焦虑催动资本对短期估值红利的追逐,忽略了硬件机器人漫长的技术迭代和供应链打磨周期。跳不开的产业成长阶段,靠融资催熟不了,靠概念也绕不过去。"
-      ],
-      "collectedAt": "2026-10-29T05:58:38.593Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-91cd8f3f42210e678524a266",
-      "title": "AGIBOT Launches Genie Studio 2.0 to Bring Robots into Real Workplaces-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
-      "date": "2026-10-27T05:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBOT G2\n Universal Embodied Intelligent Robot\n AGIBOT G1 MAX\n ##### AGIBOT G1 MAX\n Flexible Manufacturing Robot\n AGIBOT G1\n ##### AGIBOT G1\n Universal Embodied Intelligent Robot [...] Home page\n Products \n : \n AGIBOT A\n : \n AGIBOT X\n : \n AGIBOT Genie\n : \n AGIBOT D1\n : \n AGIBOT C5\n : \n AGIBOT Accessories\n : \n AGIBOT Premium Selection\n : \n Document Center\n : \n Security Center\n : \n 智元远征A2 Max 2\n + AGIBOT A3\n ##### AGIBOT A3\n Silicon-based star born for the stage\n AGIBOT A2 Ultra\n ##### AGIBOT A2 Ultra\n Full-Size Humanoid Robot\n AGIBOT A2 Lite [...] D1 MaxPro\n ##### D1 MaxPro\n Meets All Industrial \n Operational Demands\n + AGIBOT C5\n ##### AGIBOT C5\n AGIBOT's First Commercial Cle",
-      "relevance": "",
-      "url": "https://www.agibot.com/article/231/detail/130.html",
-      "sourceName": "www.agibot.com",
-      "authors": [],
-      "topics": [],
-      "highlights": [
-        "AGIBOT A2 Lite\n ##### AGIBOT A2 Lite\n Master of Performance\n + AGIBOT X1\n ##### AGIBOT X1\n Full-Stack Open-Source Robot\n AGIBOT X2 series\n ##### AGIBOT X2 series\n Fully Intelligent & Agile Robot\n + AGIBOT G2\n ##### AGIBO"
       ],
       "collectedAt": "2026-10-29T05:58:38.593Z",
       "dateVerified": true,
@@ -5853,94 +5916,11 @@
       "dateVerified": true,
       "updatedAt": "2026-10-26T09:00:17.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-24174cf38012beed634c9a81",
-      "title": "JevVLA: Jev-Inspired Energy-Based Adaptation for Vision-Language-Action Policies",
-      "date": "2026-10-26T08:21:02.000Z",
-      "category": "论文",
-      "summary": "Vision-language-action (VLA) policies can select among discrete candidates for pick-and-place manipulation or generate continuous action chunks for motion control. Improving both forms of decision making through a common mechanism while retaining the capabilities of a pretrained policy is an important adaptation problem. Inspired by Jev's structured, probabilistic decision interface, we propose JevVLA, a lightweight energy-based adaptation framework for VLA policies. JevVLA instantiates this inspiration by modeling the relative quality of action proposals: with the base policy frozen, it learns a differentiable scalar energy conditioned on observations, task context, and actions, using execution feedback, expert corrections, or demonstration-derived preferences. JevVLA uses this single learned action preference function in two ways: its values compare discrete candidates, while its action gradients correct continuous actions or guide their generation. Candidate selection and continuous",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.35010",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Wei Wang",
-        "Wenqiao Zhang",
-        "Zheqi Lv",
-        "Zheng Dong",
-        "Yingjie Niu",
-        "Jiaqi Zhu",
-        "Jun Xiao",
-        "Chao Li",
-        "Yueting Zhuang"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-27T05:16:00.419Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-26T08:21:02.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-eeb51867a751e648e11478be",
-      "title": "MMGNet: Multi-Modal 6-DoF Grasp Synthesis for Cluttered Scenes",
-      "date": "2026-10-26T06:13:05.000Z",
-      "category": "论文",
-      "summary": "Grasping is a foundational capability in robotic manipulation. Scene-level 6-DoF grasp synthesis relies on point clouds for metric geometry, yet real-world point observations are often noisy, incomplete, and over-smoothed. RGB images provide object-region, boundary, and appearance cues, yet two bottlenecks limit their effective use in scene representation and local grasp reasoning. We present MMGNet, a Multi-Modal Grasp Synthesis Network that addresses these bottlenecks through hierarchical image-to-3D feature injection and rotational graspness modeling. Hierarchical injection integrates multi-scale image features throughout 3D representation formation, while the rotational graspness jointly predicts the grasp approach direction and in-plane rotation before organizing local image-informed features through grasp-shaded grouping. Ablation studies show that these two modules provide complementary gains. MMGNet achieves a mean AP of 60.34 on GraspNet-1Billion with RealSense, surpassing all",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.34893",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Rui Cao",
-        "Jia-Hui Pan",
-        "Yichuan Li",
-        "Yunfan Yu",
-        "Chi-Wing Fu",
-        "Jiangliu Wang",
-        "Yun-Hui Liu"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-27T05:16:00.419Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-26T06:13:05.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-e0c909b03cac4654e261918b",
-      "title": "Behavioural Quality Is Not Learning Utility: Objective Mismatch in Human Behaviour Models for Robot Learning",
-      "date": "2026-10-26T04:38:02.000Z",
-      "category": "论文",
-      "summary": "Human behaviour models are increasingly used to provide simulated human interactions for training robots via reinforcement learning (RL). Existing approaches primarily evaluate these models according to how closely their generated behaviours resemble real human data, while their usefulness as training partners is less commonly assessed. This creates a potential objective mismatch: a model that performs well according to behavioural evaluation metrics may not necessarily provide useful training experiences for downstream robot policy learning. Across two human-robot interaction (HRI) domains, highway driving and object handover, we evaluate different types of human behaviour models using common generative-model evaluation metrics. We consider multiple human trajectory representations and compare the resulting evaluations with the downstream performance of RL policies trained using the corresponding models. We find that existing behavioural evaluation metrics do not consistently predict ",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2610.34839",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Haoyang Jiang",
-        "Dana Kulic",
-        "Michael Burke",
-        "Pamela Carreno-Medrano"
-      ],
-      "topics": [
-        "强化学习",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-10-27T05:16:00.419Z",
-      "dateVerified": true,
-      "updatedAt": "2026-10-26T04:38:02.000Z",
-      "kind": "paper"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-10-30T05:59:47.463Z",
-    "newsAttemptAt": "2026-10-31T05:55:34.065Z",
+    "newsAttemptAt": "2026-11-01T06:23:12.007Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -5948,9 +5928,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-02T05:59:47.463Z",
-    "lastRunAt": "2026-10-31T05:55:34.065Z",
-    "lastFinishedAt": "2026-10-31T05:55:34.065Z",
-    "budgetDay": "2026-10-31",
+    "lastRunAt": "2026-11-01T06:23:12.007Z",
+    "lastFinishedAt": "2026-11-01T06:23:12.007Z",
+    "budgetDay": "2026-11-01",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
