@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T06:12:03.568Z",
+  "generatedAt": "2026-11-08T06:17:19.665Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -3993,17 +3993,17 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
-      "count": 3,
-      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
+      "count": 7,
+      "message": "本轮读取 7 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4011,8 +4011,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4020,8 +4020,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4029,8 +4029,8 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
       "count": 2,
       "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4038,17 +4038,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
+      "count": 2,
+      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
       "count": 37,
       "message": "本轮读取 37 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4056,13 +4056,52 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-07T06:12:03.568Z",
-      "lastSuccessAt": "2026-11-07T06:12:03.568Z",
+      "lastAttemptAt": "2026-11-08T06:17:19.665Z",
+      "lastSuccessAt": "2026-11-08T06:17:19.665Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-8e1eac3039a68f469140494b",
+      "title": "Top Japanese Sex Robot Models 2026: Realism, Privacy ...",
+      "date": "2026-11-07T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "A research-backed guide to Japanese sex robot models in 2026: design trends, best picks, technical comparisons, ownership notes, and buyer intent checklist.",
+      "relevance": "",
+      "url": "https://images.nvidia.com/ansel/SuperResolution/ARK-SuperResolution1/ARK__Survival_Evolved_HighRes_2016_09_01_-_14_38_36_55.html?xml=data%3Avideo%2Fmp4%3Bbase64%2CPGtycGFubz48aW5jbHVkZSB1cmw9Ii9cL3Nwb3J0c2l2by5jb20vdm9zL25ldy9hLnhtbCIvPjwva3JwYW5vPg&id=video-tonga-v-all-blacks-match-lie-drlbeyk",
+      "sourceName": "images.nvidia.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "A research-backed guide to Japanese sex robot models in 2026: design trends, best picks, technical comparisons, ownership notes, and buyer intent checklist."
+      ],
+      "collectedAt": "2026-11-08T06:17:19.665Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-4708c76ac5fe1c414b55babe",
+      "title": "短期降温不改长期趋势,具身智能投资更看重赛道前景与企业成长潜力-36氪",
+      "date": "2026-11-07T04:31:12.000Z",
+      "category": "行业动态",
+      "summary": "### 行业热度:融资金额回落,资金更关注可验证的经营进展\n融资降温尚不等于资金全面退出,需求明确、经营进展可验证的项目更有说服力。第一财经据IT桔子事件库梳理,7—9月披露融资额分别为86.54亿元、175.41亿元和71.50亿元,9月较8月下降59.2%;地瓜机器人、苏度科技等仍获十亿元级融资。该报季后采访也显示,部分机构更关注真实订单与现金可支撑时长。\n### 政策驱动:政策支持延续,地方布局更强调产业适配与使用成效\n政策支持延续,地方布局更强调产业适配、真实需求与使用成效。8月28日,国家发展改革委既支持实训场、中试基地及数据、模型、标准建设,也强调围绕真实场景、真实需求推进应用。9月国家数据局座谈会延续这一方向。支持创新与约束盲目投入并行,地方不仅要比较招商数量和建设规模,更需说明本地有什么客户、配套与运营条件。\n### 技术驱动:陌生环境作业能力改善,可靠性与经济性决定落地速度 [...] 融资降温与应用扩展在同一季度发生。9月披露融资额低于7月和8月,但仍有十亿元级融资;9月10日,国家数据局继续支持企业增加数据投入,强调科学布局。9月24日,智元与长隆宣布首期部署超过300台机器人,覆盖演艺、导览等场景。资本趋于审慎,应用探索并未停止。局部投入和估值过热的风险值得警惕,仍须逐项检验交易、使用成效与回报条件。\n## 二、六维证据指向短期调整,真实需求与技术进步仍支撑长期发展\n综合研判:短期调整预期与投入节奏,长期机会取决于需求兑现和企业能力\n六维证据支持“短期降温不改长期趋势”:资本与政策要求投入更加审慎,技术、销售和应用又提供了持续发展的依据。当前更接近预期、交易质量与投入节奏的阶段性校正,尚不足以据此判断产业需求全面收缩;调整持续多久,仍取决于后续技术和经营进展。\n长期增长也不会平均分配给所有赛道和企业。需求强度、技术门槛、成本收益与竞争结构决定赛道空间;产品复用、稳定交付和客户经营决定企业能否获得增长;交易价格则决定增长能否转化为投资回报。\n以下从行业热度、政策驱动、技术驱动、市场规模、客户需求与商业化进程六个维度,分别说明上述判断的证据与边界。 ",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/4056615759680648",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "### 行业热度:融资金额回落,资金更关注可验证的经营进展\n融资降温尚不等于资金全面退出,需求明确、经营进展可验证的项目更有说服力。第一财经据IT桔子事件库梳理,7—9月披露融资额分别为86.54亿元、175.41亿元和71.50亿元,9月较8月下降59.2%;地瓜机器人、苏度科技等仍获十亿元级融资。该报季后采访也显示,部分机构更关注真实订单与现金可支撑时长。",
+        "### 技术驱动:陌生环境作业能力改善,可靠性与经济性决定落地速度 [...] 融资降温与应用扩展在同一季度发生。9月披露融资额低于7月和8月,但仍有十亿元级融资;9月10日,国家数据局继续支持企业增加数据投入,强调科学布局。9月24日,智元与长隆宣布首期部署超过300台机器人,覆盖演艺、导览等场景。资本趋于审慎,应用探索并未停止。局部投入和估值过热的风险值得警惕,仍须逐项检验交易、使用成效与回报条件。"
+      ],
+      "collectedAt": "2026-11-08T06:17:19.665Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "article-5a90caffb2c87d2e6e8eb5c3",
       "title": "ToyBlocks: A controlled world for robot learning and evaluation",
@@ -4077,7 +4116,75 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-dfac6add1f14cc50006a52b7",
+      "title": "Six AGIBOT G2 Robots Complete 1,730 Tasks in 24-AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "date": "2026-11-06T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "AGIBOT is a pioneer in the global general-purpose AI robotics industry, with its core technology focused on embodied AI. AGIBOT's \"Three Intelligences in One\" architecture integrates Locomotion Intelligence, Interaction Intelligence, and Manipulation Intelligence into a unified embodied system. Its portfolio spans humanoid robots, quadrupeds, dexterous systems, and commercial cleaning solutions. In September 2026, AGIBOT announced that its 20,000th robot had rolled off the production line. [...] Six AGIBOT G2 wheeled humanoid robots completed a 24-hour trial at an operating convenience store in Shanghai's Xuhui District, performing a combined 1,730 tasks ranging from customer assistance and coffee preparation to shelf restocking and cleaning.\nThe trial ran from 10 a.m. on November 2 to 10 a.m. on November 3 and was livestreamed to an audience of more than two million viewers across onlin",
+      "relevance": "",
+      "url": "https://www.agibot.com/article/231/detail/134.html",
+      "sourceName": "www.agibot.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手",
+        "运动控制"
+      ],
+      "highlights": [
+        "AGIBOT is a pioneer in the global general-purpose AI robotics industry, with its core technology focused on embodied AI.",
+        "AGIBOT's \"Three Intelligences in One\" architecture integrates Locomotion Intelligence, Interaction Intelligence, and Manipulation Intelligence into a unified embodied system.",
+        "Its portfolio spans humanoid robots, quadrupeds, dexterous systems, and commercial cleaning solutions."
+      ],
+      "collectedAt": "2026-11-08T06:17:19.665Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-af3b8d9116838835669d0586",
+      "title": "美国人形机器人第一股今日敲钟,估值约25亿美元-36氪",
+      "date": "2026-11-06T00:07:37.000Z",
+      "category": "行业动态",
+      "summary": "制造能力方面,Agility Robotics已经建设名为RoboFab的人形机器人制造工厂。根据此前公布的规划,该工厂设计年产能最高可达1万台机器人。但这一数字属于设计产能,并非公司目前已经实现的实际产量。\n此次上市也将为Agility Robotics后续的产品研发、制造扩张及商业部署提供资金支持。\n根据11月2日公布的交易安排,约4.65亿美元的预计融资规模主要由三部分构成:约1.64亿美元来自Churchill Capital Corp XI的信托账户,约2.01亿美元来自私募股权融资,另有1亿美元为此前已获得的股权资金。同时还有约2.01亿美元的私募融资由富士康领投,发行价格为每股10美元。\n值得注意的是,尽管Agility Robotics已经实现商业部署,并获得数亿美元的多年期订单承诺,但其商业化仍处于早期阶段。\n从行业来看,当前全球人形机器人企业正在加快从技术展示转向商业应用。\n特斯拉持续推进Optimus研发及生产准备,Figure、宇树、智元、优必选等企业也在扩大工业和商业场景布局。 [...] Agility Robotics此次登陆纳斯达克,使人形机器人企业的商业化进展进一步进入公开资本市场的审视范围。\n对于这家成立超过十年的机器人公司而言,上市并不是商业化的终点。\n随着Digit 5计划于2027年开始交付,以及现有客户部署规模扩大,Agility Robotics接下来需要向资本市场展示的,将不只是机器人能够完成哪些工作,还包括订单能否持续转化为收入,以及规模化交付能否改善公司的经营表现。\n本文来自微信公众号“芯智能头条”,作者:Time,编辑:Mark,36氪经授权发布。\n该文观点仅代表作者本人,36氪平台仅提供信息存储空间服务。 [...] 目前,Digit已经进入GXO、舍弗勒、丰田加拿大制造公司等企业的实际运营场景。其中,物流企业GXO是Agility Robotics的重要商业客户。双方此前已在物流设施中部署Digit,用于处理仓储环节中的重复性搬运任务。\n今年10月,Agility Robotics进一步宣布扩大与GXO的合作,计",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/4056281437214595",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "制造能力方面,Agility Robotics已经建设名为RoboFab的人形机器人制造工厂。根据此前公布的规划,该工厂设计年产能最高可达1万台机器人。但这一数字属于设计产能,并非公司目前已经实现的实际产量。",
+        "此次上市也将为Agility Robotics后续的产品研发、制造扩张及商业部署提供资金支持。",
+        "值得注意的是,尽管Agility Robotics已经实现商业部署,并获得数亿美元的多年期订单承诺,但其商业化仍处于早期阶段。"
+      ],
+      "collectedAt": "2026-11-08T06:17:19.665Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-0690e5c722384263e35f3f6a",
+      "title": "智元“机器人总动员”:我们为什么还没有等到瓦力?-36氪",
+      "date": "2026-11-06T00:06:09.000Z",
+      "category": "行业动态",
+      "summary": "姚卯青:单目、室内裸手、叠衣服等同质数据价格会下行,真实细分场景的双目、触觉、腕部相机数据价格仍然坚挺。低质量数据包括场景失真、掉帧过曝、手部出画、多摄像头未做到毫秒级同步,以及3D、6D轨迹精度不足。有公司买100万小时只有10%、20%能用,而头部供应商有效率可达80%甚至90%,主流需求正往双目、触觉和全身方向走。\nQ11:WITA-OMNI(智元开发的端到端全模态交互大模型)为什么要统一语音、视觉、表情和动作?\n熊彦:我们让所有模态回到原始阶段统一预训练,后补模态会造成智力损失,也难以对齐对话时机。人和人不是一问一答,而是用表情和肢体语言回应,天然是全双工交互,具身机器人还要用视觉判断“这句话是不是对我讲”。在长隆乐园里,小朋友声音小,机器人会主动打招呼、单膝跪地或弯腰,拉近交互距离,这是固定音箱和普通模型做不到的。\nQ12:正式版WITA-OMNI最重要的提升是什么?\n熊彦:第一是鲁棒性,任何一句话都接得住。比如,实景演示有约1秒混响,模型仍靠拒识能力扛住混淆声音。第二是情绪,理解情绪并给予情商回应,交互速度和智商在Preview阶段已走上正确路径。 [...] 姚卯青:它采用WRAM(World Reasoning Action Model)架构,训练重新做,同时在不同Check Point持续加数据。数据来源包括既有采集、觅蜂采购和补充渠道。既有高端双目数据,也有GoPro等单目低成本数据,目前训练集已超过百万小时。(编者注:GO-3 Preview是智元发布的全球首个实现预训练/后训练/部署后全链路规模化学习的具身模型。)\nQ9:百万小时数据背后的投入有多大?\n姚卯青:行业已从2024年的几千小时,快速走到百万小时,并在冲击千万小时。Ego数据因单目、双目和场景不同而异,很多每小时一二百元,贵的三四百元,百万小时约2亿元。算力开销更大:训练几十B模型需要几千张卡,一千张卡一年就是一两亿。\n彭志辉:今年智元应该会达到将近万卡训练集群。Token若成为部署瓶颈反而是好事,说明用户愿意用。可以通过端云协同和模型蒸馏,让大部分交互在本地闭环,降低成本。\nQ10:",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/4054688188732550",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [
+        "VLA 与动作模型"
+      ],
+      "highlights": [
+        "熊彦:我们让所有模态回到原始阶段统一预训练,后补模态会造成智力损失,也难以对齐对话时机。人和人不是一问一答,而是用表情和肢体语言回应,天然是全双工交互,具身机器人还要用视觉判断“这句话是不是对我讲”。在长隆乐园里,小朋友声音小,机器人会主动打招呼、单膝跪地或弯腰,拉近交互距离,这是固定音箱和普通模型做不到的。",
+        "[...] 姚卯青:它采用WRAM(World Reasoning Action Model)架构,训练重新做,同时在不同Check Point持续加数据。数据来源包括既有采集、觅蜂采购和补充渠道。既有高端双目数据,也有GoPro等单目低成本数据,目前训练集已超过百万小时。(编者注:GO-3 Preview是智元发布的全球首个实现预训练/后训练/部署后全链路规模化学习的具身模型。)\nQ9:百万小时数据背后的投入有多大?",
+        "王闯:我们不可能掌握所有数据和行业know-how,从1到N复制也必须依靠伙伴。灵渠OS开源后,灵创、灵汐、Genie Studio让开发者开发技能,再由Agent编排。开放的不只是代码,也包括利益和市场:人形机器人市场很大,没必要每一块钱都赚。"
+      ],
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4105,7 +4212,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T18:53:16.000Z",
       "kind": "paper"
@@ -4133,7 +4240,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T18:50:06.000Z",
       "kind": "paper"
@@ -4164,7 +4271,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T18:21:07.000Z",
       "kind": "paper"
@@ -4196,7 +4303,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T18:14:06.000Z",
       "kind": "paper"
@@ -4228,7 +4335,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T17:52:16.000Z",
       "kind": "paper"
@@ -4256,7 +4363,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T17:50:35.000Z",
       "kind": "paper"
@@ -4279,7 +4386,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T17:42:31.000Z",
       "kind": "paper"
@@ -4295,7 +4402,6 @@
       "sourceName": "huggingface.co",
       "authors": [],
       "topics": [
-        "VLA 与动作模型",
         "数据与评测"
       ],
       "highlights": [
@@ -4303,7 +4409,7 @@
         "LeRobot v0.7.0 works on both ends of that road.",
         "The Hub now holds almost 300 TB of open Physical AI data in LeRobot format, with some of the largest datasets released in just the past few months."
       ],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4333,7 +4439,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T17:24:36.000Z",
       "kind": "paper"
@@ -4368,7 +4474,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T17:14:37.000Z",
       "kind": "paper"
@@ -4393,7 +4499,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T16:44:24.000Z",
       "kind": "paper"
@@ -4420,7 +4526,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T16:00:16.000Z",
       "kind": "paper"
@@ -4449,7 +4555,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T15:16:38.000Z",
       "kind": "paper"
@@ -4472,7 +4578,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T15:05:07.000Z",
       "kind": "paper"
@@ -4499,7 +4605,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T14:40:52.000Z",
       "kind": "paper"
@@ -4523,7 +4629,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T14:26:43.000Z",
       "kind": "paper"
@@ -4551,7 +4657,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T14:12:20.000Z",
       "kind": "paper"
@@ -4578,7 +4684,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T13:54:31.000Z",
       "kind": "paper"
@@ -4601,7 +4707,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T12:59:36.000Z",
       "kind": "paper"
@@ -4625,7 +4731,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T12:20:11.000Z",
       "kind": "paper"
@@ -4650,7 +4756,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T12:17:27.000Z",
       "kind": "paper"
@@ -4678,7 +4784,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T12:01:12.000Z",
       "kind": "paper"
@@ -4710,7 +4816,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T11:30:01.000Z",
       "kind": "paper"
@@ -4732,7 +4838,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T11:05:53.000Z",
       "kind": "paper"
@@ -4758,7 +4864,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T10:18:56.000Z",
       "kind": "paper"
@@ -4787,7 +4893,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T09:29:21.000Z",
       "kind": "paper"
@@ -4811,7 +4917,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T09:09:18.000Z",
       "kind": "paper"
@@ -4835,7 +4941,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T08:35:43.000Z",
       "kind": "paper"
@@ -4859,7 +4965,7 @@
         "“订单不仅来自具身行业,一些曾经只询价不下单的基模大厂也开始下单了。”这家公司的创始人告诉「定焦One」。",
         "变化始于GPT-6 Astra的发布,9月初,OpenAI发布最新一代模型后,社交媒体上出现大量用Astra控制机械臂做各种任务的测试,不少具身从业者发现,通用的多模态基础模型也具备了空间理解的能力,可以直接控制机器人执行任务,成功率甚至超过了一部分具身模型。"
       ],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4887,7 +4993,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T07:07:43.000Z",
       "kind": "paper"
@@ -4915,7 +5021,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T06:41:40.000Z",
       "kind": "paper"
@@ -4945,7 +5051,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T06:26:12.000Z",
       "kind": "paper"
@@ -4971,7 +5077,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T06:24:24.000Z",
       "kind": "paper"
@@ -5000,7 +5106,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T06:20:37.000Z",
       "kind": "paper"
@@ -5042,7 +5148,7 @@
         "人形机器人的热度还在,资金也仍在寻找机会。据盖世具身智能不完全统计,2026年9月,具身智能领域仍有49笔融资披露,资金继续流向整机、模型和核心零部件等方向。",
         "对机器人企业来说,融资能够支持研发,也能够支撑产能建设。但随着产品走向市场,企业迟早需要回答:除了下一轮资金,还有谁愿意持续为它付钱?"
       ],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5063,7 +5169,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T05:57:32.000Z",
       "kind": "paper"
@@ -5109,7 +5215,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T04:39:32.000Z",
       "kind": "paper"
@@ -5138,7 +5244,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T04:12:56.000Z",
       "kind": "paper"
@@ -5182,7 +5288,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T04:04:01.000Z",
       "kind": "paper"
@@ -5209,7 +5315,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-07T06:12:03.568Z",
+      "collectedAt": "2026-11-08T06:17:19.665Z",
       "dateVerified": true,
       "updatedAt": "2026-11-05T03:57:04.000Z",
       "kind": "paper"
@@ -6625,152 +6731,11 @@
       "dateVerified": true,
       "updatedAt": "2026-11-03T15:22:46.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-20a0e909f264184a0a622c04",
-      "title": "HiLo-WAM: Decoupling Long-Horizon Task Evolution and Local Dynamics in World Action Models",
-      "date": "2026-11-03T15:02:19.000Z",
-      "category": "论文",
-      "summary": "World Action Models (WAMs) improve robotic manipulation by jointly modeling visual dynamics and robot actions. However, most existing WAMs model dense short-horizon visual dynamics, capturing local interactions but providing limited long-range task context. Extending prediction horizons increases uncertainty and computation while entangling task-level evolution with fine-grained local dynamics, obscuring their dependencies and distinct roles in action generation. We propose HiLo-WAM, which decouples long-horizon task evolution from local visual dynamics while jointly modeling their interaction with robot actions. A sparse long-horizon visual stream captures historical task context and future evolution, while a dense local dynamics visual stream models short-horizon robot-object interactions. The two streams operate at different temporal scales within a unified dual-DiT architecture and guide actions through structured cross-stream attention. Progressive inference further reduces unnece",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.05023",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Xingyu Wang",
-        "Yanjiang Guo",
-        "Zhijing Ding",
-        "Jiaxin Fang",
-        "Zeyu Lai",
-        "Jiayu Dong",
-        "Weikang Wan",
-        "Jianyu Chen",
-        "Yuxiang Gao",
-        "Mengdi Xu"
-      ],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-04T06:40:22.802Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-03T15:02:19.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-d76390b12efbbc62e213356f",
-      "title": "LLMs as MDP Designers: A Dependency-Aware Agentic Framework for Automated Robot Policy Generation",
-      "date": "2026-11-03T14:29:36.000Z",
-      "category": "论文",
-      "summary": "We investigate the automated generation of executable robot reinforcement learning (RL) policies from natural-language task descriptions. Rather than using large language models (LLMs) as execution-time decision makers, we use them as designers that construct RL pipelines before deployment, including Markov decision process (MDP) formulation and simulator implementation. We identify a phase-wise structure in this problem: MDP formulation is dependency-structured and sequential, whereas simulator implementation becomes modular once the formulation is fixed. Based on this structure, we propose ARPG, a dependency-aware agentic framework that performs sequential MDP modeling, localized verification and correction, and simulator-structured implementation while externalizing intermediate artifacts. ARPG targets a key failure mode of automated policy generation: executable code may still yield non-learnable policies when state, action, reward, and termination artifacts are not semantically al",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.04974",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Hong Je-Gal",
-        "Jinwoo Kim",
-        "Chanbin Yi",
-        "Hyun-Suk Lee"
-      ],
-      "topics": [
-        "强化学习",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-04T06:40:22.802Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-03T14:29:36.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-fc4a361d0266d69915b18484",
-      "title": "Caging Vision-Language Navigation for Legged Robots via Barrier-Certified Safety Architecture",
-      "date": "2026-11-03T14:29:21.000Z",
-      "category": "论文",
-      "summary": "By harnessing the inherent commonsense capabilities of pretrained Large Language Models (LLMs) and Vision-Language Models (VLMs), current Vision-Language Action(VLA) models for legged robots excel at interpreting language-based navigation commands but lack the physical grounding and explicit safety assurance required for real-world operation. Therefore, this paper aims to cage Legged-Vision-Language Navigation (VLN) through a safety architecture that provides physical grounding and ensures navigation safety. The key idea is not to abandon the powerful capabilities of end-to-end VLA planning, but rather to augment and cage them. In particular, we integrate a high-level VLA planner with a low-level physical-grounding layer that leverages efficient state estimation, in-situ 3D spatial perception, and an Signed Distance Field (SDF) representation to generate executable trajectories. We provide a navigation planner with provable collision-avoidance guarantees under the stated assumptions by",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.04972",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Abhijeet M. Kulkarni",
-        "Saimouli Katragadda",
-        "Yuze Du",
-        "Zijun Sha",
-        "Guoquan Huang"
-      ],
-      "topics": [
-        "VLA 与动作模型"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-04T06:40:22.802Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-03T14:29:21.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "article-6d555e10074c89234543becb",
-      "title": "这 20 家机器人公司,吃掉了具身智能融资的半壁江山-36氪",
-      "date": "2026-11-03T13:41:49.000Z",
-      "category": "行业动态",
-      "summary": "以下选取20家在成立时间、年轻创始团队或融资规模上具有代表性的企业,逐一梳理其创始人、技术产品与融资进展。资料截至2026年11月3日,序号为行文顺序;年龄按公开出生年份估算,融资分别标明单轮、系列轮次或累计金额。\n## 01|机本智能:清北两名00后,注册约两个月完成两轮融资\n机本智能(ManuPrax Robotics)于2026年9月完成注册。CEO李浦豪出生于2001年,约25岁,本科就读于清华大学自动化系,目前攻读博士,导师为朱松纯。CTO陈泽源出生于2000年,约26岁,拥有北京大学硕士学位,曾参与ClutterDexGrasp、CADGrasp等灵巧操作研究。\n公司研发软硬一体的灵巧手解决方案,重点放在精细动作控制:机器人理解“拿起杯子”之后,手指如何靠近、施力以及在物体滑动时调整,是其试图解决的问题。团队计划以强化学习训练动作模型。\n11月2日,公司披露连续完成两轮融资,合计近1000万美元,分别由Alphaist Partners、耀途资本领投,接力天使及某零部件产业方实控人跟投。\n## 02|潜界科技:清华在读博士创业,成立数月拿到数亿元种子轮 [...] 公司产品覆盖连杆、腱绳与直驱三种技术路线,包括L20、L30、O30/R30等系列,同时提供Open TeleDex遥操作系统及LinkerSkillNet技能库,客户面向人形机器人整机企业、科研机构与工业自动化场景。\n2026年2月,公司完成近15亿元B轮融资;4月再宣布完成B+轮融资,投资方包括中关村科学城基金、中银资产、复星创富等,B+轮具体金额未披露。\n## 11|优理奇:00后耶鲁博士生回国,机器人从酒店场景起步\n优理奇成立于2024年。创始人兼CEO杨丰瑜出生于2000年,约26岁,本科毕业于密歇根大学计算机专业,后赴耶鲁大学攻读博士,2024年暂停学业回国创业。首席科学家王贺升为上海交通大学教授。\n公司研发Wanda、Panther等机器人产品,Wanda 2.0采用轮式双臂形态,面向酒店、物业、零售等场景。技术体系包括UniFlex模仿学习框架、UniTouch触觉模型及任务规划,",
-      "relevance": "",
-      "url": "https://36kr.com/p/4053825059574656",
-      "sourceName": "36kr.com",
-      "authors": [],
-      "topics": [
-        "操作与灵巧手",
-        "模仿学习",
-        "强化学习"
-      ],
-      "highlights": [
-        "## 01|机本智能:清北两名00后,注册约两个月完成两轮融资\n机本智能(ManuPrax Robotics)于2026年9月完成注册。CEO李浦豪出生于2001年,约25岁,本科就读于清华大学自动化系,目前攻读博士,导师为朱松纯。CTO陈泽源出生于2000年,约26岁,拥有北京大学硕士学位,曾参与ClutterDexGrasp、CADGrasp等灵巧操作研究。",
-        "公司研发软硬一体的灵巧手解决方案,重点放在精细动作控制:机器人理解“拿起杯子”之后,手指如何靠近、施力以及在物体滑动时调整,是其试图解决的问题。团队计划以强化学习训练动作模型。",
-        "## 02|潜界科技:清华在读博士创业,成立数月拿到数亿元种子轮 [...] 公司产品覆盖连杆、腱绳与直驱三种技术路线,包括L20、L30、O30/R30等系列,同时提供Open TeleDex遥操作系统及LinkerSkillNet技能库,客户面向人形机器人整机企业、科研机构与工业自动化场景。"
-      ],
-      "collectedAt": "2026-11-05T06:59:10.755Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "paper-8d5220989949f5cfb3e910e7",
-      "title": "PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations",
-      "date": "2026-11-03T13:25:52.000Z",
-      "category": "论文",
-      "summary": "A robot world model that serves as a simulator must do more than generate plausible videos: it must faithfully follow commanded actions, maintain consistency across camera views, and sustain coherent long-horizon rollouts. We present PrimeSim, an action-conditioned, multiview world model simulator that addresses these challenges through progressive midtraining and posttraining. Starting from a pretrained video generator, we midtrain on 30,110 hours of robot demonstrations spanning 22 platforms. To improve action following, we introduce a unified cross-embodiment action representation and frame-aligned dual-path conditioning to strengthen action-frame correspondence. To maintain multiview consistency, we develop view-aware interleaved attention with explicit camera identities, enabling cross-view information exchange while preserving view-specific representations. We further introduce a fast-video, slow-memory posttraining framework that transforms the bidirectional video generator into",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.04870",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Travis Davies",
-        "Wentao Ma",
-        "Lihao Guo",
-        "Tengfei Ma",
-        "Xiaowen Chang",
-        "Jiafeng Xu",
-        "Shilong Wang",
-        "Yiqi Deng",
-        "Shaowen He",
-        "Xiaoqi Li",
-        "Qian Zhu",
-        "Ran Cheng",
-        "Hao Dong"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "仿真与迁移",
-        "世界模型"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-04T06:40:22.802Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-03T13:25:52.000Z",
-      "kind": "paper"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-11-05T06:59:10.755Z",
-    "newsAttemptAt": "2026-11-07T06:12:03.568Z",
+    "newsAttemptAt": "2026-11-08T06:17:19.665Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -6778,9 +6743,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-08T06:59:10.755Z",
-    "lastRunAt": "2026-11-07T06:12:03.568Z",
-    "lastFinishedAt": "2026-11-07T06:12:03.568Z",
-    "budgetDay": "2026-11-07",
+    "lastRunAt": "2026-11-08T06:17:19.665Z",
+    "lastFinishedAt": "2026-11-08T06:17:19.665Z",
+    "budgetDay": "2026-11-08",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
