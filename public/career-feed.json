@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T06:56:02.535Z",
+  "generatedAt": "2026-11-14T06:42:18.754Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -4427,26 +4427,26 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
-      "count": 4,
-      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "count": 5,
+      "message": "本轮读取 5 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
-      "count": 4,
-      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "count": 3,
+      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4454,8 +4454,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4463,26 +4463,26 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
-      "count": 4,
-      "message": "本轮读取 4 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "count": 6,
+      "message": "本轮读取 6 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
       "count": 36,
       "message": "本轮读取 36 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4490,13 +4490,122 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-13T06:56:02.535Z",
-      "lastSuccessAt": "2026-11-13T06:56:02.535Z",
+      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
+      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-a5a60884cf7d9e9e637b1d4a",
+      "title": "美国自动化促进协会主席谈北美机器人趋势:北美上半年55%订单来自非汽车产业-36氪",
+      "date": "2026-11-14T05:20:21.000Z",
+      "category": "行业动态",
+      "summary": "## 人形机器人和家用机器人:令人兴奋,但仍需要时间\nAI方面的进展,也把我们带到了大家最兴奋的话题:人形机器人和具身机器人。\n现在,全球范围内都有大量资金投入人形机器人研发,中国也是一样。这显然是机器人下一步重要的发展方向之一。但从时间上看,不同人的判断非常不同。\n有些人认为一两年内就能够实现大规模具身智能落地,也有人认为永远不可能实现。\n绝大多数人的判断处于两者之间。我的看法是:我们相信可以实现,但需要时间。就像协作机器人一样,它也需要一定时间才能被市场接受、被企业部署、被应用场景验证。\n为什么我们要做人形机器人?因为如果这种机器人真正成熟,它可以应用在各个领域,可以帮助人类,也可以成为服务机器人,并在人类环境中工作。最近,我们也看到有公司已经在美国公开上市,成为首家上市的人形机器人制造商。\n与此同时,在消费者领域,近年来美国也有公司发布面向消费者的人形机器人产品。我们认为,人形机器人最终是一种工具。它们会和人一起合作,在有人环境中长期工作。\n因此,整个模式都会变化:人、工具和风险会共处在同一个场景里。 [...] 他在演讲中提到,北美机器人生态系统中已有500多家公司,覆盖人工智能、机器视觉、运动控制、机器人制造商、系统集成商、终端用户和教育机构等不同角色。当前,北美机器人产业的重要变化包括:非汽车行业订单占比上升,协作机器人和移动机器人持续扩展应用边界,人形机器人吸引大量资本投入,而家用机器人仍是一个尚未完全兑现的长期梦想。\n以下为「明亮公司」根据现场速记精编后的演讲内容(未经演讲人审阅):\n## 北美机器人产业:从汽车工业起步,走向更多行业\n大家好,非常荣幸能够再次回到世界机器人大会的会场。今天我想介绍一下北美机器人产业的发展趋势。我已经在这个行业深耕了45年,对我来说,这不是一个新行业;对整个产业来说,它本身也并不年轻。但过去这段时间,机器人产业确实发生了日新月异的变化,让我们觉得非常激动人心。\n今天在北美机器人生态系统中,已经有500多家公司参与其中,覆盖人工智能、机器视觉、运动控制等领域,也包括机器人制造商、系统集成商、终端用户和教育机构,这是一个全方位",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/3947315645316230",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [
+        "运动控制"
+      ],
+      "highlights": [
+        "## 人形机器人和家用机器人:令人兴奋,但仍需要时间\nAI方面的进展,也把我们带到了大家最兴奋的话题:人形机器人和具身机器人。",
+        "现在,全球范围内都有大量资金投入人形机器人研发,中国也是一样。这显然是机器人下一步重要的发展方向之一。但从时间上看,不同人的判断非常不同。",
+        "有些人认为一两年内就能够实现大规模具身智能落地,也有人认为永远不可能实现。"
+      ],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-bc3657725c2462044ee9900b",
+      "title": "GR00T 2: Scaling Robot Foundation Models for Generalization, Dexterity, and Adaptation",
+      "date": "2026-11-14T01:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation data per task, post-training lets GR00T 2 perform long-horizon dexterous tasks with Dexter's two 22-DoF Sharpa hands: labeling packages, swapping parts, assembling toys, and running chemistry-lab procedures end to end.\nMake shipping label [...] A humanoid must place its hands precisely while staying balanced as its whole body moves, often quickly. With its lower prediction cost, GR00T 2 Turbo runs onboard a Unitree G1 and steers the SONIC whole-body controller through latent whole-body commands. The videos below show it serving popcorn, cleaning up a spill, and picking up trash in an office cafeteria.\nPopcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] G",
+      "relevance": "",
+      "url": "https://research.nvidia.com/labs/gear/gr00t-2",
+      "sourceName": "research.nvidia.com",
+      "authors": [],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "运动控制"
+      ],
+      "highlights": [
+        "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation dat",
+        "Popcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] GR00T 2 reads recent video, the instruction and the robot state, denoises future video and an action chunk together, executes the chunk, and repeat",
+        "The footage is a GR00T 2 rollout of truck assembly on Dexter (Tianji robot + Sharpa hands), shown from the head camera and both wrist cameras at the model's own 320×224 resolution."
+      ],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-c818d7e9430c72555b9e616e",
+      "title": "对话宇树早期投资人:未来具身赛道可能只有三家过得好,十家过得去,剩下的活不下去|硬氪专访-36氪",
+      "date": "2026-11-13T22:59:05.000Z",
+      "category": "行业动态",
+      "summary": "但投过宇树和银河通用的容亿投资却选择观望。黄金平在产业里浸泡了数十年,看多了周期起伏。他形成了一套近乎本能的思考方式:不追风口,看产业本质。“一条技术路线绕不开三个问题——技术能不能跑通,工程能不能落地,商业能不能闭环。”黄金平说。\n黄金平告诉硬氪,具身泡沫当下,市场焦虑催动资本对短期估值红利的追逐,忽略了硬件机器人漫长的技术迭代和供应链打磨周期。跳不开的产业成长阶段,靠融资催熟不了,靠概念也绕不过去。\n“我们可以做一个推演是,假设未来出现二十家机器人公司、瓜分5000亿规模市场,理想状态下是期待大家都能活得很好,但现实大概率不是。可能只有三家特别好,第四到第十名还过得去,剩下的可能活不下去。”黄金平说。\n他甚至给现在不停融资的具身公司泼了冷水,因为黄金平认为,一路融资太过顺遂的创始人,很容易高估自身能力,导致经营决策上极易出现偏离长期路线的偏差。\n“当大量热情和资金在短期内集中涌入时,市场会把发展节奏想得过快,企业估值过快上涨其实也是这种预期过高的投射。”他告诉硬氪。\n在具身赛道金钱涌动之时,我们和这位硬科技投资老兵对话,希望他可以给行业提供一个更冷静的视角。 [...] 2023年之前,机器人赛道还不明确,能跑通技术路径、有工程化能力的团队极少,我们判断宇树的龙头地位会越来越强。到了2023年具身智能爆发,更多团队进场、更多资本涌入,但我们对产业终局看法没有变,所以围绕上下游环节布局一些垂类公司,但出手逻辑依然是只投资龙头。\n所以这不是简单的二选一取舍,而是一套清晰的产业判断:短期市场验证企业的存活能力,长期赛道决定企业的增长空间,只有在这两者之间形成递进,才能真正走远。\n容亿投资创始合伙人黄金平(图源/企业)\n硬氪:成立时间短但估值冲高的具身智能公司不在少数。从投资角度看,这类公司在技术积累、产品工程化、组织磨合等维度上,跟宇树这类经历过相对完整产业周期的公司相比,差距具体体现在哪些地方?短期内的高估值是否在某种程度上掩盖了这些差距?\n黄金平:单纯的短期估值,确实不能等同于企业的真实经营状态和技术实力。我们一直有个比喻,企业成长和孩子长大是一个道理,成长阶段一步都",
+      "relevance": "",
+      "url": "https://m.36kr.com/p/3942012454419592",
+      "sourceName": "m.36kr.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "黄金平告诉硬氪,具身泡沫当下,市场焦虑催动资本对短期估值红利的追逐,忽略了硬件机器人漫长的技术迭代和供应链打磨周期。跳不开的产业成长阶段,靠融资催熟不了,靠概念也绕不过去。",
+        "“我们可以做一个推演是,假设未来出现二十家机器人公司、瓜分5000亿规模市场,理想状态下是期待大家都能活得很好,但现实大概率不是。可能只有三家特别好,第四到第十名还过得去,剩下的可能活不下去。”黄金平说。",
+        "他甚至给现在不停融资的具身公司泼了冷水,因为黄金平认为,一路融资太过顺遂的创始人,很容易高估自身能力,导致经营决策上极易出现偏离长期路线的偏差。"
+      ],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-cdc8eef67bc55a0d0fa5ca86",
+      "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+      "date": "2026-11-13T18:00:39.000Z",
+      "category": "开源工具",
+      "summary": "",
+      "relevance": "",
+      "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+      "sourceName": "huggingface.co",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
+      "id": "article-a50f32ed0276415adad3963b",
+      "title": "Adapt Human Motion for Robots with NVIDIA SOMA Retargeter | NVIDIA Technical Blog",
+      "date": "2026-11-13T17:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "A SOMA human model and a Unitree G1 model move side by side. Colored skeletons show their recent and target poses.\nFigure 5. MotionBricks generates continuous motion for a SOMA human and Unitree G1 robot in the reference demos, with recent motion and target poses shown alongside each character.\nThe MotionBricks paper and project video demonstrate this approach on a physical Unitree G1. A G1-specific MotionBricks model supplies the motion targets, and SONIC controls their execution. [...] Human motion offers roboticists a great starting point for teaching humanoid robots how to move. A human demonstration captures the coordination and timing behind natural movement, from everyday actions to complex tasks. But a robot cannot simply copy the same joint motion from a human. Its proportions, joint structure, and range of motion are different, so the movement needs to be adapted to fit the rob",
+      "relevance": "",
+      "url": "https://developer.nvidia.com/blog/adapt-human-motion-for-robots-with-nvidia-soma-retargeter",
+      "sourceName": "developer.nvidia.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "MotionBricks generates continuous motion for a SOMA human and Unitree G1 robot in the reference demos, with recent motion and target poses shown alongside each character.",
+        "[...] Human motion offers roboticists a great starting point for teaching humanoid robots how to move.",
+        "But a robot cannot simply copy the same joint motion from a human."
+      ],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "paper-c8b8acda92da9619f36beceb",
       "title": "HEIR: Harness Egocentric Intent for Human-Robot Interactions",
@@ -4527,7 +4636,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T18:25:41.000Z",
       "kind": "paper"
@@ -4560,7 +4669,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:38:57.000Z",
       "kind": "paper"
@@ -4586,7 +4695,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:38:48.000Z",
       "kind": "paper"
@@ -4618,7 +4727,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:30:11.000Z",
       "kind": "paper"
@@ -4644,7 +4753,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:04:50.000Z",
       "kind": "paper"
@@ -4685,7 +4794,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T14:38:40.000Z",
       "kind": "paper"
@@ -4710,7 +4819,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T13:04:57.000Z",
       "kind": "paper"
@@ -4750,7 +4859,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T12:40:24.000Z",
       "kind": "paper"
@@ -4777,7 +4886,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T11:05:11.000Z",
       "kind": "paper"
@@ -4802,7 +4911,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T10:23:15.000Z",
       "kind": "paper"
@@ -4835,7 +4944,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T10:21:49.000Z",
       "kind": "paper"
@@ -4856,30 +4965,7 @@
         "有些大额融资买的是一家企业提前具备的生产条件。小鹏机器人业务8月完成超过9亿美元的首轮股权融资,9月启用生产线,计划年底进入规模量产阶段,先在小鹏自己的门店和园区部署,2027年再面向市场销售和交付。门店能提供一批试用场所,汽车业务也有采购和制造体系可借用。对一家没有场地和产线的创业公司来说,这两件事都要另找合作方,量产前就得多花一轮钱。同样是从样机做到交付,两类公司各自要花的时间和钱可能差很多。",
         "[...] 六五折也要等买家\n具身智能最热的时候,投资人得抢着进下一轮。到了今年10月,部分老股东愿意按上一轮估值的六五折到八折找买家,接手的人仍然谨慎。同一个月,做绳驱机器人的星尘智能宣布融了10亿元,新一轮估值升到150亿元。6月,它刚宣布估值超过100亿元。"
       ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-3739117f129053956a7d3196",
-      "title": "Embodied Intelligence Education Solutions - Unitree Robotics",
-      "date": "2026-11-12T09:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "R1-A / R1-A-D\n Ultra-fast deployment, multi-scenario application\n G1-D\n Data & Training\n G1-Comp\n Football Icon Designed for Competitions\n G1-Boxing\n Iron Fist King: Awakening!\n Dexterous Hand\n Dex5-S\n 22 DoF per hand. Effortless dexterity, at your command\n Dex2/5\n Precise control for unbeatable strength.\n Dex1-1\n Professional and Refined\n Dex5-1\n Smart Adaptability, Instant Responsiveness\n Dex3-1\n Power Control Dexterous Hand, Operate Everything [...] Platforms spanning quadruped robots, humanoid robots, robotic arms, and dexterous hands support a wide range of disciplines, including embodied intelligence, humanoid robotics, robotics engineering, automation, artificial intelligence, and intelligent manufacturing.\n Continuous Integration of Courses, Competitions, and Research [...] Multifunctional, Industrial Level Application\n Humanoid Robot\n Next-Generation Full-Size Humanoid Robot\n Fu",
-      "relevance": "",
-      "url": "https://www.unitree.com/mobile/industry/education",
-      "sourceName": "www.unitree.com",
-      "authors": [],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [
-        "Dexterous Hand\n Dex5-S\n 22 DoF per hand.",
-        "Effortless dexterity, at your command\n Dex2/5\n Precise control for unbeatable strength.",
-        "Dex1-1\n Professional and Refined\n Dex5-1\n Smart Adaptability, Instant Responsiveness\n Dex3-1\n Power Control Dexterous Hand, Operate Everything [...] Platforms spanning quadruped robots, humanoid robots, robotic arms, and"
-      ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4905,7 +4991,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T07:51:31.000Z",
       "kind": "paper"
@@ -4930,7 +5016,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T07:33:05.000Z",
       "kind": "paper"
@@ -4953,7 +5039,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T07:31:42.000Z",
       "kind": "paper"
@@ -4977,7 +5063,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T06:55:11.000Z",
       "kind": "paper"
@@ -5017,7 +5103,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T06:42:31.000Z",
       "kind": "paper"
@@ -5041,10 +5127,33 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T06:04:32.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-3739117f129053956a7d3196",
+      "title": "Embodied Intelligence Education Solutions - Unitree Robotics",
+      "date": "2026-11-12T06:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "R1-A / R1-A-D\n Ultra-fast deployment, multi-scenario application\n G1-D\n Data & Training\n G1-Comp\n Football Icon Designed for Competitions\n G1-Boxing\n Iron Fist King: Awakening!\n Dexterous Hand\n Dex5-S\n 22 DoF per hand. Effortless dexterity, at your command\n Dex2/5\n Precise control for unbeatable strength.\n Dex1-1\n Professional and Refined\n Dex5-1\n Smart Adaptability, Instant Responsiveness\n Dex3-1\n Power Control Dexterous Hand, Operate Everything [...] Platforms spanning quadruped robots, humanoid robots, robotic arms, and dexterous hands support a wide range of disciplines, including embodied intelligence, humanoid robotics, robotics engineering, automation, artificial intelligence, and intelligent manufacturing.\n Continuous Integration of Courses, Competitions, and Research [...] Multifunctional, Industrial Level Application\n Humanoid Robot\n Next-Generation Full-Size Humanoid Robot\n Fu",
+      "relevance": "",
+      "url": "https://www.unitree.com/mobile/industry/education",
+      "sourceName": "www.unitree.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [
+        "Dexterous Hand\n Dex5-S\n 22 DoF per hand.",
+        "Effortless dexterity, at your command\n Dex2/5\n Precise control for unbeatable strength.",
+        "Dex1-1\n Professional and Refined\n Dex5-1\n Smart Adaptability, Instant Responsiveness\n Dex3-1\n Power Control Dexterous Hand, Operate Everything [...] Platforms spanning quadruped robots, humanoid robots, robotic arms, and"
+      ],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-89c7966ff2a9b9ce3c173a5a",
@@ -5068,7 +5177,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T05:58:50.000Z",
       "kind": "paper"
@@ -5095,7 +5204,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T03:42:58.000Z",
       "kind": "paper"
@@ -5116,7 +5225,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T03:14:48.000Z",
       "kind": "paper"
@@ -5143,7 +5252,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T03:07:07.000Z",
       "kind": "paper"
@@ -5169,7 +5278,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T02:23:21.000Z",
       "kind": "paper"
@@ -5198,7 +5307,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T20:33:31.000Z",
       "kind": "paper"
@@ -5240,7 +5349,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T20:20:56.000Z",
       "kind": "paper"
@@ -5268,7 +5377,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T19:32:35.000Z",
       "kind": "paper"
@@ -5294,7 +5403,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T19:23:36.000Z",
       "kind": "paper"
@@ -5326,7 +5435,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T18:17:42.000Z",
       "kind": "paper"
@@ -5347,7 +5456,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:28:48.000Z",
       "kind": "paper"
@@ -5374,7 +5483,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:07:05.000Z",
       "kind": "paper"
@@ -5403,7 +5512,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:01:28.000Z",
       "kind": "paper"
@@ -5426,7 +5535,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:00:58.000Z",
       "kind": "paper"
@@ -5451,7 +5560,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T15:09:28.000Z",
       "kind": "paper"
@@ -5479,7 +5588,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T14:14:19.000Z",
       "kind": "paper"
@@ -5508,7 +5617,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T13:53:09.000Z",
       "kind": "paper"
@@ -5537,7 +5646,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T13:50:13.000Z",
       "kind": "paper"
@@ -5565,7 +5674,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T13:15:30.000Z",
       "kind": "paper"
@@ -5710,23 +5819,21 @@
       "id": "article-6b6709b612e5913e3ffca54a",
       "title": "Gemini Robotics 2.5: Accelerating Physical Intelligence — Google DeepMind",
       "date": "2026-11-10T15:00:00.000Z",
-      "category": "技术进展",
-      "summary": "Today, we are introducing Gemini Robotics 2.5, our most capable vision-language-action (VLA) model to date. Gemini Robotics 2.5 increases both the breadth of skills a robot can learn and the speed at which it can acquire them. This enhances dexterity, reliability, and safety to help robots step out of the lab and into more unstructured, real-world environments, where they can assist people with a greater range of tasks. [...] Using our embodied reasoning model (Gemini Robotics ER) to keep track of the workflow, and the Gemini Robotics 2.5 actions model to control its hands and arms, the robot reaches into supply bins, picks up metal automotive brackets, and places them into sequencing containers, all while correcting for any gaps. Achieving a 96% success rate, this pilot shows promising progress toward widespread real-world industrial applications. [...] Earlier this year, we brought who",
+      "category": "硬件与落地",
+      "summary": "Dexterity: Our robots can perform significantly more tasks with greater performance and dexterity — from using everyday tools to handling delicate, flexible objects.\n Reliability: During a real-world proof-of-concept on Mercedes-Benz production lines, our models helped Apptronik’s Apollo 2 humanoid pick and pack automotive parts with a 96% success rate. This could enable robots to take on monotonous work, to enable technicians to focus on complex build tasks. [...] Using our embodied reasoning model (Gemini Robotics ER) to keep track of the workflow, and the Gemini Robotics 2.5 actions model to control its hands and arms, the robot reaches into supply bins, picks up metal automotive brackets, and places them into sequencing containers, all while correcting for any gaps. Achieving a 96% success rate, this pilot shows promising progress toward widespread real-world industrial applications.",
       "relevance": "",
       "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence",
       "sourceName": "deepmind.google",
       "authors": [],
       "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "运动控制"
+        "操作与灵巧手"
       ],
       "highlights": [
-        "Today, we are introducing Gemini Robotics 2.5, our most capable vision-language-action (VLA) model to date.",
-        "Gemini Robotics 2.5 increases both the breadth of skills a robot can learn and the speed at which it can acquire them.",
-        "This enhances dexterity, reliability, and safety to help robots step out of the lab and into more unstructured, real-world environments, where they can assist people with a greater range of tasks."
+        "Dexterity: Our robots can perform significantly more tasks with greater performance and dexterity — from using everyday tools to handling delicate, flexible objects.",
+        "This could enable robots to take on monotonous work, to enable technicians to focus on complex build tasks.",
+        "[...] Using our embodied reasoning model (Gemini Robotics ER) to keep track of the workflow, and the Gemini Robotics 2.5 actions model to control its hands and arms, the robot reaches into supply bins, picks up metal aut"
       ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6077,23 +6184,23 @@
       "id": "article-9dc1c657da7b0a8119f58074",
       "title": "Isaac GR00T | Humanoid Robot Development Platform | NVIDIA",
       "date": "2026-11-10T06:00:00.000Z",
-      "category": "技术进展",
-      "summary": "### \nGR00T models take onboard camera views, a natural-language instruction, and the robot’s current state as input. The policy predicts chunks of continuous robot actions, helping produce coordinated and smooth manipulation behavior.\n### \nGR00T models learn from a diverse mixture of internet-scale human video, real robot teleoperation data, and synthetic data generated in simulation. This mix provides world knowledge, physical grounding, and scalable task coverage.\n### [...] ## Isaac GR00T Family of Models\nStart with pre-trained GR00T foundation models for generalized robot skills, then fine-tune and deploy them across embodiments and environments.\n### Get started with GR00T 1.7\nGR00T 1.7 is the latest open VLA model in the GR00T family, with a Cosmos backend and commercial license. The 3-billion-parameter model is available on GitHub and Hugging Face.\n### Orchestrate with Frontier AI [",
+      "category": "硬件与落地",
+      "summary": "### \nGR00T models take onboard camera views, a natural-language instruction, and the robot’s current state as input. The policy predicts chunks of continuous robot actions, helping produce coordinated and smooth manipulation behavior.\n### \nGR00T models learn from a diverse mixture of internet-scale human video, real robot teleoperation data, and synthetic data generated in simulation. This mix provides world knowledge, physical grounding, and scalable task coverage.\n### [...] Learn More\n### Halos Safety for Humanoids\nSafety solution spanning infrastructure, operating system, middleware, and applications.\nLearn More\n## Isaac GR00T Reference Workflows\nFollow a fully open, validated, and reproducible path from data collection and policy training to evaluation and deployment on physical robots. Use NVIDIA software, your own tools, or a combination of both.\n### Capture Data [...] ### Capture ",
       "relevance": "",
       "url": "https://www.nvidia.com/en-eu/industries/robotics/isaac-groot",
       "sourceName": "www.nvidia.com",
       "authors": [],
       "topics": [
-        "VLA 与动作模型",
         "操作与灵巧手",
-        "仿真与迁移"
+        "仿真与迁移",
+        "数据与评测"
       ],
       "highlights": [
         "### \nGR00T models take onboard camera views, a natural-language instruction, and the robot’s current state as input.",
         "The policy predicts chunks of continuous robot actions, helping produce coordinated and smooth manipulation behavior.",
         "### \nGR00T models learn from a diverse mixture of internet-scale human video, real robot teleoperation data, and synthetic data generated in simulation."
       ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6247,7 +6354,7 @@
         "On 14 real-world tasks across single-arm, dual-arm, dexterous, and humanoid robots, it achieves the highest success rate.",
         "We evaluate it as a visuomotor policy, as the action head of vision-language-action (VLA) and world action models (WAMs), and as the actor of model-based RL against 14 baselines on unimanual, bimanual, dexterous, locomot"
       ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6550,29 +6657,6 @@
       "kind": "paper"
     },
     {
-      "id": "article-a5a60884cf7d9e9e637b1d4a",
-      "title": "美国自动化促进协会主席谈北美机器人趋势:北美上半年55%订单来自非汽车产业-36氪",
-      "date": "2026-11-09T14:01:50.000Z",
-      "category": "行业动态",
-      "summary": "## 人形机器人和家用机器人:令人兴奋,但仍需要时间\nAI方面的进展,也把我们带到了大家最兴奋的话题:人形机器人和具身机器人。\n现在,全球范围内都有大量资金投入人形机器人研发,中国也是一样。这显然是机器人下一步重要的发展方向之一。但从时间上看,不同人的判断非常不同。\n有些人认为一两年内就能够实现大规模具身智能落地,也有人认为永远不可能实现。\n绝大多数人的判断处于两者之间。我的看法是:我们相信可以实现,但需要时间。就像协作机器人一样,它也需要一定时间才能被市场接受、被企业部署、被应用场景验证。\n为什么我们要做人形机器人?因为如果这种机器人真正成熟,它可以应用在各个领域,可以帮助人类,也可以成为服务机器人,并在人类环境中工作。最近,我们也看到有公司已经在美国公开上市,成为首家上市的人形机器人制造商。\n与此同时,在消费者领域,近年来美国也有公司发布面向消费者的人形机器人产品。我们认为,人形机器人最终是一种工具。它们会和人一起合作,在有人环境中长期工作。\n因此,整个模式都会变化:人、工具和风险会共处在同一个场景里。 [...] 他在演讲中提到,北美机器人生态系统中已有500多家公司,覆盖人工智能、机器视觉、运动控制、机器人制造商、系统集成商、终端用户和教育机构等不同角色。当前,北美机器人产业的重要变化包括:非汽车行业订单占比上升,协作机器人和移动机器人持续扩展应用边界,人形机器人吸引大量资本投入,而家用机器人仍是一个尚未完全兑现的长期梦想。\n以下为「明亮公司」根据现场速记精编后的演讲内容(未经演讲人审阅):\n## 北美机器人产业:从汽车工业起步,走向更多行业\n大家好,非常荣幸能够再次回到世界机器人大会的会场。今天我想介绍一下北美机器人产业的发展趋势。我已经在这个行业深耕了45年,对我来说,这不是一个新行业;对整个产业来说,它本身也并不年轻。但过去这段时间,机器人产业确实发生了日新月异的变化,让我们觉得非常激动人心。\n今天在北美机器人生态系统中,已经有500多家公司参与其中,覆盖人工智能、机器视觉、运动控制等领域,也包括机器人制造商、系统集成商、终端用户和教育机构,这是一个全方位",
-      "relevance": "",
-      "url": "https://m.36kr.com/p/3947315645316230",
-      "sourceName": "m.36kr.com",
-      "authors": [],
-      "topics": [
-        "运动控制"
-      ],
-      "highlights": [
-        "## 人形机器人和家用机器人:令人兴奋,但仍需要时间\nAI方面的进展,也把我们带到了大家最兴奋的话题:人形机器人和具身机器人。",
-        "现在,全球范围内都有大量资金投入人形机器人研发,中国也是一样。这显然是机器人下一步重要的发展方向之一。但从时间上看,不同人的判断非常不同。",
-        "有些人认为一两年内就能够实现大规模具身智能落地,也有人认为永远不可能实现。"
-      ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
       "id": "article-6e07690c27eb09da199b1ed7",
       "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation | NVIDIA Blog",
       "date": "2026-11-09T14:00:01.000Z",
@@ -6593,7 +6677,7 @@
         "Genesis AI, mimic robotics and other industry partners are evaluating DexBench through early access.",
         "[...] FieldAI is using Newton — as well as Isaac Lab and Isaac Sim, built on NVIDIA Omniverse libraries — to train and validate robot policies for deployment in unstructured real-world environments."
       ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6640,7 +6724,7 @@
         "政策侧也在给出方向。2025年《政府工作报告》首次将“具身智能”写入未来产业培育方向,工信部《人形机器人创新发展指导意见》提出到2025年初步建立创新体系、到2027年形成安全可靠的产业链供应链。触觉传感器作为机器人物理交互的“界面层”,其国产化与量产能力直接关系到机器人能否从结构化环境进入非结构化场景。灵感机器人所处的,正是这个从“有没有”向“用不用得起、接不接得进”过渡的环节。",
         "[...] 首页\n文章详情\n# 视触觉传感破解“拿不稳”痛点,灵感机器人完成天使轮\n16017319282026-11-10 14:18\n灵感机器人深耕触觉感知,推进量产与全栈触觉方案落地\n机器人能跑、能跳、能后空翻,却未必能稳稳捏起一颗草莓。在具身智能从运动能力向操作能力迁移的过程中,一个被反复验证的瓶颈正在浮出水面:视觉可以让机器人“看见”目标,却无法告诉它接触力有多大、物体是否正在滑落、表面纹理到了什么程度。轻了抓不住,重了会捏碎"
       ],
-      "collectedAt": "2026-11-13T06:56:02.535Z",
+      "collectedAt": "2026-11-14T06:42:18.754Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -7035,31 +7119,6 @@
       "kind": "paper"
     },
     {
-      "id": "article-bc3657725c2462044ee9900b",
-      "title": "GR00T 2: Scaling Robot Foundation Models for Generalization, Dexterity, and Adaptation",
-      "date": "2026-11-09T07:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation data per task, post-training lets GR00T 2 perform long-horizon dexterous tasks with Dexter's two 22-DoF Sharpa hands: labeling packages, swapping parts, assembling toys, and running chemistry-lab procedures end to end.\nMake shipping label [...] A humanoid must place its hands precisely while staying balanced as its whole body moves, often quickly. With its lower prediction cost, GR00T 2 Turbo runs onboard a Unitree G1 and steers the SONIC whole-body controller through latent whole-body commands. The videos below show it serving popcorn, cleaning up a spill, and picking up trash in an office cafeteria.\nPopcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] G",
-      "relevance": "",
-      "url": "https://research.nvidia.com/labs/gear/gr00t-2",
-      "sourceName": "research.nvidia.com",
-      "authors": [],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "运动控制"
-      ],
-      "highlights": [
-        "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation dat",
-        "Popcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] GR00T 2 reads recent video, the instruction and the robot state, denoises future video and an action chunk together, executes the chunk, and repeat",
-        "The footage is a GR00T 2 rollout of truck assembly on Dexter (Tianji robot + Sharpa hands), shown from the head camera and both wrist cameras at the model's own 320×224 resolution."
-      ],
-      "collectedAt": "2026-11-12T07:24:06.590Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
       "id": "paper-72338d426ded0f6bf667692c",
       "title": "Flip Anything with Agentic Robotics Self-Learning",
       "date": "2026-11-09T06:09:55.000Z",
@@ -7082,6 +7141,27 @@
       "dateVerified": true,
       "updatedAt": "2026-11-09T06:09:55.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-717a93f792927c8636fc582a",
+      "title": "独家对话施晓鑫:人形机器人的终局,一半在手上 - 36氪",
+      "date": "2026-11-09T06:00:00.000Z",
+      "category": "行业动态",
+      "summary": "本文深度聚焦灵巧手技术研发核心议题,围绕拟人灵巧手的技术落地边界与拟人化审美设计逻辑展开系统性探讨,精准剖析当前灵巧手产业化进程中潜藏的核心风险,为智能",
+      "relevance": "",
+      "url": "https://eu.36kr.com/zh/p/4063274873672578",
+      "sourceName": "eu.36kr.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手"
+      ],
+      "highlights": [
+        "本文深度聚焦灵巧手技术研发核心议题,围绕拟人灵巧手的技术落地边界与拟人化审美设计逻辑展开系统性探讨,精准剖析当前灵巧手产业化进程中潜藏的核心风险,为智能"
+      ],
+      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-a1a14651ca005596cc49c60d",
@@ -7161,108 +7241,11 @@
       "dateVerified": true,
       "updatedAt": "2026-11-09T02:54:44.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-5cb3654254a43a36e0f25235",
-      "title": "Particle Filtering with Generative Trajectory Models for State Estimation and Control",
-      "date": "2026-11-09T01:13:58.000Z",
-      "category": "论文",
-      "summary": "Generative models can support both state estimation and control in robotics. For control, a common approach is to use the model as a policy that directly samples actions conditioned on observation histories. However, models that jointly represent states, actions, and observations can also predict how the robot state and its environment evolve. We investigate whether these predictions can improve state estimation and control through a change in inference procedure, without modifying the pretrained model. To this end, we use particle filtering to maintain competing hypotheses about state histories. A single pretrained diffusion model generates these hypotheses along with their predicted observations and associated action proposals. As new measurements arrive, particles are reweighted according to how well their predicted observations match the measurements. While particle filtering conventionally uses these weights only for state estimation, we also use them to guide action selection, fa",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.11732",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Lukas Lao Beyer",
-        "Samvit Das",
-        "Sertac Karaman"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "仿真与迁移"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-10T07:28:50.658Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-09T01:13:58.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-89f97a39ff39534a2a966faa",
-      "title": "Accelerated Reinforcement Learning for Soft Robotics: Hours Instead of Years",
-      "date": "2026-11-09T00:26:43.000Z",
-      "category": "论文",
-      "summary": "Reinforcement learning (RL) requires large amounts of interaction data or a reliable simulator, both hard to obtain for nonlinear soft robotic hardware. Recent work shows that a time-scale separation inherent to soft robot dynamics justifies their reduction to low-dimensional invariant manifolds, known as adiabatic spectral submanifolds (aSSMs). We demonstrate that an aSSM-reduced model, a simple polynomial ordinary differential equation learned purely from pre-collected data, can serve as an RL training environment. On a pneumatically actuated soft arm, we train a trajectory-tracking policy in 3 hours on a six-dimensional aSSM-reduced model and deploy it without fine-tuning, whereas reproducing this policy training extrapolates to 3 years of hardware interaction. Our policy tracks dynamic targets with 40% lower error than otherwise identical policies trained on a 4.8-million-parameter recurrent neural network (RNN) or a 1.7-million-parameter transformer, which take 13 and 100 hours to",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.11718",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Roshan S. Kaundinya",
-        "Hehui Zheng",
-        "Robert K. Katzschmann",
-        "George Haller"
-      ],
-      "topics": [
-        "强化学习"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-10T07:28:50.658Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-09T00:26:43.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-672e9c338170c3d1ca6914a6",
-      "title": "Data-Driven Precision Control of Soft Helicoid Robots",
-      "date": "2026-11-09T00:09:24.000Z",
-      "category": "论文",
-      "summary": "A purely data-driven method grounded in the theory of adiabatic spectral submanifolds (aSSMs) was recently used to model and control nonlinear soft robotic simulators. Here, we extend the methodology to learn aSSM-reduced models from data collected from hardware soft robotic platforms. Specifically, we learn a five dimensional (5D) aSSM-reduced nonlinear ordinary differential equation (ODE) that accurately models the dynamics of a soft-helicoid trunk robot. We then use this ODE in a model predictive control scheme to demonstrate real-time precision control across various challenging closed-loop trajectory-tracking tasks, ranging from 2D to 3D trajectories with static and dynamic constraints. We find that our methodology enhances accuracy and precision across all control tasks compared to available data-driven linear methods and model-free reinforcement learning. While we focus here on a soft-helicoid trunk robot, our methodology relies solely on hardware data and is therefore applicabl",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.11709",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Roshan S. Kaundinya",
-        "Mark Leone",
-        "Roberto Sabella",
-        "Hugo Buurmeijer",
-        "Luis Pabon",
-        "John Irvin Alora",
-        "Marco Pavone",
-        "George Haller"
-      ],
-      "topics": [
-        "强化学习"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-10T07:28:50.658Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-09T00:09:24.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-ab31c69785f70cb46c0d27f4",
-      "title": "Brain-Aligned Latent Actions: Imposing Premotor Cortex Geometry on a Robot's Action Vocabulary",
-      "date": "2026-11-08T22:59:22.000Z",
-      "category": "论文",
-      "summary": "Robot policies increasingly act through a small vocabulary of discrete latent actions learned from unlabeled video, yet training leaves open which motion receives which code. We find this choice highly unstable: two independently trained runs of Moto's latent motion tokenizer assign the same robot clips to nearly unrelated codes (adjusted Rand index 0.001), and evaluating one tokenizer in bf16 instead of fp32 reassigns 74% of its tokens. We use this freedom to impose the representational geometry of macaque ventral premotor cortex (PMv), recorded while a monkey drew shapes, on the tokenizer's code assignment, with a straight-through similarity loss trained alongside its reconstruction objective on robot video. In one training run per target, on five shape categories the loss never saw, the PMv-trained tokenizer reaches a representational similarity of 0.52 with PMv, against 0.20-0.26 for released and no-prior tokenizers and 0.42 for the 95th percentile of random kinematic encoders. Kin",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.11674",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Amit Jadhav"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-10T07:28:50.658Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-08T22:59:22.000Z",
-      "kind": "paper"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-11-12T07:24:06.590Z",
-    "newsAttemptAt": "2026-11-13T06:56:02.535Z",
+    "newsAttemptAt": "2026-11-14T06:42:18.754Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -7270,9 +7253,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-15T07:24:06.590Z",
-    "lastRunAt": "2026-11-13T06:56:02.535Z",
-    "lastFinishedAt": "2026-11-13T06:56:02.535Z",
-    "budgetDay": "2026-11-13",
+    "lastRunAt": "2026-11-14T06:42:18.754Z",
+    "lastFinishedAt": "2026-11-14T06:42:18.754Z",
+    "budgetDay": "2026-11-14",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
