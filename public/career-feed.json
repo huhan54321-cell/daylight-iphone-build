@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T06:42:18.754Z",
+  "generatedAt": "2026-11-15T06:47:25.342Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -4427,8 +4427,8 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
       "count": 5,
       "message": "本轮读取 5 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4436,17 +4436,17 @@
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
-      "count": 3,
-      "message": "本轮读取 3 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4454,8 +4454,8 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4463,26 +4463,26 @@
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
-      "count": 1,
-      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
-      "count": 6,
-      "message": "本轮读取 6 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
+      "count": 7,
+      "message": "本轮读取 7 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
       "count": 36,
       "message": "本轮读取 36 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4490,13 +4490,38 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-14T06:42:18.754Z",
-      "lastSuccessAt": "2026-11-14T06:42:18.754Z",
+      "lastAttemptAt": "2026-11-15T06:47:25.342Z",
+      "lastSuccessAt": "2026-11-15T06:47:25.342Z",
       "count": 1,
       "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-bc3657725c2462044ee9900b",
+      "title": "GR00T 2: Scaling Robot Foundation Models for Generalization, Dexterity, and Adaptation",
+      "date": "2026-11-14T23:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation data per task, post-training lets GR00T 2 perform long-horizon dexterous tasks with Dexter's two 22-DoF Sharpa hands: labeling packages, swapping parts, assembling toys, and running chemistry-lab procedures end to end.\nMake shipping label [...] A humanoid must place its hands precisely while staying balanced as its whole body moves, often quickly. With its lower prediction cost, GR00T 2 Turbo runs onboard a Unitree G1 and steers the SONIC whole-body controller through latent whole-body commands. The videos below show it serving popcorn, cleaning up a spill, and picking up trash in an office cafeteria.\nPopcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] G",
+      "relevance": "",
+      "url": "https://research.nvidia.com/labs/gear/gr00t-2",
+      "sourceName": "research.nvidia.com",
+      "authors": [],
+      "topics": [
+        "VLA 与动作模型",
+        "操作与灵巧手",
+        "运动控制"
+      ],
+      "highlights": [
+        "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation dat",
+        "Popcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] GR00T 2 reads recent video, the instruction and the robot state, denoises future video and an action chunk together, executes the chunk, and repeat",
+        "The footage is a GR00T 2 rollout of truck assembly on Dexter (Tianji robot + Sharpa hands), shown from the head camera and both wrist cameras at the model's own 320×224 resolution."
+      ],
+      "collectedAt": "2026-11-15T06:47:25.342Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "article-a5a60884cf7d9e9e637b1d4a",
       "title": "美国自动化促进协会主席谈北美机器人趋势:北美上半年55%订单来自非汽车产业-36氪",
@@ -4515,32 +4540,7 @@
         "现在,全球范围内都有大量资金投入人形机器人研发,中国也是一样。这显然是机器人下一步重要的发展方向之一。但从时间上看,不同人的判断非常不同。",
         "有些人认为一两年内就能够实现大规模具身智能落地,也有人认为永远不可能实现。"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-bc3657725c2462044ee9900b",
-      "title": "GR00T 2: Scaling Robot Foundation Models for Generalization, Dexterity, and Adaptation",
-      "date": "2026-11-14T01:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation data per task, post-training lets GR00T 2 perform long-horizon dexterous tasks with Dexter's two 22-DoF Sharpa hands: labeling packages, swapping parts, assembling toys, and running chemistry-lab procedures end to end.\nMake shipping label [...] A humanoid must place its hands precisely while staying balanced as its whole body moves, often quickly. With its lower prediction cost, GR00T 2 Turbo runs onboard a Unitree G1 and steers the SONIC whole-body controller through latent whole-body commands. The videos below show it serving popcorn, cleaning up a spill, and picking up trash in an office cafeteria.\nPopcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] G",
-      "relevance": "",
-      "url": "https://research.nvidia.com/labs/gear/gr00t-2",
-      "sourceName": "research.nvidia.com",
-      "authors": [],
-      "topics": [
-        "VLA 与动作模型",
-        "操作与灵巧手",
-        "运动控制"
-      ],
-      "highlights": [
-        "DexUMI demo · training data\nGR00T 2 on Tianji · autonomous\nDexUMI demo · training data\nGR00T 2 on Tianji · autonomous\n## Dexterity: Fine Motor Control for Five-Fingered Hands\nWith only a small amount of teleoperation dat",
-        "Popcorn serving\n### GR00T 2 Turbo: Efficient World-Action Modeling [...] GR00T 2 reads recent video, the instruction and the robot state, denoises future video and an action chunk together, executes the chunk, and repeat",
-        "The footage is a GR00T 2 rollout of truck assembly on Dexter (Tianji robot + Sharpa hands), shown from the head camera and both wrist cameras at the model's own 320×224 resolution."
-      ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4561,7 +4561,7 @@
         "“我们可以做一个推演是,假设未来出现二十家机器人公司、瓜分5000亿规模市场,理想状态下是期待大家都能活得很好,但现实大概率不是。可能只有三家特别好,第四到第十名还过得去,剩下的可能活不下去。”黄金平说。",
         "他甚至给现在不停融资的具身公司泼了冷水,因为黄金平认为,一路融资太过顺遂的创始人,很容易高估自身能力,导致经营决策上极易出现偏离长期路线的偏差。"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4580,7 +4580,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4601,7 +4601,7 @@
         "[...] Human motion offers roboticists a great starting point for teaching humanoid robots how to move.",
         "But a robot cannot simply copy the same joint motion from a human."
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4636,7 +4636,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T18:25:41.000Z",
       "kind": "paper"
@@ -4669,7 +4669,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:38:57.000Z",
       "kind": "paper"
@@ -4695,7 +4695,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:38:48.000Z",
       "kind": "paper"
@@ -4727,7 +4727,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:30:11.000Z",
       "kind": "paper"
@@ -4753,7 +4753,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T17:04:50.000Z",
       "kind": "paper"
@@ -4794,7 +4794,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T14:38:40.000Z",
       "kind": "paper"
@@ -4819,7 +4819,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T13:04:57.000Z",
       "kind": "paper"
@@ -4859,7 +4859,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T12:40:24.000Z",
       "kind": "paper"
@@ -4886,7 +4886,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T11:05:11.000Z",
       "kind": "paper"
@@ -4911,7 +4911,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T10:23:15.000Z",
       "kind": "paper"
@@ -4944,7 +4944,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T10:21:49.000Z",
       "kind": "paper"
@@ -4965,7 +4965,7 @@
         "有些大额融资买的是一家企业提前具备的生产条件。小鹏机器人业务8月完成超过9亿美元的首轮股权融资,9月启用生产线,计划年底进入规模量产阶段,先在小鹏自己的门店和园区部署,2027年再面向市场销售和交付。门店能提供一批试用场所,汽车业务也有采购和制造体系可借用。对一家没有场地和产线的创业公司来说,这两件事都要另找合作方,量产前就得多花一轮钱。同样是从样机做到交付,两类公司各自要花的时间和钱可能差很多。",
         "[...] 六五折也要等买家\n具身智能最热的时候,投资人得抢着进下一轮。到了今年10月,部分老股东愿意按上一轮估值的六五折到八折找买家,接手的人仍然谨慎。同一个月,做绳驱机器人的星尘智能宣布融了10亿元,新一轮估值升到150亿元。6月,它刚宣布估值超过100亿元。"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -4991,7 +4991,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T07:51:31.000Z",
       "kind": "paper"
@@ -5016,7 +5016,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T07:33:05.000Z",
       "kind": "paper"
@@ -5039,7 +5039,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T07:31:42.000Z",
       "kind": "paper"
@@ -5063,7 +5063,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T06:55:11.000Z",
       "kind": "paper"
@@ -5103,7 +5103,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T06:42:31.000Z",
       "kind": "paper"
@@ -5127,7 +5127,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T06:04:32.000Z",
       "kind": "paper"
@@ -5150,7 +5150,7 @@
         "Effortless dexterity, at your command\n Dex2/5\n Precise control for unbeatable strength.",
         "Dex1-1\n Professional and Refined\n Dex5-1\n Smart Adaptability, Instant Responsiveness\n Dex3-1\n Power Control Dexterous Hand, Operate Everything [...] Platforms spanning quadruped robots, humanoid robots, robotic arms, and"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -5177,7 +5177,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T05:58:50.000Z",
       "kind": "paper"
@@ -5204,7 +5204,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T03:42:58.000Z",
       "kind": "paper"
@@ -5225,7 +5225,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T03:14:48.000Z",
       "kind": "paper"
@@ -5252,7 +5252,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T03:07:07.000Z",
       "kind": "paper"
@@ -5278,7 +5278,7 @@
         "运动控制"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-12T02:23:21.000Z",
       "kind": "paper"
@@ -5307,7 +5307,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T20:33:31.000Z",
       "kind": "paper"
@@ -5349,7 +5349,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T20:20:56.000Z",
       "kind": "paper"
@@ -5377,7 +5377,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T19:32:35.000Z",
       "kind": "paper"
@@ -5403,7 +5403,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T19:23:36.000Z",
       "kind": "paper"
@@ -5435,7 +5435,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T18:17:42.000Z",
       "kind": "paper"
@@ -5456,7 +5456,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:28:48.000Z",
       "kind": "paper"
@@ -5483,7 +5483,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:07:05.000Z",
       "kind": "paper"
@@ -5512,7 +5512,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:01:28.000Z",
       "kind": "paper"
@@ -5535,7 +5535,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T16:00:58.000Z",
       "kind": "paper"
@@ -5560,7 +5560,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T15:09:28.000Z",
       "kind": "paper"
@@ -5588,7 +5588,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T14:14:19.000Z",
       "kind": "paper"
@@ -5617,7 +5617,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T13:53:09.000Z",
       "kind": "paper"
@@ -5646,7 +5646,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T13:50:13.000Z",
       "kind": "paper"
@@ -5674,7 +5674,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": "2026-11-11T13:15:30.000Z",
       "kind": "paper"
@@ -5833,7 +5833,7 @@
         "This could enable robots to take on monotonous work, to enable technicians to focus on complex build tasks.",
         "[...] Using our embodied reasoning model (Gemini Robotics ER) to keep track of the workflow, and the Gemini Robotics 2.5 actions model to control its hands and arms, the robot reaches into supply bins, picks up metal aut"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6200,7 +6200,7 @@
         "The policy predicts chunks of continuous robot actions, helping produce coordinated and smooth manipulation behavior.",
         "### \nGR00T models learn from a diverse mixture of internet-scale human video, real robot teleoperation data, and synthetic data generated in simulation."
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6354,7 +6354,7 @@
         "On 14 real-world tasks across single-arm, dual-arm, dexterous, and humanoid robots, it achieves the highest success rate.",
         "We evaluate it as a visuomotor policy, as the action head of vision-language-action (VLA) and world action models (WAMs), and as the actor of model-based RL against 14 baselines on unimanual, bimanual, dexterous, locomot"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6407,6 +6407,29 @@
       "dateVerified": true,
       "updatedAt": "2026-11-09T23:44:46.000Z",
       "kind": "paper"
+    },
+    {
+      "id": "article-fe588534d577c0de338cbc12",
+      "title": "UT Austin Trains Robots in Simulation with NVIDIA Isaac",
+      "date": "2026-11-09T22:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Texas Robotics needed simulation-ready GPUs that every lab and course could use, and a dependable path from simulation to real robots.\nUT Austin Villa\nUT Austin Villa\nUT Austin’s humanoid soccer team at RoboCup 2026.\nWith the force-adaptive controller, the robot stably pushes the object using its end-effector.\n## Training Robot Skills in Simulation and Proving Them on Real Robots [...] Humanoid walking. For humanoids, walking comes first. Students train walking policies, the control programs that tell a robot how to move, for the team’s Booster T1 humanoid robots in Isaac Lab. They shape rewards across many simulated robots at once, then transfer the policy to the real machine. “There’s just no way I would be able to run these experiments at scale without these compute nodes,” said Alex Lu, a sophomore computer science major training humanoid walking policies. Those skills [...] “Learnin",
+      "relevance": "",
+      "url": "https://www.nvidia.com/en-us/case-studies/ut-austin",
+      "sourceName": "www.nvidia.com",
+      "authors": [],
+      "topics": [
+        "仿真与迁移"
+      ],
+      "highlights": [
+        "Texas Robotics needed simulation-ready GPUs that every lab and course could use, and a dependable path from simulation to real robots.",
+        "With the force-adaptive controller, the robot stably pushes the object using its end-effector.",
+        "## Training Robot Skills in Simulation and Proving Them on Real Robots [...] Humanoid walking."
+      ],
+      "collectedAt": "2026-11-15T06:47:25.342Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
     },
     {
       "id": "paper-60766746d966944fdde13863",
@@ -6677,30 +6700,7 @@
         "Genesis AI, mimic robotics and other industry partners are evaluating DexBench through early access.",
         "[...] FieldAI is using Newton — as well as Isaac Lab and Isaac Sim, built on NVIDIA Omniverse libraries — to train and validate robot policies for deployment in unstructured real-world environments."
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
-      "dateVerified": true,
-      "updatedAt": null,
-      "kind": "news"
-    },
-    {
-      "id": "article-fe588534d577c0de338cbc12",
-      "title": "UT Austin Trains Robots in Simulation with NVIDIA Isaac",
-      "date": "2026-11-09T14:00:00.000Z",
-      "category": "硬件与落地",
-      "summary": "cars to Ph.D. researchers training humanoids: build and test robot skills in simulation, then put them to work on real robots. For any university with more robotics students than robots, it’s a model for turning limited hardware into hands-on experience for more students. [...] Humanoid walking. For humanoids, walking comes first. Students train walking policies, the control programs that tell a robot how to move, for the team’s Booster T1 humanoid robots in Isaac Lab. They shape rewards across many simulated robots at once, then transfer the policy to the real machine. “There’s just no way I would be able to run these experiments at scale without these compute nodes,” said Alex Lu, a sophomore computer science major training humanoid walking policies. Those skills [...] Texas Robotics needed simulation-ready GPUs that every lab and course could use, and a dependable path from simulation",
-      "relevance": "",
-      "url": "https://www.nvidia.com/en-us/case-studies/ut-austin",
-      "sourceName": "www.nvidia.com",
-      "authors": [],
-      "topics": [
-        "仿真与迁移"
-      ],
-      "highlights": [
-        "researchers training humanoids: build and test robot skills in simulation, then put them to work on real robots.",
-        "For any university with more robotics students than robots, it’s a model for turning limited hardware into hands-on experience for more students.",
-        "Students train walking policies, the control programs that tell a robot how to move, for the team’s Booster T1 humanoid robots in Isaac Lab."
-      ],
-      "collectedAt": "2026-11-11T06:43:52.805Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -6724,7 +6724,7 @@
         "政策侧也在给出方向。2025年《政府工作报告》首次将“具身智能”写入未来产业培育方向,工信部《人形机器人创新发展指导意见》提出到2025年初步建立创新体系、到2027年形成安全可靠的产业链供应链。触觉传感器作为机器人物理交互的“界面层”,其国产化与量产能力直接关系到机器人能否从结构化环境进入非结构化场景。灵感机器人所处的,正是这个从“有没有”向“用不用得起、接不接得进”过渡的环节。",
         "[...] 首页\n文章详情\n# 视触觉传感破解“拿不稳”痛点,灵感机器人完成天使轮\n16017319282026-11-10 14:18\n灵感机器人深耕触觉感知,推进量产与全栈触觉方案落地\n机器人能跑、能跳、能后空翻,却未必能稳稳捏起一颗草莓。在具身智能从运动能力向操作能力迁移的过程中,一个被反复验证的瓶颈正在浮出水面:视觉可以让机器人“看见”目标,却无法告诉它接触力有多大、物体是否正在滑落、表面纹理到了什么程度。轻了抓不住,重了会捏碎"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -7144,21 +7144,24 @@
     },
     {
       "id": "article-717a93f792927c8636fc582a",
-      "title": "独家对话施晓鑫:人形机器人的终局,一半在手上 - 36氪",
+      "title": "独家对话艾莫机器人施晓鑫:人形机器人产业终局 核心胜负手在灵巧手技术赛道",
       "date": "2026-11-09T06:00:00.000Z",
       "category": "行业动态",
-      "summary": "本文深度聚焦灵巧手技术研发核心议题,围绕拟人灵巧手的技术落地边界与拟人化审美设计逻辑展开系统性探讨,精准剖析当前灵巧手产业化进程中潜藏的核心风险,为智能",
+      "summary": "第三段在小鹏,我负责整个产品的规划和造型的研发。给我很深的感受是:当你真正从0到1定义一个产品的时候,你需要考虑什么——怎么定义一个高标准的产品,从技术侧如何实现,遇到困难怎么应对,能不能把产品的上限发挥出来。也真正探索到了什么能做、什么不能做,硬件开发需要花多少资源。\n职场Bonus:在猎豹那几年,服务机器人也被说是泡沫期。今天的具身智能热,和当年有什么本质不同?\n施晓鑫:总结来讲,可能没有太大本质的不同。最早是基于规则化编程,以NAO和Pepper为代表;后来是基于偏自动化的技术,比如自然语言处理和SLAM(即时定位与地图构建)——对话可以做了但还不太行,机器人能开始移动了,但在酒店和餐厅里跑得没那么好;再到现今,以模型驱动,GPT时刻带来的加速。\n行业在一波一波地往前进展,每一波都留下了很可观的技术积累。无论这个泡沫有多大、有没有破,你依然坚定地去做这个符合愿景的事情。 [...] 职场Bonus:这四个月你和团队在忙什么?有哪些事是之前没料到的?\n施晓鑫:从0到1搭建公司。注册、找场地、完成第一笔融资,整个过程是从学习到熟悉、再到能把控的阶段。没料到的更多是流程和形式上的问题,比如法务。融资对我们来讲是一件熟悉又陌生的事——大家都知道一级市场,也都跟机构聊过,但真正自己去运营一家公司、跟机构打交道,很多事情是新的。公司要展现什么内容给机构?机构在意的是什么?长期要怎么运营和准备?这些都是在企业做职业经理人的时候很少会涉猎的。\n## 灵巧手的三道坎\n职场Bonus:行业里有个说法,人形机器人的竞争终局,一半在手上。你认同吗?\n施晓鑫:基本认同。从硬件、本体的角度,手跟身体其余部分的价值可能都相当了,包括操作的价值和难度,可以说一半在手上。\n我更倾向于另一种理解:真正发挥价值的一个是手,一个是脑,从这个角度也是一半一半,手和脑应该协同发展。这件事在生物学上也有依据。人的手比猩猩的手灵巧很多,手的进化跟大脑的进化是协同的。脑促进了手的进化,手的灵巧又反过来推动脑的进化。 [...] 如果从通用机器人的分级来看——现在技术探索和产品是有区别的。很多人认为技术已经到了某个",
       "relevance": "",
       "url": "https://eu.36kr.com/zh/p/4063274873672578",
       "sourceName": "eu.36kr.com",
       "authors": [],
       "topics": [
-        "操作与灵巧手"
+        "操作与灵巧手",
+        "运动控制"
       ],
       "highlights": [
-        "本文深度聚焦灵巧手技术研发核心议题,围绕拟人灵巧手的技术落地边界与拟人化审美设计逻辑展开系统性探讨,精准剖析当前灵巧手产业化进程中潜藏的核心风险,为智能"
+        "职场Bonus:在猎豹那几年,服务机器人也被说是泡沫期。今天的具身智能热,和当年有什么本质不同?",
+        "施晓鑫:总结来讲,可能没有太大本质的不同。最早是基于规则化编程,以NAO和Pepper为代表;后来是基于偏自动化的技术,比如自然语言处理和SLAM(即时定位与地图构建)——对话可以做了但还不太行,机器人能开始移动了,但在酒店和餐厅里跑得没那么好;再到现今,以模型驱动,GPT时刻带来的加速。",
+        "## 灵巧手的三道坎\n职场Bonus:行业里有个说法,人形机器人的竞争终局,一半在手上。你认同吗?"
       ],
-      "collectedAt": "2026-11-14T06:42:18.754Z",
+      "collectedAt": "2026-11-15T06:47:25.342Z",
       "dateVerified": true,
       "updatedAt": null,
       "kind": "news"
@@ -7245,7 +7248,7 @@
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-11-12T07:24:06.590Z",
-    "newsAttemptAt": "2026-11-14T06:42:18.754Z",
+    "newsAttemptAt": "2026-11-15T06:47:25.342Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -7253,9 +7256,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-15T07:24:06.590Z",
-    "lastRunAt": "2026-11-14T06:42:18.754Z",
-    "lastFinishedAt": "2026-11-14T06:42:18.754Z",
-    "budgetDay": "2026-11-14",
+    "lastRunAt": "2026-11-15T06:47:25.342Z",
+    "lastFinishedAt": "2026-11-15T06:47:25.342Z",
+    "budgetDay": "2026-11-15",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
