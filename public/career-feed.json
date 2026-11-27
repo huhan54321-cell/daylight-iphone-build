@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T08:35:53.723Z",
+  "generatedAt": "2026-11-27T08:47:23.864Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -4820,8 +4820,8 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4829,8 +4829,8 @@
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4838,8 +4838,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4847,17 +4847,17 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
+      "count": 2,
+      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4865,8 +4865,8 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4874,8 +4874,8 @@
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 38,
       "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4883,8 +4883,8 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-26T08:35:53.723Z",
-      "lastSuccessAt": "2026-11-26T08:35:53.723Z",
+      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
+      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
@@ -4912,7 +4912,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T18:59:36.000Z",
       "kind": "paper"
@@ -4941,7 +4941,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T18:40:47.000Z",
       "kind": "paper"
@@ -4976,7 +4976,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:39:10.000Z",
       "kind": "paper"
@@ -5004,7 +5004,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:25:17.000Z",
       "kind": "paper"
@@ -5027,7 +5027,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:23:01.000Z",
       "kind": "paper"
@@ -5055,7 +5055,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:19:06.000Z",
       "kind": "paper"
@@ -5087,7 +5087,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:39:10.000Z",
       "kind": "paper"
@@ -5116,7 +5116,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:30:15.000Z",
       "kind": "paper"
@@ -5150,7 +5150,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:29:17.000Z",
       "kind": "paper"
@@ -5182,7 +5182,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:24:11.000Z",
       "kind": "paper"
@@ -5215,7 +5215,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:36:13.000Z",
       "kind": "paper"
@@ -5239,7 +5239,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:32:39.000Z",
       "kind": "paper"
@@ -5269,7 +5269,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:32:21.000Z",
       "kind": "paper"
@@ -5296,7 +5296,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:20:36.000Z",
       "kind": "paper"
@@ -5325,7 +5325,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:58:31.000Z",
       "kind": "paper"
@@ -5361,7 +5361,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:28:05.000Z",
       "kind": "paper"
@@ -5387,7 +5387,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:12:10.000Z",
       "kind": "paper"
@@ -5413,7 +5413,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:08:37.000Z",
       "kind": "paper"
@@ -5437,7 +5437,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:04:32.000Z",
       "kind": "paper"
@@ -5462,7 +5462,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T13:09:34.000Z",
       "kind": "paper"
@@ -5491,7 +5491,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:54:52.000Z",
       "kind": "paper"
@@ -5518,7 +5518,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:50:05.000Z",
       "kind": "paper"
@@ -5548,7 +5548,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:41:56.000Z",
       "kind": "paper"
@@ -5577,7 +5577,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:41:23.000Z",
       "kind": "paper"
@@ -5603,7 +5603,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:36:42.000Z",
       "kind": "paper"
@@ -5629,7 +5629,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:19:59.000Z",
       "kind": "paper"
@@ -5656,7 +5656,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:44:48.000Z",
       "kind": "paper"
@@ -5682,7 +5682,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:30:48.000Z",
       "kind": "paper"
@@ -5715,7 +5715,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:25:08.000Z",
       "kind": "paper"
@@ -5746,7 +5746,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:18:08.000Z",
       "kind": "paper"
@@ -5769,7 +5769,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T09:23:33.000Z",
       "kind": "paper"
@@ -5803,7 +5803,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T09:22:42.000Z",
       "kind": "paper"
@@ -5834,7 +5834,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T08:46:50.000Z",
       "kind": "paper"
@@ -5862,7 +5862,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T08:28:00.000Z",
       "kind": "paper"
@@ -5895,7 +5895,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:45:51.000Z",
       "kind": "paper"
@@ -5921,7 +5921,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:43:15.000Z",
       "kind": "paper"
@@ -5957,7 +5957,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:37:06.000Z",
       "kind": "paper"
@@ -5983,7 +5983,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-26T08:35:53.723Z",
+      "collectedAt": "2026-11-27T08:47:23.864Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:34:35.000Z",
       "kind": "paper"
@@ -7798,18 +7798,18 @@
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-11-26T08:35:53.723Z",
-    "newsAttemptAt": "2026-11-26T08:35:53.723Z",
+    "newsAttemptAt": "2026-11-27T08:47:23.864Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
-    "searchRequests": 18
+    "searchRequests": 6
   },
   "scheduler": {
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-29T08:35:53.723Z",
-    "lastRunAt": "2026-11-26T08:35:53.723Z",
-    "lastFinishedAt": "2026-11-26T08:35:53.723Z",
-    "budgetDay": "2026-11-26",
-    "budgetUsed": 18,
+    "lastRunAt": "2026-11-27T08:47:23.864Z",
+    "lastFinishedAt": "2026-11-27T08:47:23.864Z",
+    "budgetDay": "2026-11-27",
+    "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
     "running": false
