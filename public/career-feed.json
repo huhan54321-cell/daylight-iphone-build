@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T08:47:23.864Z",
+  "generatedAt": "2026-11-28T08:02:04.151Z",
   "jobs": [
     {
       "id": "job_0021918f413b9daa887f26ca",
@@ -4820,17 +4820,17 @@
       "id": "news-1f040ed34171b48d002589df",
       "name": "行业动态",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-acc9f299dae9ce0b9732289c",
       "name": "技术进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4838,8 +4838,8 @@
       "id": "news-703e697a72287deeb06d9b6f",
       "name": "操作与学习",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4847,17 +4847,17 @@
       "id": "news-7e826a09e32d7c16db38fcb2",
       "name": "仿真与评测",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
-      "count": 2,
-      "message": "本轮读取 2 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
+      "count": 0,
+      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "news-cf8dd964996b00cf6c4058ee",
       "name": "开源工具",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4865,17 +4865,17 @@
       "id": "news-cd695a7dcf624817e7310e61",
       "name": "硬件与落地",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
-      "count": 0,
-      "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
+      "count": 1,
+      "message": "本轮读取 1 条公开记录；原页日期与核查状态分别保留。"
     },
     {
       "id": "arxiv",
       "name": "arXiv 论文",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
       "count": 38,
       "message": "本轮读取 38 条公开记录；原页日期与核查状态分别保留。"
     },
@@ -4883,13 +4883,37 @@
       "id": "huggingface",
       "name": "Hugging Face 开源进展",
       "state": "ok",
-      "lastAttemptAt": "2026-11-27T08:47:23.864Z",
-      "lastSuccessAt": "2026-11-27T08:47:23.864Z",
+      "lastAttemptAt": "2026-11-28T08:02:04.151Z",
+      "lastSuccessAt": "2026-11-28T08:02:04.151Z",
       "count": 0,
       "message": "本轮读取 0 条公开记录；原页日期与核查状态分别保留。"
     }
   ],
   "articles": [
+    {
+      "id": "article-ef5bba56e3d0b00298582109",
+      "title": "13家人形机器人企业上市最新进展-36氪",
+      "date": "2026-11-27T10:02:45.000Z",
+      "category": "行业动态",
+      "summary": "# 13家人形机器人企业上市最新进展\n100天前,宇树科技登陆科创板,给中国人形机器人撕开了二级市场的口子。\n100天后,站在门前的队伍已经排开,但每家公司的处境并不相同:在A股,云深处正在问询关口,乐聚因财报过期暂时停步;在港股,保密递表成了高频词,多家明星公司选择先躲开聚光灯把流程跑起来,也有估值数百亿的头部玩家被曝暂缓IPO、转头继续融资。\n比上市节奏更分化的是商业化路径。离开展会和表演舞台后,这批机器人开始分头找活干——进车厂搬轴承、进药房值夜班、进快递站分包裹、进医院做保洁,甚至标价9998元卖给普通消费者。谁已经靠卖货回血,谁还停留在试点和交付爬坡,差距正在拉大。\n截至2026年11月27日,这批头部公司走到哪一步了?《芯智能头条》逐一盘点了13家人形机器人及具身智能企业的产品、生意与IPO最新进展。\n## 01 乐聚智能|从教育机器人到汽车零部件产线,创业板审核中止\n2016年,冷晓琨与哈尔滨工业大学机器人俱乐部的伙伴在深圳创办乐聚。公司第一年推出小型双足机器人AELOS,切入编程教育。2023年推出的全尺寸人形机器人“夸父”,把业务拓到工业、科研和实训。 [...] 自变量选了家庭保洁做应用试验。今年3月,公司与58到家合作推出人机协作保洁服务,深圳用户可预约专业保洁员和机器人共同上门。项目给公司提供了真实家庭里的任务反馈,也保留了保洁员参与服务的环节。\n9月,自变量被报道已向港交所秘密递表。公司向《国际金融报》回应称,对该消息不知情。暂未见公开申报文件。\n## 13 星动纪元|机器人进快递分拣中心,赴港传闻遭否认\n星动纪元成立于2023年,由清华大学交叉信息研究院孵化,创始人是陈建宇。它同时做全尺寸双足人形机器人、模块化半身机器人和XHAND灵巧手,星动L7是代表机型。\n星动较具体的商业进展出现在快递分拣。按《中国邮政快递报》8月的报道,星动机器人已在中国邮政、顺丰等企业的10余个物流中心常态化作业。在分拣线,机器人要抓取和转运形状、材质不一的包裹。今年4月,星动宣布完成超2亿美元融资,顺丰参与领投。\n8月,市场传出星动纪元考虑赴港上市。公司相关人士向",
+      "relevance": "",
+      "url": "https://www.36kr.com/p/4087750298244745",
+      "sourceName": "www.36kr.com",
+      "authors": [],
+      "topics": [
+        "操作与灵巧手",
+        "运动控制"
+      ],
+      "highlights": [
+        "# 13家人形机器人企业上市最新进展\n100天前,宇树科技登陆科创板,给中国人形机器人撕开了二级市场的口子。",
+        "比上市节奏更分化的是商业化路径。离开展会和表演舞台后,这批机器人开始分头找活干——进车厂搬轴承、进药房值夜班、进快递站分包裹、进医院做保洁,甚至标价9998元卖给普通消费者。谁已经靠卖货回血,谁还停留在试点和交付爬坡,差距正在拉大。",
+        "截至2026年11月27日,这批头部公司走到哪一步了?《芯智能头条》逐一盘点了13家人形机器人及具身智能企业的产品、生意与IPO最新进展。"
+      ],
+      "collectedAt": "2026-11-28T08:02:04.151Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
     {
       "id": "paper-8013fcc76a8c8f8bb7492bf9",
       "title": "DexLink: Synthesizing Dexterous Behaviors from Chained Hand-object Poses",
@@ -4912,7 +4936,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T18:59:36.000Z",
       "kind": "paper"
@@ -4941,7 +4965,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T18:40:47.000Z",
       "kind": "paper"
@@ -4976,7 +5000,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:39:10.000Z",
       "kind": "paper"
@@ -5004,7 +5028,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:25:17.000Z",
       "kind": "paper"
@@ -5027,7 +5051,7 @@
       ],
       "topics": [],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:23:01.000Z",
       "kind": "paper"
@@ -5055,7 +5079,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T17:19:06.000Z",
       "kind": "paper"
@@ -5087,7 +5111,7 @@
         "VLA 与动作模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:39:10.000Z",
       "kind": "paper"
@@ -5116,7 +5140,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:30:15.000Z",
       "kind": "paper"
@@ -5150,7 +5174,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:29:17.000Z",
       "kind": "paper"
@@ -5182,7 +5206,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T16:24:11.000Z",
       "kind": "paper"
@@ -5215,7 +5239,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:36:13.000Z",
       "kind": "paper"
@@ -5239,7 +5263,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:32:39.000Z",
       "kind": "paper"
@@ -5269,7 +5293,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:32:21.000Z",
       "kind": "paper"
@@ -5296,7 +5320,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T15:20:36.000Z",
       "kind": "paper"
@@ -5325,7 +5349,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:58:31.000Z",
       "kind": "paper"
@@ -5361,7 +5385,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:28:05.000Z",
       "kind": "paper"
@@ -5387,7 +5411,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:12:10.000Z",
       "kind": "paper"
@@ -5413,7 +5437,7 @@
         "仿真与迁移"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:08:37.000Z",
       "kind": "paper"
@@ -5437,7 +5461,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T14:04:32.000Z",
       "kind": "paper"
@@ -5462,7 +5486,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T13:09:34.000Z",
       "kind": "paper"
@@ -5491,7 +5515,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:54:52.000Z",
       "kind": "paper"
@@ -5518,7 +5542,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:50:05.000Z",
       "kind": "paper"
@@ -5548,7 +5572,7 @@
         "世界模型"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:41:56.000Z",
       "kind": "paper"
@@ -5577,7 +5601,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:41:23.000Z",
       "kind": "paper"
@@ -5603,7 +5627,7 @@
         "模仿学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:36:42.000Z",
       "kind": "paper"
@@ -5629,7 +5653,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T12:19:59.000Z",
       "kind": "paper"
@@ -5656,7 +5680,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:44:48.000Z",
       "kind": "paper"
@@ -5682,7 +5706,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:30:48.000Z",
       "kind": "paper"
@@ -5715,7 +5739,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:25:08.000Z",
       "kind": "paper"
@@ -5746,7 +5770,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T10:18:08.000Z",
       "kind": "paper"
@@ -5769,7 +5793,7 @@
         "强化学习"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T09:23:33.000Z",
       "kind": "paper"
@@ -5803,7 +5827,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T09:22:42.000Z",
       "kind": "paper"
@@ -5834,7 +5858,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T08:46:50.000Z",
       "kind": "paper"
@@ -5862,7 +5886,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T08:28:00.000Z",
       "kind": "paper"
@@ -5895,7 +5919,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:45:51.000Z",
       "kind": "paper"
@@ -5921,7 +5945,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:43:15.000Z",
       "kind": "paper"
@@ -5957,7 +5981,7 @@
         "操作与灵巧手"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:37:06.000Z",
       "kind": "paper"
@@ -5983,7 +6007,7 @@
         "数据与评测"
       ],
       "highlights": [],
-      "collectedAt": "2026-11-27T08:47:23.864Z",
+      "collectedAt": "2026-11-28T08:02:04.151Z",
       "dateVerified": true,
       "updatedAt": "2026-11-25T07:34:35.000Z",
       "kind": "paper"
@@ -7136,6 +7160,26 @@
       "kind": "paper"
     },
     {
+      "id": "article-e4694f3ef082573ef667d8fb",
+      "title": "As2 SDK Development Guide - 宇树文档中心 - Unitree Robotics",
+      "date": "2026-11-24T08:00:00.000Z",
+      "category": "硬件与落地",
+      "summary": "Quadruped robots feature complex structures and powerful drive systems. This is a civilian robot product. Air is factory-equipped with Unitree L2 LiDAR;",
+      "relevance": "",
+      "url": "https://support.unitree.com/home/en/AS2_SDK_Development_Guide/about_as2",
+      "sourceName": "support.unitree.com",
+      "authors": [],
+      "topics": [],
+      "highlights": [
+        "Quadruped robots feature complex structures and powerful drive systems.",
+        "This is a civilian robot product."
+      ],
+      "collectedAt": "2026-11-28T08:02:04.151Z",
+      "dateVerified": true,
+      "updatedAt": null,
+      "kind": "news"
+    },
+    {
       "id": "paper-ca91e1433d5f8d14231b8236",
       "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
       "date": "2026-11-23T18:52:19.000Z",
@@ -7743,62 +7787,11 @@
       "dateVerified": true,
       "updatedAt": "2026-11-23T14:38:50.000Z",
       "kind": "paper"
-    },
-    {
-      "id": "paper-29b48ef0ff00f7414e31feb6",
-      "title": "EgoDepth-Bench: Benchmarking Metric Depth for Egocentric Manipulation",
-      "date": "2026-11-23T14:12:47.000Z",
-      "category": "论文",
-      "summary": "We introduce EgoDepth-Bench, comprising 941,233 synchronized samples collected across 37 distinct physical environments. Each sample combines six calibrated RGB views with metric depth in the native fisheye view, reconstructed from five active-infrared stereo modules. A calibrated ball-bar confirms millimeter-level geometric accuracy, with a median error of 1.27 mm on a known sphere spacing. Environment-held-out splits enable evaluation of generalization to unseen environments. Across monocular, stereo, and multi-view models, the benchmark measures both depth accuracy and prediction coverage, including on hands and objects. Fine-tuning MapAnything on EgoDepth-Bench reduces metric AbsRel from 0.708 to 0.091 and scale-aligned AbsRel from 0.327 to 0.072 on unseen environments. These results demonstrate that EgoDepth-Bench provides effective supervision and enables rigorous evaluation of metric and relative depth estimation in egocentric manipulation. The project page provides the evaluati",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.30734",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Yuan Gao",
-        "Dongchen Wei",
-        "Xinyang Lin",
-        "Shuhua Cao",
-        "Xueliang Guo",
-        "Zhuohan Li",
-        "Yihao Wang"
-      ],
-      "topics": [
-        "操作与灵巧手",
-        "数据与评测"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-24T10:04:16.231Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-23T14:12:47.000Z",
-      "kind": "paper"
-    },
-    {
-      "id": "paper-7f533ab6440517e23cc34663",
-      "title": "LLM-Guided Compositional Continual Learning for Robot Manipulation with Gated Low-Rank Experts",
-      "date": "2026-11-23T13:25:03.000Z",
-      "category": "论文",
-      "summary": "General-purpose manipulation robots must acquire new skills over time without forgetting prior ones or retraining from scratch. We present a continual learning framework that represents each skill as a dedicated expert sub- network in a Progressive Neural Network (PNN). New tasks reuse prior knowledge through low-rank adaptation (LoRA) modules on lateral connections controlled by learnable per-parent gates, enabling explicit attenuation of individual transfer paths while reducing the parameter cost of dense PNN laterals. For long-horizon deployment, a frozen local large language model decomposes natural-language instructions into sub-tasks, routes them to suitable experts, and requests a new expert only when the library is insufficient. Using a shared task-space action interface, we evaluate the framework on twelve MetaWorld tasks and in a Sawyer-to-Panda-to-UR5e cross-embodiment transfer experiment, showing improved task success relative to learning from scratch when demonstrations ar",
-      "relevance": "",
-      "url": "https://arxiv.org/abs/2611.30667",
-      "sourceName": "arXiv · 预印本",
-      "authors": [
-        "Nilay Kushawaha",
-        "Abdalla Swikir",
-        "Fares Abu-Dakka"
-      ],
-      "topics": [
-        "操作与灵巧手"
-      ],
-      "highlights": [],
-      "collectedAt": "2026-11-24T10:04:16.231Z",
-      "dateVerified": true,
-      "updatedAt": "2026-11-23T13:25:03.000Z",
-      "kind": "paper"
     }
   ],
   "updateInfo": {
     "jobsAttemptAt": "2026-11-26T08:35:53.723Z",
-    "newsAttemptAt": "2026-11-27T08:47:23.864Z",
+    "newsAttemptAt": "2026-11-28T08:02:04.151Z",
     "schedule": "资讯每日更新，岗位每三天更新；手动刷新读取最新已发布内容。",
     "searchRequests": 6
   },
@@ -7806,9 +7799,9 @@
     "enabled": true,
     "intervalHours": 72,
     "nextRunAt": "2026-11-29T08:35:53.723Z",
-    "lastRunAt": "2026-11-27T08:47:23.864Z",
-    "lastFinishedAt": "2026-11-27T08:47:23.864Z",
-    "budgetDay": "2026-11-27",
+    "lastRunAt": "2026-11-28T08:02:04.151Z",
+    "lastFinishedAt": "2026-11-28T08:02:04.151Z",
+    "budgetDay": "2026-11-28",
     "budgetUsed": 6,
     "budgetLimit": 18,
     "hostRequired": false,
